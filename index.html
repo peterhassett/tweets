@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A curated archive of good tweets from Twitter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://bestoftwitter.com/">
+    <title>Good Tweets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bestoftwitter.com/">
+    <meta property="og:title" content="Good Tweets Archive">
+    <meta property="og:description" content="Best of Twitter. Instant search through 2,500 hall-of-fame tweets.">
+    <meta property="og:image" content="https://bestoftwitter.com/og-image.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bestoftwitter.com/">
+    <meta name="twitter:title" content="Best of Twitter">
+    <meta name="twitter:description" content="Instant search through 2,500 hall-of-fame tweets.">
+    <meta name="twitter:image" content="https://bestoftwitter.com/og-image.jpg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Good Tweets",
+        "url": "https://bestoftwitter.com/",
+        "description": "Best of Twitter. A curated archive of 2,500 hall-of-fame tweets with instant search and high-quality screenshots.",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Searchable Tweet Database",
+                "description": "Instant client-side search across 2,500 curated tweet screenshots and alt-text."
+            }
+            ]
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestoftwitter.com/index.html?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <!-- 
+      I am teaching myself some more Python, so I thought I'd try this as an exercise
+      I grabbed all of Dennis B. Hooper's carefully curated threads of tweets.
+      I extracted the images, alt text, usernames, and other metadata into JSON.
+      I optimized the images into WEBP.
+      I cleaned the JSON data in a few phases.
+      I tried to use Tesseact and OpenOCR to extract the date from the images, but I coudn't get it to work.
+      I minified the JSON and served it up statically. It's not too big and I'm not precious about data (that I stole).
+      The index page does a search against the JSON. It debounces the input.
+      It renders each returned tweet as a card in a bootstrap list.
+      The single tweet page shows the same info. Nothing fancy, but using some JS to inject meta.
+      Some of that meta injection is sub-optimal, since search engines won't see it server-side.
+      If I do more on this, I'll try to get the post dates via OCR again, and I'll generate static pages.
+      In any case, Dennis did all the hard work.  
+    -->
+  </head>
+  <body>
+    <main class="hero">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <h1 class="mb-2 mt-2">Classic Tweets</h1>
+            <p class="text-muted mb-4">A searchable archive of the best posts from the best posters.</br>Originally curated by <a href="https://linktr.ee/dennisbhooper?utm_source=ig&utm_medium=classic-tweets" target="_blank" rel="noopener">Dennis B. Hooper</a>.</p>
+            <div class="card p-3 shadow-sm">
+              <input type="text" id="search" class="form-control search-large" placeholder="Search 2,500 good tweets..." autofocus>
+            </div>
+            <div id="results" class="row g-3 mt-3" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="mini-footer">
+      <a href="https://peterhassett.net" target="_blank" rel="noopener">Peter Hassett</a>
+    </div>
+
+    <script>
+      // client-side search with debounce
+      let tweets = [];
+      const resultsEl = document.getElementById('results');
+
+      fetch('data.min.json')
+        .then(r => r.json())
+        .then(data => {
+            tweets = data;
+          })
+        .catch(() => {
+          resultsEl.innerHTML = '<div class="col-12 text-muted">no tweets to load</div>';
+        });
+
+      function debounce(fn, wait) {
+        let t;
+        return (...args) => {
+          clearTimeout(t);
+          t = setTimeout(() => fn(...args), wait);
+        };
+      }
+
+      function decodeHtml(s){
+        const el = document.createElement('textarea');
+        el.innerHTML = s || '';
+        return el.value;
+      }
+
+      const onInput = debounce((e) => {
+        const term = (e.target.value || '').toLowerCase();
+        if (!term) return resultsEl.innerHTML = '';
+        const filtered = tweets.filter(t => ((decodeHtml(t.alt||'') || '') + ' ' + (t.name || '') + ' ' + (t.handle || '')).toLowerCase().includes(term));
+        render(filtered.slice(0, 100));
+      }, 300);
+
+      document.getElementById('search').addEventListener('input', onInput);
+
+      // populate search box from querystring param `q` or `search`
+      (function(){
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q') || params.get('search');
+        if (q) {
+          const input = document.getElementById('search');
+          input.value = q;
+          // trigger the input handler (debounced)
+          onInput({ target: input });
+        }
+      })();
+
+      function render(list) {
+        if (!list || list.length === 0) {
+          resultsEl.innerHTML = '<div class="col-12 text-muted">nothing 🤷🤷‍♀️🤷🏿‍♂️</div>';
+          return;
+        }
+
+        resultsEl.innerHTML = list.map(t => {
+          const name = t.name ? `${t.name}` : '';
+          const handle = t.handle ? `@${t.handle}` : '';
+          const title = (name || handle) ? `<div class="small"><span class="name-text">${name}</span> <span class="handle-text">${handle}</span></div>` : '';
+          const id = t.id || '';
+          const imgSrc = `/img/${id}.webp`;
+          const imgAlt = escapeHtml(decodeHtml(t.alt || ''));
+          return `
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                  <a href="tweet?id=${encodeURIComponent(id)}" class="text-decoration-none text-body">
+                    <div class="card h-100 tweet-card">
+                      <img src="${imgSrc}" loading="lazy" decoding="async" class="card-img-top" alt="${imgAlt}">
+                      <div class="card-body py-2 px-2">
+                        ${title}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              `;
+        }).join('');
+      }
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

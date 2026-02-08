@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;600&display=swap');
+html,body{height:100%;}
+body{
+  background-color:#222c34;
+  background-image:linear-gradient(180deg,#293138 0%, #0f1316 50%, #0a0c0e 100%);
+  background-attachment:fixed;
+  color: #e6e6e6;
+  font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+body::after{
+  content:"";
+  pointer-events:none;
+  position:fixed;inset:0;z-index:0;opacity:0.36;
+  background-image:radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size:2px 2px;
+  mix-blend-mode:overlay;
+}
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:1;
+}
+.hero .card { background:transparent; border:0; }
+.search-large { font-size:1.25rem; padding:1.25rem 1rem; }
+
+.tweet-card {  }
+.tweet-card .card-img-top { width:100%; height:auto; object-fit:contain; }
+.tweet-card .card-body { padding:.75rem; }
+.credit { position:fixed; right:12px; bottom:12px; font-size:0.75rem; opacity:0.7; }
+
+.mini-footer { position:fixed; right:12px; bottom:12px; font-size:0.75rem; opacity:0.95; color:inherit; z-index: 3; pointer-events: auto; }
+.mini-footer a { color:#86c0ff; text-decoration:none; margin:0 .25rem; }
+.mini-footer .sep { color:rgba(255,255,255,0.25); }
+
+.hero .card { background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.06); }
+
+.hero .card.p-3 {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+a { color: #86c0ff; }
+.text-muted { color: rgba(230,230,230,0.65) !important; }
+
+#tweet-container .row {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  color: #e6e6e6;
+}
+
+#tweet-container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.handle-text { color: #e6e6e6; }
+.name-text { display: none; }
+
+@media (max-width: 991.98px) {
+  .tweet-row > .col-12.col-md-6 { margin-bottom: 1.5rem; }
+  .tweet-row > .col-12.col-md-6:last-child { margin-bottom: 0; }
+}

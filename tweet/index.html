@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Archived copy of a good tweet">
+    <meta property="og:title" content="A classic tweet" id="og-title">
+    <meta property="og:description" content="Archived copy of a good tweet" id="og-desc">
+    <meta property="og:image" content="https://bestoftwitter.com/og-image.jpg" id="og-image">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Here is a classic tweet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container py-3">
+      <div id="tweet-container">loading</div>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const tweetId = params.get('id');
+      function decodeHtml(s){
+        const el = document.createElement('textarea');
+        el.innerHTML = s || '';
+        return el.value;
+      }
+      const container = document.getElementById('tweet-container');
+
+      if (!tweetId) {
+        container.innerHTML = '<div class="text-muted">no id</div>';
+      } else {
+        fetch('/data.min.json')
+          .then(r => r.json())
+          .then(data => {
+            const tweet = data.find(t => t.id === tweetId || t.id === Number(tweetId).toString());
+            if (!tweet) {
+              container.innerHTML = '<div class="text-muted">what</div>';
+              return;
+            }
+
+            const name = tweet.name ? escapeHtml(tweet.name) : '';
+            const handle = tweet.handle ? ('@' + escapeHtml(tweet.handle)) : '';
+            const decodedAltRaw = tweet.alt ? decodeHtml(tweet.alt) : '';
+            const alt = decodedAltRaw ? escapeHtml(decodedAltRaw).replace(/\n/g, '<br>') : '';
+            const imgSrc = `/img/${tweet.id}.webp`;
+
+            const titleText = ((decodedAltRaw ? decodedAltRaw : '') + (name || handle ? ' — ' : '') + name + (name && handle ? ' ' : '') + handle).trim();
+            document.title = escapeHtml(titleText);
+
+            try {
+              const ogTitle = document.getElementById('og-title');
+              const ogDesc = document.getElementById('og-desc');
+              const ogImage = document.getElementById('og-image');
+              const safeText = (decodedAltRaw || '').replace(/\s+/g, ' ').trim();
+              if (ogTitle) ogTitle.setAttribute('content', safeText ? safeText : document.title);
+              if (ogDesc) ogDesc.setAttribute('content', safeText ? safeText : 'Archived copy of a good tweet');
+              if (ogImage) ogImage.setAttribute('content', imgSrc);
+            } catch (e) {
+            }
+
+            (function insertJsonLd(tw){
+              const existing = document.getElementById('ld-json');
+              if (!tw) {
+                if (existing) existing.remove();
+                return;
+              }
+
+              const siteBase = 'https://bestoftwitter.com';
+              const tweetUrl = `${siteBase}/tweet/index.html?id=${encodeURIComponent(String(tw.id))}`;
+
+              const graph = [];
+
+              const breadcrumb = {
+                '@type': 'BreadcrumbList',
+                'itemListElement': [
+                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': siteBase + '/' },
+                  { '@type': 'ListItem', 'position': 2, 'name': 'Tweet', 'item': tweetUrl }
+                ]
+              };
+              graph.push(breadcrumb);
+
+              const posting = { '@type': 'SocialMediaPosting' };
+              if (tw.id) posting.identifier = String(tw.id);
+              const body = (tw.alt && typeof tw.alt === 'string') ? decodeHtml(tw.alt) : '';
+              const headline = body ? (body.length > 110 ? body.substring(0, 110) + '...' : body) : undefined;
+              if (headline) posting.headline = headline;
+              if (body) posting.articleBody = body;
+              if (tw.name || tw.handle) {
+                posting.author = { '@type': 'Person' };
+                if (tw.name) posting.author.name = tw.name;
+                if (tw.handle) posting.author.alternateName = tw.handle;
+              }
+              if (tw.id) posting.image = siteBase + `/img/${encodeURIComponent(String(tw.id))}.webp`;
+              if (tw.date) posting.datePublished = tw.date;
+
+              graph.push(posting);
+
+              const jsonld = { '@context': 'https://schema.org', '@graph': graph };
+
+              const script = document.createElement('script');
+              script.type = 'application/ld+json';
+              script.id = 'ld-json';
+              script.text = JSON.stringify(jsonld, null, 2);
+
+              if (existing) existing.replaceWith(script); else document.head.appendChild(script);
+            })(tweet);
+
+            container.innerHTML = `
+              <div class="row tweet-row">
+                <div class="col-12 col-md-6">
+                  <img src="${imgSrc}" class="img-fluid rounded" alt="${escapeHtml(decodedAltRaw)}">
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4><span class="name-text">${name}</span> <span class="handle-text fs-6 d-block d-md-inline">${handle}</span></h4>
+                  <p>${alt}</p>
+                  <a href="/" class="btn btn-sm btn-link">Back</a>
+                  <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+                </div>
+              </div>
+            `;
+
+            // random
+            const randomBtn = document.getElementById('random-btn');
+            if (randomBtn) {
+              randomBtn.addEventListener('click', () => {
+                if (!Array.isArray(data) || data.length === 0) return;
+                let idx = Math.floor(Math.random() * data.length);
+                if (data.length > 1) {
+                  let attempts = 0;
+                  while (String(data[idx].id) === String(tweetId) && attempts < 10) {
+                    idx = Math.floor(Math.random() * data.length);
+                    attempts++;
+                  }
+                }
+                const randId = encodeURIComponent(String(data[idx].id));
+                window.location.href = `/tweet?id=${randId}`;
+              });
+            }
+          })
+          .catch(() => {
+            container.innerHTML = '<div class="text-muted">(nope)</div>';
+          });
+      }
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // Press Escape to go back to home
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          window.location.href = '/';
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

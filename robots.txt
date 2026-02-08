@@ -1,0 +1,17 @@
+Sitemap: https://bestoftwitter.com/sitemap.xml
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OpenAI
+Disallow: /
+
+User-agent: ChatGPT
+Disallow: /
+
+User-agent: Copilot
+Disallow: /
+
+User-agent: *
+Disallow: /secret/
+Allow: /
