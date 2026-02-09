@@ -63,6 +63,7 @@ blueprint = """<!doctype html>
         if (e.key === 'Escape') window.location.href = '/';
       }});
     </script>
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
 </html>
 """
