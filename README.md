@@ -37,7 +37,6 @@ Here's how I did it
 - I could bring in new sources of good tweets to expand the data.
 - I could clean the data – there are some missing names/handles.
 - I may try again to use OCR to get dates or other missing data.
-- I may look into generating static pages for each tweet rather than doing it dynamically. 
 
 ## Credits
 
