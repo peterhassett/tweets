@@ -1,19 +1,19 @@
 # Best of Twitter
 
-A lightweight, static minisite with a searchable archive of good tweets. (I didn't curate the tweets.)
+A lightweight, static site with a searchable archive of good tweets. (I didn't curate the tweets.)
 
 ## Why
 
-I am trying to get better at Python, so I thought I'd try this as an exercise. I did none of the content work. Just learning.
+I am trying to get better at Python, so I thought I'd try this as an exercise. I did none of the content work. This is just for education.
 
 ## Features
 
-- Client-side search over a JSON dataset with 2.5k entries.
-- Single-tweet page with metadata and screenshots.
-- Images optimized as WEBP.
+- Client-side search over a JSON dataset with 2.5k entries
+- Single-tweet page with metadata and screenshots
+- Images optimized as WEBP
 - Minimal styling using Bootstrap
 - Minimal external libraries
-- Python helper to generate `sitemap.xml`
+- Python helper to generate sitemap
 - Minified JSON file
 
 ## Assembly
@@ -34,18 +34,19 @@ Here's how I did it
 
 ## Next Steps
 
-- I could bring in new sources of good tweets to expand the data
-- I may try again to use OCR to get dates
+- I could bring in new sources of good tweets to expand the data.
+- I could clean the data – there are some missing names/handles.
+- I may try again to use OCR to get dates or other missing data.
 - I may look into generating static pages for each tweet rather than doing it dynamically. 
 
 ## Credits
 
-The tweet collection was entirely curated by Dennis B. Hooper. I just wanted to see if I could scrape and clean the data as a personal prokct.
+The tweet collection was entirely curated by Dennis B. Hooper. I just wanted to see if I could scrape and clean the data as a personal project.
 
 ## License
 
-See the `LICENSE` file in the repository for licensing details.
+Public domain. See the Unlicense.
 
 ## Author
 
-Pete
+it's ya boy pete
