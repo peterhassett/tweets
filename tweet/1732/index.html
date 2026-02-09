@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[me] I got you a present
+[him] it looks like you gift wrapped a
+snake
+[me] no I didn&#x27;t
+[him] is it hissin...">
+    <meta property="og:title" content="[me] I got you a present
+[him] it looks like you g — ibid @87bidi">
+    <meta property="og:image:alt" content="[me] I got you a present
+[him] it looks like you gift wrapped a
+snake
+[me] no I didn&#x27;t
+[him] is it hissing?
+[me] don&#x27;t open it from that end">
+    <meta property="og:description" content="[me] I got you a present
+[him] it looks like you gift wrapped a
+snake
+[me] no I didn&#x27;t
+[him] is it hissing?
+[me] don&#x27;t open it from that end">
+    <meta property="og:image" content="/img/1732.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[me] I got you a present
+[him] it looks like you g — ibid @87bidi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1732/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1732",
+      "headline": "[me] I got you a present\n[him] it looks like you gift wrapped a\nsnake\n[me] no I didn't\n[him] is it hissing?\n[m",
+      "articleBody": "[me] I got you a present\n[him] it looks like you gift wrapped a\nsnake\n[me] no I didn't\n[him] is it hissing?\n[me] don't open it from that end",
+      "image": "/img/1732.webp",
+      "author": {
+        "@type": "Person",
+        "name": "ibid",
+        "alternateName": "87bidi"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1732.webp" class="img-fluid rounded" alt="[me] I got you a present
+[him] it looks like you gift wrapped a
+snake
+[me] no I didn&#x27;t
+[him] is it hissing?
+[me] don&#x27;t open it from that end">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">ibid</span> <span class="handle-text fs-6 d-block d-md-inline">@87bidi</span></h4>
+            <p>[me] I got you a present<br>[him] it looks like you gift wrapped a<br>snake<br>[me] no I didn&#x27;t<br>[him] is it hissing?<br>[me] don&#x27;t open it from that end</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

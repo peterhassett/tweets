@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in ...">
+    <meta property="og:title" content="When I was in college I saw a fellow student ask m — Peter Raleigh @PetreRaleigh">
+    <meta property="og:image:alt" content="When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in by midnight that night. The professor responded &quot;well, is that enough time?&quot; and I genuinely don&#x27;t think any single moment has ever been more impactful on my own teaching">
+    <meta property="og:description" content="When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in by midnight that night. The professor responded &quot;well, is that enough time?&quot; and I genuinely don&#x27;t think any single moment has ever been more impactful on my own teaching">
+    <meta property="og:image" content="/img/0062.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>When I was in college I saw a fellow student ask m — Peter Raleigh @PetreRaleigh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0062/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0062",
+      "headline": "When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in ",
+      "articleBody": "When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in by midnight that night. The professor responded \"well, is that enough time?\" and I genuinely don't think any single moment has ever been more impactful on my own teaching",
+      "image": "/img/0062.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Peter Raleigh",
+        "alternateName": "PetreRaleigh"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0062.webp" class="img-fluid rounded" alt="When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in by midnight that night. The professor responded &quot;well, is that enough time?&quot; and I genuinely don&#x27;t think any single moment has ever been more impactful on my own teaching">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Peter Raleigh</span> <span class="handle-text fs-6 d-block d-md-inline">@PetreRaleigh</span></h4>
+            <p>When I was in college I saw a fellow student ask my professor for an extension, promising to get his paper in by midnight that night. The professor responded &quot;well, is that enough time?&quot; and I genuinely don&#x27;t think any single moment has ever been more impactful on my own teaching</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

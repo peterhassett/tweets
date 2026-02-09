@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="in 1920 we took children out of the
+coal mines
+in 2020, the most popular video game on the market is minecraft...">
+    <meta property="og:title" content="in 1920 we took children out of the
+coal mines
+in  — patryc dad/daddy is @_patryc_">
+    <meta property="og:image:alt" content="in 1920 we took children out of the
+coal mines
+in 2020, the most popular video game on the market is minecraft.
+the children yearn for the mines">
+    <meta property="og:description" content="in 1920 we took children out of the
+coal mines
+in 2020, the most popular video game on the market is minecraft.
+the children yearn for the mines">
+    <meta property="og:image" content="/img/0720.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>in 1920 we took children out of the
+coal mines
+in  — patryc dad/daddy is @_patryc_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0720/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0720",
+      "headline": "in 1920 we took children out of the\ncoal mines\nin 2020, the most popular video game on the market is minecraft",
+      "articleBody": "in 1920 we took children out of the\ncoal mines\nin 2020, the most popular video game on the market is minecraft.\nthe children yearn for the mines",
+      "image": "/img/0720.webp",
+      "author": {
+        "@type": "Person",
+        "name": "patryc dad/daddy is",
+        "alternateName": "_patryc_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0720.webp" class="img-fluid rounded" alt="in 1920 we took children out of the
+coal mines
+in 2020, the most popular video game on the market is minecraft.
+the children yearn for the mines">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">patryc dad/daddy is</span> <span class="handle-text fs-6 d-block d-md-inline">@_patryc_</span></h4>
+            <p>in 1920 we took children out of the<br>coal mines<br>in 2020, the most popular video game on the market is minecraft.<br>the children yearn for the mines</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

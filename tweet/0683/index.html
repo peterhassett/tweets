@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Fantasy is when it&#x27;s filmed in a forest on the outskirts of Vancouver. Sci-fi is when it&#x27;s filmed in...">
+    <meta property="og:title" content="Fantasy is when it&#x27;s filmed in a forest on the out — zeddy @Zeddary">
+    <meta property="og:image:alt" content="Fantasy is when it&#x27;s filmed in a forest on the outskirts of Vancouver. Sci-fi is when it&#x27;s filmed in a rock quarry on the outskirts of Vancouver.">
+    <meta property="og:description" content="Fantasy is when it&#x27;s filmed in a forest on the outskirts of Vancouver. Sci-fi is when it&#x27;s filmed in a rock quarry on the outskirts of Vancouver.">
+    <meta property="og:image" content="/img/0683.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Fantasy is when it&#x27;s filmed in a forest on the out — zeddy @Zeddary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0683/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0683",
+      "headline": "Fantasy is when it's filmed in a forest on the outskirts of Vancouver. Sci-fi is when it's filmed in a rock qu",
+      "articleBody": "Fantasy is when it's filmed in a forest on the outskirts of Vancouver. Sci-fi is when it's filmed in a rock quarry on the outskirts of Vancouver.",
+      "image": "/img/0683.webp",
+      "author": {
+        "@type": "Person",
+        "name": "zeddy",
+        "alternateName": "Zeddary"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0683.webp" class="img-fluid rounded" alt="Fantasy is when it&#x27;s filmed in a forest on the outskirts of Vancouver. Sci-fi is when it&#x27;s filmed in a rock quarry on the outskirts of Vancouver.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">zeddy</span> <span class="handle-text fs-6 d-block d-md-inline">@Zeddary</span></h4>
+            <p>Fantasy is when it&#x27;s filmed in a forest on the outskirts of Vancouver. Sci-fi is when it&#x27;s filmed in a rock quarry on the outskirts of Vancouver.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

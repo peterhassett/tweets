@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Directly in the middle of a New
+Yorker personal history titled &quot;My Father was Abusive but Loved Me&quot;:...">
+    <meta property="og:title" content="Directly in the middle of a New
+Yorker personal hi — Rajat Suresh @rajat_suresh">
+    <meta property="og:image:alt" content="Directly in the middle of a New
+Yorker personal history titled &quot;My Father was Abusive but Loved Me&quot;:
+*drawing of Paul revere riding on his horse with plastic bag*
+&quot;Your seamless is coming! Your seamless is coming! &quot;">
+    <meta property="og:description" content="Directly in the middle of a New
+Yorker personal history titled &quot;My Father was Abusive but Loved Me&quot;:
+*drawing of Paul revere riding on his horse with plastic bag*
+&quot;Your seamless is coming! Your seamless is coming! &quot;">
+    <meta property="og:image" content="/img/0797.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Directly in the middle of a New
+Yorker personal hi — Rajat Suresh @rajat_suresh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0797/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0797",
+      "headline": "Directly in the middle of a New\nYorker personal history titled \"My Father was Abusive but Loved Me\":\n*drawing ",
+      "articleBody": "Directly in the middle of a New\nYorker personal history titled \"My Father was Abusive but Loved Me\":\n*drawing of Paul revere riding on his horse with plastic bag*\n\"Your seamless is coming! Your seamless is coming! \"",
+      "image": "/img/0797.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Rajat Suresh",
+        "alternateName": "rajat_suresh"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0797.webp" class="img-fluid rounded" alt="Directly in the middle of a New
+Yorker personal history titled &quot;My Father was Abusive but Loved Me&quot;:
+*drawing of Paul revere riding on his horse with plastic bag*
+&quot;Your seamless is coming! Your seamless is coming! &quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Rajat Suresh</span> <span class="handle-text fs-6 d-block d-md-inline">@rajat_suresh</span></h4>
+            <p>Directly in the middle of a New<br>Yorker personal history titled &quot;My Father was Abusive but Loved Me&quot;:<br>*drawing of Paul revere riding on his horse with plastic bag*<br>&quot;Your seamless is coming! Your seamless is coming! &quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

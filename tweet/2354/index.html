@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Food $200
+Data $150
+Rent $800
+Candles $3600
+Utility $150
+Someone who is good at the economy please help me bud...">
+    <meta property="og:title" content="Food $200
+Data $150
+Rent $800
+Candles $3600
+Utilit — Dril @">
+    <meta property="og:image:alt" content="Food $200
+Data $150
+Rent $800
+Candles $3600
+Utility $150
+Someone who is good at the economy please help me budget that’s my family is dying
+
+Craig: spend less on candles
+
+Dril: no">
+    <meta property="og:description" content="Food $200
+Data $150
+Rent $800
+Candles $3600
+Utility $150
+Someone who is good at the economy please help me budget that’s my family is dying
+
+Craig: spend less on candles
+
+Dril: no">
+    <meta property="og:image" content="/img/2354.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Food $200
+Data $150
+Rent $800
+Candles $3600
+Utilit — Dril @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2354/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2354",
+      "headline": "Food $200\nData $150\nRent $800\nCandles $3600\nUtility $150\nSomeone who is good at the economy please help me bud",
+      "articleBody": "Food $200\nData $150\nRent $800\nCandles $3600\nUtility $150\nSomeone who is good at the economy please help me budget that\u2019s my family is dying\n\nCraig: spend less on candles\n\nDril: no",
+      "image": "/img/2354.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dril",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2354.webp" class="img-fluid rounded" alt="Food $200
+Data $150
+Rent $800
+Candles $3600
+Utility $150
+Someone who is good at the economy please help me budget that’s my family is dying
+
+Craig: spend less on candles
+
+Dril: no">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dril</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>Food $200<br>Data $150<br>Rent $800<br>Candles $3600<br>Utility $150<br>Someone who is good at the economy please help me budget that’s my family is dying<br><br>Craig: spend less on candles<br><br>Dril: no</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

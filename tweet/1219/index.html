@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Lamfooo What&#x27;s that mean">
+    <meta property="og:title" content="Lamfooo What&#x27;s that mean — Cher @cher">
+    <meta property="og:image:alt" content="Lamfooo What&#x27;s that mean">
+    <meta property="og:description" content="Lamfooo What&#x27;s that mean">
+    <meta property="og:image" content="/img/1219.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Lamfooo What&#x27;s that mean — Cher @cher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1219/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1219",
+      "headline": "Lamfooo What's that mean",
+      "articleBody": "Lamfooo What's that mean",
+      "image": "/img/1219.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Cher",
+        "alternateName": "cher"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1219.webp" class="img-fluid rounded" alt="Lamfooo What&#x27;s that mean">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Cher</span> <span class="handle-text fs-6 d-block d-md-inline">@cher</span></h4>
+            <p>Lamfooo What&#x27;s that mean</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

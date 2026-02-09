@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[god looking down at the tower of
+babel] y&#x27;all ain&#x27;t ready for that
+conversation">
+    <meta property="og:title" content="[god looking down at the tower of
+babel] y&#x27;all ain — andy s @CIAGoFundMe">
+    <meta property="og:image:alt" content="[god looking down at the tower of
+babel] y&#x27;all ain&#x27;t ready for that
+conversation">
+    <meta property="og:description" content="[god looking down at the tower of
+babel] y&#x27;all ain&#x27;t ready for that
+conversation">
+    <meta property="og:image" content="/img/1938.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[god looking down at the tower of
+babel] y&#x27;all ain — andy s @CIAGoFundMe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1938/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1938",
+      "headline": "[god looking down at the tower of\nbabel] y'all ain't ready for that\nconversation",
+      "articleBody": "[god looking down at the tower of\nbabel] y'all ain't ready for that\nconversation",
+      "image": "/img/1938.webp",
+      "author": {
+        "@type": "Person",
+        "name": "andy s",
+        "alternateName": "CIAGoFundMe"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1938.webp" class="img-fluid rounded" alt="[god looking down at the tower of
+babel] y&#x27;all ain&#x27;t ready for that
+conversation">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">andy s</span> <span class="handle-text fs-6 d-block d-md-inline">@CIAGoFundMe</span></h4>
+            <p>[god looking down at the tower of<br>babel] y&#x27;all ain&#x27;t ready for that<br>conversation</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

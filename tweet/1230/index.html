@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My Tesla got hacked and is doing donuts in my yard, and I can&#x27;t get in because the handles have frozen
+ov...">
+    <meta property="og:title" content="My Tesla got hacked and is doing donuts in my yard — Cody Johnston ❤ @drmistercody">
+    <meta property="og:image:alt" content="My Tesla got hacked and is doing donuts in my yard, and I can&#x27;t get in because the handles have frozen
+over. It is blaring La Bamba at 3am and the tires have started to melt. To
+be clear, this is my fault. I have no issue with Tesla.">
+    <meta property="og:description" content="My Tesla got hacked and is doing donuts in my yard, and I can&#x27;t get in because the handles have frozen
+over. It is blaring La Bamba at 3am and the tires have started to melt. To
+be clear, this is my fault. I have no issue with Tesla.">
+    <meta property="og:image" content="/img/1230.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>My Tesla got hacked and is doing donuts in my yard — Cody Johnston ❤ @drmistercody</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1230/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1230",
+      "headline": "My Tesla got hacked and is doing donuts in my yard, and I can't get in because the handles have frozen\nover. I",
+      "articleBody": "My Tesla got hacked and is doing donuts in my yard, and I can't get in because the handles have frozen\nover. It is blaring La Bamba at 3am and the tires have started to melt. To\nbe clear, this is my fault. I have no issue with Tesla.",
+      "image": "/img/1230.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Cody Johnston \u2764",
+        "alternateName": "drmistercody"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1230.webp" class="img-fluid rounded" alt="My Tesla got hacked and is doing donuts in my yard, and I can&#x27;t get in because the handles have frozen
+over. It is blaring La Bamba at 3am and the tires have started to melt. To
+be clear, this is my fault. I have no issue with Tesla.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Cody Johnston ❤</span> <span class="handle-text fs-6 d-block d-md-inline">@drmistercody</span></h4>
+            <p>My Tesla got hacked and is doing donuts in my yard, and I can&#x27;t get in because the handles have frozen<br>over. It is blaring La Bamba at 3am and the tires have started to melt. To<br>be clear, this is my fault. I have no issue with Tesla.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

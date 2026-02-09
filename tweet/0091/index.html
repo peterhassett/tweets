@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jag...">
+    <meta property="og:title" content="Harry Styles thinks of himself as being next in th — my life is a living hell. every minute i... ▾ @on_da_spectrum">
+    <meta property="og:image:alt" content="Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jagger/Elton John type figure, but he just doesn&#x27;t have *it*. He doesn&#x27;t have the singles, and he certainly doesn&#x27;t have the albums. And also he doesn&#x27;t have sex with men">
+    <meta property="og:description" content="Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jagger/Elton John type figure, but he just doesn&#x27;t have *it*. He doesn&#x27;t have the singles, and he certainly doesn&#x27;t have the albums. And also he doesn&#x27;t have sex with men">
+    <meta property="og:image" content="/img/0091.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Harry Styles thinks of himself as being next in th — my life is a living hell. every minute i... ▾ @on_da_spectrum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0091/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0091",
+      "headline": "Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jag",
+      "articleBody": "Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jagger/Elton John type figure, but he just doesn't have *it*. He doesn't have the singles, and he certainly doesn't have the albums. And also he doesn't have sex with men",
+      "image": "/img/0091.webp",
+      "author": {
+        "@type": "Person",
+        "name": "my life is a living hell. every minute i... \u25be",
+        "alternateName": "on_da_spectrum"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0091.webp" class="img-fluid rounded" alt="Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jagger/Elton John type figure, but he just doesn&#x27;t have *it*. He doesn&#x27;t have the singles, and he certainly doesn&#x27;t have the albums. And also he doesn&#x27;t have sex with men">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">my life is a living hell. every minute i... ▾</span> <span class="handle-text fs-6 d-block d-md-inline">@on_da_spectrum</span></h4>
+            <p>Harry Styles thinks of himself as being next in the lineage of great British pop stars, a David Bowie/Mick Jagger/Elton John type figure, but he just doesn&#x27;t have *it*. He doesn&#x27;t have the singles, and he certainly doesn&#x27;t have the albums. And also he doesn&#x27;t have sex with men</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

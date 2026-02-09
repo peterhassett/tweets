@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Jaws is a timeless masterpiece because it&#x27;s premised on a raw, primal truth: the four types of guy are co...">
+    <meta property="og:title" content="Jaws is a timeless masterpiece because it&#x27;s premis — &amp;quot;Lice survivor.&amp;quot; in bio @alexqarbuckle">
+    <meta property="og:image:alt" content="Jaws is a timeless masterpiece because it&#x27;s premised on a raw, primal truth: the four types of guy are cop, scientist, fisherman, and mayor.">
+    <meta property="og:description" content="Jaws is a timeless masterpiece because it&#x27;s premised on a raw, primal truth: the four types of guy are cop, scientist, fisherman, and mayor.">
+    <meta property="og:image" content="/img/1225.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Jaws is a timeless masterpiece because it&#x27;s premis — &amp;quot;Lice survivor.&amp;quot; in bio @alexqarbuckle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1225/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1225",
+      "headline": "Jaws is a timeless masterpiece because it's premised on a raw, primal truth: the four types of guy are cop, sc",
+      "articleBody": "Jaws is a timeless masterpiece because it's premised on a raw, primal truth: the four types of guy are cop, scientist, fisherman, and mayor.",
+      "image": "/img/1225.webp",
+      "author": {
+        "@type": "Person",
+        "name": "&quot;Lice survivor.&quot; in bio",
+        "alternateName": "alexqarbuckle"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1225.webp" class="img-fluid rounded" alt="Jaws is a timeless masterpiece because it&#x27;s premised on a raw, primal truth: the four types of guy are cop, scientist, fisherman, and mayor.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">&amp;quot;Lice survivor.&amp;quot; in bio</span> <span class="handle-text fs-6 d-block d-md-inline">@alexqarbuckle</span></h4>
+            <p>Jaws is a timeless masterpiece because it&#x27;s premised on a raw, primal truth: the four types of guy are cop, scientist, fisherman, and mayor.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

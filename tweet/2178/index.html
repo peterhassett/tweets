@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies ...">
+    <meta property="og:title" content="jordan peele got a seventy million opening out of  — Jingleghost @JeremyMonjo">
+    <meta property="og:image:alt" content="jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies could make if they featured characters people already know, like Gambit or the Fantastic Four">
+    <meta property="og:description" content="jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies could make if they featured characters people already know, like Gambit or the Fantastic Four">
+    <meta property="og:image" content="/img/2178.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>jordan peele got a seventy million opening out of  — Jingleghost @JeremyMonjo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2178/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2178",
+      "headline": "jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies ",
+      "articleBody": "jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies could make if they featured characters people already know, like Gambit or the Fantastic Four",
+      "image": "/img/2178.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jingleghost",
+        "alternateName": "JeremyMonjo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2178.webp" class="img-fluid rounded" alt="jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies could make if they featured characters people already know, like Gambit or the Fantastic Four">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jingleghost</span> <span class="handle-text fs-6 d-block d-md-inline">@JeremyMonjo</span></h4>
+            <p>jordan peele got a seventy million opening out of an original idea.... wow. imagine how much money his movies could make if they featured characters people already know, like Gambit or the Fantastic Four</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

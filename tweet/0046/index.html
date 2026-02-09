@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, i...">
+    <meta property="og:title" content="alright everybody stand up for this person to sing — slate @pleasebegneiss.bsky.social">
+    <meta property="og:image:alt" content="alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, if they fuck up it will haunt them forever. then we&#x27;ll play some baseball">
+    <meta property="og:description" content="alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, if they fuck up it will haunt them forever. then we&#x27;ll play some baseball">
+    <meta property="og:image" content="/img/0046.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>alright everybody stand up for this person to sing — slate @pleasebegneiss.bsky.social</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0046/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0046",
+      "headline": "alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, i",
+      "articleBody": "alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, if they fuck up it will haunt them forever. then we'll play some baseball",
+      "image": "/img/0046.webp",
+      "author": {
+        "@type": "Person",
+        "name": "slate",
+        "alternateName": "pleasebegneiss.bsky.social"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0046.webp" class="img-fluid rounded" alt="alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, if they fuck up it will haunt them forever. then we&#x27;ll play some baseball">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">slate</span> <span class="handle-text fs-6 d-block d-md-inline">@pleasebegneiss.bsky.social</span></h4>
+            <p>alright everybody stand up for this person to sing a really hard song about the war of 1812 solo a cappella, if they fuck up it will haunt them forever. then we&#x27;ll play some baseball</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

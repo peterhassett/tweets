@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="me: so this is twitter, and these are all
+the people who follow me
+dad: and they like you?
+me: haha oh goodnes...">
+    <meta property="og:title" content="me: so this is twitter, and these are all
+the peop — Here to make friends @InternetHippo">
+    <meta property="og:image:alt" content="me: so this is twitter, and these are all
+the people who follow me
+dad: and they like you?
+me: haha oh goodness no">
+    <meta property="og:description" content="me: so this is twitter, and these are all
+the people who follow me
+dad: and they like you?
+me: haha oh goodness no">
+    <meta property="og:image" content="/img/2034.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>me: so this is twitter, and these are all
+the peop — Here to make friends @InternetHippo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2034/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2034",
+      "headline": "me: so this is twitter, and these are all\nthe people who follow me\ndad: and they like you?\nme: haha oh goodnes",
+      "articleBody": "me: so this is twitter, and these are all\nthe people who follow me\ndad: and they like you?\nme: haha oh goodness no",
+      "image": "/img/2034.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Here to make friends",
+        "alternateName": "InternetHippo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2034.webp" class="img-fluid rounded" alt="me: so this is twitter, and these are all
+the people who follow me
+dad: and they like you?
+me: haha oh goodness no">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Here to make friends</span> <span class="handle-text fs-6 d-block d-md-inline">@InternetHippo</span></h4>
+            <p>me: so this is twitter, and these are all<br>the people who follow me<br>dad: and they like you?<br>me: haha oh goodness no</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

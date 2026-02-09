@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="James Cameron: We need a name for Avatar 2, I&#x27;m thinking The Way of Water
+Me, scratching out &quot;Wet Av...">
+    <meta property="og:title" content="James Cameron: We need a name for Avatar 2, I&#x27;m th — Ron Iver @ronnui_">
+    <meta property="og:image:alt" content="James Cameron: We need a name for Avatar 2, I&#x27;m thinking The Way of Water
+Me, scratching out &quot;Wet Avatar&quot;: Yeah that&#x27;s really good, I didn&#x27;t have anything.">
+    <meta property="og:description" content="James Cameron: We need a name for Avatar 2, I&#x27;m thinking The Way of Water
+Me, scratching out &quot;Wet Avatar&quot;: Yeah that&#x27;s really good, I didn&#x27;t have anything.">
+    <meta property="og:image" content="/img/0409.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>James Cameron: We need a name for Avatar 2, I&#x27;m th — Ron Iver @ronnui_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0409/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0409",
+      "headline": "James Cameron: We need a name for Avatar 2, I'm thinking The Way of Water\nMe, scratching out \"Wet Avatar\": Yea",
+      "articleBody": "James Cameron: We need a name for Avatar 2, I'm thinking The Way of Water\nMe, scratching out \"Wet Avatar\": Yeah that's really good, I didn't have anything.",
+      "image": "/img/0409.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ron Iver",
+        "alternateName": "ronnui_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0409.webp" class="img-fluid rounded" alt="James Cameron: We need a name for Avatar 2, I&#x27;m thinking The Way of Water
+Me, scratching out &quot;Wet Avatar&quot;: Yeah that&#x27;s really good, I didn&#x27;t have anything.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ron Iver</span> <span class="handle-text fs-6 d-block d-md-inline">@ronnui_</span></h4>
+            <p>James Cameron: We need a name for Avatar 2, I&#x27;m thinking The Way of Water<br>Me, scratching out &quot;Wet Avatar&quot;: Yeah that&#x27;s really good, I didn&#x27;t have anything.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

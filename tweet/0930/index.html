@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Pitbulls are so funny bc someone really walked in like &quot;i would like the most dense fucking dog you can p...">
+    <meta property="og:title" content="Pitbulls are so funny bc someone really walked in  — giant sized baby thing @tentinybees">
+    <meta property="og:image:alt" content="Pitbulls are so funny bc someone really walked in like &quot;i would like the most dense fucking dog you can possibly manufacture. I&#x27;m talking 2x the amount of dog you can condense in the space of one dog. A neutron star of a dog. Compress that motherfucker. Make it stupid also.&quot;">
+    <meta property="og:description" content="Pitbulls are so funny bc someone really walked in like &quot;i would like the most dense fucking dog you can possibly manufacture. I&#x27;m talking 2x the amount of dog you can condense in the space of one dog. A neutron star of a dog. Compress that motherfucker. Make it stupid also.&quot;">
+    <meta property="og:image" content="/img/0930.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Pitbulls are so funny bc someone really walked in  — giant sized baby thing @tentinybees</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0930/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0930",
+      "headline": "Pitbulls are so funny bc someone really walked in like \"i would like the most dense fucking dog you can possib",
+      "articleBody": "Pitbulls are so funny bc someone really walked in like \"i would like the most dense fucking dog you can possibly manufacture. I'm talking 2x the amount of dog you can condense in the space of one dog. A neutron star of a dog. Compress that motherfucker. Make it stupid also.\"",
+      "image": "/img/0930.webp",
+      "author": {
+        "@type": "Person",
+        "name": "giant sized baby thing",
+        "alternateName": "tentinybees"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0930.webp" class="img-fluid rounded" alt="Pitbulls are so funny bc someone really walked in like &quot;i would like the most dense fucking dog you can possibly manufacture. I&#x27;m talking 2x the amount of dog you can condense in the space of one dog. A neutron star of a dog. Compress that motherfucker. Make it stupid also.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">giant sized baby thing</span> <span class="handle-text fs-6 d-block d-md-inline">@tentinybees</span></h4>
+            <p>Pitbulls are so funny bc someone really walked in like &quot;i would like the most dense fucking dog you can possibly manufacture. I&#x27;m talking 2x the amount of dog you can condense in the space of one dog. A neutron star of a dog. Compress that motherfucker. Make it stupid also.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

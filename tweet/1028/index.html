@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him...">
+    <meta property="og:title" content="jordan peterson: that Tasmanian beast means a whol — Andrew Durso @andrew_durso">
+    <meta property="og:image:alt" content="jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him and Bugs, and you dress them up in those baggy shorts, with the backwards hat and the hip hop sneakers? The degree of chaos *starts crying* that introduces">
+    <meta property="og:description" content="jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him and Bugs, and you dress them up in those baggy shorts, with the backwards hat and the hip hop sneakers? The degree of chaos *starts crying* that introduces">
+    <meta property="og:image" content="/img/1028.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>jordan peterson: that Tasmanian beast means a whol — Andrew Durso @andrew_durso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1028/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1028",
+      "headline": "jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him",
+      "articleBody": "jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him and Bugs, and you dress them up in those baggy shorts, with the backwards hat and the hip hop sneakers? The degree of chaos *starts crying* that introduces",
+      "image": "/img/1028.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Andrew Durso",
+        "alternateName": "andrew_durso"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1028.webp" class="img-fluid rounded" alt="jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him and Bugs, and you dress them up in those baggy shorts, with the backwards hat and the hip hop sneakers? The degree of chaos *starts crying* that introduces">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Andrew Durso</span> <span class="handle-text fs-6 d-block d-md-inline">@andrew_durso</span></h4>
+            <p>jordan peterson: that Tasmanian beast means a whole bloody lot to a whole lot of people. And when you take him and Bugs, and you dress them up in those baggy shorts, with the backwards hat and the hip hop sneakers? The degree of chaos *starts crying* that introduces</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

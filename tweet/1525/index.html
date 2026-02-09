@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it would...">
+    <meta property="og:title" content="this may be controversial to some of you, but rata — ryan @_yeatez">
+    <meta property="og:image:alt" content="this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it wouldn&#x27;t even be close
+
+
+
+ryan @_yeatez. 2d
+just to clear the air on this: yes his name is remy, but his chef name
+(presumably) is ratatouille. please show some professional courtesy">
+    <meta property="og:description" content="this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it wouldn&#x27;t even be close
+
+
+
+ryan @_yeatez. 2d
+just to clear the air on this: yes his name is remy, but his chef name
+(presumably) is ratatouille. please show some professional courtesy">
+    <meta property="og:image" content="/img/1525.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>this may be controversial to some of you, but rata — ryan @_yeatez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1525/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1525",
+      "headline": "this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it would",
+      "articleBody": "this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it wouldn't even be close\n\n\n\nryan @_yeatez. 2d\njust to clear the air on this: yes his name is remy, but his chef name\n(presumably) is ratatouille. please show some professional courtesy",
+      "image": "/img/1525.webp",
+      "author": {
+        "@type": "Person",
+        "name": "ryan",
+        "alternateName": "_yeatez"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1525.webp" class="img-fluid rounded" alt="this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it wouldn&#x27;t even be close
+
+
+
+ryan @_yeatez. 2d
+just to clear the air on this: yes his name is remy, but his chef name
+(presumably) is ratatouille. please show some professional courtesy">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">ryan</span> <span class="handle-text fs-6 d-block d-md-inline">@_yeatez</span></h4>
+            <p>this may be controversial to some of you, but ratatouille would demolish stuart little in a fight and it wouldn&#x27;t even be close<br><br><br><br>ryan @_yeatez. 2d<br>just to clear the air on this: yes his name is remy, but his chef name<br>(presumably) is ratatouille. please show some professional courtesy</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, whi...">
+    <meta property="og:title" content="Finding a lever in the back of my closet. Little d — senior vice president of jerks @rajandelman">
+    <meta property="og:image:alt" content="Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, which are secretly just dormant slingshots. My finger reaches toward the handle. Somewhere, a man sips a margarita, unaware that he&#x27;ll soon be above the gulls. A sunblot">
+    <meta property="og:description" content="Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, which are secretly just dormant slingshots. My finger reaches toward the handle. Somewhere, a man sips a margarita, unaware that he&#x27;ll soon be above the gulls. A sunblot">
+    <meta property="og:image" content="/img/1829.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Finding a lever in the back of my closet. Little d — senior vice president of jerks @rajandelman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1829/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1829",
+      "headline": "Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, whi",
+      "articleBody": "Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, which are secretly just dormant slingshots. My finger reaches toward the handle. Somewhere, a man sips a margarita, unaware that he'll soon be above the gulls. A sunblot",
+      "image": "/img/1829.webp",
+      "author": {
+        "@type": "Person",
+        "name": "senior vice president of jerks",
+        "alternateName": "rajandelman"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1829.webp" class="img-fluid rounded" alt="Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, which are secretly just dormant slingshots. My finger reaches toward the handle. Somewhere, a man sips a margarita, unaware that he&#x27;ll soon be above the gulls. A sunblot">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">senior vice president of jerks</span> <span class="handle-text fs-6 d-block d-md-inline">@rajandelman</span></h4>
+            <p>Finding a lever in the back of my closet. Little do I know it will activate all the hammocks in the world, which are secretly just dormant slingshots. My finger reaches toward the handle. Somewhere, a man sips a margarita, unaware that he&#x27;ll soon be above the gulls. A sunblot</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

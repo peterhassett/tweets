@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 
+guns n&#x27; roses only criteria for calling a place &quot;paradise:&quot;
+1) women are attractive
+2) grass...">
+    <meta property="og:title" content=". 
+guns n&#x27; roses only criteria for calling a place — soul nate @MNateShyamalan">
+    <meta property="og:image:alt" content=". 
+guns n&#x27; roses only criteria for calling a place &quot;paradise:&quot;
+1) women are attractive
+2) grass normal color">
+    <meta property="og:description" content=". 
+guns n&#x27; roses only criteria for calling a place &quot;paradise:&quot;
+1) women are attractive
+2) grass normal color">
+    <meta property="og:image" content="/img/0231.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 
+guns n&#x27; roses only criteria for calling a place — soul nate @MNateShyamalan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0231/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0231",
+      "headline": ". \nguns n' roses only criteria for calling a place \"paradise:\"\n1) women are attractive\n2) grass normal color",
+      "articleBody": ". \nguns n' roses only criteria for calling a place \"paradise:\"\n1) women are attractive\n2) grass normal color",
+      "image": "/img/0231.webp",
+      "author": {
+        "@type": "Person",
+        "name": "soul nate",
+        "alternateName": "MNateShyamalan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0231.webp" class="img-fluid rounded" alt=". 
+guns n&#x27; roses only criteria for calling a place &quot;paradise:&quot;
+1) women are attractive
+2) grass normal color">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">soul nate</span> <span class="handle-text fs-6 d-block d-md-inline">@MNateShyamalan</span></h4>
+            <p>. <br>guns n&#x27; roses only criteria for calling a place &quot;paradise:&quot;<br>1) women are attractive<br>2) grass normal color</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

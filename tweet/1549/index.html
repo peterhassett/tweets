@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="have often bragged that I&#x27;m immune to poison ivy after getting a really bad case of it years back. Two da...">
+    <meta property="og:title" content="have often bragged that I&#x27;m immune to poison ivy a — Matt Walsh @MattWalshBlog">
+    <meta property="og:image:alt" content="have often bragged that I&#x27;m immune to poison ivy after getting a really bad case of it years back. Two days ago I walked fearlessly through a patch of it because I&#x27;m immune. It turns out I&#x27;m not immune.
+
+
+
+Matt Walsh
+@MattWalshBlog
+Is immunity to poison ivy even a thing? Why didn&#x27;t anyone ever correct me? Has everyone just been playing along waiting for this moment? If that&#x27;s the case, well played.">
+    <meta property="og:description" content="have often bragged that I&#x27;m immune to poison ivy after getting a really bad case of it years back. Two days ago I walked fearlessly through a patch of it because I&#x27;m immune. It turns out I&#x27;m not immune.
+
+
+
+Matt Walsh
+@MattWalshBlog
+Is immunity to poison ivy even a thing? Why didn&#x27;t anyone ever correct me? Has everyone just been playing along waiting for this moment? If that&#x27;s the case, well played.">
+    <meta property="og:image" content="/img/1549.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>have often bragged that I&#x27;m immune to poison ivy a — Matt Walsh @MattWalshBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1549/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1549",
+      "headline": "have often bragged that I'm immune to poison ivy after getting a really bad case of it years back. Two days ag",
+      "articleBody": "have often bragged that I'm immune to poison ivy after getting a really bad case of it years back. Two days ago I walked fearlessly through a patch of it because I'm immune. It turns out I'm not immune.\n\n\n\nMatt Walsh\n@MattWalshBlog\nIs immunity to poison ivy even a thing? Why didn't anyone ever correct me? Has everyone just been playing along waiting for this moment? If that's the case, well played.",
+      "image": "/img/1549.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Matt Walsh",
+        "alternateName": "MattWalshBlog"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1549.webp" class="img-fluid rounded" alt="have often bragged that I&#x27;m immune to poison ivy after getting a really bad case of it years back. Two days ago I walked fearlessly through a patch of it because I&#x27;m immune. It turns out I&#x27;m not immune.
+
+
+
+Matt Walsh
+@MattWalshBlog
+Is immunity to poison ivy even a thing? Why didn&#x27;t anyone ever correct me? Has everyone just been playing along waiting for this moment? If that&#x27;s the case, well played.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Matt Walsh</span> <span class="handle-text fs-6 d-block d-md-inline">@MattWalshBlog</span></h4>
+            <p>have often bragged that I&#x27;m immune to poison ivy after getting a really bad case of it years back. Two days ago I walked fearlessly through a patch of it because I&#x27;m immune. It turns out I&#x27;m not immune.<br><br><br><br>Matt Walsh<br>@MattWalshBlog<br>Is immunity to poison ivy even a thing? Why didn&#x27;t anyone ever correct me? Has everyone just been playing along waiting for this moment? If that&#x27;s the case, well played.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

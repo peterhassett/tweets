@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="being on Twitter right now is like
+playing the violin on the titanic
+except we are also making fun of the
+iceb...">
+    <meta property="og:title" content="being on Twitter right now is like
+playing the vio — Lauren Dombrowski @callmekitto">
+    <meta property="og:image:alt" content="being on Twitter right now is like
+playing the violin on the titanic
+except we are also making fun of the
+iceberg and the iceberg is getting genuinely mad">
+    <meta property="og:description" content="being on Twitter right now is like
+playing the violin on the titanic
+except we are also making fun of the
+iceberg and the iceberg is getting genuinely mad">
+    <meta property="og:image" content="/img/0523.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>being on Twitter right now is like
+playing the vio — Lauren Dombrowski @callmekitto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0523/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0523",
+      "headline": "being on Twitter right now is like\nplaying the violin on the titanic\nexcept we are also making fun of the\niceb",
+      "articleBody": "being on Twitter right now is like\nplaying the violin on the titanic\nexcept we are also making fun of the\niceberg and the iceberg is getting genuinely mad",
+      "image": "/img/0523.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Lauren Dombrowski",
+        "alternateName": "callmekitto"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0523.webp" class="img-fluid rounded" alt="being on Twitter right now is like
+playing the violin on the titanic
+except we are also making fun of the
+iceberg and the iceberg is getting genuinely mad">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Lauren Dombrowski</span> <span class="handle-text fs-6 d-block d-md-inline">@callmekitto</span></h4>
+            <p>being on Twitter right now is like<br>playing the violin on the titanic<br>except we are also making fun of the<br>iceberg and the iceberg is getting genuinely mad</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

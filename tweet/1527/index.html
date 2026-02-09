@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that this is how you summon
+him)
+
+
+
+Tom Arnold @Tom Arnold 6/13/21 T...">
+    <meta property="og:title" content="Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that thi — Phyllis Magnetbox @Weird">
+    <meta property="og:image:alt" content="Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that this is how you summon
+him)
+
+
+
+Tom Arnold @Tom Arnold 6/13/21 That&#x27;s Beetlejuice dumb ass
+
+
+
+The Ugly One, Still Zailing
+@rathlufolek
+Why did it work then">
+    <meta property="og:description" content="Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that this is how you summon
+him)
+
+
+
+Tom Arnold @Tom Arnold 6/13/21 That&#x27;s Beetlejuice dumb ass
+
+
+
+The Ugly One, Still Zailing
+@rathlufolek
+Why did it work then">
+    <meta property="og:image" content="/img/1527.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that thi — Phyllis Magnetbox @Weird</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1527/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1527",
+      "headline": "Tom Arnold\nTom Arnold\nTom Arnold\n(I heard that this is how you summon\nhim)\n\n\n\nTom Arnold @Tom Arnold 6/13/21 T",
+      "articleBody": "Tom Arnold\nTom Arnold\nTom Arnold\n(I heard that this is how you summon\nhim)\n\n\n\nTom Arnold @Tom Arnold 6/13/21 That's Beetlejuice dumb ass\n\n\n\nThe Ugly One, Still Zailing\n@rathlufolek\nWhy did it work then",
+      "image": "/img/1527.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Phyllis Magnetbox",
+        "alternateName": "Weird"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1527.webp" class="img-fluid rounded" alt="Tom Arnold
+Tom Arnold
+Tom Arnold
+(I heard that this is how you summon
+him)
+
+
+
+Tom Arnold @Tom Arnold 6/13/21 That&#x27;s Beetlejuice dumb ass
+
+
+
+The Ugly One, Still Zailing
+@rathlufolek
+Why did it work then">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Phyllis Magnetbox</span> <span class="handle-text fs-6 d-block d-md-inline">@Weird</span></h4>
+            <p>Tom Arnold<br>Tom Arnold<br>Tom Arnold<br>(I heard that this is how you summon<br>him)<br><br><br><br>Tom Arnold @Tom Arnold 6/13/21 That&#x27;s Beetlejuice dumb ass<br><br><br><br>The Ugly One, Still Zailing<br>@rathlufolek<br>Why did it work then</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

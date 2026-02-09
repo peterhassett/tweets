@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="i told the doctor he is nothing to me
+and he said i am just a scurvy diagnosis to him">
+    <meta property="og:title" content="i told the doctor he is nothing to me
+and he said  — jody @wnbagirlfriend">
+    <meta property="og:image:alt" content="i told the doctor he is nothing to me
+and he said i am just a scurvy diagnosis to him">
+    <meta property="og:description" content="i told the doctor he is nothing to me
+and he said i am just a scurvy diagnosis to him">
+    <meta property="og:image" content="/img/0771.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>i told the doctor he is nothing to me
+and he said  — jody @wnbagirlfriend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0771/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0771",
+      "headline": "i told the doctor he is nothing to me\nand he said i am just a scurvy diagnosis to him",
+      "articleBody": "i told the doctor he is nothing to me\nand he said i am just a scurvy diagnosis to him",
+      "image": "/img/0771.webp",
+      "author": {
+        "@type": "Person",
+        "name": "jody",
+        "alternateName": "wnbagirlfriend"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0771.webp" class="img-fluid rounded" alt="i told the doctor he is nothing to me
+and he said i am just a scurvy diagnosis to him">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">jody</span> <span class="handle-text fs-6 d-block d-md-inline">@wnbagirlfriend</span></h4>
+            <p>i told the doctor he is nothing to me<br>and he said i am just a scurvy diagnosis to him</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

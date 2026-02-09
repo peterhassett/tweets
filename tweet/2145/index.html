@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="The Democratic Party defended
+slavery, started the civil war, and founded the KKK. But you&#x27;ll
+never hear ...">
+    <meta property="og:title" content="The Democratic Party defended
+slavery, started the — Baked AlaskaTMM @bakedalaska">
+    <meta property="og:image:alt" content="The Democratic Party defended
+slavery, started the civil war, and founded the KKK. But you&#x27;ll
+never hear that in a history class.
+
+
+KRANG NELSON @Kr...
+lol you absolutely learn that in
+8m
+history class
+
+
+Baked AlaskaTMM @bakedalaska
+Replying to @KrangTNelson
+I was home schooled and it was
+not taught">
+    <meta property="og:description" content="The Democratic Party defended
+slavery, started the civil war, and founded the KKK. But you&#x27;ll
+never hear that in a history class.
+
+
+KRANG NELSON @Kr...
+lol you absolutely learn that in
+8m
+history class
+
+
+Baked AlaskaTMM @bakedalaska
+Replying to @KrangTNelson
+I was home schooled and it was
+not taught">
+    <meta property="og:image" content="/img/2145.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>The Democratic Party defended
+slavery, started the — Baked AlaskaTMM @bakedalaska</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2145/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2145",
+      "headline": "The Democratic Party defended\nslavery, started the civil war, and founded the KKK. But you'll\nnever hear that ",
+      "articleBody": "The Democratic Party defended\nslavery, started the civil war, and founded the KKK. But you'll\nnever hear that in a history class.\n\n\nKRANG NELSON @Kr...\nlol you absolutely learn that in\n8m\nhistory class\n\n\nBaked AlaskaTMM @bakedalaska\nReplying to @KrangTNelson\nI was home schooled and it was\nnot taught",
+      "image": "/img/2145.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Baked AlaskaTMM",
+        "alternateName": "bakedalaska"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2145.webp" class="img-fluid rounded" alt="The Democratic Party defended
+slavery, started the civil war, and founded the KKK. But you&#x27;ll
+never hear that in a history class.
+
+
+KRANG NELSON @Kr...
+lol you absolutely learn that in
+8m
+history class
+
+
+Baked AlaskaTMM @bakedalaska
+Replying to @KrangTNelson
+I was home schooled and it was
+not taught">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Baked AlaskaTMM</span> <span class="handle-text fs-6 d-block d-md-inline">@bakedalaska</span></h4>
+            <p>The Democratic Party defended<br>slavery, started the civil war, and founded the KKK. But you&#x27;ll<br>never hear that in a history class.<br><br><br>KRANG NELSON @Kr...<br>lol you absolutely learn that in<br>8m<br>history class<br><br><br>Baked AlaskaTMM @bakedalaska<br>Replying to @KrangTNelson<br>I was home schooled and it was<br>not taught</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

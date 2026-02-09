@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="... . 1d
+Can you imagine today&#x27;s youth storming the beaches of Normandy?
+
+
+Hot Take Appreciator @IHateN.....">
+    <meta property="og:title" content="... . 1d
+Can you imagine today&#x27;s youth storming th — Michele Jeanne @MicheleJean">
+    <meta property="og:image:alt" content="... . 1d
+Can you imagine today&#x27;s youth storming the beaches of Normandy?
+
+
+Hot Take Appreciator @IHateN... ·7h I can&#x27;t imagine today&#x27;s boomers doing it, all y&#x27;all do is buy commemorative Trump teddy bears &amp; post &quot;how to open PDF&quot; as a facebook status
+
+
+Michele Jeanne @MicheleJe... . 37m Ever hear of the Vietnam war?
+
+
+Matt
+@matttomic
+no, who won">
+    <meta property="og:description" content="... . 1d
+Can you imagine today&#x27;s youth storming the beaches of Normandy?
+
+
+Hot Take Appreciator @IHateN... ·7h I can&#x27;t imagine today&#x27;s boomers doing it, all y&#x27;all do is buy commemorative Trump teddy bears &amp; post &quot;how to open PDF&quot; as a facebook status
+
+
+Michele Jeanne @MicheleJe... . 37m Ever hear of the Vietnam war?
+
+
+Matt
+@matttomic
+no, who won">
+    <meta property="og:image" content="/img/1619.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>... . 1d
+Can you imagine today&#x27;s youth storming th — Michele Jeanne @MicheleJean</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1619/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1619",
+      "headline": "... . 1d\nCan you imagine today's youth storming the beaches of Normandy?\n\n\nHot Take Appreciator @IHateN... \u00b77h",
+      "articleBody": "... . 1d\nCan you imagine today's youth storming the beaches of Normandy?\n\n\nHot Take Appreciator @IHateN... \u00b77h I can't imagine today's boomers doing it, all y'all do is buy commemorative Trump teddy bears & post \"how to open PDF\" as a facebook status\n\n\nMichele Jeanne @MicheleJe... . 37m Ever hear of the Vietnam war?\n\n\nMatt\n@matttomic\nno, who won",
+      "image": "/img/1619.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Michele Jeanne",
+        "alternateName": "MicheleJean"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1619.webp" class="img-fluid rounded" alt="... . 1d
+Can you imagine today&#x27;s youth storming the beaches of Normandy?
+
+
+Hot Take Appreciator @IHateN... ·7h I can&#x27;t imagine today&#x27;s boomers doing it, all y&#x27;all do is buy commemorative Trump teddy bears &amp; post &quot;how to open PDF&quot; as a facebook status
+
+
+Michele Jeanne @MicheleJe... . 37m Ever hear of the Vietnam war?
+
+
+Matt
+@matttomic
+no, who won">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Michele Jeanne</span> <span class="handle-text fs-6 d-block d-md-inline">@MicheleJean</span></h4>
+            <p>... . 1d<br>Can you imagine today&#x27;s youth storming the beaches of Normandy?<br><br><br>Hot Take Appreciator @IHateN... ·7h I can&#x27;t imagine today&#x27;s boomers doing it, all y&#x27;all do is buy commemorative Trump teddy bears &amp; post &quot;how to open PDF&quot; as a facebook status<br><br><br>Michele Jeanne @MicheleJe... . 37m Ever hear of the Vietnam war?<br><br><br>Matt<br>@matttomic<br>no, who won</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

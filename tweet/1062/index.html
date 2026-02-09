@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="When I play a song on repeat for
+hours at a very high volume, I&#x27;m paying homage to Chungking Express">
+    <meta property="og:title" content="When I play a song on repeat for
+hours at a very h — chingy &amp;quot;feet takeshi&amp;quot; nea @TheGayChingy">
+    <meta property="og:image:alt" content="When I play a song on repeat for
+hours at a very high volume, I&#x27;m paying homage to Chungking Express">
+    <meta property="og:description" content="When I play a song on repeat for
+hours at a very high volume, I&#x27;m paying homage to Chungking Express">
+    <meta property="og:image" content="/img/1062.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>When I play a song on repeat for
+hours at a very h — chingy &amp;quot;feet takeshi&amp;quot; nea @TheGayChingy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1062/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1062",
+      "headline": "When I play a song on repeat for\nhours at a very high volume, I'm paying homage to Chungking Express",
+      "articleBody": "When I play a song on repeat for\nhours at a very high volume, I'm paying homage to Chungking Express",
+      "image": "/img/1062.webp",
+      "author": {
+        "@type": "Person",
+        "name": "chingy &quot;feet takeshi&quot; nea",
+        "alternateName": "TheGayChingy"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1062.webp" class="img-fluid rounded" alt="When I play a song on repeat for
+hours at a very high volume, I&#x27;m paying homage to Chungking Express">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">chingy &amp;quot;feet takeshi&amp;quot; nea</span> <span class="handle-text fs-6 d-block d-md-inline">@TheGayChingy</span></h4>
+            <p>When I play a song on repeat for<br>hours at a very high volume, I&#x27;m paying homage to Chungking Express</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

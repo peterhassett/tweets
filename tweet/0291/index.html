@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="If he doesn&#x27;t love the ocean thats a the sea is the strongest woman of all and it should be every man&#x2...">
+    <meta property="og:title" content="If he doesn&#x27;t love the ocean thats a the sea is th — ΑΙ @SweatieAngle">
+    <meta property="og:image:alt" content="If he doesn&#x27;t love the ocean thats a the sea is the strongest woman of all and it should be every man&#x27;s mistress">
+    <meta property="og:description" content="If he doesn&#x27;t love the ocean thats a the sea is the strongest woman of all and it should be every man&#x27;s mistress">
+    <meta property="og:image" content="/img/0291.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>If he doesn&#x27;t love the ocean thats a the sea is th — ΑΙ @SweatieAngle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0291/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0291",
+      "headline": "If he doesn't love the ocean thats a the sea is the strongest woman of all and it should be every man's mistre",
+      "articleBody": "If he doesn't love the ocean thats a the sea is the strongest woman of all and it should be every man's mistress",
+      "image": "/img/0291.webp",
+      "author": {
+        "@type": "Person",
+        "name": "\u0391\u0399",
+        "alternateName": "SweatieAngle"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0291.webp" class="img-fluid rounded" alt="If he doesn&#x27;t love the ocean thats a the sea is the strongest woman of all and it should be every man&#x27;s mistress">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">ΑΙ</span> <span class="handle-text fs-6 d-block d-md-inline">@SweatieAngle</span></h4>
+            <p>If he doesn&#x27;t love the ocean thats a the sea is the strongest woman of all and it should be every man&#x27;s mistress</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

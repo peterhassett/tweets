@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="love both Alan Moore&#x27;s &quot;I disown this
+bastardization of my intellectual property please never contac...">
+    <meta property="og:title" content="love both Alan Moore&#x27;s &quot;I disown this
+bastardizati — justin @brandnewraygun">
+    <meta property="og:image:alt" content="love both Alan Moore&#x27;s &quot;I disown this
+bastardization of my intellectual property please never contact me again&quot; and John Carpenter&#x27;s &quot;I love getting a check in the mail to spend on weed and Xbox&quot;.">
+    <meta property="og:description" content="love both Alan Moore&#x27;s &quot;I disown this
+bastardization of my intellectual property please never contact me again&quot; and John Carpenter&#x27;s &quot;I love getting a check in the mail to spend on weed and Xbox&quot;.">
+    <meta property="og:image" content="/img/0629.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>love both Alan Moore&#x27;s &quot;I disown this
+bastardizati — justin @brandnewraygun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0629/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0629",
+      "headline": "love both Alan Moore's \"I disown this\nbastardization of my intellectual property please never contact me again",
+      "articleBody": "love both Alan Moore's \"I disown this\nbastardization of my intellectual property please never contact me again\" and John Carpenter's \"I love getting a check in the mail to spend on weed and Xbox\".",
+      "image": "/img/0629.webp",
+      "author": {
+        "@type": "Person",
+        "name": "justin",
+        "alternateName": "brandnewraygun"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0629.webp" class="img-fluid rounded" alt="love both Alan Moore&#x27;s &quot;I disown this
+bastardization of my intellectual property please never contact me again&quot; and John Carpenter&#x27;s &quot;I love getting a check in the mail to spend on weed and Xbox&quot;.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">justin</span> <span class="handle-text fs-6 d-block d-md-inline">@brandnewraygun</span></h4>
+            <p>love both Alan Moore&#x27;s &quot;I disown this<br>bastardization of my intellectual property please never contact me again&quot; and John Carpenter&#x27;s &quot;I love getting a check in the mail to spend on weed and Xbox&quot;.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

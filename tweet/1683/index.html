@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="What&#x27;s something that feels British but isn&#x27;t?
+Show this thread
+
+
+Pariah Carey. @Sumzlbrahiim
+The co...">
+    <meta property="og:title" content="What&#x27;s something that feels British but isn&#x27;t?
+Sho — The Trashies @TheTrashiesUK.7h">
+    <meta property="og:image:alt" content="What&#x27;s something that feels British but isn&#x27;t?
+Show this thread
+
+
+Pariah Carey. @Sumzlbrahiim
+The contents of the British Museum">
+    <meta property="og:description" content="What&#x27;s something that feels British but isn&#x27;t?
+Show this thread
+
+
+Pariah Carey. @Sumzlbrahiim
+The contents of the British Museum">
+    <meta property="og:image" content="/img/1683.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>What&#x27;s something that feels British but isn&#x27;t?
+Sho — The Trashies @TheTrashiesUK.7h</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1683/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1683",
+      "headline": "What's something that feels British but isn't?\nShow this thread\n\n\nPariah Carey. @Sumzlbrahiim\nThe contents of ",
+      "articleBody": "What's something that feels British but isn't?\nShow this thread\n\n\nPariah Carey. @Sumzlbrahiim\nThe contents of the British Museum",
+      "image": "/img/1683.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The Trashies",
+        "alternateName": "TheTrashiesUK.7h"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1683.webp" class="img-fluid rounded" alt="What&#x27;s something that feels British but isn&#x27;t?
+Show this thread
+
+
+Pariah Carey. @Sumzlbrahiim
+The contents of the British Museum">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The Trashies</span> <span class="handle-text fs-6 d-block d-md-inline">@TheTrashiesUK.7h</span></h4>
+            <p>What&#x27;s something that feels British but isn&#x27;t?<br>Show this thread<br><br><br>Pariah Carey. @Sumzlbrahiim<br>The contents of the British Museum</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

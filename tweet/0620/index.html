@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="People will be like &quot;the best way to reheat leftover pizza is in a cast iron skillet with a little olive ...">
+    <meta property="og:title" content="People will be like &quot;the best way to reheat leftov — Daniel Kibblesmith @kibblesmith">
+    <meta property="og:image:alt" content="People will be like &quot;the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil and a fresh oregano sprig, wait for it to get hot, crack an egg on top and cover for two minutes&quot; like I didn&#x27;t already
+start eating it before the refrigerator was closed.">
+    <meta property="og:description" content="People will be like &quot;the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil and a fresh oregano sprig, wait for it to get hot, crack an egg on top and cover for two minutes&quot; like I didn&#x27;t already
+start eating it before the refrigerator was closed.">
+    <meta property="og:image" content="/img/0620.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>People will be like &quot;the best way to reheat leftov — Daniel Kibblesmith @kibblesmith</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0620/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0620",
+      "headline": "People will be like \"the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil a",
+      "articleBody": "People will be like \"the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil and a fresh oregano sprig, wait for it to get hot, crack an egg on top and cover for two minutes\" like I didn't already\nstart eating it before the refrigerator was closed.",
+      "image": "/img/0620.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Kibblesmith",
+        "alternateName": "kibblesmith"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0620.webp" class="img-fluid rounded" alt="People will be like &quot;the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil and a fresh oregano sprig, wait for it to get hot, crack an egg on top and cover for two minutes&quot; like I didn&#x27;t already
+start eating it before the refrigerator was closed.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Daniel Kibblesmith</span> <span class="handle-text fs-6 d-block d-md-inline">@kibblesmith</span></h4>
+            <p>People will be like &quot;the best way to reheat leftover pizza is in a cast iron skillet with a little olive oil and a fresh oregano sprig, wait for it to get hot, crack an egg on top and cover for two minutes&quot; like I didn&#x27;t already<br>start eating it before the refrigerator was closed.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

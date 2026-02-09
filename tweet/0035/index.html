@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="CNN ANCHOR: this is NOT the america any of us signed up for. we&#x27;ll be right back.
+(five ads designed to t...">
+    <meta property="og:title" content="CNN ANCHOR: this is NOT the america any of us sign — Chris Stephens @ChrisStephensMD">
+    <meta property="og:image:alt" content="CNN ANCHOR: this is NOT the america any of us signed up for. we&#x27;ll be right back.
+(five ads designed to trick old poor people into going bankrupt play)
+CNN ANCHOR: and we&#x27;re back
+1:01 PM - 26 Sep 2018
+199 Retweets 1,215 Likes
+く">
+    <meta property="og:description" content="CNN ANCHOR: this is NOT the america any of us signed up for. we&#x27;ll be right back.
+(five ads designed to trick old poor people into going bankrupt play)
+CNN ANCHOR: and we&#x27;re back
+1:01 PM - 26 Sep 2018
+199 Retweets 1,215 Likes
+く">
+    <meta property="og:image" content="/img/0035.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>CNN ANCHOR: this is NOT the america any of us sign — Chris Stephens @ChrisStephensMD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0035/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0035",
+      "headline": "CNN ANCHOR: this is NOT the america any of us signed up for. we'll be right back.\n(five ads designed to trick ",
+      "articleBody": "CNN ANCHOR: this is NOT the america any of us signed up for. we'll be right back.\n(five ads designed to trick old poor people into going bankrupt play)\nCNN ANCHOR: and we're back\n1:01 PM - 26 Sep 2018\n199 Retweets 1,215 Likes\n\u304f",
+      "image": "/img/0035.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Stephens",
+        "alternateName": "ChrisStephensMD"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0035.webp" class="img-fluid rounded" alt="CNN ANCHOR: this is NOT the america any of us signed up for. we&#x27;ll be right back.
+(five ads designed to trick old poor people into going bankrupt play)
+CNN ANCHOR: and we&#x27;re back
+1:01 PM - 26 Sep 2018
+199 Retweets 1,215 Likes
+く">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Chris Stephens</span> <span class="handle-text fs-6 d-block d-md-inline">@ChrisStephensMD</span></h4>
+            <p>CNN ANCHOR: this is NOT the america any of us signed up for. we&#x27;ll be right back.<br>(five ads designed to trick old poor people into going bankrupt play)<br>CNN ANCHOR: and we&#x27;re back<br>1:01 PM - 26 Sep 2018<br>199 Retweets 1,215 Likes<br>く</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

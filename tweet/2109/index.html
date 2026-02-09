@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="ok so I have a follow-up question
+
+Charlie J. Johnson is furlough.... 6/12/20
+L.A. schools police will return ...">
+    <meta property="og:title" content="ok so I have a follow-up question
+
+Charlie J. John — Emma Berquist @eeberquist">
+    <meta property="og:image:alt" content="ok so I have a follow-up question
+
+Charlie J. Johnson is furlough.... 6/12/20
+L.A. schools police will return grenade launchers latimes.com/local/lanow/la... Show this thread">
+    <meta property="og:description" content="ok so I have a follow-up question
+
+Charlie J. Johnson is furlough.... 6/12/20
+L.A. schools police will return grenade launchers latimes.com/local/lanow/la... Show this thread">
+    <meta property="og:image" content="/img/2109.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>ok so I have a follow-up question
+
+Charlie J. John — Emma Berquist @eeberquist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2109/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2109",
+      "headline": "ok so I have a follow-up question\n\nCharlie J. Johnson is furlough.... 6/12/20\nL.A. schools police will return ",
+      "articleBody": "ok so I have a follow-up question\n\nCharlie J. Johnson is furlough.... 6/12/20\nL.A. schools police will return grenade launchers latimes.com/local/lanow/la... Show this thread",
+      "image": "/img/2109.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Emma Berquist",
+        "alternateName": "eeberquist"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2109.webp" class="img-fluid rounded" alt="ok so I have a follow-up question
+
+Charlie J. Johnson is furlough.... 6/12/20
+L.A. schools police will return grenade launchers latimes.com/local/lanow/la... Show this thread">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Emma Berquist</span> <span class="handle-text fs-6 d-block d-md-inline">@eeberquist</span></h4>
+            <p>ok so I have a follow-up question<br><br>Charlie J. Johnson is furlough.... 6/12/20<br>L.A. schools police will return grenade launchers latimes.com/local/lanow/la... Show this thread</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

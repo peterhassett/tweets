@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="It&#x27;s Prince&#x27;s birthday
+This is my favourite story about him by a country mile
+
+(Screenshot of interv...">
+    <meta property="og:title" content="It&#x27;s Prince&#x27;s birthday
+This is my favourite story  — Tom Reagan&amp;#39;s Hat @RufusTSuperfly">
+    <meta property="og:image:alt" content="It&#x27;s Prince&#x27;s birthday
+This is my favourite story about him by a country mile
+
+(Screenshot of interview)
+
+Julia Stiles (co-star, Bourne&#x27; films): After The Bourne Ultimatum came out, there was a premiere in London. Prince actually came to it, then got tickets for the cast to come see him [perform]. We were summoned into a room to meet him [after the show]. Matt said, &quot;So you live in Minnesota? I hear you live in Minnesota.&quot;
+Damon: Prince said, &quot;I live inside my own heart, Matt Damon.&quot;
+1:26 PM 6/7/24">
+    <meta property="og:description" content="It&#x27;s Prince&#x27;s birthday
+This is my favourite story about him by a country mile
+
+(Screenshot of interview)
+
+Julia Stiles (co-star, Bourne&#x27; films): After The Bourne Ultimatum came out, there was a premiere in London. Prince actually came to it, then got tickets for the cast to come see him [perform]. We were summoned into a room to meet him [after the show]. Matt said, &quot;So you live in Minnesota? I hear you live in Minnesota.&quot;
+Damon: Prince said, &quot;I live inside my own heart, Matt Damon.&quot;
+1:26 PM 6/7/24">
+    <meta property="og:image" content="/img/0184.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>It&#x27;s Prince&#x27;s birthday
+This is my favourite story  — Tom Reagan&amp;#39;s Hat @RufusTSuperfly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0184/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0184",
+      "headline": "It's Prince's birthday\nThis is my favourite story about him by a country mile\n\n(Screenshot of interview)\n\nJuli",
+      "articleBody": "It's Prince's birthday\nThis is my favourite story about him by a country mile\n\n(Screenshot of interview)\n\nJulia Stiles (co-star, Bourne' films): After The Bourne Ultimatum came out, there was a premiere in London. Prince actually came to it, then got tickets for the cast to come see him [perform]. We were summoned into a room to meet him [after the show]. Matt said, \"So you live in Minnesota? I hear you live in Minnesota.\"\nDamon: Prince said, \"I live inside my own heart, Matt Damon.\"\n1:26 PM 6/7/24",
+      "image": "/img/0184.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Tom Reagan&#39;s Hat",
+        "alternateName": "RufusTSuperfly"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0184.webp" class="img-fluid rounded" alt="It&#x27;s Prince&#x27;s birthday
+This is my favourite story about him by a country mile
+
+(Screenshot of interview)
+
+Julia Stiles (co-star, Bourne&#x27; films): After The Bourne Ultimatum came out, there was a premiere in London. Prince actually came to it, then got tickets for the cast to come see him [perform]. We were summoned into a room to meet him [after the show]. Matt said, &quot;So you live in Minnesota? I hear you live in Minnesota.&quot;
+Damon: Prince said, &quot;I live inside my own heart, Matt Damon.&quot;
+1:26 PM 6/7/24">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Tom Reagan&amp;#39;s Hat</span> <span class="handle-text fs-6 d-block d-md-inline">@RufusTSuperfly</span></h4>
+            <p>It&#x27;s Prince&#x27;s birthday<br>This is my favourite story about him by a country mile<br><br>(Screenshot of interview)<br><br>Julia Stiles (co-star, Bourne&#x27; films): After The Bourne Ultimatum came out, there was a premiere in London. Prince actually came to it, then got tickets for the cast to come see him [perform]. We were summoned into a room to meet him [after the show]. Matt said, &quot;So you live in Minnesota? I hear you live in Minnesota.&quot;<br>Damon: Prince said, &quot;I live inside my own heart, Matt Damon.&quot;<br>1:26 PM 6/7/24</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

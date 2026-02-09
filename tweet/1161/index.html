@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain ...">
+    <meta property="og:title" content="Hearing reports that i was 100% wrong and reality  — ←
+Tweet
+warrior cop @wyatt_privilege">
+    <meta property="og:image:alt" content="Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain why that doesn&#x27;t matter">
+    <meta property="og:description" content="Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain why that doesn&#x27;t matter">
+    <meta property="og:image" content="/img/1161.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Hearing reports that i was 100% wrong and reality  — ←
+Tweet
+warrior cop @wyatt_privilege</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1161/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1161",
+      "headline": "Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain ",
+      "articleBody": "Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain why that doesn't matter",
+      "image": "/img/1161.webp",
+      "author": {
+        "@type": "Person",
+        "name": "\u2190\nTweet\nwarrior cop",
+        "alternateName": "wyatt_privilege"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1161.webp" class="img-fluid rounded" alt="Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain why that doesn&#x27;t matter">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">←
+Tweet
+warrior cop</span> <span class="handle-text fs-6 d-block d-md-inline">@wyatt_privilege</span></h4>
+            <p>Hearing reports that i was 100% wrong and reality is basically the opposite of what i claimed. Let me explain why that doesn&#x27;t matter</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="The Bard DID really coin every phrase. #Shakespeare
+SHAKESPEARE QUOTE OF THE DAY
+An SSL error has occurred and...">
+    <meta property="og:title" content="The Bard DID really coin every phrase. #Shakespear — Dennis Detwiller @drgonzo123">
+    <meta property="og:image:alt" content="The Bard DID really coin every phrase. #Shakespeare
+SHAKESPEARE QUOTE OF THE DAY
+An SSL error has occurred and a secure connection to the server cannot be made.">
+    <meta property="og:description" content="The Bard DID really coin every phrase. #Shakespeare
+SHAKESPEARE QUOTE OF THE DAY
+An SSL error has occurred and a secure connection to the server cannot be made.">
+    <meta property="og:image" content="/img/1391.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>The Bard DID really coin every phrase. #Shakespear — Dennis Detwiller @drgonzo123</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1391/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1391",
+      "headline": "The Bard DID really coin every phrase. #Shakespeare\nSHAKESPEARE QUOTE OF THE DAY\nAn SSL error has occurred and",
+      "articleBody": "The Bard DID really coin every phrase. #Shakespeare\nSHAKESPEARE QUOTE OF THE DAY\nAn SSL error has occurred and a secure connection to the server cannot be made.",
+      "image": "/img/1391.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dennis Detwiller",
+        "alternateName": "drgonzo123"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1391.webp" class="img-fluid rounded" alt="The Bard DID really coin every phrase. #Shakespeare
+SHAKESPEARE QUOTE OF THE DAY
+An SSL error has occurred and a secure connection to the server cannot be made.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dennis Detwiller</span> <span class="handle-text fs-6 d-block d-md-inline">@drgonzo123</span></h4>
+            <p>The Bard DID really coin every phrase. #Shakespeare<br>SHAKESPEARE QUOTE OF THE DAY<br>An SSL error has occurred and a secure connection to the server cannot be made.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="you want universal health care? how
+spoiled are you. your life is already amazing compared to a 12th century p...">
+    <meta property="og:title" content="you want universal health care? how
+spoiled are yo — Ded Moroz @InternetHippo">
+    <meta property="og:image:alt" content="you want universal health care? how
+spoiled are you. your life is already amazing compared to a 12th century peasant but it&#x27;s never enough">
+    <meta property="og:description" content="you want universal health care? how
+spoiled are you. your life is already amazing compared to a 12th century peasant but it&#x27;s never enough">
+    <meta property="og:image" content="/img/1261.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>you want universal health care? how
+spoiled are yo — Ded Moroz @InternetHippo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1261/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1261",
+      "headline": "you want universal health care? how\nspoiled are you. your life is already amazing compared to a 12th century p",
+      "articleBody": "you want universal health care? how\nspoiled are you. your life is already amazing compared to a 12th century peasant but it's never enough",
+      "image": "/img/1261.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ded Moroz",
+        "alternateName": "InternetHippo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1261.webp" class="img-fluid rounded" alt="you want universal health care? how
+spoiled are you. your life is already amazing compared to a 12th century peasant but it&#x27;s never enough">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ded Moroz</span> <span class="handle-text fs-6 d-block d-md-inline">@InternetHippo</span></h4>
+            <p>you want universal health care? how<br>spoiled are you. your life is already amazing compared to a 12th century peasant but it&#x27;s never enough</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

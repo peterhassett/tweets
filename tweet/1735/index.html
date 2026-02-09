@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 3h
+Make a movie better by adding one letter.
+
+
+Brian Tallerico✔ @Brian_Tallerico
+
+Fargo">
+    <meta property="og:title" content=". 3h
+Make a movie better by adding one letter.
+
+
+B — Erik Anderson @awards_watch">
+    <meta property="og:image:alt" content=". 3h
+Make a movie better by adding one letter.
+
+
+Brian Tallerico✔ @Brian_Tallerico
+
+Fargo">
+    <meta property="og:description" content=". 3h
+Make a movie better by adding one letter.
+
+
+Brian Tallerico✔ @Brian_Tallerico
+
+Fargo">
+    <meta property="og:image" content="/img/1735.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 3h
+Make a movie better by adding one letter.
+
+
+B — Erik Anderson @awards_watch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1735/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1735",
+      "headline": ". 3h\nMake a movie better by adding one letter.\n\n\nBrian Tallerico\u2714 @Brian_Tallerico\n\nFargo",
+      "articleBody": ". 3h\nMake a movie better by adding one letter.\n\n\nBrian Tallerico\u2714 @Brian_Tallerico\n\nFargo",
+      "image": "/img/1735.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Erik Anderson",
+        "alternateName": "awards_watch"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1735.webp" class="img-fluid rounded" alt=". 3h
+Make a movie better by adding one letter.
+
+
+Brian Tallerico✔ @Brian_Tallerico
+
+Fargo">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Erik Anderson</span> <span class="handle-text fs-6 d-block d-md-inline">@awards_watch</span></h4>
+            <p>. 3h<br>Make a movie better by adding one letter.<br><br><br>Brian Tallerico✔ @Brian_Tallerico<br><br>Fargo</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

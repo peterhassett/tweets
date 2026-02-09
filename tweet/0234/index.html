@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="the guy inventing artificial banana flavor: whatever close enough">
+    <meta property="og:title" content="the guy inventing artificial banana flavor: whatev — Ben Rosen @ben_rosen">
+    <meta property="og:image:alt" content="the guy inventing artificial banana flavor: whatever close enough">
+    <meta property="og:description" content="the guy inventing artificial banana flavor: whatever close enough">
+    <meta property="og:image" content="/img/0234.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>the guy inventing artificial banana flavor: whatev — Ben Rosen @ben_rosen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0234/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0234",
+      "headline": "the guy inventing artificial banana flavor: whatever close enough",
+      "articleBody": "the guy inventing artificial banana flavor: whatever close enough",
+      "image": "/img/0234.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ben Rosen",
+        "alternateName": "ben_rosen"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0234.webp" class="img-fluid rounded" alt="the guy inventing artificial banana flavor: whatever close enough">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ben Rosen</span> <span class="handle-text fs-6 d-block d-md-inline">@ben_rosen</span></h4>
+            <p>the guy inventing artificial banana flavor: whatever close enough</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

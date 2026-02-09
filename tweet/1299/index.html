@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.">
+    <meta property="og:title" content="Why are puzzles so expensive?? Like bitch you are  — Air Durnell @air_durnell">
+    <meta property="og:image:alt" content="Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.">
+    <meta property="og:description" content="Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.">
+    <meta property="og:image" content="/img/1299.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Why are puzzles so expensive?? Like bitch you are  — Air Durnell @air_durnell</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1299/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1299",
+      "headline": "Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.",
+      "articleBody": "Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.",
+      "image": "/img/1299.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Air Durnell",
+        "alternateName": "air_durnell"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1299.webp" class="img-fluid rounded" alt="Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Air Durnell</span> <span class="handle-text fs-6 d-block d-md-inline">@air_durnell</span></h4>
+            <p>Why are puzzles so expensive?? Like bitch you are a broken picture. You should be paying me.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

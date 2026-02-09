@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="police
+&gt;
+zorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I d...">
+    <meta property="og:title" content="police
+&gt;
+zorro effortlessly parries my attack and  — Turing Police @turing">
+    <meta property="og:image:alt" content="police
+&gt;
+zorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont seem to be harmed? my pants fall to the floor in tatters revealing that he has circumcised me">
+    <meta property="og:description" content="police
+&gt;
+zorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont seem to be harmed? my pants fall to the floor in tatters revealing that he has circumcised me">
+    <meta property="og:image" content="/img/1885.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>police
+&gt;
+zorro effortlessly parries my attack and  — Turing Police @turing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1885/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1885",
+      "headline": "police\n>\nzorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont",
+      "articleBody": "police\n>\nzorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont seem to be harmed? my pants fall to the floor in tatters revealing that he has circumcised me",
+      "image": "/img/1885.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Turing Police",
+        "alternateName": "turing"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1885.webp" class="img-fluid rounded" alt="police
+&gt;
+zorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont seem to be harmed? my pants fall to the floor in tatters revealing that he has circumcised me">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Turing Police</span> <span class="handle-text fs-6 d-block d-md-inline">@turing</span></h4>
+            <p>police<br>&gt;<br>zorro effortlessly parries my attack and executes a rapid series of slashes about my body. But I dont seem to be harmed? my pants fall to the floor in tatters revealing that he has circumcised me</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

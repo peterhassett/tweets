@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="keeping track of things with the
+following rhyme:
+if the Naomi be Klein
+you&#x27;re doing just fine
+If the Nao...">
+    <meta property="og:title" content="keeping track of things with the
+following rhyme:
+ — jd vance&amp;#39;s &amp;quot;holler aunt&amp;quot; @markpopham">
+    <meta property="og:image:alt" content="keeping track of things with the
+following rhyme:
+if the Naomi be Klein
+you&#x27;re doing just fine
+If the Naomi be Wolf
+Oh, buddy. Ooooof.">
+    <meta property="og:description" content="keeping track of things with the
+following rhyme:
+if the Naomi be Klein
+you&#x27;re doing just fine
+If the Naomi be Wolf
+Oh, buddy. Ooooof.">
+    <meta property="og:image" content="/img/1780.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>keeping track of things with the
+following rhyme:
+ — jd vance&amp;#39;s &amp;quot;holler aunt&amp;quot; @markpopham</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1780/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1780",
+      "headline": "keeping track of things with the\nfollowing rhyme:\nif the Naomi be Klein\nyou're doing just fine\nIf the Naomi be",
+      "articleBody": "keeping track of things with the\nfollowing rhyme:\nif the Naomi be Klein\nyou're doing just fine\nIf the Naomi be Wolf\nOh, buddy. Ooooof.",
+      "image": "/img/1780.webp",
+      "author": {
+        "@type": "Person",
+        "name": "jd vance&#39;s &quot;holler aunt&quot;",
+        "alternateName": "markpopham"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1780.webp" class="img-fluid rounded" alt="keeping track of things with the
+following rhyme:
+if the Naomi be Klein
+you&#x27;re doing just fine
+If the Naomi be Wolf
+Oh, buddy. Ooooof.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">jd vance&amp;#39;s &amp;quot;holler aunt&amp;quot;</span> <span class="handle-text fs-6 d-block d-md-inline">@markpopham</span></h4>
+            <p>keeping track of things with the<br>following rhyme:<br>if the Naomi be Klein<br>you&#x27;re doing just fine<br>If the Naomi be Wolf<br>Oh, buddy. Ooooof.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

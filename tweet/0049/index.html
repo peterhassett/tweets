@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="instagram used to trick ppl into fucking up bc you&#x27;d be used to double tapping a pic to zoom in and surpr...">
+    <meta property="og:title" content="instagram used to trick ppl into fucking up bc you — Warrior Cop @wyatt_privilege">
+    <meta property="og:image:alt" content="instagram used to trick ppl into fucking up bc you&#x27;d be used to double tapping a pic to zoom in and surprise you just hearted some girl&#x27;s beach pic from 2 mos ago. same shit back in spirit by telling ppl who watches their stories
+11/19/18">
+    <meta property="og:description" content="instagram used to trick ppl into fucking up bc you&#x27;d be used to double tapping a pic to zoom in and surprise you just hearted some girl&#x27;s beach pic from 2 mos ago. same shit back in spirit by telling ppl who watches their stories
+11/19/18">
+    <meta property="og:image" content="/img/0049.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>instagram used to trick ppl into fucking up bc you — Warrior Cop @wyatt_privilege</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0049/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0049",
+      "headline": "instagram used to trick ppl into fucking up bc you'd be used to double tapping a pic to zoom in and surprise y",
+      "articleBody": "instagram used to trick ppl into fucking up bc you'd be used to double tapping a pic to zoom in and surprise you just hearted some girl's beach pic from 2 mos ago. same shit back in spirit by telling ppl who watches their stories\n11/19/18",
+      "image": "/img/0049.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Warrior Cop",
+        "alternateName": "wyatt_privilege"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0049.webp" class="img-fluid rounded" alt="instagram used to trick ppl into fucking up bc you&#x27;d be used to double tapping a pic to zoom in and surprise you just hearted some girl&#x27;s beach pic from 2 mos ago. same shit back in spirit by telling ppl who watches their stories
+11/19/18">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Warrior Cop</span> <span class="handle-text fs-6 d-block d-md-inline">@wyatt_privilege</span></h4>
+            <p>instagram used to trick ppl into fucking up bc you&#x27;d be used to double tapping a pic to zoom in and surprise you just hearted some girl&#x27;s beach pic from 2 mos ago. same shit back in spirit by telling ppl who watches their stories<br>11/19/18</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

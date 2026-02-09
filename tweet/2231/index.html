@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="LA = shitty heaven, NY = fun hell">
+    <meta property="og:title" content="LA = shitty heaven, NY = fun hell — Averytuckerlive @">
+    <meta property="og:image:alt" content="LA = shitty heaven, NY = fun hell">
+    <meta property="og:description" content="LA = shitty heaven, NY = fun hell">
+    <meta property="og:image" content="/img/2231.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>LA = shitty heaven, NY = fun hell — Averytuckerlive @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2231/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2231",
+      "headline": "LA = shitty heaven, NY = fun hell",
+      "articleBody": "LA = shitty heaven, NY = fun hell",
+      "image": "/img/2231.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Averytuckerlive",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2231.webp" class="img-fluid rounded" alt="LA = shitty heaven, NY = fun hell">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Averytuckerlive</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>LA = shitty heaven, NY = fun hell</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

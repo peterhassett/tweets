@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="You&#x27;ve been speaking English your entire life
+but did you know that the words you
+speak are all created f...">
+    <meta property="og:title" content="You&#x27;ve been speaking English your entire life
+but  — Jack Raines @Jack_Raines">
+    <meta property="og:image:alt" content="You&#x27;ve been speaking English your entire life
+but did you know that the words you
+speak are all created from 26
+individual letters?
+Here are the 26 letters that you
+MUST know:">
+    <meta property="og:description" content="You&#x27;ve been speaking English your entire life
+but did you know that the words you
+speak are all created from 26
+individual letters?
+Here are the 26 letters that you
+MUST know:">
+    <meta property="og:image" content="/img/0831.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>You&#x27;ve been speaking English your entire life
+but  — Jack Raines @Jack_Raines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0831/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0831",
+      "headline": "You've been speaking English your entire life\nbut did you know that the words you\nspeak are all created from 2",
+      "articleBody": "You've been speaking English your entire life\nbut did you know that the words you\nspeak are all created from 26\nindividual letters?\nHere are the 26 letters that you\nMUST know:",
+      "image": "/img/0831.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jack Raines",
+        "alternateName": "Jack_Raines"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0831.webp" class="img-fluid rounded" alt="You&#x27;ve been speaking English your entire life
+but did you know that the words you
+speak are all created from 26
+individual letters?
+Here are the 26 letters that you
+MUST know:">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jack Raines</span> <span class="handle-text fs-6 d-block d-md-inline">@Jack_Raines</span></h4>
+            <p>You&#x27;ve been speaking English your entire life<br>but did you know that the words you<br>speak are all created from 26<br>individual letters?<br>Here are the 26 letters that you<br>MUST know:</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

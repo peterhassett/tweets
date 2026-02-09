@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Photo of tony soprano) 
+
+moeeze @seigfridge
+i cooka da pi...">
+    <meta property="og:title" content="why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Ph — han E-408 @occultkyoong">
+    <meta property="og:image:alt" content="why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Photo of tony soprano) 
+
+moeeze @seigfridge
+i cooka da pizza
+
+
+han E-408 @occultkyoong
+go fuck yourself, for real. i cant with these people anymore. i hate you all from the
+bottom of my heart ignorant pieces of shit">
+    <meta property="og:description" content="why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Photo of tony soprano) 
+
+moeeze @seigfridge
+i cooka da pizza
+
+
+han E-408 @occultkyoong
+go fuck yourself, for real. i cant with these people anymore. i hate you all from the
+bottom of my heart ignorant pieces of shit">
+    <meta property="og:image" content="/img/0861.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Ph — han E-408 @occultkyoong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0861/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0861",
+      "headline": "why mafia isn't a fucking aesthetic: a thread\n\n(Photo of tony soprano) \n\nmoeeze @seigfridge\ni cooka da pizza\n\n",
+      "articleBody": "why mafia isn't a fucking aesthetic: a thread\n\n(Photo of tony soprano) \n\nmoeeze @seigfridge\ni cooka da pizza\n\n\nhan E-408 @occultkyoong\ngo fuck yourself, for real. i cant with these people anymore. i hate you all from the\nbottom of my heart ignorant pieces of shit",
+      "image": "/img/0861.webp",
+      "author": {
+        "@type": "Person",
+        "name": "han E-408",
+        "alternateName": "occultkyoong"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0861.webp" class="img-fluid rounded" alt="why mafia isn&#x27;t a fucking aesthetic: a thread
+
+(Photo of tony soprano) 
+
+moeeze @seigfridge
+i cooka da pizza
+
+
+han E-408 @occultkyoong
+go fuck yourself, for real. i cant with these people anymore. i hate you all from the
+bottom of my heart ignorant pieces of shit">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">han E-408</span> <span class="handle-text fs-6 d-block d-md-inline">@occultkyoong</span></h4>
+            <p>why mafia isn&#x27;t a fucking aesthetic: a thread<br><br>(Photo of tony soprano) <br><br>moeeze @seigfridge<br>i cooka da pizza<br><br><br>han E-408 @occultkyoong<br>go fuck yourself, for real. i cant with these people anymore. i hate you all from the<br>bottom of my heart ignorant pieces of shit</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

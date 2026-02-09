@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="i give everyone permission to milk my death for personal benefits if i die. idc if we&#x27;re just acquaintanc...">
+    <meta property="og:title" content="i give everyone permission to milk my death for pe — candy boys c c candy boys @lgbtop">
+    <meta property="og:image:alt" content="i give everyone permission to milk my death for personal benefits if i die. idc if we&#x27;re just acquaintances, if we ever talked and i suddenly drop dead one day i want you to tell your boss you just lost a friend and take the day off. my treat">
+    <meta property="og:description" content="i give everyone permission to milk my death for personal benefits if i die. idc if we&#x27;re just acquaintances, if we ever talked and i suddenly drop dead one day i want you to tell your boss you just lost a friend and take the day off. my treat">
+    <meta property="og:image" content="/img/1844.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>i give everyone permission to milk my death for pe — candy boys c c candy boys @lgbtop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1844/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1844",
+      "headline": "i give everyone permission to milk my death for personal benefits if i die. idc if we're just acquaintances, i",
+      "articleBody": "i give everyone permission to milk my death for personal benefits if i die. idc if we're just acquaintances, if we ever talked and i suddenly drop dead one day i want you to tell your boss you just lost a friend and take the day off. my treat",
+      "image": "/img/1844.webp",
+      "author": {
+        "@type": "Person",
+        "name": "candy boys c c candy boys",
+        "alternateName": "lgbtop"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1844.webp" class="img-fluid rounded" alt="i give everyone permission to milk my death for personal benefits if i die. idc if we&#x27;re just acquaintances, if we ever talked and i suddenly drop dead one day i want you to tell your boss you just lost a friend and take the day off. my treat">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">candy boys c c candy boys</span> <span class="handle-text fs-6 d-block d-md-inline">@lgbtop</span></h4>
+            <p>i give everyone permission to milk my death for personal benefits if i die. idc if we&#x27;re just acquaintances, if we ever talked and i suddenly drop dead one day i want you to tell your boss you just lost a friend and take the day off. my treat</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

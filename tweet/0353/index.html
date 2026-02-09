@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="occasional reminder: I don&#x27;t know who needs to hear this but
+
+(Photo of a page in a book)
+
+SPELLS, CHARMS...">
+    <meta property="og:title" content="occasional reminder: I don&#x27;t know who needs to hea — That Tom Tomorrow guy @tomtomorrow">
+    <meta property="og:image:alt" content="occasional reminder: I don&#x27;t know who needs to hear this but
+
+(Photo of a page in a book)
+
+SPELLS, CHARMS AND INCANTATIONS
+
+Take a shoe that the woman you love has worn, fill it with rue, and hang it over your bed to make her love you.
+
+&quot;To win a maiden&#x27;s love, get a hair and a pin off her un- perceived, twist the hair around the pin, and then throw them backwards into a river.&quot;
+
+(But the reader’s finger is pointing at…)
+
+You may fascinate a woman by giving her a piece of cheese.">
+    <meta property="og:description" content="occasional reminder: I don&#x27;t know who needs to hear this but
+
+(Photo of a page in a book)
+
+SPELLS, CHARMS AND INCANTATIONS
+
+Take a shoe that the woman you love has worn, fill it with rue, and hang it over your bed to make her love you.
+
+&quot;To win a maiden&#x27;s love, get a hair and a pin off her un- perceived, twist the hair around the pin, and then throw them backwards into a river.&quot;
+
+(But the reader’s finger is pointing at…)
+
+You may fascinate a woman by giving her a piece of cheese.">
+    <meta property="og:image" content="/img/0353.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>occasional reminder: I don&#x27;t know who needs to hea — That Tom Tomorrow guy @tomtomorrow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0353/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0353",
+      "headline": "occasional reminder: I don't know who needs to hear this but\n\n(Photo of a page in a book)\n\nSPELLS, CHARMS AND ",
+      "articleBody": "occasional reminder: I don't know who needs to hear this but\n\n(Photo of a page in a book)\n\nSPELLS, CHARMS AND INCANTATIONS\n\nTake a shoe that the woman you love has worn, fill it with rue, and hang it over your bed to make her love you.\n\n\"To win a maiden's love, get a hair and a pin off her un- perceived, twist the hair around the pin, and then throw them backwards into a river.\"\n\n(But the reader\u2019s finger is pointing at\u2026)\n\nYou may fascinate a woman by giving her a piece of cheese.",
+      "image": "/img/0353.webp",
+      "author": {
+        "@type": "Person",
+        "name": "That Tom Tomorrow guy",
+        "alternateName": "tomtomorrow"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0353.webp" class="img-fluid rounded" alt="occasional reminder: I don&#x27;t know who needs to hear this but
+
+(Photo of a page in a book)
+
+SPELLS, CHARMS AND INCANTATIONS
+
+Take a shoe that the woman you love has worn, fill it with rue, and hang it over your bed to make her love you.
+
+&quot;To win a maiden&#x27;s love, get a hair and a pin off her un- perceived, twist the hair around the pin, and then throw them backwards into a river.&quot;
+
+(But the reader’s finger is pointing at…)
+
+You may fascinate a woman by giving her a piece of cheese.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">That Tom Tomorrow guy</span> <span class="handle-text fs-6 d-block d-md-inline">@tomtomorrow</span></h4>
+            <p>occasional reminder: I don&#x27;t know who needs to hear this but<br><br>(Photo of a page in a book)<br><br>SPELLS, CHARMS AND INCANTATIONS<br><br>Take a shoe that the woman you love has worn, fill it with rue, and hang it over your bed to make her love you.<br><br>&quot;To win a maiden&#x27;s love, get a hair and a pin off her un- perceived, twist the hair around the pin, and then throw them backwards into a river.&quot;<br><br>(But the reader’s finger is pointing at…)<br><br>You may fascinate a woman by giving her a piece of cheese.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

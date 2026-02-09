@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="doctor: I know there&#x27;s a lot of stigma surrounding testicular canc-
+me: stigma testicles in ur mouth Imfa...">
+    <meta property="og:title" content="doctor: I know there&#x27;s a lot of stigma surrounding — chad @badboychadhoy">
+    <meta property="og:image:alt" content="doctor: I know there&#x27;s a lot of stigma surrounding testicular canc-
+me: stigma testicles in ur mouth Imfao
+doctor: I for real cannot wait until u
+die from this disease">
+    <meta property="og:description" content="doctor: I know there&#x27;s a lot of stigma surrounding testicular canc-
+me: stigma testicles in ur mouth Imfao
+doctor: I for real cannot wait until u
+die from this disease">
+    <meta property="og:image" content="/img/0742.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>doctor: I know there&#x27;s a lot of stigma surrounding — chad @badboychadhoy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0742/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0742",
+      "headline": "doctor: I know there's a lot of stigma surrounding testicular canc-\nme: stigma testicles in ur mouth Imfao\ndoc",
+      "articleBody": "doctor: I know there's a lot of stigma surrounding testicular canc-\nme: stigma testicles in ur mouth Imfao\ndoctor: I for real cannot wait until u\ndie from this disease",
+      "image": "/img/0742.webp",
+      "author": {
+        "@type": "Person",
+        "name": "chad",
+        "alternateName": "badboychadhoy"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0742.webp" class="img-fluid rounded" alt="doctor: I know there&#x27;s a lot of stigma surrounding testicular canc-
+me: stigma testicles in ur mouth Imfao
+doctor: I for real cannot wait until u
+die from this disease">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">chad</span> <span class="handle-text fs-6 d-block d-md-inline">@badboychadhoy</span></h4>
+            <p>doctor: I know there&#x27;s a lot of stigma surrounding testicular canc-<br>me: stigma testicles in ur mouth Imfao<br>doctor: I for real cannot wait until u<br>die from this disease</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

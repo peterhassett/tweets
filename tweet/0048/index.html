@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to sit on an accordion while watching a Ci...">
+    <meta property="og:title" content="&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to — Alec Sulkin @thesulk">
+    <meta property="og:image:alt" content="&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to sit on an accordion while watching a Civil War documentary.&quot;
+ Dec 29, 2017
+
+
+
+Robbie Robertson
+@r0bbier0berts0n
+Wish I could&#x27;ve written for the Cleveland Show, instead.">
+    <meta property="og:description" content="&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to sit on an accordion while watching a Civil War documentary.&quot;
+ Dec 29, 2017
+
+
+
+Robbie Robertson
+@r0bbier0berts0n
+Wish I could&#x27;ve written for the Cleveland Show, instead.">
+    <meta property="og:image" content="/img/0048.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to — Alec Sulkin @thesulk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0048/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0048",
+      "headline": "\"Wanna listen to The Band?\" \"No. I'm just going to sit on an accordion while watching a Civil War documentary.",
+      "articleBody": "\"Wanna listen to The Band?\" \"No. I'm just going to sit on an accordion while watching a Civil War documentary.\"\n Dec 29, 2017\n\n\n\nRobbie Robertson\n@r0bbier0berts0n\nWish I could've written for the Cleveland Show, instead.",
+      "image": "/img/0048.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Alec Sulkin",
+        "alternateName": "thesulk"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0048.webp" class="img-fluid rounded" alt="&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to sit on an accordion while watching a Civil War documentary.&quot;
+ Dec 29, 2017
+
+
+
+Robbie Robertson
+@r0bbier0berts0n
+Wish I could&#x27;ve written for the Cleveland Show, instead.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Alec Sulkin</span> <span class="handle-text fs-6 d-block d-md-inline">@thesulk</span></h4>
+            <p>&quot;Wanna listen to The Band?&quot; &quot;No. I&#x27;m just going to sit on an accordion while watching a Civil War documentary.&quot;<br> Dec 29, 2017<br><br><br><br>Robbie Robertson<br>@r0bbier0berts0n<br>Wish I could&#x27;ve written for the Cleveland Show, instead.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="The devil works hard but the updater of the Macbeth Wikipedia page
+works harder
+
+Screenshot of Wikipedia entry...">
+    <meta property="og:title" content="The devil works hard but the updater of the Macbet — hannah strong @thethirdhan">
+    <meta property="og:image:alt" content="The devil works hard but the updater of the Macbeth Wikipedia page
+works harder
+
+Screenshot of Wikipedia entry: 
+
+At the 94th Academy Awards, Chris Rock congratulated Denzel Washington on his performance in The Tragedy of Macbeth, verbally saying the name of the Scottish play aloud in the Dolby Theatre. Moments later, Rock was slapped by Will Smith after making a joke about Smith&#x27;s wife, Jada Pinkett Smith.[15]">
+    <meta property="og:description" content="The devil works hard but the updater of the Macbeth Wikipedia page
+works harder
+
+Screenshot of Wikipedia entry: 
+
+At the 94th Academy Awards, Chris Rock congratulated Denzel Washington on his performance in The Tragedy of Macbeth, verbally saying the name of the Scottish play aloud in the Dolby Theatre. Moments later, Rock was slapped by Will Smith after making a joke about Smith&#x27;s wife, Jada Pinkett Smith.[15]">
+    <meta property="og:image" content="/img/1052.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>The devil works hard but the updater of the Macbet — hannah strong @thethirdhan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1052/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1052",
+      "headline": "The devil works hard but the updater of the Macbeth Wikipedia page\nworks harder\n\nScreenshot of Wikipedia entry",
+      "articleBody": "The devil works hard but the updater of the Macbeth Wikipedia page\nworks harder\n\nScreenshot of Wikipedia entry: \n\nAt the 94th Academy Awards, Chris Rock congratulated Denzel Washington on his performance in The Tragedy of Macbeth, verbally saying the name of the Scottish play aloud in the Dolby Theatre. Moments later, Rock was slapped by Will Smith after making a joke about Smith's wife, Jada Pinkett Smith.[15]",
+      "image": "/img/1052.webp",
+      "author": {
+        "@type": "Person",
+        "name": "hannah strong",
+        "alternateName": "thethirdhan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1052.webp" class="img-fluid rounded" alt="The devil works hard but the updater of the Macbeth Wikipedia page
+works harder
+
+Screenshot of Wikipedia entry: 
+
+At the 94th Academy Awards, Chris Rock congratulated Denzel Washington on his performance in The Tragedy of Macbeth, verbally saying the name of the Scottish play aloud in the Dolby Theatre. Moments later, Rock was slapped by Will Smith after making a joke about Smith&#x27;s wife, Jada Pinkett Smith.[15]">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">hannah strong</span> <span class="handle-text fs-6 d-block d-md-inline">@thethirdhan</span></h4>
+            <p>The devil works hard but the updater of the Macbeth Wikipedia page<br>works harder<br><br>Screenshot of Wikipedia entry: <br><br>At the 94th Academy Awards, Chris Rock congratulated Denzel Washington on his performance in The Tragedy of Macbeth, verbally saying the name of the Scottish play aloud in the Dolby Theatre. Moments later, Rock was slapped by Will Smith after making a joke about Smith&#x27;s wife, Jada Pinkett Smith.[15]</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

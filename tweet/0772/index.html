@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? wa...">
+    <meta property="og:title" content="hey man loved that portrait aspect comedy video yo — thomas violence @thomas_violence">
+    <meta property="og:image:alt" content="hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? was it filmed during the early
+Holocene when the earth&#x27;s
+population was between 1 and 10 million people or ?">
+    <meta property="og:description" content="hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? was it filmed during the early
+Holocene when the earth&#x27;s
+population was between 1 and 10 million people or ?">
+    <meta property="og:image" content="/img/0772.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>hey man loved that portrait aspect comedy video yo — thomas violence @thomas_violence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0772/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0772",
+      "headline": "hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? wa",
+      "articleBody": "hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? was it filmed during the early\nHolocene when the earth's\npopulation was between 1 and 10 million people or ?",
+      "image": "/img/0772.webp",
+      "author": {
+        "@type": "Person",
+        "name": "thomas violence",
+        "alternateName": "thomas_violence"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0772.webp" class="img-fluid rounded" alt="hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? was it filmed during the early
+Holocene when the earth&#x27;s
+population was between 1 and 10 million people or ?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">thomas violence</span> <span class="handle-text fs-6 d-block d-md-inline">@thomas_violence</span></h4>
+            <p>hey man loved that portrait aspect comedy video you did. noticed every part in the scene was played by you? was it filmed during the early<br>Holocene when the earth&#x27;s<br>population was between 1 and 10 million people or ?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

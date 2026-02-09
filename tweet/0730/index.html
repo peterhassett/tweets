@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="SOMEONE: In 2006, when I was 10 years
+old--
+ME: Sorry, no. Everyone was in university in 2006. Bloc Party Sile...">
+    <meta property="og:title" content="SOMEONE: In 2006, when I was 10 years
+old--
+ME: So — Brooks Otterlake @i_zzzzzz">
+    <meta property="og:image:alt" content="SOMEONE: In 2006, when I was 10 years
+old--
+ME: Sorry, no. Everyone was in university in 2006. Bloc Party Silent Alarm and so forth. Anyway, continue">
+    <meta property="og:description" content="SOMEONE: In 2006, when I was 10 years
+old--
+ME: Sorry, no. Everyone was in university in 2006. Bloc Party Silent Alarm and so forth. Anyway, continue">
+    <meta property="og:image" content="/img/0730.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>SOMEONE: In 2006, when I was 10 years
+old--
+ME: So — Brooks Otterlake @i_zzzzzz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0730/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0730",
+      "headline": "SOMEONE: In 2006, when I was 10 years\nold--\nME: Sorry, no. Everyone was in university in 2006. Bloc Party Sile",
+      "articleBody": "SOMEONE: In 2006, when I was 10 years\nold--\nME: Sorry, no. Everyone was in university in 2006. Bloc Party Silent Alarm and so forth. Anyway, continue",
+      "image": "/img/0730.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Brooks Otterlake",
+        "alternateName": "i_zzzzzz"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0730.webp" class="img-fluid rounded" alt="SOMEONE: In 2006, when I was 10 years
+old--
+ME: Sorry, no. Everyone was in university in 2006. Bloc Party Silent Alarm and so forth. Anyway, continue">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Brooks Otterlake</span> <span class="handle-text fs-6 d-block d-md-inline">@i_zzzzzz</span></h4>
+            <p>SOMEONE: In 2006, when I was 10 years<br>old--<br>ME: Sorry, no. Everyone was in university in 2006. Bloc Party Silent Alarm and so forth. Anyway, continue</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

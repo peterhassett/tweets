@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I feel bad laughing at this but this goose is FADED
+
+CBS Los Angeles @CBSLA
+NEAR OVERDOSE: A goose and a gull ...">
+    <meta property="og:title" content="I feel bad laughing at this but this goose is FADE — nuanced opinion guy @charles_kinbote">
+    <meta property="og:image:alt" content="I feel bad laughing at this but this goose is FADED
+
+CBS Los Angeles @CBSLA
+NEAR OVERDOSE: A goose and a gull are recovering after eating prescription pills dumped at Carr Park in Huntington Beach. 
+
+(Photo of a passed out goose)">
+    <meta property="og:description" content="I feel bad laughing at this but this goose is FADED
+
+CBS Los Angeles @CBSLA
+NEAR OVERDOSE: A goose and a gull are recovering after eating prescription pills dumped at Carr Park in Huntington Beach. 
+
+(Photo of a passed out goose)">
+    <meta property="og:image" content="/img/1603.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I feel bad laughing at this but this goose is FADE — nuanced opinion guy @charles_kinbote</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1603/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1603",
+      "headline": "I feel bad laughing at this but this goose is FADED\n\nCBS Los Angeles @CBSLA\nNEAR OVERDOSE: A goose and a gull ",
+      "articleBody": "I feel bad laughing at this but this goose is FADED\n\nCBS Los Angeles @CBSLA\nNEAR OVERDOSE: A goose and a gull are recovering after eating prescription pills dumped at Carr Park in Huntington Beach. \n\n(Photo of a passed out goose)",
+      "image": "/img/1603.webp",
+      "author": {
+        "@type": "Person",
+        "name": "nuanced opinion guy",
+        "alternateName": "charles_kinbote"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1603.webp" class="img-fluid rounded" alt="I feel bad laughing at this but this goose is FADED
+
+CBS Los Angeles @CBSLA
+NEAR OVERDOSE: A goose and a gull are recovering after eating prescription pills dumped at Carr Park in Huntington Beach. 
+
+(Photo of a passed out goose)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">nuanced opinion guy</span> <span class="handle-text fs-6 d-block d-md-inline">@charles_kinbote</span></h4>
+            <p>I feel bad laughing at this but this goose is FADED<br><br>CBS Los Angeles @CBSLA<br>NEAR OVERDOSE: A goose and a gull are recovering after eating prescription pills dumped at Carr Park in Huntington Beach. <br><br>(Photo of a passed out goose)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

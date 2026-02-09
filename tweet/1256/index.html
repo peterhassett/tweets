@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="This is what a libertarian folk singer
+puts on his guitar
+
+PHOTO:
+
+THIS MACHINE ACCEPTS
+CREDIT CARDS
+ONLY">
+    <meta property="og:title" content="This is what a libertarian folk singer
+puts on his — Fred Armisen as Cranky Kong @Bread_Santa">
+    <meta property="og:image:alt" content="This is what a libertarian folk singer
+puts on his guitar
+
+PHOTO:
+
+THIS MACHINE ACCEPTS
+CREDIT CARDS
+ONLY">
+    <meta property="og:description" content="This is what a libertarian folk singer
+puts on his guitar
+
+PHOTO:
+
+THIS MACHINE ACCEPTS
+CREDIT CARDS
+ONLY">
+    <meta property="og:image" content="/img/1256.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>This is what a libertarian folk singer
+puts on his — Fred Armisen as Cranky Kong @Bread_Santa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1256/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1256",
+      "headline": "This is what a libertarian folk singer\nputs on his guitar\n\nPHOTO:\n\nTHIS MACHINE ACCEPTS\nCREDIT CARDS\nONLY",
+      "articleBody": "This is what a libertarian folk singer\nputs on his guitar\n\nPHOTO:\n\nTHIS MACHINE ACCEPTS\nCREDIT CARDS\nONLY",
+      "image": "/img/1256.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Fred Armisen as Cranky Kong",
+        "alternateName": "Bread_Santa"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1256.webp" class="img-fluid rounded" alt="This is what a libertarian folk singer
+puts on his guitar
+
+PHOTO:
+
+THIS MACHINE ACCEPTS
+CREDIT CARDS
+ONLY">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Fred Armisen as Cranky Kong</span> <span class="handle-text fs-6 d-block d-md-inline">@Bread_Santa</span></h4>
+            <p>This is what a libertarian folk singer<br>puts on his guitar<br><br>PHOTO:<br><br>THIS MACHINE ACCEPTS<br>CREDIT CARDS<br>ONLY</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

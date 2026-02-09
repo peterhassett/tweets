@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Logan Roy: So...what&#x27;s the move on
+this?
+Kendall: Well... It&#x27;s... Fucking.... uh... peepee fucking, ...">
+    <meta property="og:title" content="Logan Roy: So...what&#x27;s the move on
+this?
+Kendall:  — Thing Bad @Merman_Melville">
+    <meta property="og:image:alt" content="Logan Roy: So...what&#x27;s the move on
+this?
+Kendall: Well... It&#x27;s... Fucking.... uh... peepee fucking, poopoo, right? Roman: Jesus Christ. UhH PeEpEE
+poOpOO? Even for you that&#x27;s like, lobotomy shit.
+Logan: He&#x27;s right.
+Roman: Ha- wait, what?
+Logan: (slowly nodding) Peepee Poopoo.
+10/10/19">
+    <meta property="og:description" content="Logan Roy: So...what&#x27;s the move on
+this?
+Kendall: Well... It&#x27;s... Fucking.... uh... peepee fucking, poopoo, right? Roman: Jesus Christ. UhH PeEpEE
+poOpOO? Even for you that&#x27;s like, lobotomy shit.
+Logan: He&#x27;s right.
+Roman: Ha- wait, what?
+Logan: (slowly nodding) Peepee Poopoo.
+10/10/19">
+    <meta property="og:image" content="/img/0080.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Logan Roy: So...what&#x27;s the move on
+this?
+Kendall:  — Thing Bad @Merman_Melville</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0080/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0080",
+      "headline": "Logan Roy: So...what's the move on\nthis?\nKendall: Well... It's... Fucking.... uh... peepee fucking, poopoo, ri",
+      "articleBody": "Logan Roy: So...what's the move on\nthis?\nKendall: Well... It's... Fucking.... uh... peepee fucking, poopoo, right? Roman: Jesus Christ. UhH PeEpEE\npoOpOO? Even for you that's like, lobotomy shit.\nLogan: He's right.\nRoman: Ha- wait, what?\nLogan: (slowly nodding) Peepee Poopoo.\n10/10/19",
+      "image": "/img/0080.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Thing Bad",
+        "alternateName": "Merman_Melville"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0080.webp" class="img-fluid rounded" alt="Logan Roy: So...what&#x27;s the move on
+this?
+Kendall: Well... It&#x27;s... Fucking.... uh... peepee fucking, poopoo, right? Roman: Jesus Christ. UhH PeEpEE
+poOpOO? Even for you that&#x27;s like, lobotomy shit.
+Logan: He&#x27;s right.
+Roman: Ha- wait, what?
+Logan: (slowly nodding) Peepee Poopoo.
+10/10/19">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Thing Bad</span> <span class="handle-text fs-6 d-block d-md-inline">@Merman_Melville</span></h4>
+            <p>Logan Roy: So...what&#x27;s the move on<br>this?<br>Kendall: Well... It&#x27;s... Fucking.... uh... peepee fucking, poopoo, right? Roman: Jesus Christ. UhH PeEpEE<br>poOpOO? Even for you that&#x27;s like, lobotomy shit.<br>Logan: He&#x27;s right.<br>Roman: Ha- wait, what?<br>Logan: (slowly nodding) Peepee Poopoo.<br>10/10/19</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="It goes like this, the fourth, the fifth, the minor fall, the major lift
+
+(Photo of theater marquee reading…)
+...">
+    <meta property="og:title" content="It goes like this, the fourth, the fifth, the mino — Becca @beegriz">
+    <meta property="og:image:alt" content="It goes like this, the fourth, the fifth, the minor fall, the major lift
+
+(Photo of theater marquee reading…)
+
+MARCEL THE SHELL WITH SHOES ON HALLELUJAH">
+    <meta property="og:description" content="It goes like this, the fourth, the fifth, the minor fall, the major lift
+
+(Photo of theater marquee reading…)
+
+MARCEL THE SHELL WITH SHOES ON HALLELUJAH">
+    <meta property="og:image" content="/img/0893.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>It goes like this, the fourth, the fifth, the mino — Becca @beegriz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0893/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0893",
+      "headline": "It goes like this, the fourth, the fifth, the minor fall, the major lift\n\n(Photo of theater marquee reading\u2026)\n",
+      "articleBody": "It goes like this, the fourth, the fifth, the minor fall, the major lift\n\n(Photo of theater marquee reading\u2026)\n\nMARCEL THE SHELL WITH SHOES ON HALLELUJAH",
+      "image": "/img/0893.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Becca",
+        "alternateName": "beegriz"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0893.webp" class="img-fluid rounded" alt="It goes like this, the fourth, the fifth, the minor fall, the major lift
+
+(Photo of theater marquee reading…)
+
+MARCEL THE SHELL WITH SHOES ON HALLELUJAH">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Becca</span> <span class="handle-text fs-6 d-block d-md-inline">@beegriz</span></h4>
+            <p>It goes like this, the fourth, the fifth, the minor fall, the major lift<br><br>(Photo of theater marquee reading…)<br><br>MARCEL THE SHELL WITH SHOES ON HALLELUJAH</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

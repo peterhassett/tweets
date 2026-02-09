@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="very interesting
+
+The Guardian
+Eminem criticises non-mask wearers on new rap track
+1 day ago
+
+AP Associated Pr...">
+    <meta property="og:title" content="very interesting
+
+The Guardian
+Eminem criticises n — blm donny @_donnydrama">
+    <meta property="og:image:alt" content="very interesting
+
+The Guardian
+Eminem criticises non-mask wearers on new rap track
+1 day ago
+
+AP Associated Press
+Trump wears mask in public for first time during pandemic
+4 hours ago">
+    <meta property="og:description" content="very interesting
+
+The Guardian
+Eminem criticises non-mask wearers on new rap track
+1 day ago
+
+AP Associated Press
+Trump wears mask in public for first time during pandemic
+4 hours ago">
+    <meta property="og:image" content="/img/2053.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>very interesting
+
+The Guardian
+Eminem criticises n — blm donny @_donnydrama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2053/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2053",
+      "headline": "very interesting\n\nThe Guardian\nEminem criticises non-mask wearers on new rap track\n1 day ago\n\nAP Associated Pr",
+      "articleBody": "very interesting\n\nThe Guardian\nEminem criticises non-mask wearers on new rap track\n1 day ago\n\nAP Associated Press\nTrump wears mask in public for first time during pandemic\n4 hours ago",
+      "image": "/img/2053.webp",
+      "author": {
+        "@type": "Person",
+        "name": "blm donny",
+        "alternateName": "_donnydrama"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2053.webp" class="img-fluid rounded" alt="very interesting
+
+The Guardian
+Eminem criticises non-mask wearers on new rap track
+1 day ago
+
+AP Associated Press
+Trump wears mask in public for first time during pandemic
+4 hours ago">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">blm donny</span> <span class="handle-text fs-6 d-block d-md-inline">@_donnydrama</span></h4>
+            <p>very interesting<br><br>The Guardian<br>Eminem criticises non-mask wearers on new rap track<br>1 day ago<br><br>AP Associated Press<br>Trump wears mask in public for first time during pandemic<br>4 hours ago</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

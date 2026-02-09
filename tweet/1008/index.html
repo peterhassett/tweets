@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="What I love about &quot;Diners, Drive-Ins, and Dives&quot; is that the episode you&#x27;re watching could be f...">
+    <meta property="og:title" content="What I love about &quot;Diners, Drive-Ins, and Dives&quot; i — C.J. Toledano @CJToledano">
+    <meta property="og:image:alt" content="What I love about &quot;Diners, Drive-Ins, and Dives&quot; is that the episode you&#x27;re watching could be from this week or 16 years ago and there&#x27;s no way to tell.">
+    <meta property="og:description" content="What I love about &quot;Diners, Drive-Ins, and Dives&quot; is that the episode you&#x27;re watching could be from this week or 16 years ago and there&#x27;s no way to tell.">
+    <meta property="og:image" content="/img/1008.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>What I love about &quot;Diners, Drive-Ins, and Dives&quot; i — C.J. Toledano @CJToledano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1008/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1008",
+      "headline": "What I love about \"Diners, Drive-Ins, and Dives\" is that the episode you're watching could be from this week o",
+      "articleBody": "What I love about \"Diners, Drive-Ins, and Dives\" is that the episode you're watching could be from this week or 16 years ago and there's no way to tell.",
+      "image": "/img/1008.webp",
+      "author": {
+        "@type": "Person",
+        "name": "C.J. Toledano",
+        "alternateName": "CJToledano"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1008.webp" class="img-fluid rounded" alt="What I love about &quot;Diners, Drive-Ins, and Dives&quot; is that the episode you&#x27;re watching could be from this week or 16 years ago and there&#x27;s no way to tell.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">C.J. Toledano</span> <span class="handle-text fs-6 d-block d-md-inline">@CJToledano</span></h4>
+            <p>What I love about &quot;Diners, Drive-Ins, and Dives&quot; is that the episode you&#x27;re watching could be from this week or 16 years ago and there&#x27;s no way to tell.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

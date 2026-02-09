@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="me: robot butler, my hands ache.
+please tweet the following for me: robopussy got me acting zeros and
+ones
+my ...">
+    <meta property="og:title" content="me: robot butler, my hands ache.
+please tweet the  — lil stinker @superlameballs">
+    <meta property="og:image:alt" content="me: robot butler, my hands ache.
+please tweet the following for me: robopussy got me acting zeros and
+ones
+my robot butler: [simultaneously quote tweeting my tweet on his private account with &quot;she mocks our culture&quot;] very good, ma&#x27;am">
+    <meta property="og:description" content="me: robot butler, my hands ache.
+please tweet the following for me: robopussy got me acting zeros and
+ones
+my robot butler: [simultaneously quote tweeting my tweet on his private account with &quot;she mocks our culture&quot;] very good, ma&#x27;am">
+    <meta property="og:image" content="/img/0259.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>me: robot butler, my hands ache.
+please tweet the  — lil stinker @superlameballs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0259/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0259",
+      "headline": "me: robot butler, my hands ache.\nplease tweet the following for me: robopussy got me acting zeros and\nones\nmy ",
+      "articleBody": "me: robot butler, my hands ache.\nplease tweet the following for me: robopussy got me acting zeros and\nones\nmy robot butler: [simultaneously quote tweeting my tweet on his private account with \"she mocks our culture\"] very good, ma'am",
+      "image": "/img/0259.webp",
+      "author": {
+        "@type": "Person",
+        "name": "lil stinker",
+        "alternateName": "superlameballs"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0259.webp" class="img-fluid rounded" alt="me: robot butler, my hands ache.
+please tweet the following for me: robopussy got me acting zeros and
+ones
+my robot butler: [simultaneously quote tweeting my tweet on his private account with &quot;she mocks our culture&quot;] very good, ma&#x27;am">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">lil stinker</span> <span class="handle-text fs-6 d-block d-md-inline">@superlameballs</span></h4>
+            <p>me: robot butler, my hands ache.<br>please tweet the following for me: robopussy got me acting zeros and<br>ones<br>my robot butler: [simultaneously quote tweeting my tweet on his private account with &quot;she mocks our culture&quot;] very good, ma&#x27;am</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

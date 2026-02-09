@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Me: can you dust my wets
+
+Server: you can just ask for Parmesan cheese
+
+Me, confused, lifts all of my spaghett...">
+    <meta property="og:title" content="Me: can you dust my wets
+
+Server: you can just ask — Horsedivorce @">
+    <meta property="og:image:alt" content="Me: can you dust my wets
+
+Server: you can just ask for Parmesan cheese
+
+Me, confused, lifts all of my spaghetti with my hands: please, my wets">
+    <meta property="og:description" content="Me: can you dust my wets
+
+Server: you can just ask for Parmesan cheese
+
+Me, confused, lifts all of my spaghetti with my hands: please, my wets">
+    <meta property="og:image" content="/img/2371.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Me: can you dust my wets
+
+Server: you can just ask — Horsedivorce @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2371/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2371",
+      "headline": "Me: can you dust my wets\n\nServer: you can just ask for Parmesan cheese\n\nMe, confused, lifts all of my spaghett",
+      "articleBody": "Me: can you dust my wets\n\nServer: you can just ask for Parmesan cheese\n\nMe, confused, lifts all of my spaghetti with my hands: please, my wets",
+      "image": "/img/2371.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Horsedivorce",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2371.webp" class="img-fluid rounded" alt="Me: can you dust my wets
+
+Server: you can just ask for Parmesan cheese
+
+Me, confused, lifts all of my spaghetti with my hands: please, my wets">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Horsedivorce</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>Me: can you dust my wets<br><br>Server: you can just ask for Parmesan cheese<br><br>Me, confused, lifts all of my spaghetti with my hands: please, my wets</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

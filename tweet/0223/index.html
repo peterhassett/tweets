@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="It&#x27;s probably foolish to think a NYC mayor will successfully translate into being a national political fi...">
+    <meta property="og:title" content="It&#x27;s probably foolish to think a NYC mayor will su — Nate Silver @NateSilver538">
+    <meta property="og:image:alt" content="It&#x27;s probably foolish to think a NYC mayor will successfully translate into being a national political figure, but I still think Eric Adams would be in my top 5 for &quot;who will be the next Democratic presidential nominee after Joe Biden?&quot;.
+
+Jan 3, 2022">
+    <meta property="og:description" content="It&#x27;s probably foolish to think a NYC mayor will successfully translate into being a national political figure, but I still think Eric Adams would be in my top 5 for &quot;who will be the next Democratic presidential nominee after Joe Biden?&quot;.
+
+Jan 3, 2022">
+    <meta property="og:image" content="/img/0223.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>It&#x27;s probably foolish to think a NYC mayor will su — Nate Silver @NateSilver538</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0223/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0223",
+      "headline": "It's probably foolish to think a NYC mayor will successfully translate into being a national political figure,",
+      "articleBody": "It's probably foolish to think a NYC mayor will successfully translate into being a national political figure, but I still think Eric Adams would be in my top 5 for \"who will be the next Democratic presidential nominee after Joe Biden?\".\n\nJan 3, 2022",
+      "image": "/img/0223.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Nate Silver",
+        "alternateName": "NateSilver538"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0223.webp" class="img-fluid rounded" alt="It&#x27;s probably foolish to think a NYC mayor will successfully translate into being a national political figure, but I still think Eric Adams would be in my top 5 for &quot;who will be the next Democratic presidential nominee after Joe Biden?&quot;.
+
+Jan 3, 2022">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Nate Silver</span> <span class="handle-text fs-6 d-block d-md-inline">@NateSilver538</span></h4>
+            <p>It&#x27;s probably foolish to think a NYC mayor will successfully translate into being a national political figure, but I still think Eric Adams would be in my top 5 for &quot;who will be the next Democratic presidential nominee after Joe Biden?&quot;.<br><br>Jan 3, 2022</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

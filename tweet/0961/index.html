@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=".@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of her torso in a one piece bathing suit with a snow...">
+    <meta property="og:title" content=".@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of — MELANIA TRUMP @MELANIATRUMP">
+    <meta property="og:image:alt" content=".@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of her torso in a one piece bathing suit with a snow leopard’s bored face on it)
+
+Jun 22, 2014">
+    <meta property="og:description" content=".@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of her torso in a one piece bathing suit with a snow leopard’s bored face on it)
+
+Jun 22, 2014">
+    <meta property="og:image" content="/img/0961.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>.@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of — MELANIA TRUMP @MELANIATRUMP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0961/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0961",
+      "headline": ".@realDonaldTrump \"Honey~see you\nsoon!\"\n\n(Photo of her torso in a one piece bathing suit with a snow leopard\u2019s",
+      "articleBody": ".@realDonaldTrump \"Honey~see you\nsoon!\"\n\n(Photo of her torso in a one piece bathing suit with a snow leopard\u2019s bored face on it)\n\nJun 22, 2014",
+      "image": "/img/0961.webp",
+      "author": {
+        "@type": "Person",
+        "name": "MELANIA TRUMP",
+        "alternateName": "MELANIATRUMP"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0961.webp" class="img-fluid rounded" alt=".@realDonaldTrump &quot;Honey~see you
+soon!&quot;
+
+(Photo of her torso in a one piece bathing suit with a snow leopard’s bored face on it)
+
+Jun 22, 2014">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">MELANIA TRUMP</span> <span class="handle-text fs-6 d-block d-md-inline">@MELANIATRUMP</span></h4>
+            <p>.@realDonaldTrump &quot;Honey~see you<br>soon!&quot;<br><br>(Photo of her torso in a one piece bathing suit with a snow leopard’s bored face on it)<br><br>Jun 22, 2014</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

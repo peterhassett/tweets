@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one wh...">
+    <meta property="og:title" content="Disney brought back Boba Fett and Ewan McGregor as — Keifer @DannyVegito">
+    <meta property="og:image:alt" content="Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one where we watch Mon Mothma go through a divorce">
+    <meta property="og:description" content="Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one where we watch Mon Mothma go through a divorce">
+    <meta property="og:image" content="/img/0549.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Disney brought back Boba Fett and Ewan McGregor as — Keifer @DannyVegito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0549/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0549",
+      "headline": "Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one wh",
+      "articleBody": "Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one where we watch Mon Mothma go through a divorce",
+      "image": "/img/0549.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Keifer",
+        "alternateName": "DannyVegito"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0549.webp" class="img-fluid rounded" alt="Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one where we watch Mon Mothma go through a divorce">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Keifer</span> <span class="handle-text fs-6 d-block d-md-inline">@DannyVegito</span></h4>
+            <p>Disney brought back Boba Fett and Ewan McGregor as Obi-Wan and the best Star Wars tv show by far is the one where we watch Mon Mothma go through a divorce</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

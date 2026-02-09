@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="one of my favorite things is when 22 year olds say &quot;imagine being 35 with socials&quot;. What grand and l...">
+    <meta property="og:title" content="one of my favorite things is when 22 year olds say — bfa agonistes @superloafcat">
+    <meta property="og:image:alt" content="one of my favorite things is when 22 year olds say &quot;imagine being 35 with socials&quot;. What grand and life fulfilling different thing do you think you&#x27;re gonna be doing at 35 buddy, this is all there is and it&#x27;s only gonna get worse">
+    <meta property="og:description" content="one of my favorite things is when 22 year olds say &quot;imagine being 35 with socials&quot;. What grand and life fulfilling different thing do you think you&#x27;re gonna be doing at 35 buddy, this is all there is and it&#x27;s only gonna get worse">
+    <meta property="og:image" content="/img/1071.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>one of my favorite things is when 22 year olds say — bfa agonistes @superloafcat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1071/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1071",
+      "headline": "one of my favorite things is when 22 year olds say \"imagine being 35 with socials\". What grand and life fulfil",
+      "articleBody": "one of my favorite things is when 22 year olds say \"imagine being 35 with socials\". What grand and life fulfilling different thing do you think you're gonna be doing at 35 buddy, this is all there is and it's only gonna get worse",
+      "image": "/img/1071.webp",
+      "author": {
+        "@type": "Person",
+        "name": "bfa agonistes",
+        "alternateName": "superloafcat"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1071.webp" class="img-fluid rounded" alt="one of my favorite things is when 22 year olds say &quot;imagine being 35 with socials&quot;. What grand and life fulfilling different thing do you think you&#x27;re gonna be doing at 35 buddy, this is all there is and it&#x27;s only gonna get worse">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">bfa agonistes</span> <span class="handle-text fs-6 d-block d-md-inline">@superloafcat</span></h4>
+            <p>one of my favorite things is when 22 year olds say &quot;imagine being 35 with socials&quot;. What grand and life fulfilling different thing do you think you&#x27;re gonna be doing at 35 buddy, this is all there is and it&#x27;s only gonna get worse</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

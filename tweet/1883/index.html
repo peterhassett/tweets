@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Replying to @UrbanAchievr
+Conservative: I have been censored for my conservative views
+Me: Holy shit! You were...">
+    <meta property="og:title" content="Replying to @UrbanAchievr
+Conservative: I have bee — Andrew Lawrence @ndrew_lawrence">
+    <meta property="og:image:alt" content="Replying to @UrbanAchievr
+Conservative: I have been censored for my conservative views
+Me: Holy shit! You were censored for wanting lower taxes?
+Con: LOL no...no not those views
+Me: So....deregulation?
+Con: Haha no not those views either
+Me: Which views, exactly?
+Con: Oh, you know the ones">
+    <meta property="og:description" content="Replying to @UrbanAchievr
+Conservative: I have been censored for my conservative views
+Me: Holy shit! You were censored for wanting lower taxes?
+Con: LOL no...no not those views
+Me: So....deregulation?
+Con: Haha no not those views either
+Me: Which views, exactly?
+Con: Oh, you know the ones">
+    <meta property="og:image" content="/img/1883.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Replying to @UrbanAchievr
+Conservative: I have bee — Andrew Lawrence @ndrew_lawrence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1883/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1883",
+      "headline": "Replying to @UrbanAchievr\nConservative: I have been censored for my conservative views\nMe: Holy shit! You were",
+      "articleBody": "Replying to @UrbanAchievr\nConservative: I have been censored for my conservative views\nMe: Holy shit! You were censored for wanting lower taxes?\nCon: LOL no...no not those views\nMe: So....deregulation?\nCon: Haha no not those views either\nMe: Which views, exactly?\nCon: Oh, you know the ones",
+      "image": "/img/1883.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Andrew Lawrence",
+        "alternateName": "ndrew_lawrence"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1883.webp" class="img-fluid rounded" alt="Replying to @UrbanAchievr
+Conservative: I have been censored for my conservative views
+Me: Holy shit! You were censored for wanting lower taxes?
+Con: LOL no...no not those views
+Me: So....deregulation?
+Con: Haha no not those views either
+Me: Which views, exactly?
+Con: Oh, you know the ones">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Andrew Lawrence</span> <span class="handle-text fs-6 d-block d-md-inline">@ndrew_lawrence</span></h4>
+            <p>Replying to @UrbanAchievr<br>Conservative: I have been censored for my conservative views<br>Me: Holy shit! You were censored for wanting lower taxes?<br>Con: LOL no...no not those views<br>Me: So....deregulation?<br>Con: Haha no not those views either<br>Me: Which views, exactly?<br>Con: Oh, you know the ones</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

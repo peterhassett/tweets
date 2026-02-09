@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="...
+Wild bee: just getting snack
+Me: no prob bee
+Mason bee: just make house
+Me: build a way b
+Honey bee:jus sa...">
+    <meta property="og:title" content="...
+Wild bee: just getting snack
+Me: no prob bee
+M — C.M. Galdre @CMGal">
+    <meta property="og:image:alt" content="...
+Wild bee: just getting snack
+Me: no prob bee
+Mason bee: just make house
+Me: build a way b
+Honey bee:jus sampling the lavenders Me: you know I got an assortment
+Bumble bee: hey *bonk* I jus *bonk* I h Me: *holds flower still*
+Wasp: I&#x27;LL SEE U IN HELL
+Me: U TELL THEM WHO SENT U">
+    <meta property="og:description" content="...
+Wild bee: just getting snack
+Me: no prob bee
+Mason bee: just make house
+Me: build a way b
+Honey bee:jus sampling the lavenders Me: you know I got an assortment
+Bumble bee: hey *bonk* I jus *bonk* I h Me: *holds flower still*
+Wasp: I&#x27;LL SEE U IN HELL
+Me: U TELL THEM WHO SENT U">
+    <meta property="og:image" content="/img/0600.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>...
+Wild bee: just getting snack
+Me: no prob bee
+M — C.M. Galdre @CMGal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0600/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0600",
+      "headline": "...\nWild bee: just getting snack\nMe: no prob bee\nMason bee: just make house\nMe: build a way b\nHoney bee:jus sa",
+      "articleBody": "...\nWild bee: just getting snack\nMe: no prob bee\nMason bee: just make house\nMe: build a way b\nHoney bee:jus sampling the lavenders Me: you know I got an assortment\nBumble bee: hey *bonk* I jus *bonk* I h Me: *holds flower still*\nWasp: I'LL SEE U IN HELL\nMe: U TELL THEM WHO SENT U",
+      "image": "/img/0600.webp",
+      "author": {
+        "@type": "Person",
+        "name": "C.M. Galdre",
+        "alternateName": "CMGal"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0600.webp" class="img-fluid rounded" alt="...
+Wild bee: just getting snack
+Me: no prob bee
+Mason bee: just make house
+Me: build a way b
+Honey bee:jus sampling the lavenders Me: you know I got an assortment
+Bumble bee: hey *bonk* I jus *bonk* I h Me: *holds flower still*
+Wasp: I&#x27;LL SEE U IN HELL
+Me: U TELL THEM WHO SENT U">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">C.M. Galdre</span> <span class="handle-text fs-6 d-block d-md-inline">@CMGal</span></h4>
+            <p>...<br>Wild bee: just getting snack<br>Me: no prob bee<br>Mason bee: just make house<br>Me: build a way b<br>Honey bee:jus sampling the lavenders Me: you know I got an assortment<br>Bumble bee: hey *bonk* I jus *bonk* I h Me: *holds flower still*<br>Wasp: I&#x27;LL SEE U IN HELL<br>Me: U TELL THEM WHO SENT U</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

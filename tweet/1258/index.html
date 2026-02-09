@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="me: ever heard of quasimodo
+him: doesn&#x27;t ring a bell
+me: i assure you he does">
+    <meta property="og:title" content="me: ever heard of quasimodo
+him: doesn&#x27;t ring a be — taming fred savage @FredTaming">
+    <meta property="og:image:alt" content="me: ever heard of quasimodo
+him: doesn&#x27;t ring a bell
+me: i assure you he does">
+    <meta property="og:description" content="me: ever heard of quasimodo
+him: doesn&#x27;t ring a bell
+me: i assure you he does">
+    <meta property="og:image" content="/img/1258.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>me: ever heard of quasimodo
+him: doesn&#x27;t ring a be — taming fred savage @FredTaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1258/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1258",
+      "headline": "me: ever heard of quasimodo\nhim: doesn't ring a bell\nme: i assure you he does",
+      "articleBody": "me: ever heard of quasimodo\nhim: doesn't ring a bell\nme: i assure you he does",
+      "image": "/img/1258.webp",
+      "author": {
+        "@type": "Person",
+        "name": "taming fred savage",
+        "alternateName": "FredTaming"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1258.webp" class="img-fluid rounded" alt="me: ever heard of quasimodo
+him: doesn&#x27;t ring a bell
+me: i assure you he does">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">taming fred savage</span> <span class="handle-text fs-6 d-block d-md-inline">@FredTaming</span></h4>
+            <p>me: ever heard of quasimodo<br>him: doesn&#x27;t ring a bell<br>me: i assure you he does</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

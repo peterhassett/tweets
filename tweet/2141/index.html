@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Take your husband&#x27;s last name. Take his first name. Take his social.
+Assume his identity. Hide the body i...">
+    <meta property="og:title" content="Take your husband&#x27;s last name. Take his first name — Danielle Grace @danimgrace">
+    <meta property="og:image:alt" content="Take your husband&#x27;s last name. Take his first name. Take his social.
+Assume his identity. Hide the body in
+a closet. You&#x27;re the husband now.">
+    <meta property="og:description" content="Take your husband&#x27;s last name. Take his first name. Take his social.
+Assume his identity. Hide the body in
+a closet. You&#x27;re the husband now.">
+    <meta property="og:image" content="/img/2141.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Take your husband&#x27;s last name. Take his first name — Danielle Grace @danimgrace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2141/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2141",
+      "headline": "Take your husband's last name. Take his first name. Take his social.\nAssume his identity. Hide the body in\na c",
+      "articleBody": "Take your husband's last name. Take his first name. Take his social.\nAssume his identity. Hide the body in\na closet. You're the husband now.",
+      "image": "/img/2141.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Danielle Grace",
+        "alternateName": "danimgrace"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2141.webp" class="img-fluid rounded" alt="Take your husband&#x27;s last name. Take his first name. Take his social.
+Assume his identity. Hide the body in
+a closet. You&#x27;re the husband now.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Danielle Grace</span> <span class="handle-text fs-6 d-block d-md-inline">@danimgrace</span></h4>
+            <p>Take your husband&#x27;s last name. Take his first name. Take his social.<br>Assume his identity. Hide the body in<br>a closet. You&#x27;re the husband now.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

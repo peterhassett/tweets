@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Adult friendships are hard because
+everyone is really really tired.">
+    <meta property="og:title" content="Adult friendships are hard because
+everyone is rea — Heather Thompson Day @HeatherTDay">
+    <meta property="og:image:alt" content="Adult friendships are hard because
+everyone is really really tired.">
+    <meta property="og:description" content="Adult friendships are hard because
+everyone is really really tired.">
+    <meta property="og:image" content="/img/1184.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Adult friendships are hard because
+everyone is rea — Heather Thompson Day @HeatherTDay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1184/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1184",
+      "headline": "Adult friendships are hard because\neveryone is really really tired.",
+      "articleBody": "Adult friendships are hard because\neveryone is really really tired.",
+      "image": "/img/1184.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Heather Thompson Day",
+        "alternateName": "HeatherTDay"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1184.webp" class="img-fluid rounded" alt="Adult friendships are hard because
+everyone is really really tired.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Heather Thompson Day</span> <span class="handle-text fs-6 d-block d-md-inline">@HeatherTDay</span></h4>
+            <p>Adult friendships are hard because<br>everyone is really really tired.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

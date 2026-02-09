@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving ...">
+    <meta property="og:title" content="you guys all say you hate lawyers until you need o — Law Boy, Esq. @The_Law_Boy">
+    <meta property="og:image:alt" content="you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving system we designed">
+    <meta property="og:description" content="you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving system we designed">
+    <meta property="og:image" content="/img/2020.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>you guys all say you hate lawyers until you need o — Law Boy, Esq. @The_Law_Boy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2020/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2020",
+      "headline": "you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving ",
+      "articleBody": "you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving system we designed",
+      "image": "/img/2020.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Law Boy, Esq.",
+        "alternateName": "The_Law_Boy"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2020.webp" class="img-fluid rounded" alt="you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving system we designed">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Law Boy, Esq.</span> <span class="handle-text fs-6 d-block d-md-inline">@The_Law_Boy</span></h4>
+            <p>you guys all say you hate lawyers until you need our help navigating the extremely burdensome and unforgiving system we designed</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

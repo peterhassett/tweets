@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Egg...">
+    <meta property="og:title" content="HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE — Leg So Hot You Fry And Egg @pisscop">
+    <meta property="og:image:alt" content="HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Eggs LETS GO DO NOT BRING WEAPONS">
+    <meta property="og:description" content="HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Eggs LETS GO DO NOT BRING WEAPONS">
+    <meta property="og:image" content="/img/1923.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE — Leg So Hot You Fry And Egg @pisscop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1923/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1923",
+      "headline": "HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Egg",
+      "articleBody": "HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Eggs LETS GO DO NOT BRING WEAPONS",
+      "image": "/img/1923.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Leg So Hot You Fry And Egg",
+        "alternateName": "pisscop"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1923.webp" class="img-fluid rounded" alt="HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Eggs LETS GO DO NOT BRING WEAPONS">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Leg So Hot You Fry And Egg</span> <span class="handle-text fs-6 d-block d-md-inline">@pisscop</span></h4>
+            <p>HELLO FELLOW HUMAN TEENS I HEARD THE COOLEST PLACE FOR US TEENS TO HANG OUT IS The Colossal Pillar of Wasp Eggs LETS GO DO NOT BRING WEAPONS</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

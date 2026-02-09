@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Phil Collins: here tonight is the man who inspired my next song, “fat shithead clogged my toilet.”
+
+(Spotlight...">
+    <meta property="og:title" content="Phil Collins: here tonight is the man who inspired — LHgarrett @">
+    <meta property="og:image:alt" content="Phil Collins: here tonight is the man who inspired my next song, “fat shithead clogged my toilet.”
+
+(Spotlight tracks me as I head for exit)">
+    <meta property="og:description" content="Phil Collins: here tonight is the man who inspired my next song, “fat shithead clogged my toilet.”
+
+(Spotlight tracks me as I head for exit)">
+    <meta property="og:image" content="/img/2272.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Phil Collins: here tonight is the man who inspired — LHgarrett @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2272/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2272",
+      "headline": "Phil Collins: here tonight is the man who inspired my next song, \u201cfat shithead clogged my toilet.\u201d\n\n(Spotlight",
+      "articleBody": "Phil Collins: here tonight is the man who inspired my next song, \u201cfat shithead clogged my toilet.\u201d\n\n(Spotlight tracks me as I head for exit)",
+      "image": "/img/2272.webp",
+      "author": {
+        "@type": "Person",
+        "name": "LHgarrett",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2272.webp" class="img-fluid rounded" alt="Phil Collins: here tonight is the man who inspired my next song, “fat shithead clogged my toilet.”
+
+(Spotlight tracks me as I head for exit)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">LHgarrett</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>Phil Collins: here tonight is the man who inspired my next song, “fat shithead clogged my toilet.”<br><br>(Spotlight tracks me as I head for exit)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

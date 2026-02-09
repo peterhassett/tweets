@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you &quot;heh back in th...">
+    <meta property="og:title" content="AC DC song titles will be something like Gettin Ha — Robbie @ActiveShootrRob">
+    <meta property="og:image:alt" content="AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you &quot;heh back in the day nobody knew what this song was really about&quot;">
+    <meta property="og:description" content="AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you &quot;heh back in the day nobody knew what this song was really about&quot;">
+    <meta property="og:image" content="/img/0430.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>AC DC song titles will be something like Gettin Ha — Robbie @ActiveShootrRob</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0430/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0430",
+      "headline": "AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you \"heh back in the day",
+      "articleBody": "AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you \"heh back in the day nobody knew what this song was really about\"",
+      "image": "/img/0430.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Robbie",
+        "alternateName": "ActiveShootrRob"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0430.webp" class="img-fluid rounded" alt="AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you &quot;heh back in the day nobody knew what this song was really about&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Robbie</span> <span class="handle-text fs-6 d-block d-md-inline">@ActiveShootrRob</span></h4>
+            <p>AC DC song titles will be something like Gettin Hard (For Sex) and your dad will tell you &quot;heh back in the day nobody knew what this song was really about&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

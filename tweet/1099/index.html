@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="ADHD Comics
+My brain has two modes:
+A) 30 hours of work done in 8 hours
+B) 30 minutes of work done in 8 hours">
+    <meta property="og:title" content="ADHD Comics
+My brain has two modes:
+A) 30 hours of — Dani Donovan @danidonovan">
+    <meta property="og:image:alt" content="ADHD Comics
+My brain has two modes:
+A) 30 hours of work done in 8 hours
+B) 30 minutes of work done in 8 hours">
+    <meta property="og:description" content="ADHD Comics
+My brain has two modes:
+A) 30 hours of work done in 8 hours
+B) 30 minutes of work done in 8 hours">
+    <meta property="og:image" content="/img/1099.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>ADHD Comics
+My brain has two modes:
+A) 30 hours of — Dani Donovan @danidonovan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1099/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1099",
+      "headline": "ADHD Comics\nMy brain has two modes:\nA) 30 hours of work done in 8 hours\nB) 30 minutes of work done in 8 hours",
+      "articleBody": "ADHD Comics\nMy brain has two modes:\nA) 30 hours of work done in 8 hours\nB) 30 minutes of work done in 8 hours",
+      "image": "/img/1099.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dani Donovan",
+        "alternateName": "danidonovan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1099.webp" class="img-fluid rounded" alt="ADHD Comics
+My brain has two modes:
+A) 30 hours of work done in 8 hours
+B) 30 minutes of work done in 8 hours">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dani Donovan</span> <span class="handle-text fs-6 d-block d-md-inline">@danidonovan</span></h4>
+            <p>ADHD Comics<br>My brain has two modes:<br>A) 30 hours of work done in 8 hours<br>B) 30 minutes of work done in 8 hours</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

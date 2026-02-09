@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Yohimbo10
+I always thought it was funny how with Elvis being a big Trekkie he named one of his horses after th...">
+    <meta property="og:title" content="Yohimbo10
+I always thought it was funny how with E — Arron @Usagi">
+    <meta property="og:image:alt" content="Yohimbo10
+I always thought it was funny how with Elvis being a big Trekkie he named one of his horses after the show but instead of choosing a
+name like Kirk or Spock he just
+named it Star Trek">
+    <meta property="og:description" content="Yohimbo10
+I always thought it was funny how with Elvis being a big Trekkie he named one of his horses after the show but instead of choosing a
+name like Kirk or Spock he just
+named it Star Trek">
+    <meta property="og:image" content="/img/0571.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Yohimbo10
+I always thought it was funny how with E — Arron @Usagi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0571/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0571",
+      "headline": "Yohimbo10\nI always thought it was funny how with Elvis being a big Trekkie he named one of his horses after th",
+      "articleBody": "Yohimbo10\nI always thought it was funny how with Elvis being a big Trekkie he named one of his horses after the show but instead of choosing a\nname like Kirk or Spock he just\nnamed it Star Trek",
+      "image": "/img/0571.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Arron",
+        "alternateName": "Usagi"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0571.webp" class="img-fluid rounded" alt="Yohimbo10
+I always thought it was funny how with Elvis being a big Trekkie he named one of his horses after the show but instead of choosing a
+name like Kirk or Spock he just
+named it Star Trek">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Arron</span> <span class="handle-text fs-6 d-block d-md-inline">@Usagi</span></h4>
+            <p>Yohimbo10<br>I always thought it was funny how with Elvis being a big Trekkie he named one of his horses after the show but instead of choosing a<br>name like Kirk or Spock he just<br>named it Star Trek</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@wOaOiOf
+me: well you see doc, i just don&#x27;t have the sauce anymore. i&#x27;m not capable of sending out b...">
+    <meta property="og:title" content="@wOaOiOf
+me: well you see doc, i just don&#x27;t have t —  @wOaOiOf">
+    <meta property="og:image:alt" content="@wOaOiOf
+me: well you see doc, i just don&#x27;t have the sauce anymore. i&#x27;m not capable of sending out banger after banger. i&#x27;m no better than a lowbie, a platonic good natured reply guy,
+even,
+58 year old psychiatrist w/ a degree from johns hopkins: Do you exercise at all? What about walks?">
+    <meta property="og:description" content="@wOaOiOf
+me: well you see doc, i just don&#x27;t have the sauce anymore. i&#x27;m not capable of sending out banger after banger. i&#x27;m no better than a lowbie, a platonic good natured reply guy,
+even,
+58 year old psychiatrist w/ a degree from johns hopkins: Do you exercise at all? What about walks?">
+    <meta property="og:image" content="/img/0888.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@wOaOiOf
+me: well you see doc, i just don&#x27;t have t —  @wOaOiOf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0888/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0888",
+      "headline": "@wOaOiOf\nme: well you see doc, i just don't have the sauce anymore. i'm not capable of sending out banger afte",
+      "articleBody": "@wOaOiOf\nme: well you see doc, i just don't have the sauce anymore. i'm not capable of sending out banger after banger. i'm no better than a lowbie, a platonic good natured reply guy,\neven,\n58 year old psychiatrist w/ a degree from johns hopkins: Do you exercise at all? What about walks?",
+      "image": "/img/0888.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "wOaOiOf"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0888.webp" class="img-fluid rounded" alt="@wOaOiOf
+me: well you see doc, i just don&#x27;t have the sauce anymore. i&#x27;m not capable of sending out banger after banger. i&#x27;m no better than a lowbie, a platonic good natured reply guy,
+even,
+58 year old psychiatrist w/ a degree from johns hopkins: Do you exercise at all? What about walks?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@wOaOiOf</span></h4>
+            <p>@wOaOiOf<br>me: well you see doc, i just don&#x27;t have the sauce anymore. i&#x27;m not capable of sending out banger after banger. i&#x27;m no better than a lowbie, a platonic good natured reply guy,<br>even,<br>58 year old psychiatrist w/ a degree from johns hopkins: Do you exercise at all? What about walks?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

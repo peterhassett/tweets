@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="hi grandma? Can you come pick me up from my rap battle? It’s over. No, I lost. He saw you drop me off and did ...">
+    <meta property="og:title" content="hi grandma? Can you come pick me up from my rap ba — ch000ch @">
+    <meta property="og:image:alt" content="hi grandma? Can you come pick me up from my rap battle? It’s over. No, I lost. He saw you drop me off and did a pretty devastating rhyme about it">
+    <meta property="og:description" content="hi grandma? Can you come pick me up from my rap battle? It’s over. No, I lost. He saw you drop me off and did a pretty devastating rhyme about it">
+    <meta property="og:image" content="/img/2352.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>hi grandma? Can you come pick me up from my rap ba — ch000ch @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2352/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2352",
+      "headline": "hi grandma? Can you come pick me up from my rap battle? It\u2019s over. No, I lost. He saw you drop me off and did ",
+      "articleBody": "hi grandma? Can you come pick me up from my rap battle? It\u2019s over. No, I lost. He saw you drop me off and did a pretty devastating rhyme about it",
+      "image": "/img/2352.webp",
+      "author": {
+        "@type": "Person",
+        "name": "ch000ch",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2352.webp" class="img-fluid rounded" alt="hi grandma? Can you come pick me up from my rap battle? It’s over. No, I lost. He saw you drop me off and did a pretty devastating rhyme about it">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">ch000ch</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>hi grandma? Can you come pick me up from my rap battle? It’s over. No, I lost. He saw you drop me off and did a pretty devastating rhyme about it</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

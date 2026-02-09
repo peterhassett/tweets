@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Twitter has taught me that the most
+important part of a joke isn&#x27;t the punchline it&#x27;s immediately li...">
+    <meta property="og:title" content="Twitter has taught me that the most
+important part — broti gupta ❤ @BrotiGupta">
+    <meta property="og:image:alt" content="Twitter has taught me that the most
+important part of a joke isn&#x27;t the punchline it&#x27;s immediately listing
+exceptions">
+    <meta property="og:description" content="Twitter has taught me that the most
+important part of a joke isn&#x27;t the punchline it&#x27;s immediately listing
+exceptions">
+    <meta property="og:image" content="/img/0944.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Twitter has taught me that the most
+important part — broti gupta ❤ @BrotiGupta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0944/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0944",
+      "headline": "Twitter has taught me that the most\nimportant part of a joke isn't the punchline it's immediately listing\nexce",
+      "articleBody": "Twitter has taught me that the most\nimportant part of a joke isn't the punchline it's immediately listing\nexceptions",
+      "image": "/img/0944.webp",
+      "author": {
+        "@type": "Person",
+        "name": "broti gupta \u2764",
+        "alternateName": "BrotiGupta"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0944.webp" class="img-fluid rounded" alt="Twitter has taught me that the most
+important part of a joke isn&#x27;t the punchline it&#x27;s immediately listing
+exceptions">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">broti gupta ❤</span> <span class="handle-text fs-6 d-block d-md-inline">@BrotiGupta</span></h4>
+            <p>Twitter has taught me that the most<br>important part of a joke isn&#x27;t the punchline it&#x27;s immediately listing<br>exceptions</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

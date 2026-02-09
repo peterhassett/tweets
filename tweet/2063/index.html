@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn&#x27;t try go...">
+    <meta property="og:title" content="My coworker told me he got banned from a bar when  — B Nasty @Bmangall20">
+    <meta property="og:image:alt" content="My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn&#x27;t try going back to it for 30 years but he finally did and the moment he stepped in someone yelled &quot;Get the hell out of here Dennis&quot; And that&#x27;s
+probably my favorite story ever">
+    <meta property="og:description" content="My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn&#x27;t try going back to it for 30 years but he finally did and the moment he stepped in someone yelled &quot;Get the hell out of here Dennis&quot; And that&#x27;s
+probably my favorite story ever">
+    <meta property="og:image" content="/img/2063.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>My coworker told me he got banned from a bar when  — B Nasty @Bmangall20</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2063/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2063",
+      "headline": "My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn't try going b",
+      "articleBody": "My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn't try going back to it for 30 years but he finally did and the moment he stepped in someone yelled \"Get the hell out of here Dennis\" And that's\nprobably my favorite story ever",
+      "image": "/img/2063.webp",
+      "author": {
+        "@type": "Person",
+        "name": "B Nasty",
+        "alternateName": "Bmangall20"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2063.webp" class="img-fluid rounded" alt="My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn&#x27;t try going back to it for 30 years but he finally did and the moment he stepped in someone yelled &quot;Get the hell out of here Dennis&quot; And that&#x27;s
+probably my favorite story ever">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">B Nasty</span> <span class="handle-text fs-6 d-block d-md-inline">@Bmangall20</span></h4>
+            <p>My coworker told me he got banned from a bar when he lived in North Dakota back in 1973 and didn&#x27;t try going back to it for 30 years but he finally did and the moment he stepped in someone yelled &quot;Get the hell out of here Dennis&quot; And that&#x27;s<br>probably my favorite story ever</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

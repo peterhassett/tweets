@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A woman at Trader Joe&#x27;s asked if they still sold a certain kind of chips. Nothing but respect for the cas...">
+    <meta property="og:title" content="A woman at Trader Joe&#x27;s asked if they still sold a — Joanna Borns @robotics">
+    <meta property="og:image:alt" content="A woman at Trader Joe&#x27;s asked if they still sold a certain kind of chips. Nothing but respect for the cashier
+that said, &quot;No. You&#x27;ll never see those again.&quot;">
+    <meta property="og:description" content="A woman at Trader Joe&#x27;s asked if they still sold a certain kind of chips. Nothing but respect for the cashier
+that said, &quot;No. You&#x27;ll never see those again.&quot;">
+    <meta property="og:image" content="/img/1413.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>A woman at Trader Joe&#x27;s asked if they still sold a — Joanna Borns @robotics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1413/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1413",
+      "headline": "A woman at Trader Joe's asked if they still sold a certain kind of chips. Nothing but respect for the cashier\n",
+      "articleBody": "A woman at Trader Joe's asked if they still sold a certain kind of chips. Nothing but respect for the cashier\nthat said, \"No. You'll never see those again.\"",
+      "image": "/img/1413.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Joanna Borns",
+        "alternateName": "robotics"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1413.webp" class="img-fluid rounded" alt="A woman at Trader Joe&#x27;s asked if they still sold a certain kind of chips. Nothing but respect for the cashier
+that said, &quot;No. You&#x27;ll never see those again.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Joanna Borns</span> <span class="handle-text fs-6 d-block d-md-inline">@robotics</span></h4>
+            <p>A woman at Trader Joe&#x27;s asked if they still sold a certain kind of chips. Nothing but respect for the cashier<br>that said, &quot;No. You&#x27;ll never see those again.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

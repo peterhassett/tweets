@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="my ancestors never dreamed of
+having this many tabs open at once">
+    <meta property="og:title" content="my ancestors never dreamed of
+having this many tab — sio @bestinsio">
+    <meta property="og:image:alt" content="my ancestors never dreamed of
+having this many tabs open at once">
+    <meta property="og:description" content="my ancestors never dreamed of
+having this many tabs open at once">
+    <meta property="og:image" content="/img/0382.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>my ancestors never dreamed of
+having this many tab — sio @bestinsio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0382/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0382",
+      "headline": "my ancestors never dreamed of\nhaving this many tabs open at once",
+      "articleBody": "my ancestors never dreamed of\nhaving this many tabs open at once",
+      "image": "/img/0382.webp",
+      "author": {
+        "@type": "Person",
+        "name": "sio",
+        "alternateName": "bestinsio"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0382.webp" class="img-fluid rounded" alt="my ancestors never dreamed of
+having this many tabs open at once">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">sio</span> <span class="handle-text fs-6 d-block d-md-inline">@bestinsio</span></h4>
+            <p>my ancestors never dreamed of<br>having this many tabs open at once</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

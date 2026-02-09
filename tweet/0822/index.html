@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines an...">
+    <meta property="og:title" content="Actor bios in the 60s and 70s: He was an amateur b — Peter Atencio @Atencio">
+    <meta property="og:image:alt" content="Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines and was discovered by a producer in Cuba where he was in jail for assault.
+Actor bios today: His dad was an investment banker and his mom was
+a model. He attended Yale.">
+    <meta property="og:description" content="Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines and was discovered by a producer in Cuba where he was in jail for assault.
+Actor bios today: His dad was an investment banker and his mom was
+a model. He attended Yale.">
+    <meta property="og:image" content="/img/0822.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Actor bios in the 60s and 70s: He was an amateur b — Peter Atencio @Atencio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0822/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0822",
+      "headline": "Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines an",
+      "articleBody": "Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines and was discovered by a producer in Cuba where he was in jail for assault.\nActor bios today: His dad was an investment banker and his mom was\na model. He attended Yale.",
+      "image": "/img/0822.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Peter Atencio",
+        "alternateName": "Atencio"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0822.webp" class="img-fluid rounded" alt="Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines and was discovered by a producer in Cuba where he was in jail for assault.
+Actor bios today: His dad was an investment banker and his mom was
+a model. He attended Yale.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Peter Atencio</span> <span class="handle-text fs-6 d-block d-md-inline">@Atencio</span></h4>
+            <p>Actor bios in the 60s and 70s: He was an amateur boxer and truck driver before joining the merchant marines and was discovered by a producer in Cuba where he was in jail for assault.<br>Actor bios today: His dad was an investment banker and his mom was<br>a model. He attended Yale.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

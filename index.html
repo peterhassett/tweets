@@ -143,11 +143,11 @@
           const handle = t.handle ? `@${t.handle}` : '';
           const title = (name || handle) ? `<div class="small"><span class="name-text">${name}</span> <span class="handle-text">${handle}</span></div>` : '';
           const id = t.id || '';
-          const imgSrc = `/img/${id}.webp`;
+          const imgSrc = `img/${id}.webp`;
           const imgAlt = escapeHtml(decodeHtml(t.alt || ''));
           return `
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                  <a href="tweet?id=${encodeURIComponent(id)}" class="text-decoration-none text-body">
+                  <a href="tweet/${encodeURIComponent(id)}" class="text-decoration-none text-body">
                     <div class="card h-100 tweet-card">
                       <img src="${imgSrc}" loading="lazy" decoding="async" class="card-img-top" alt="${imgAlt}">
                       <div class="card-body py-2 px-2">

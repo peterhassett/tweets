@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/22/21
+The former CEO of Make-A-Wish Iowa has been arrest...">
+    <meta property="og:title" content="what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/2 — Emo Philips @EmoPhilips">
+    <meta property="og:image:alt" content="what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/22/21
+The former CEO of Make-A-Wish Iowa has been arrested on felony charges alleging she embezzled tens of thousands of dollars from the charity that supports sick children, the group confirmed Friday">
+    <meta property="og:description" content="what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/22/21
+The former CEO of Make-A-Wish Iowa has been arrested on felony charges alleging she embezzled tens of thousands of dollars from the charity that supports sick children, the group confirmed Friday">
+    <meta property="og:image" content="/img/1597.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/2 — Emo Philips @EmoPhilips</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1597/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1597",
+      "headline": "what if that was some kid's wish\n\n5 KTLA\n@KTLA 1/22/21\nThe former CEO of Make-A-Wish Iowa has been arrested on",
+      "articleBody": "what if that was some kid's wish\n\n5 KTLA\n@KTLA 1/22/21\nThe former CEO of Make-A-Wish Iowa has been arrested on felony charges alleging she embezzled tens of thousands of dollars from the charity that supports sick children, the group confirmed Friday",
+      "image": "/img/1597.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Emo Philips",
+        "alternateName": "EmoPhilips"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1597.webp" class="img-fluid rounded" alt="what if that was some kid&#x27;s wish
+
+5 KTLA
+@KTLA 1/22/21
+The former CEO of Make-A-Wish Iowa has been arrested on felony charges alleging she embezzled tens of thousands of dollars from the charity that supports sick children, the group confirmed Friday">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Emo Philips</span> <span class="handle-text fs-6 d-block d-md-inline">@EmoPhilips</span></h4>
+            <p>what if that was some kid&#x27;s wish<br><br>5 KTLA<br>@KTLA 1/22/21<br>The former CEO of Make-A-Wish Iowa has been arrested on felony charges alleging she embezzled tens of thousands of dollars from the charity that supports sick children, the group confirmed Friday</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

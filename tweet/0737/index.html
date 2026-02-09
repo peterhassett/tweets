@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="new office neighbour has a very sensible office door policy.
+Dear visitor,
+In order to protect my concentratio...">
+    <meta property="og:title" content="new office neighbour has a very sensible office do — hugo reinert @metaleptic">
+    <meta property="og:image:alt" content="new office neighbour has a very sensible office door policy.
+Dear visitor,
+In order to protect my concentration and sanity I have decided to implement a door policy:
+Door open: Very welcome to knock and come in, yes I would love to have a chat!
+Door closed: Please do not knock at my door or come in unless you have urgent business.* I am extremely easily distracted and I will talk to you until the end of time instead of writing my dissertation.
+Never: come in without knocking.
+&quot;List of things that are urgent business: -the building or someone is on fire - you&#x27;re bringing me coffee
+- revolution
+- there is a dog">
+    <meta property="og:description" content="new office neighbour has a very sensible office door policy.
+Dear visitor,
+In order to protect my concentration and sanity I have decided to implement a door policy:
+Door open: Very welcome to knock and come in, yes I would love to have a chat!
+Door closed: Please do not knock at my door or come in unless you have urgent business.* I am extremely easily distracted and I will talk to you until the end of time instead of writing my dissertation.
+Never: come in without knocking.
+&quot;List of things that are urgent business: -the building or someone is on fire - you&#x27;re bringing me coffee
+- revolution
+- there is a dog">
+    <meta property="og:image" content="/img/0737.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>new office neighbour has a very sensible office do — hugo reinert @metaleptic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0737/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0737",
+      "headline": "new office neighbour has a very sensible office door policy.\nDear visitor,\nIn order to protect my concentratio",
+      "articleBody": "new office neighbour has a very sensible office door policy.\nDear visitor,\nIn order to protect my concentration and sanity I have decided to implement a door policy:\nDoor open: Very welcome to knock and come in, yes I would love to have a chat!\nDoor closed: Please do not knock at my door or come in unless you have urgent business.* I am extremely easily distracted and I will talk to you until the end of time instead of writing my dissertation.\nNever: come in without knocking.\n\"List of things that are urgent business: -the building or someone is on fire - you're bringing me coffee\n- revolution\n- there is a dog",
+      "image": "/img/0737.webp",
+      "author": {
+        "@type": "Person",
+        "name": "hugo reinert",
+        "alternateName": "metaleptic"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0737.webp" class="img-fluid rounded" alt="new office neighbour has a very sensible office door policy.
+Dear visitor,
+In order to protect my concentration and sanity I have decided to implement a door policy:
+Door open: Very welcome to knock and come in, yes I would love to have a chat!
+Door closed: Please do not knock at my door or come in unless you have urgent business.* I am extremely easily distracted and I will talk to you until the end of time instead of writing my dissertation.
+Never: come in without knocking.
+&quot;List of things that are urgent business: -the building or someone is on fire - you&#x27;re bringing me coffee
+- revolution
+- there is a dog">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">hugo reinert</span> <span class="handle-text fs-6 d-block d-md-inline">@metaleptic</span></h4>
+            <p>new office neighbour has a very sensible office door policy.<br>Dear visitor,<br>In order to protect my concentration and sanity I have decided to implement a door policy:<br>Door open: Very welcome to knock and come in, yes I would love to have a chat!<br>Door closed: Please do not knock at my door or come in unless you have urgent business.* I am extremely easily distracted and I will talk to you until the end of time instead of writing my dissertation.<br>Never: come in without knocking.<br>&quot;List of things that are urgent business: -the building or someone is on fire - you&#x27;re bringing me coffee<br>- revolution<br>- there is a dog</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

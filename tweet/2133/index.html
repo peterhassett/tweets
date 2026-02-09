@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="When parents say to kids &quot;go to ur room &amp; think about what you&#x27;ve done&quot; it&#x27;s really go...">
+    <meta property="og:title" content="When parents say to kids &quot;go to ur room &amp; think ab — pat tobin @tastefactory">
+    <meta property="og:image:alt" content="When parents say to kids &quot;go to ur room &amp; think about what you&#x27;ve done&quot; it&#x27;s really good practice for
+what you&#x27;ll do every night as an adult">
+    <meta property="og:description" content="When parents say to kids &quot;go to ur room &amp; think about what you&#x27;ve done&quot; it&#x27;s really good practice for
+what you&#x27;ll do every night as an adult">
+    <meta property="og:image" content="/img/2133.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>When parents say to kids &quot;go to ur room &amp; think ab — pat tobin @tastefactory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2133/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2133",
+      "headline": "When parents say to kids \"go to ur room & think about what you've done\" it's really good practice for\nwhat you",
+      "articleBody": "When parents say to kids \"go to ur room & think about what you've done\" it's really good practice for\nwhat you'll do every night as an adult",
+      "image": "/img/2133.webp",
+      "author": {
+        "@type": "Person",
+        "name": "pat tobin",
+        "alternateName": "tastefactory"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2133.webp" class="img-fluid rounded" alt="When parents say to kids &quot;go to ur room &amp; think about what you&#x27;ve done&quot; it&#x27;s really good practice for
+what you&#x27;ll do every night as an adult">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">pat tobin</span> <span class="handle-text fs-6 d-block d-md-inline">@tastefactory</span></h4>
+            <p>When parents say to kids &quot;go to ur room &amp; think about what you&#x27;ve done&quot; it&#x27;s really good practice for<br>what you&#x27;ll do every night as an adult</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

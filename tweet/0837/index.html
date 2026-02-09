@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="the bus ride was lowkey the most lit
+part of field trips
+156 comments 
+34.5k retweets 
+211.4k likes 
+[quote re...">
+    <meta property="og:title" content="the bus ride was lowkey the most lit
+part of field — cheyenne @evilvillain1231">
+    <meta property="og:image:alt" content="the bus ride was lowkey the most lit
+part of field trips
+156 comments 
+34.5k retweets 
+211.4k likes 
+[quote retweet from 45,000 BC hunter-gatherer who was just brought to the present a week ago] what is a bus ride
+0 comments
+0 retweets
+2 likes">
+    <meta property="og:description" content="the bus ride was lowkey the most lit
+part of field trips
+156 comments 
+34.5k retweets 
+211.4k likes 
+[quote retweet from 45,000 BC hunter-gatherer who was just brought to the present a week ago] what is a bus ride
+0 comments
+0 retweets
+2 likes">
+    <meta property="og:image" content="/img/0837.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>the bus ride was lowkey the most lit
+part of field — cheyenne @evilvillain1231</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0837/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0837",
+      "headline": "the bus ride was lowkey the most lit\npart of field trips\n156 comments \n34.5k retweets \n211.4k likes \n[quote re",
+      "articleBody": "the bus ride was lowkey the most lit\npart of field trips\n156 comments \n34.5k retweets \n211.4k likes \n[quote retweet from 45,000 BC hunter-gatherer who was just brought to the present a week ago] what is a bus ride\n0 comments\n0 retweets\n2 likes",
+      "image": "/img/0837.webp",
+      "author": {
+        "@type": "Person",
+        "name": "cheyenne",
+        "alternateName": "evilvillain1231"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0837.webp" class="img-fluid rounded" alt="the bus ride was lowkey the most lit
+part of field trips
+156 comments 
+34.5k retweets 
+211.4k likes 
+[quote retweet from 45,000 BC hunter-gatherer who was just brought to the present a week ago] what is a bus ride
+0 comments
+0 retweets
+2 likes">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">cheyenne</span> <span class="handle-text fs-6 d-block d-md-inline">@evilvillain1231</span></h4>
+            <p>the bus ride was lowkey the most lit<br>part of field trips<br>156 comments <br>34.5k retweets <br>211.4k likes <br>[quote retweet from 45,000 BC hunter-gatherer who was just brought to the present a week ago] what is a bus ride<br>0 comments<br>0 retweets<br>2 likes</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

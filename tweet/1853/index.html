@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 23h Hey @YouTube, maybe don&#x27;t put ads before first aid vids? I don&#x27;t have time to watch a Red Lobs...">
+    <meta property="og:title" content=". 23h Hey @YouTube, maybe don&#x27;t put ads before fir — Palmszy on YouTube @yopalmm">
+    <meta property="og:image:alt" content=". 23h Hey @YouTube, maybe don&#x27;t put ads before first aid vids? I don&#x27;t have time to watch a Red Lobster ad when my grandma is choking on a fish bone.
+
+
+TeamYouTube
+@TeamYouTube
+Replying to @yopalmm
+
+Sorry to hear about the trouble - YouTube Premium offers an ad-free experience when you watch videos. Learn more here: yt.be/help/kF50. Hope this helps.">
+    <meta property="og:description" content=". 23h Hey @YouTube, maybe don&#x27;t put ads before first aid vids? I don&#x27;t have time to watch a Red Lobster ad when my grandma is choking on a fish bone.
+
+
+TeamYouTube
+@TeamYouTube
+Replying to @yopalmm
+
+Sorry to hear about the trouble - YouTube Premium offers an ad-free experience when you watch videos. Learn more here: yt.be/help/kF50. Hope this helps.">
+    <meta property="og:image" content="/img/1853.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 23h Hey @YouTube, maybe don&#x27;t put ads before fir — Palmszy on YouTube @yopalmm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1853/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1853",
+      "headline": ". 23h Hey @YouTube, maybe don't put ads before first aid vids? I don't have time to watch a Red Lobster ad whe",
+      "articleBody": ". 23h Hey @YouTube, maybe don't put ads before first aid vids? I don't have time to watch a Red Lobster ad when my grandma is choking on a fish bone.\n\n\nTeamYouTube\n@TeamYouTube\nReplying to @yopalmm\n\nSorry to hear about the trouble - YouTube Premium offers an ad-free experience when you watch videos. Learn more here: yt.be/help/kF50. Hope this helps.",
+      "image": "/img/1853.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Palmszy on YouTube",
+        "alternateName": "yopalmm"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1853.webp" class="img-fluid rounded" alt=". 23h Hey @YouTube, maybe don&#x27;t put ads before first aid vids? I don&#x27;t have time to watch a Red Lobster ad when my grandma is choking on a fish bone.
+
+
+TeamYouTube
+@TeamYouTube
+Replying to @yopalmm
+
+Sorry to hear about the trouble - YouTube Premium offers an ad-free experience when you watch videos. Learn more here: yt.be/help/kF50. Hope this helps.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Palmszy on YouTube</span> <span class="handle-text fs-6 d-block d-md-inline">@yopalmm</span></h4>
+            <p>. 23h Hey @YouTube, maybe don&#x27;t put ads before first aid vids? I don&#x27;t have time to watch a Red Lobster ad when my grandma is choking on a fish bone.<br><br><br>TeamYouTube<br>@TeamYouTube<br>Replying to @yopalmm<br><br>Sorry to hear about the trouble - YouTube Premium offers an ad-free experience when you watch videos. Learn more here: yt.be/help/kF50. Hope this helps.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="dudes will read MALCOLM
+GLADWELL but won&#x27;t make their GAL CUM MAD WELL. like bro
+you&#x27;re worried abou...">
+    <meta property="og:title" content="dudes will read MALCOLM
+GLADWELL but won&#x27;t make th — w.s. moron @ws_moron">
+    <meta property="og:image:alt" content="dudes will read MALCOLM
+GLADWELL but won&#x27;t make their GAL CUM MAD WELL. like bro
+you&#x27;re worried about the wrong tipping point">
+    <meta property="og:description" content="dudes will read MALCOLM
+GLADWELL but won&#x27;t make their GAL CUM MAD WELL. like bro
+you&#x27;re worried about the wrong tipping point">
+    <meta property="og:image" content="/img/1650.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>dudes will read MALCOLM
+GLADWELL but won&#x27;t make th — w.s. moron @ws_moron</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1650/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1650",
+      "headline": "dudes will read MALCOLM\nGLADWELL but won't make their GAL CUM MAD WELL. like bro\nyou're worried about the wron",
+      "articleBody": "dudes will read MALCOLM\nGLADWELL but won't make their GAL CUM MAD WELL. like bro\nyou're worried about the wrong tipping point",
+      "image": "/img/1650.webp",
+      "author": {
+        "@type": "Person",
+        "name": "w.s. moron",
+        "alternateName": "ws_moron"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1650.webp" class="img-fluid rounded" alt="dudes will read MALCOLM
+GLADWELL but won&#x27;t make their GAL CUM MAD WELL. like bro
+you&#x27;re worried about the wrong tipping point">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">w.s. moron</span> <span class="handle-text fs-6 d-block d-md-inline">@ws_moron</span></h4>
+            <p>dudes will read MALCOLM<br>GLADWELL but won&#x27;t make their GAL CUM MAD WELL. like bro<br>you&#x27;re worried about the wrong tipping point</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

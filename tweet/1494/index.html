@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Ridley Scott&#x27;s Alien squatting to
+poop but another smaller butt comes out and poops instead">
+    <meta property="og:title" content="Ridley Scott&#x27;s Alien squatting to
+poop but another — everyday sensei @evverydaysensei">
+    <meta property="og:image:alt" content="Ridley Scott&#x27;s Alien squatting to
+poop but another smaller butt comes out and poops instead">
+    <meta property="og:description" content="Ridley Scott&#x27;s Alien squatting to
+poop but another smaller butt comes out and poops instead">
+    <meta property="og:image" content="/img/1494.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Ridley Scott&#x27;s Alien squatting to
+poop but another — everyday sensei @evverydaysensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1494/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1494",
+      "headline": "Ridley Scott's Alien squatting to\npoop but another smaller butt comes out and poops instead",
+      "articleBody": "Ridley Scott's Alien squatting to\npoop but another smaller butt comes out and poops instead",
+      "image": "/img/1494.webp",
+      "author": {
+        "@type": "Person",
+        "name": "everyday sensei",
+        "alternateName": "evverydaysensei"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1494.webp" class="img-fluid rounded" alt="Ridley Scott&#x27;s Alien squatting to
+poop but another smaller butt comes out and poops instead">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">everyday sensei</span> <span class="handle-text fs-6 d-block d-md-inline">@evverydaysensei</span></h4>
+            <p>Ridley Scott&#x27;s Alien squatting to<br>poop but another smaller butt comes out and poops instead</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

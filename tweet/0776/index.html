@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="every 2-3 months there&#x27;s some
+scandal about a guy named like Daiquiri Dan who i&#x27;ve never heard of an...">
+    <meta property="og:title" content="every 2-3 months there&#x27;s some
+scandal about a guy  — Gregory Midnight-Possum @cat_beltane">
+    <meta property="og:image:alt" content="every 2-3 months there&#x27;s some
+scandal about a guy named like Daiquiri Dan who i&#x27;ve never heard of and i look him up and it&#x27;s like &quot;Daiquiri Dan is an American
+YouTube personality. He is worth $46.3m, $15m of which came from becoming the spokesman for the food &#x27;almonds&#x27; in 2018&quot;">
+    <meta property="og:description" content="every 2-3 months there&#x27;s some
+scandal about a guy named like Daiquiri Dan who i&#x27;ve never heard of and i look him up and it&#x27;s like &quot;Daiquiri Dan is an American
+YouTube personality. He is worth $46.3m, $15m of which came from becoming the spokesman for the food &#x27;almonds&#x27; in 2018&quot;">
+    <meta property="og:image" content="/img/0776.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>every 2-3 months there&#x27;s some
+scandal about a guy  — Gregory Midnight-Possum @cat_beltane</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0776/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0776",
+      "headline": "every 2-3 months there's some\nscandal about a guy named like Daiquiri Dan who i've never heard of and i look h",
+      "articleBody": "every 2-3 months there's some\nscandal about a guy named like Daiquiri Dan who i've never heard of and i look him up and it's like \"Daiquiri Dan is an American\nYouTube personality. He is worth $46.3m, $15m of which came from becoming the spokesman for the food 'almonds' in 2018\"",
+      "image": "/img/0776.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Gregory Midnight-Possum",
+        "alternateName": "cat_beltane"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0776.webp" class="img-fluid rounded" alt="every 2-3 months there&#x27;s some
+scandal about a guy named like Daiquiri Dan who i&#x27;ve never heard of and i look him up and it&#x27;s like &quot;Daiquiri Dan is an American
+YouTube personality. He is worth $46.3m, $15m of which came from becoming the spokesman for the food &#x27;almonds&#x27; in 2018&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Gregory Midnight-Possum</span> <span class="handle-text fs-6 d-block d-md-inline">@cat_beltane</span></h4>
+            <p>every 2-3 months there&#x27;s some<br>scandal about a guy named like Daiquiri Dan who i&#x27;ve never heard of and i look him up and it&#x27;s like &quot;Daiquiri Dan is an American<br>YouTube personality. He is worth $46.3m, $15m of which came from becoming the spokesman for the food &#x27;almonds&#x27; in 2018&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

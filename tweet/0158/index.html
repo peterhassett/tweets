@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Elon Musk is no longer the richest person in the world
+
+
+i bless the rains down in castamere @Chinchillazllla
+...">
+    <meta property="og:title" content="Elon Musk is no longer the richest person in the w — CNBC @CNBC">
+    <meta property="og:image:alt" content="Elon Musk is no longer the richest person in the world
+
+
+i bless the rains down in castamere @Chinchillazllla
+Chappelle introduced him as the richest man in the world and the crowd booed him so hard they altered reality">
+    <meta property="og:description" content="Elon Musk is no longer the richest person in the world
+
+
+i bless the rains down in castamere @Chinchillazllla
+Chappelle introduced him as the richest man in the world and the crowd booed him so hard they altered reality">
+    <meta property="og:image" content="/img/0158.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Elon Musk is no longer the richest person in the w — CNBC @CNBC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0158/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0158",
+      "headline": "Elon Musk is no longer the richest person in the world\n\n\ni bless the rains down in castamere @Chinchillazllla\n",
+      "articleBody": "Elon Musk is no longer the richest person in the world\n\n\ni bless the rains down in castamere @Chinchillazllla\nChappelle introduced him as the richest man in the world and the crowd booed him so hard they altered reality",
+      "image": "/img/0158.webp",
+      "author": {
+        "@type": "Person",
+        "name": "CNBC",
+        "alternateName": "CNBC"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0158.webp" class="img-fluid rounded" alt="Elon Musk is no longer the richest person in the world
+
+
+i bless the rains down in castamere @Chinchillazllla
+Chappelle introduced him as the richest man in the world and the crowd booed him so hard they altered reality">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">CNBC</span> <span class="handle-text fs-6 d-block d-md-inline">@CNBC</span></h4>
+            <p>Elon Musk is no longer the richest person in the world<br><br><br>i bless the rains down in castamere @Chinchillazllla<br>Chappelle introduced him as the richest man in the world and the crowd booed him so hard they altered reality</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

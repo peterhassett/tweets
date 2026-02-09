@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="What&#x27;s the German word for the
+perverse joy you feel when a waiter can&#x27;t remember an ingredient in t...">
+    <meta property="og:title" content="What&#x27;s the German word for the
+perverse joy you fe — Alex Baze @bazecraze">
+    <meta property="og:image:alt" content="What&#x27;s the German word for the
+perverse joy you feel when a waiter can&#x27;t remember an ingredient in the
+special?">
+    <meta property="og:description" content="What&#x27;s the German word for the
+perverse joy you feel when a waiter can&#x27;t remember an ingredient in the
+special?">
+    <meta property="og:image" content="/img/1676.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>What&#x27;s the German word for the
+perverse joy you fe — Alex Baze @bazecraze</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1676/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1676",
+      "headline": "What's the German word for the\nperverse joy you feel when a waiter can't remember an ingredient in the\nspecial",
+      "articleBody": "What's the German word for the\nperverse joy you feel when a waiter can't remember an ingredient in the\nspecial?",
+      "image": "/img/1676.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Alex Baze",
+        "alternateName": "bazecraze"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1676.webp" class="img-fluid rounded" alt="What&#x27;s the German word for the
+perverse joy you feel when a waiter can&#x27;t remember an ingredient in the
+special?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Alex Baze</span> <span class="handle-text fs-6 d-block d-md-inline">@bazecraze</span></h4>
+            <p>What&#x27;s the German word for the<br>perverse joy you feel when a waiter can&#x27;t remember an ingredient in the<br>special?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

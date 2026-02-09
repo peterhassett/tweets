@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="If bowser kidnapped my wife, I would
+not be saying &quot;wahoo&quot; no matter how fun the jump was">
+    <meta property="og:title" content="If bowser kidnapped my wife, I would
+not be saying — the fruit freak @dafruitfreak">
+    <meta property="og:image:alt" content="If bowser kidnapped my wife, I would
+not be saying &quot;wahoo&quot; no matter how fun the jump was">
+    <meta property="og:description" content="If bowser kidnapped my wife, I would
+not be saying &quot;wahoo&quot; no matter how fun the jump was">
+    <meta property="og:image" content="/img/0988.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>If bowser kidnapped my wife, I would
+not be saying — the fruit freak @dafruitfreak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0988/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0988",
+      "headline": "If bowser kidnapped my wife, I would\nnot be saying \"wahoo\" no matter how fun the jump was",
+      "articleBody": "If bowser kidnapped my wife, I would\nnot be saying \"wahoo\" no matter how fun the jump was",
+      "image": "/img/0988.webp",
+      "author": {
+        "@type": "Person",
+        "name": "the fruit freak",
+        "alternateName": "dafruitfreak"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0988.webp" class="img-fluid rounded" alt="If bowser kidnapped my wife, I would
+not be saying &quot;wahoo&quot; no matter how fun the jump was">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">the fruit freak</span> <span class="handle-text fs-6 d-block d-md-inline">@dafruitfreak</span></h4>
+            <p>If bowser kidnapped my wife, I would<br>not be saying &quot;wahoo&quot; no matter how fun the jump was</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

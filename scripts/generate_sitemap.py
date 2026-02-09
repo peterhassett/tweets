@@ -7,6 +7,8 @@ Usage:
 
 The script reads JSON or JSONL and extracts tweet IDs from common keys (`id`, `id_str`, `tweet_id`).
 It writes a standard sitemap at the specified output path.
+
+Updated from using querystring params to static paths.
 """
 import argparse
 import json
@@ -113,7 +115,7 @@ def build_sitemap(base_url: str, ids):
     base = base_url.rstrip("/")
     add_loc(base + "/")
     for id_ in sorted(ids, key=lambda s: s):
-        add_loc(f"{base}/tweet?id={id_}")
+        add_loc(f"{base}/tweet/{id_}")
 
     indent(urlset)
     return urlset

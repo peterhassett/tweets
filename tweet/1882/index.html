@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="kool-aid man sleeps standing-up like
+a horse">
+    <meta property="og:title" content="kool-aid man sleeps standing-up like
+a horse — santigula claus @huntigula">
+    <meta property="og:image:alt" content="kool-aid man sleeps standing-up like
+a horse">
+    <meta property="og:description" content="kool-aid man sleeps standing-up like
+a horse">
+    <meta property="og:image" content="/img/1882.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>kool-aid man sleeps standing-up like
+a horse — santigula claus @huntigula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1882/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1882",
+      "headline": "kool-aid man sleeps standing-up like\na horse",
+      "articleBody": "kool-aid man sleeps standing-up like\na horse",
+      "image": "/img/1882.webp",
+      "author": {
+        "@type": "Person",
+        "name": "santigula claus",
+        "alternateName": "huntigula"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1882.webp" class="img-fluid rounded" alt="kool-aid man sleeps standing-up like
+a horse">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">santigula claus</span> <span class="handle-text fs-6 d-block d-md-inline">@huntigula</span></h4>
+            <p>kool-aid man sleeps standing-up like<br>a horse</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

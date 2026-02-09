@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME:
+WIFE:
+ME:
+WIFE: Lot of deaths for a to- ME: A LOT of ...">
+    <meta property="og:title" content="[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME — Andrew Nadeau @TheAndrewNadeau">
+    <meta property="og:image:alt" content="[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME:
+WIFE:
+ME:
+WIFE: Lot of deaths for a to- ME: A LOT of deaths for a tour!">
+    <meta property="og:description" content="[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME:
+WIFE:
+ME:
+WIFE: Lot of deaths for a to- ME: A LOT of deaths for a tour!">
+    <meta property="og:image" content="/img/1437.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME — Andrew Nadeau @TheAndrewNadeau</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1437/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1437",
+      "headline": "[After leaving Willy Wonka's factory]\nME:\nWIFE:\nME:\nWIFE:\nME:\nWIFE: Lot of deaths for a to- ME: A LOT of death",
+      "articleBody": "[After leaving Willy Wonka's factory]\nME:\nWIFE:\nME:\nWIFE:\nME:\nWIFE: Lot of deaths for a to- ME: A LOT of deaths for a tour!",
+      "image": "/img/1437.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Andrew Nadeau",
+        "alternateName": "TheAndrewNadeau"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1437.webp" class="img-fluid rounded" alt="[After leaving Willy Wonka&#x27;s factory]
+ME:
+WIFE:
+ME:
+WIFE:
+ME:
+WIFE: Lot of deaths for a to- ME: A LOT of deaths for a tour!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Andrew Nadeau</span> <span class="handle-text fs-6 d-block d-md-inline">@TheAndrewNadeau</span></h4>
+            <p>[After leaving Willy Wonka&#x27;s factory]<br>ME:<br>WIFE:<br>ME:<br>WIFE:<br>ME:<br>WIFE: Lot of deaths for a to- ME: A LOT of deaths for a tour!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

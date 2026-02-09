@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="four months ago I quietly left 57 DVDs of Click at my parents house and they’ve still never noticed or mention...">
+    <meta property="og:title" content="four months ago I quietly left 57 DVDs of Click at — electrolemon @">
+    <meta property="og:image:alt" content="four months ago I quietly left 57 DVDs of Click at my parents house and they’ve still never noticed or mentioned it (image of the same)">
+    <meta property="og:description" content="four months ago I quietly left 57 DVDs of Click at my parents house and they’ve still never noticed or mentioned it (image of the same)">
+    <meta property="og:image" content="/img/2338.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>four months ago I quietly left 57 DVDs of Click at — electrolemon @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2338/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2338",
+      "headline": "four months ago I quietly left 57 DVDs of Click at my parents house and they\u2019ve still never noticed or mention",
+      "articleBody": "four months ago I quietly left 57 DVDs of Click at my parents house and they\u2019ve still never noticed or mentioned it (image of the same)",
+      "image": "/img/2338.webp",
+      "author": {
+        "@type": "Person",
+        "name": "electrolemon",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2338.webp" class="img-fluid rounded" alt="four months ago I quietly left 57 DVDs of Click at my parents house and they’ve still never noticed or mentioned it (image of the same)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">electrolemon</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>four months ago I quietly left 57 DVDs of Click at my parents house and they’ve still never noticed or mentioned it (image of the same)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

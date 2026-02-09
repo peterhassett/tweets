@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wol...">
+    <meta property="og:title" content="Inside of you there are two wolves. Inside those w — literary agent needing jerk @rajandelman">
+    <meta property="og:image:alt" content="Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wolves. And so on. The number of wolves and people in you reaches infinity. Now if you start with a wolf, that&#x27;s a whole different ball game">
+    <meta property="og:description" content="Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wolves. And so on. The number of wolves and people in you reaches infinity. Now if you start with a wolf, that&#x27;s a whole different ball game">
+    <meta property="og:image" content="/img/1353.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Inside of you there are two wolves. Inside those w — literary agent needing jerk @rajandelman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1353/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1353",
+      "headline": "Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wol",
+      "articleBody": "Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wolves. And so on. The number of wolves and people in you reaches infinity. Now if you start with a wolf, that's a whole different ball game",
+      "image": "/img/1353.webp",
+      "author": {
+        "@type": "Person",
+        "name": "literary agent needing jerk",
+        "alternateName": "rajandelman"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1353.webp" class="img-fluid rounded" alt="Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wolves. And so on. The number of wolves and people in you reaches infinity. Now if you start with a wolf, that&#x27;s a whole different ball game">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">literary agent needing jerk</span> <span class="handle-text fs-6 d-block d-md-inline">@rajandelman</span></h4>
+            <p>Inside of you there are two wolves. Inside those wolves, there are three people. Inside those people, four wolves. And so on. The number of wolves and people in you reaches infinity. Now if you start with a wolf, that&#x27;s a whole different ball game</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

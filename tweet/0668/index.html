@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="When men refer to themselves as
+&quot;alpha males&quot;, I hear that in the context of software, where alpha v...">
+    <meta property="og:title" content="When men refer to themselves as
+&quot;alpha males&quot;, I h — Glenn F. Henriksen @henriksen">
+    <meta property="og:image:alt" content="When men refer to themselves as
+&quot;alpha males&quot;, I hear that in the context of software, where alpha versions are unstable, missing important features, filled with flaws, and not fit for the public.">
+    <meta property="og:description" content="When men refer to themselves as
+&quot;alpha males&quot;, I hear that in the context of software, where alpha versions are unstable, missing important features, filled with flaws, and not fit for the public.">
+    <meta property="og:image" content="/img/0668.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>When men refer to themselves as
+&quot;alpha males&quot;, I h — Glenn F. Henriksen @henriksen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0668/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0668",
+      "headline": "When men refer to themselves as\n\"alpha males\", I hear that in the context of software, where alpha versions ar",
+      "articleBody": "When men refer to themselves as\n\"alpha males\", I hear that in the context of software, where alpha versions are unstable, missing important features, filled with flaws, and not fit for the public.",
+      "image": "/img/0668.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Glenn F. Henriksen",
+        "alternateName": "henriksen"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0668.webp" class="img-fluid rounded" alt="When men refer to themselves as
+&quot;alpha males&quot;, I hear that in the context of software, where alpha versions are unstable, missing important features, filled with flaws, and not fit for the public.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Glenn F. Henriksen</span> <span class="handle-text fs-6 d-block d-md-inline">@henriksen</span></h4>
+            <p>When men refer to themselves as<br>&quot;alpha males&quot;, I hear that in the context of software, where alpha versions are unstable, missing important features, filled with flaws, and not fit for the public.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

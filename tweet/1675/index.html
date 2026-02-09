@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Replying to @Femmefeministe
+I get the point you&#x27;re trying to make, but I have yet to meet a hetero woman ...">
+    <meta property="og:title" content="Replying to @Femmefeministe
+I get the point you&#x27;re — Brad Anderson @andybradhv">
+    <meta property="og:image:alt" content="Replying to @Femmefeministe
+I get the point you&#x27;re trying to make, but I have yet to meet a hetero woman who enthusiastically participates in sex.">
+    <meta property="og:description" content="Replying to @Femmefeministe
+I get the point you&#x27;re trying to make, but I have yet to meet a hetero woman who enthusiastically participates in sex.">
+    <meta property="og:image" content="/img/1675.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Replying to @Femmefeministe
+I get the point you&#x27;re — Brad Anderson @andybradhv</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1675/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1675",
+      "headline": "Replying to @Femmefeministe\nI get the point you're trying to make, but I have yet to meet a hetero woman who e",
+      "articleBody": "Replying to @Femmefeministe\nI get the point you're trying to make, but I have yet to meet a hetero woman who enthusiastically participates in sex.",
+      "image": "/img/1675.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Brad Anderson",
+        "alternateName": "andybradhv"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1675.webp" class="img-fluid rounded" alt="Replying to @Femmefeministe
+I get the point you&#x27;re trying to make, but I have yet to meet a hetero woman who enthusiastically participates in sex.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Brad Anderson</span> <span class="handle-text fs-6 d-block d-md-inline">@andybradhv</span></h4>
+            <p>Replying to @Femmefeministe<br>I get the point you&#x27;re trying to make, but I have yet to meet a hetero woman who enthusiastically participates in sex.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

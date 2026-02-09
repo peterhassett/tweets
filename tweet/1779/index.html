@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I hate when I&#x27;m on a flight and I wake up with a water bottle next to me like oh great now I gotta be res...">
+    <meta property="og:title" content="I hate when I&#x27;m on a flight and I wake up with a w — KANYE WEST @kanyewest">
+    <meta property="og:image:alt" content="I hate when I&#x27;m on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle">
+    <meta property="og:description" content="I hate when I&#x27;m on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle">
+    <meta property="og:image" content="/img/1779.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I hate when I&#x27;m on a flight and I wake up with a w — KANYE WEST @kanyewest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1779/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1779",
+      "headline": "I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsi",
+      "articleBody": "I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle",
+      "image": "/img/1779.webp",
+      "author": {
+        "@type": "Person",
+        "name": "KANYE WEST",
+        "alternateName": "kanyewest"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1779.webp" class="img-fluid rounded" alt="I hate when I&#x27;m on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">KANYE WEST</span> <span class="handle-text fs-6 d-block d-md-inline">@kanyewest</span></h4>
+            <p>I hate when I&#x27;m on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="you will NOT get me to watch The Walking Dead For People Who Still
+Do Wordle
+1/30/23">
+    <meta property="og:title" content="you will NOT get me to watch The Walking Dead For  — jay @listenupnerds">
+    <meta property="og:image:alt" content="you will NOT get me to watch The Walking Dead For People Who Still
+Do Wordle
+1/30/23">
+    <meta property="og:description" content="you will NOT get me to watch The Walking Dead For People Who Still
+Do Wordle
+1/30/23">
+    <meta property="og:image" content="/img/0088.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>you will NOT get me to watch The Walking Dead For  — jay @listenupnerds</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0088/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0088",
+      "headline": "you will NOT get me to watch The Walking Dead For People Who Still\nDo Wordle\n1/30/23",
+      "articleBody": "you will NOT get me to watch The Walking Dead For People Who Still\nDo Wordle\n1/30/23",
+      "image": "/img/0088.webp",
+      "author": {
+        "@type": "Person",
+        "name": "jay",
+        "alternateName": "listenupnerds"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0088.webp" class="img-fluid rounded" alt="you will NOT get me to watch The Walking Dead For People Who Still
+Do Wordle
+1/30/23">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">jay</span> <span class="handle-text fs-6 d-block d-md-inline">@listenupnerds</span></h4>
+            <p>you will NOT get me to watch The Walking Dead For People Who Still<br>Do Wordle<br>1/30/23</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

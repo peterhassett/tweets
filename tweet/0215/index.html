@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I don&#x27;t wanna make a broad generalization but you have to admit it&#x27;s at least *interesting* that eve...">
+    <meta property="og:title" content="I don&#x27;t wanna make a broad generalization but you  — Mike Scollins @mikescollins">
+    <meta property="og:image:alt" content="I don&#x27;t wanna make a broad generalization but you have to admit it&#x27;s at least *interesting* that everyone who likes Elon Musk is the biggest loser you&#x27;ve ever met.
+
+
+
+Mike Scollins @mikescollins. 
+Wow this really blew up! I feel like one of his cars!">
+    <meta property="og:description" content="I don&#x27;t wanna make a broad generalization but you have to admit it&#x27;s at least *interesting* that everyone who likes Elon Musk is the biggest loser you&#x27;ve ever met.
+
+
+
+Mike Scollins @mikescollins. 
+Wow this really blew up! I feel like one of his cars!">
+    <meta property="og:image" content="/img/0215.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I don&#x27;t wanna make a broad generalization but you  — Mike Scollins @mikescollins</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0215/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0215",
+      "headline": "I don't wanna make a broad generalization but you have to admit it's at least *interesting* that everyone who ",
+      "articleBody": "I don't wanna make a broad generalization but you have to admit it's at least *interesting* that everyone who likes Elon Musk is the biggest loser you've ever met.\n\n\n\nMike Scollins @mikescollins. \nWow this really blew up! I feel like one of his cars!",
+      "image": "/img/0215.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Mike Scollins",
+        "alternateName": "mikescollins"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0215.webp" class="img-fluid rounded" alt="I don&#x27;t wanna make a broad generalization but you have to admit it&#x27;s at least *interesting* that everyone who likes Elon Musk is the biggest loser you&#x27;ve ever met.
+
+
+
+Mike Scollins @mikescollins. 
+Wow this really blew up! I feel like one of his cars!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Mike Scollins</span> <span class="handle-text fs-6 d-block d-md-inline">@mikescollins</span></h4>
+            <p>I don&#x27;t wanna make a broad generalization but you have to admit it&#x27;s at least *interesting* that everyone who likes Elon Musk is the biggest loser you&#x27;ve ever met.<br><br><br><br>Mike Scollins @mikescollins. <br>Wow this really blew up! I feel like one of his cars!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

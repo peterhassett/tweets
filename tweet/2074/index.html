@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then ...">
+    <meta property="og:title" content="facte: you eat 28 spiders in your lifetime. always — happy hallowappy @egg_dog">
+    <meta property="og:image:alt" content="facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then 25 spiders
+arrive at once">
+    <meta property="og:description" content="facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then 25 spiders
+arrive at once">
+    <meta property="og:image" content="/img/2074.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>facte: you eat 28 spiders in your lifetime. always — happy hallowappy @egg_dog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2074/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2074",
+      "headline": "facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then ",
+      "articleBody": "facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then 25 spiders\narrive at once",
+      "image": "/img/2074.webp",
+      "author": {
+        "@type": "Person",
+        "name": "happy hallowappy",
+        "alternateName": "egg_dog"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2074.webp" class="img-fluid rounded" alt="facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then 25 spiders
+arrive at once">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">happy hallowappy</span> <span class="handle-text fs-6 d-block d-md-inline">@egg_dog</span></h4>
+            <p>facte: you eat 28 spiders in your lifetime. always 28. if you are about to die and you have only eaten 3 then 25 spiders<br>arrive at once</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

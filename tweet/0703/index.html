@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="dog twitter:
+
+my hungry ass could NOT be left alone with a rotisserie chicken!!
+23 comments
+316 retweets 
+16.5...">
+    <meta property="og:title" content="dog twitter:
+
+my hungry ass could NOT be left alon — peter hess @PeterNHess">
+    <meta property="og:image:alt" content="dog twitter:
+
+my hungry ass could NOT be left alone with a rotisserie chicken!!
+23 comments
+316 retweets 
+16.5K likes 
+
+i know some of ya&#x27;ll just pretend to
+hate cats
+674 comments 
+13 retweets
+19 likes">
+    <meta property="og:description" content="dog twitter:
+
+my hungry ass could NOT be left alone with a rotisserie chicken!!
+23 comments
+316 retweets 
+16.5K likes 
+
+i know some of ya&#x27;ll just pretend to
+hate cats
+674 comments 
+13 retweets
+19 likes">
+    <meta property="og:image" content="/img/0703.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>dog twitter:
+
+my hungry ass could NOT be left alon — peter hess @PeterNHess</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0703/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0703",
+      "headline": "dog twitter:\n\nmy hungry ass could NOT be left alone with a rotisserie chicken!!\n23 comments\n316 retweets \n16.5",
+      "articleBody": "dog twitter:\n\nmy hungry ass could NOT be left alone with a rotisserie chicken!!\n23 comments\n316 retweets \n16.5K likes \n\ni know some of ya'll just pretend to\nhate cats\n674 comments \n13 retweets\n19 likes",
+      "image": "/img/0703.webp",
+      "author": {
+        "@type": "Person",
+        "name": "peter hess",
+        "alternateName": "PeterNHess"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0703.webp" class="img-fluid rounded" alt="dog twitter:
+
+my hungry ass could NOT be left alone with a rotisserie chicken!!
+23 comments
+316 retweets 
+16.5K likes 
+
+i know some of ya&#x27;ll just pretend to
+hate cats
+674 comments 
+13 retweets
+19 likes">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">peter hess</span> <span class="handle-text fs-6 d-block d-md-inline">@PeterNHess</span></h4>
+            <p>dog twitter:<br><br>my hungry ass could NOT be left alone with a rotisserie chicken!!<br>23 comments<br>316 retweets <br>16.5K likes <br><br>i know some of ya&#x27;ll just pretend to<br>hate cats<br>674 comments <br>13 retweets<br>19 likes</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

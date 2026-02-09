@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="really like this new band &quot;That Movie Madagascar for the Tenth Time&quot; but
+I hate saying I&#x27;m goin...">
+    <meta property="og:title" content="really like this new band &quot;That Movie Madagascar f — Joe Rumrill @2tonbug">
+    <meta property="og:image:alt" content="really like this new band &quot;That Movie Madagascar for the Tenth Time&quot; but
+I hate saying I&#x27;m going to see them">
+    <meta property="og:description" content="really like this new band &quot;That Movie Madagascar for the Tenth Time&quot; but
+I hate saying I&#x27;m going to see them">
+    <meta property="og:image" content="/img/1178.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>really like this new band &quot;That Movie Madagascar f — Joe Rumrill @2tonbug</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1178/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1178",
+      "headline": "really like this new band \"That Movie Madagascar for the Tenth Time\" but\nI hate saying I'm going to see them",
+      "articleBody": "really like this new band \"That Movie Madagascar for the Tenth Time\" but\nI hate saying I'm going to see them",
+      "image": "/img/1178.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Joe Rumrill",
+        "alternateName": "2tonbug"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1178.webp" class="img-fluid rounded" alt="really like this new band &quot;That Movie Madagascar for the Tenth Time&quot; but
+I hate saying I&#x27;m going to see them">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Joe Rumrill</span> <span class="handle-text fs-6 d-block d-md-inline">@2tonbug</span></h4>
+            <p>really like this new band &quot;That Movie Madagascar for the Tenth Time&quot; but<br>I hate saying I&#x27;m going to see them</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

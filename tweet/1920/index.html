@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim. That box is mine.
+[CUT TO INTERVIEW]
+RON: No way was ...">
+    <meta property="og:title" content="Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim — big time influencer guy on here @boring_as_heck">
+    <meta property="og:image:alt" content="Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim. That box is mine.
+[CUT TO INTERVIEW]
+RON: No way was I letting Jim get
+that lunchbox.">
+    <meta property="og:description" content="Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim. That box is mine.
+[CUT TO INTERVIEW]
+RON: No way was I letting Jim get
+that lunchbox.">
+    <meta property="og:image" content="/img/1920.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim — big time influencer guy on here @boring_as_heck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1920/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1920",
+      "headline": "Next, on TLC's Lunchbox Wanters\nRON: Back off, Jim. That box is mine.\n[CUT TO INTERVIEW]\nRON: No way was I let",
+      "articleBody": "Next, on TLC's Lunchbox Wanters\nRON: Back off, Jim. That box is mine.\n[CUT TO INTERVIEW]\nRON: No way was I letting Jim get\nthat lunchbox.",
+      "image": "/img/1920.webp",
+      "author": {
+        "@type": "Person",
+        "name": "big time influencer guy on here",
+        "alternateName": "boring_as_heck"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1920.webp" class="img-fluid rounded" alt="Next, on TLC&#x27;s Lunchbox Wanters
+RON: Back off, Jim. That box is mine.
+[CUT TO INTERVIEW]
+RON: No way was I letting Jim get
+that lunchbox.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">big time influencer guy on here</span> <span class="handle-text fs-6 d-block d-md-inline">@boring_as_heck</span></h4>
+            <p>Next, on TLC&#x27;s Lunchbox Wanters<br>RON: Back off, Jim. That box is mine.<br>[CUT TO INTERVIEW]<br>RON: No way was I letting Jim get<br>that lunchbox.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes but truly great TV is 200 episodes and 40...">
+    <meta property="og:title" content="Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes b — Valondar @VK_HM">
+    <meta property="og:image:alt" content="Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes but truly great TV is 200 episodes and 40 of them are
+the worst things you&#x27;ve ever seen">
+    <meta property="og:description" content="Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes but truly great TV is 200 episodes and 40 of them are
+the worst things you&#x27;ve ever seen">
+    <meta property="og:image" content="/img/0628.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes b — Valondar @VK_HM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0628/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0628",
+      "headline": "Kids today watch 'good' TV with 'great' episodes but truly great TV is 200 episodes and 40 of them are\nthe wor",
+      "articleBody": "Kids today watch 'good' TV with 'great' episodes but truly great TV is 200 episodes and 40 of them are\nthe worst things you've ever seen",
+      "image": "/img/0628.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Valondar",
+        "alternateName": "VK_HM"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0628.webp" class="img-fluid rounded" alt="Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes but truly great TV is 200 episodes and 40 of them are
+the worst things you&#x27;ve ever seen">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Valondar</span> <span class="handle-text fs-6 d-block d-md-inline">@VK_HM</span></h4>
+            <p>Kids today watch &#x27;good&#x27; TV with &#x27;great&#x27; episodes but truly great TV is 200 episodes and 40 of them are<br>the worst things you&#x27;ve ever seen</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

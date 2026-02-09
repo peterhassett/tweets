@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="This is actually true of every movie
+
+
+(Poster for a Ring movie)
+
+FIRST YOU WATCH IT.
+THEN
+YOU DIE.">
+    <meta property="og:title" content="This is actually true of every movie
+
+
+(Poster for — Sean Morrow @snmrrw">
+    <meta property="og:image:alt" content="This is actually true of every movie
+
+
+(Poster for a Ring movie)
+
+FIRST YOU WATCH IT.
+THEN
+YOU DIE.">
+    <meta property="og:description" content="This is actually true of every movie
+
+
+(Poster for a Ring movie)
+
+FIRST YOU WATCH IT.
+THEN
+YOU DIE.">
+    <meta property="og:image" content="/img/1900.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>This is actually true of every movie
+
+
+(Poster for — Sean Morrow @snmrrw</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1900/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1900",
+      "headline": "This is actually true of every movie\n\n\n(Poster for a Ring movie)\n\nFIRST YOU WATCH IT.\nTHEN\nYOU DIE.",
+      "articleBody": "This is actually true of every movie\n\n\n(Poster for a Ring movie)\n\nFIRST YOU WATCH IT.\nTHEN\nYOU DIE.",
+      "image": "/img/1900.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Sean Morrow",
+        "alternateName": "snmrrw"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1900.webp" class="img-fluid rounded" alt="This is actually true of every movie
+
+
+(Poster for a Ring movie)
+
+FIRST YOU WATCH IT.
+THEN
+YOU DIE.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Sean Morrow</span> <span class="handle-text fs-6 d-block d-md-inline">@snmrrw</span></h4>
+            <p>This is actually true of every movie<br><br><br>(Poster for a Ring movie)<br><br>FIRST YOU WATCH IT.<br>THEN<br>YOU DIE.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

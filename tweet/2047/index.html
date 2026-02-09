@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="was SO cute today, he
+asked me &quot;dad are clouds candy?&quot; I told him they were water. Then he asked &qu...">
+    <meta property="og:title" content="was SO cute today, he
+asked me &quot;dad are clouds can — My son
+Omar Najam @OmarNajam">
+    <meta property="og:image:alt" content="was SO cute today, he
+asked me &quot;dad are clouds candy?&quot; I told him they were water. Then he asked &quot;dad, what&#x27;s Earth&#x27;s defense system?&quot; and then I remembered I don&#x27;t have a son and he asked again his eyes now
+obsidian black &quot;what is the defense system father&quot;">
+    <meta property="og:description" content="was SO cute today, he
+asked me &quot;dad are clouds candy?&quot; I told him they were water. Then he asked &quot;dad, what&#x27;s Earth&#x27;s defense system?&quot; and then I remembered I don&#x27;t have a son and he asked again his eyes now
+obsidian black &quot;what is the defense system father&quot;">
+    <meta property="og:image" content="/img/2047.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>was SO cute today, he
+asked me &quot;dad are clouds can — My son
+Omar Najam @OmarNajam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2047/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2047",
+      "headline": "was SO cute today, he\nasked me \"dad are clouds candy?\" I told him they were water. Then he asked \"dad, what's ",
+      "articleBody": "was SO cute today, he\nasked me \"dad are clouds candy?\" I told him they were water. Then he asked \"dad, what's Earth's defense system?\" and then I remembered I don't have a son and he asked again his eyes now\nobsidian black \"what is the defense system father\"",
+      "image": "/img/2047.webp",
+      "author": {
+        "@type": "Person",
+        "name": "My son\nOmar Najam",
+        "alternateName": "OmarNajam"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2047.webp" class="img-fluid rounded" alt="was SO cute today, he
+asked me &quot;dad are clouds candy?&quot; I told him they were water. Then he asked &quot;dad, what&#x27;s Earth&#x27;s defense system?&quot; and then I remembered I don&#x27;t have a son and he asked again his eyes now
+obsidian black &quot;what is the defense system father&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">My son
+Omar Najam</span> <span class="handle-text fs-6 d-block d-md-inline">@OmarNajam</span></h4>
+            <p>was SO cute today, he<br>asked me &quot;dad are clouds candy?&quot; I told him they were water. Then he asked &quot;dad, what&#x27;s Earth&#x27;s defense system?&quot; and then I remembered I don&#x27;t have a son and he asked again his eyes now<br>obsidian black &quot;what is the defense system father&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is...">
+    <meta property="og:title" content="im so ruthlessly commited to Dialectics that i am  — warm criminal @unhaunting">
+    <meta property="og:image:alt" content="im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is a clown and a coward">
+    <meta property="og:description" content="im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is a clown and a coward">
+    <meta property="og:image" content="/img/1902.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>im so ruthlessly commited to Dialectics that i am  — warm criminal @unhaunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1902/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1902",
+      "headline": "im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is",
+      "articleBody": "im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is a clown and a coward",
+      "image": "/img/1902.webp",
+      "author": {
+        "@type": "Person",
+        "name": "warm criminal",
+        "alternateName": "unhaunting"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1902.webp" class="img-fluid rounded" alt="im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is a clown and a coward">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">warm criminal</span> <span class="handle-text fs-6 d-block d-md-inline">@unhaunting</span></h4>
+            <p>im so ruthlessly commited to Dialectics that i am constantly at war with the person i was two days ago, who is a clown and a coward</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

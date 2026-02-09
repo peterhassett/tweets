@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="In Best in Show when Catherine O&#x27;Hara tells Ed Begley Jr. to try her credit card again because &quot;it&#...">
+    <meta property="og:title" content="In Best in Show when Catherine O&#x27;Hara tells Ed Beg — Justin Boldaji @justinboldaji">
+    <meta property="og:image:alt" content="In Best in Show when Catherine O&#x27;Hara tells Ed Begley Jr. to try her credit card again because &quot;it&#x27;s the good card&quot;, its one of the most relatable lines of dialogue in all of cinema">
+    <meta property="og:description" content="In Best in Show when Catherine O&#x27;Hara tells Ed Begley Jr. to try her credit card again because &quot;it&#x27;s the good card&quot;, its one of the most relatable lines of dialogue in all of cinema">
+    <meta property="og:image" content="/img/0236.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>In Best in Show when Catherine O&#x27;Hara tells Ed Beg — Justin Boldaji @justinboldaji</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0236/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0236",
+      "headline": "In Best in Show when Catherine O'Hara tells Ed Begley Jr. to try her credit card again because \"it's the good ",
+      "articleBody": "In Best in Show when Catherine O'Hara tells Ed Begley Jr. to try her credit card again because \"it's the good card\", its one of the most relatable lines of dialogue in all of cinema",
+      "image": "/img/0236.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Justin Boldaji",
+        "alternateName": "justinboldaji"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0236.webp" class="img-fluid rounded" alt="In Best in Show when Catherine O&#x27;Hara tells Ed Begley Jr. to try her credit card again because &quot;it&#x27;s the good card&quot;, its one of the most relatable lines of dialogue in all of cinema">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Justin Boldaji</span> <span class="handle-text fs-6 d-block d-md-inline">@justinboldaji</span></h4>
+            <p>In Best in Show when Catherine O&#x27;Hara tells Ed Begley Jr. to try her credit card again because &quot;it&#x27;s the good card&quot;, its one of the most relatable lines of dialogue in all of cinema</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

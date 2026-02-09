@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="(Screenshot of google search suggestions)
+
+People also ask
+Which fruit can be eaten at night?
+What Is The nigh...">
+    <meta property="og:title" content="(Screenshot of google search suggestions)
+
+People  — Villein @burialfetish">
+    <meta property="og:image:alt" content="(Screenshot of google search suggestions)
+
+People also ask
+Which fruit can be eaten at night?
+What Is The night fruit?">
+    <meta property="og:description" content="(Screenshot of google search suggestions)
+
+People also ask
+Which fruit can be eaten at night?
+What Is The night fruit?">
+    <meta property="og:image" content="/img/1046.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>(Screenshot of google search suggestions)
+
+People  — Villein @burialfetish</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1046/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1046",
+      "headline": "(Screenshot of google search suggestions)\n\nPeople also ask\nWhich fruit can be eaten at night?\nWhat Is The nigh",
+      "articleBody": "(Screenshot of google search suggestions)\n\nPeople also ask\nWhich fruit can be eaten at night?\nWhat Is The night fruit?",
+      "image": "/img/1046.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Villein",
+        "alternateName": "burialfetish"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1046.webp" class="img-fluid rounded" alt="(Screenshot of google search suggestions)
+
+People also ask
+Which fruit can be eaten at night?
+What Is The night fruit?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Villein</span> <span class="handle-text fs-6 d-block d-md-inline">@burialfetish</span></h4>
+            <p>(Screenshot of google search suggestions)<br><br>People also ask<br>Which fruit can be eaten at night?<br>What Is The night fruit?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

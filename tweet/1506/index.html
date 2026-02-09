@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="if I could give any advice to my 8 year old self?
+stop talking abt how much u like owls all the time. Ur about...">
+    <meta property="og:title" content="if I could give any advice to my 8 year old self?
+ — Dani Lyle @Danika_Lyle">
+    <meta property="og:image:alt" content="if I could give any advice to my 8 year old self?
+stop talking abt how much u like owls all the time. Ur about to get worthless owl things for every holiday until ur 20. Start talking about how much u like cold hard cash.">
+    <meta property="og:description" content="if I could give any advice to my 8 year old self?
+stop talking abt how much u like owls all the time. Ur about to get worthless owl things for every holiday until ur 20. Start talking about how much u like cold hard cash.">
+    <meta property="og:image" content="/img/1506.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>if I could give any advice to my 8 year old self?
+ — Dani Lyle @Danika_Lyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1506/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1506",
+      "headline": "if I could give any advice to my 8 year old self?\nstop talking abt how much u like owls all the time. Ur about",
+      "articleBody": "if I could give any advice to my 8 year old self?\nstop talking abt how much u like owls all the time. Ur about to get worthless owl things for every holiday until ur 20. Start talking about how much u like cold hard cash.",
+      "image": "/img/1506.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dani Lyle",
+        "alternateName": "Danika_Lyle"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1506.webp" class="img-fluid rounded" alt="if I could give any advice to my 8 year old self?
+stop talking abt how much u like owls all the time. Ur about to get worthless owl things for every holiday until ur 20. Start talking about how much u like cold hard cash.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dani Lyle</span> <span class="handle-text fs-6 d-block d-md-inline">@Danika_Lyle</span></h4>
+            <p>if I could give any advice to my 8 year old self?<br>stop talking abt how much u like owls all the time. Ur about to get worthless owl things for every holiday until ur 20. Start talking about how much u like cold hard cash.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

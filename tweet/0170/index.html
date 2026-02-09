@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Jordan Peterson: When a ghost says, &quot;boo!&quot; it is BEYOND alarming, obviously. But the word &quot;boo&...">
+    <meta property="og:title" content="Jordan Peterson: When a ghost says, &quot;boo!&quot; it is B — rob @OkButStill">
+    <meta property="og:image:alt" content="Jordan Peterson: When a ghost says, &quot;boo!&quot; it is BEYOND alarming, obviously. But the word &quot;boo&quot; not only frightens, it is a condemnation.
+Joe Rogan: The ghost is scaring you, but he&#x27;s also, like booing you.
+Peterson (tearing up): Well there you have it. That&#x27;s exactly correct.">
+    <meta property="og:description" content="Jordan Peterson: When a ghost says, &quot;boo!&quot; it is BEYOND alarming, obviously. But the word &quot;boo&quot; not only frightens, it is a condemnation.
+Joe Rogan: The ghost is scaring you, but he&#x27;s also, like booing you.
+Peterson (tearing up): Well there you have it. That&#x27;s exactly correct.">
+    <meta property="og:image" content="/img/0170.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Jordan Peterson: When a ghost says, &quot;boo!&quot; it is B — rob @OkButStill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0170/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0170",
+      "headline": "Jordan Peterson: When a ghost says, \"boo!\" it is BEYOND alarming, obviously. But the word \"boo\" not only frigh",
+      "articleBody": "Jordan Peterson: When a ghost says, \"boo!\" it is BEYOND alarming, obviously. But the word \"boo\" not only frightens, it is a condemnation.\nJoe Rogan: The ghost is scaring you, but he's also, like booing you.\nPeterson (tearing up): Well there you have it. That's exactly correct.",
+      "image": "/img/0170.webp",
+      "author": {
+        "@type": "Person",
+        "name": "rob",
+        "alternateName": "OkButStill"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0170.webp" class="img-fluid rounded" alt="Jordan Peterson: When a ghost says, &quot;boo!&quot; it is BEYOND alarming, obviously. But the word &quot;boo&quot; not only frightens, it is a condemnation.
+Joe Rogan: The ghost is scaring you, but he&#x27;s also, like booing you.
+Peterson (tearing up): Well there you have it. That&#x27;s exactly correct.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">rob</span> <span class="handle-text fs-6 d-block d-md-inline">@OkButStill</span></h4>
+            <p>Jordan Peterson: When a ghost says, &quot;boo!&quot; it is BEYOND alarming, obviously. But the word &quot;boo&quot; not only frightens, it is a condemnation.<br>Joe Rogan: The ghost is scaring you, but he&#x27;s also, like booing you.<br>Peterson (tearing up): Well there you have it. That&#x27;s exactly correct.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

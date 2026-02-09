@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Thanks for the reply. Are there any
+other personal details from your life that make this joke setup not
+applic...">
+    <meta property="og:title" content="Thanks for the reply. Are there any
+other personal — warrior cop @wyatt_privilege">
+    <meta property="og:image:alt" content="Thanks for the reply. Are there any
+other personal details from your life that make this joke setup not
+applicable to you? You can reply here or I&#x27;d be happy to hop on a call
+and hear more">
+    <meta property="og:description" content="Thanks for the reply. Are there any
+other personal details from your life that make this joke setup not
+applicable to you? You can reply here or I&#x27;d be happy to hop on a call
+and hear more">
+    <meta property="og:image" content="/img/0636.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Thanks for the reply. Are there any
+other personal — warrior cop @wyatt_privilege</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0636/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0636",
+      "headline": "Thanks for the reply. Are there any\nother personal details from your life that make this joke setup not\napplic",
+      "articleBody": "Thanks for the reply. Are there any\nother personal details from your life that make this joke setup not\napplicable to you? You can reply here or I'd be happy to hop on a call\nand hear more",
+      "image": "/img/0636.webp",
+      "author": {
+        "@type": "Person",
+        "name": "warrior cop",
+        "alternateName": "wyatt_privilege"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0636.webp" class="img-fluid rounded" alt="Thanks for the reply. Are there any
+other personal details from your life that make this joke setup not
+applicable to you? You can reply here or I&#x27;d be happy to hop on a call
+and hear more">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">warrior cop</span> <span class="handle-text fs-6 d-block d-md-inline">@wyatt_privilege</span></h4>
+            <p>Thanks for the reply. Are there any<br>other personal details from your life that make this joke setup not<br>applicable to you? You can reply here or I&#x27;d be happy to hop on a call<br>and hear more</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

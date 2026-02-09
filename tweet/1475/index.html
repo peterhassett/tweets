@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Time to bring back one of my
+favorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eras...">
+    <meta property="og:title" content="Time to bring back one of my
+favorite anecdotes ev — John Frankensteiner @JFrankensteiner">
+    <meta property="og:image:alt" content="Time to bring back one of my
+favorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eraserhead, he assumes all things on cable will be that wonderful, never enjoys another program again
+
+(Screenshot)
+
+BUKOWSKI: We got cable TV here, and the first thing we switched on happened to be Eraserhead. I said, &quot;What&#x27;s this?&quot; I didn&#x27;t know what it was. It was so great. I said, &quot;Oh, this cable TV has opened up a whole new world. We&#x27;re gonna be sitting in front of this thing for centuries. What next?&quot; So starting with Eraserhead we sit here, click, click, click-nothing.">
+    <meta property="og:description" content="Time to bring back one of my
+favorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eraserhead, he assumes all things on cable will be that wonderful, never enjoys another program again
+
+(Screenshot)
+
+BUKOWSKI: We got cable TV here, and the first thing we switched on happened to be Eraserhead. I said, &quot;What&#x27;s this?&quot; I didn&#x27;t know what it was. It was so great. I said, &quot;Oh, this cable TV has opened up a whole new world. We&#x27;re gonna be sitting in front of this thing for centuries. What next?&quot; So starting with Eraserhead we sit here, click, click, click-nothing.">
+    <meta property="og:image" content="/img/1475.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Time to bring back one of my
+favorite anecdotes ev — John Frankensteiner @JFrankensteiner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1475/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1475",
+      "headline": "Time to bring back one of my\nfavorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eras",
+      "articleBody": "Time to bring back one of my\nfavorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eraserhead, he assumes all things on cable will be that wonderful, never enjoys another program again\n\n(Screenshot)\n\nBUKOWSKI: We got cable TV here, and the first thing we switched on happened to be Eraserhead. I said, \"What's this?\" I didn't know what it was. It was so great. I said, \"Oh, this cable TV has opened up a whole new world. We're gonna be sitting in front of this thing for centuries. What next?\" So starting with Eraserhead we sit here, click, click, click-nothing.",
+      "image": "/img/1475.webp",
+      "author": {
+        "@type": "Person",
+        "name": "John Frankensteiner",
+        "alternateName": "JFrankensteiner"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1475.webp" class="img-fluid rounded" alt="Time to bring back one of my
+favorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eraserhead, he assumes all things on cable will be that wonderful, never enjoys another program again
+
+(Screenshot)
+
+BUKOWSKI: We got cable TV here, and the first thing we switched on happened to be Eraserhead. I said, &quot;What&#x27;s this?&quot; I didn&#x27;t know what it was. It was so great. I said, &quot;Oh, this cable TV has opened up a whole new world. We&#x27;re gonna be sitting in front of this thing for centuries. What next?&quot; So starting with Eraserhead we sit here, click, click, click-nothing.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">John Frankensteiner</span> <span class="handle-text fs-6 d-block d-md-inline">@JFrankensteiner</span></h4>
+            <p>Time to bring back one of my<br>favorite anecdotes ever: Charles Bukowski gets cable, first thing he sees is Eraserhead, he assumes all things on cable will be that wonderful, never enjoys another program again<br><br>(Screenshot)<br><br>BUKOWSKI: We got cable TV here, and the first thing we switched on happened to be Eraserhead. I said, &quot;What&#x27;s this?&quot; I didn&#x27;t know what it was. It was so great. I said, &quot;Oh, this cable TV has opened up a whole new world. We&#x27;re gonna be sitting in front of this thing for centuries. What next?&quot; So starting with Eraserhead we sit here, click, click, click-nothing.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

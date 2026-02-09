@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amaz...">
+    <meta property="og:title" content="Anecdote 1/2: One night, over dinner, I told John  — Guillermo del Toro @RealGDT">
+    <meta property="og:image:alt" content="Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amazing it was that it had...
+
+
+Guillermo del Toro
+@RealGDT
+Anecdote 2/2: ...over time, &quot;found its
+audience&quot; and was now revered. &quot;What fucking good does that do to me&quot; he said. We ordered dessert.">
+    <meta property="og:description" content="Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amazing it was that it had...
+
+
+Guillermo del Toro
+@RealGDT
+Anecdote 2/2: ...over time, &quot;found its
+audience&quot; and was now revered. &quot;What fucking good does that do to me&quot; he said. We ordered dessert.">
+    <meta property="og:image" content="/img/1089.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Anecdote 1/2: One night, over dinner, I told John  — Guillermo del Toro @RealGDT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1089/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1089",
+      "headline": "Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amaz",
+      "articleBody": "Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amazing it was that it had...\n\n\nGuillermo del Toro\n@RealGDT\nAnecdote 2/2: ...over time, \"found its\naudience\" and was now revered. \"What fucking good does that do to me\" he said. We ordered dessert.",
+      "image": "/img/1089.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Guillermo del Toro",
+        "alternateName": "RealGDT"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1089.webp" class="img-fluid rounded" alt="Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amazing it was that it had...
+
+
+Guillermo del Toro
+@RealGDT
+Anecdote 2/2: ...over time, &quot;found its
+audience&quot; and was now revered. &quot;What fucking good does that do to me&quot; he said. We ordered dessert.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Guillermo del Toro</span> <span class="handle-text fs-6 d-block d-md-inline">@RealGDT</span></h4>
+            <p>Anecdote 1/2: One night, over dinner, I told John Carpenter, how much all generations love The Thing. How amazing it was that it had...<br><br><br>Guillermo del Toro<br>@RealGDT<br>Anecdote 2/2: ...over time, &quot;found its<br>audience&quot; and was now revered. &quot;What fucking good does that do to me&quot; he said. We ordered dessert.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

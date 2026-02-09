@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="In Zack Snyder&#x27;s Justice League, Superman goes crazy and Batman calls him &quot;Clark&quot;, thus finally...">
+    <meta property="og:title" content="In Zack Snyder&#x27;s Justice League, Superman goes cra — Colin Young @ColinYovng">
+    <meta property="og:image:alt" content="In Zack Snyder&#x27;s Justice League, Superman goes crazy and Batman calls him &quot;Clark&quot;, thus finally answering 3 Doors Down&#x27;s question">
+    <meta property="og:description" content="In Zack Snyder&#x27;s Justice League, Superman goes crazy and Batman calls him &quot;Clark&quot;, thus finally answering 3 Doors Down&#x27;s question">
+    <meta property="og:image" content="/img/1646.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>In Zack Snyder&#x27;s Justice League, Superman goes cra — Colin Young @ColinYovng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1646/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1646",
+      "headline": "In Zack Snyder's Justice League, Superman goes crazy and Batman calls him \"Clark\", thus finally answering 3 Do",
+      "articleBody": "In Zack Snyder's Justice League, Superman goes crazy and Batman calls him \"Clark\", thus finally answering 3 Doors Down's question",
+      "image": "/img/1646.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Colin Young",
+        "alternateName": "ColinYovng"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1646.webp" class="img-fluid rounded" alt="In Zack Snyder&#x27;s Justice League, Superman goes crazy and Batman calls him &quot;Clark&quot;, thus finally answering 3 Doors Down&#x27;s question">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Colin Young</span> <span class="handle-text fs-6 d-block d-md-inline">@ColinYovng</span></h4>
+            <p>In Zack Snyder&#x27;s Justice League, Superman goes crazy and Batman calls him &quot;Clark&quot;, thus finally answering 3 Doors Down&#x27;s question</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

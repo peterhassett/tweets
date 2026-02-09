@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="i heard there was a secret cord/you
+plug it in/and you meet the lord
+
+
+Chris Kohler
+@kobunheat. 1d
+Around this...">
+    <meta property="og:title" content="i heard there was a secret cord/you
+plug it in/and — brad @bshoup">
+    <meta property="og:image:alt" content="i heard there was a secret cord/you
+plug it in/and you meet the lord
+
+
+Chris Kohler
+@kobunheat. 1d
+Around this time of year, people who strung their Christmas lights the wrong way start wandering into hardware stores looking for what they later find out is often called a
+&quot;suicide cable.&quot;
+
+
+(Photo of signs) 
+
+This Double-ended Male Plug does NOT exist
+
+THESE ARE NOT MADE THEY SHOULD NEVER BE MADE WE WILL NOT MAKE THEM WE WILL NOT HELP MAKE THEM">
+    <meta property="og:description" content="i heard there was a secret cord/you
+plug it in/and you meet the lord
+
+
+Chris Kohler
+@kobunheat. 1d
+Around this time of year, people who strung their Christmas lights the wrong way start wandering into hardware stores looking for what they later find out is often called a
+&quot;suicide cable.&quot;
+
+
+(Photo of signs) 
+
+This Double-ended Male Plug does NOT exist
+
+THESE ARE NOT MADE THEY SHOULD NEVER BE MADE WE WILL NOT MAKE THEM WE WILL NOT HELP MAKE THEM">
+    <meta property="og:image" content="/img/1787.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>i heard there was a secret cord/you
+plug it in/and — brad @bshoup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1787/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1787",
+      "headline": "i heard there was a secret cord/you\nplug it in/and you meet the lord\n\n\nChris Kohler\n@kobunheat. 1d\nAround this",
+      "articleBody": "i heard there was a secret cord/you\nplug it in/and you meet the lord\n\n\nChris Kohler\n@kobunheat. 1d\nAround this time of year, people who strung their Christmas lights the wrong way start wandering into hardware stores looking for what they later find out is often called a\n\"suicide cable.\"\n\n\n(Photo of signs) \n\nThis Double-ended Male Plug does NOT exist\n\nTHESE ARE NOT MADE THEY SHOULD NEVER BE MADE WE WILL NOT MAKE THEM WE WILL NOT HELP MAKE THEM",
+      "image": "/img/1787.webp",
+      "author": {
+        "@type": "Person",
+        "name": "brad",
+        "alternateName": "bshoup"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1787.webp" class="img-fluid rounded" alt="i heard there was a secret cord/you
+plug it in/and you meet the lord
+
+
+Chris Kohler
+@kobunheat. 1d
+Around this time of year, people who strung their Christmas lights the wrong way start wandering into hardware stores looking for what they later find out is often called a
+&quot;suicide cable.&quot;
+
+
+(Photo of signs) 
+
+This Double-ended Male Plug does NOT exist
+
+THESE ARE NOT MADE THEY SHOULD NEVER BE MADE WE WILL NOT MAKE THEM WE WILL NOT HELP MAKE THEM">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">brad</span> <span class="handle-text fs-6 d-block d-md-inline">@bshoup</span></h4>
+            <p>i heard there was a secret cord/you<br>plug it in/and you meet the lord<br><br><br>Chris Kohler<br>@kobunheat. 1d<br>Around this time of year, people who strung their Christmas lights the wrong way start wandering into hardware stores looking for what they later find out is often called a<br>&quot;suicide cable.&quot;<br><br><br>(Photo of signs) <br><br>This Double-ended Male Plug does NOT exist<br><br>THESE ARE NOT MADE THEY SHOULD NEVER BE MADE WE WILL NOT MAKE THEM WE WILL NOT HELP MAKE THEM</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

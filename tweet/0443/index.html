@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you ca...">
+    <meta property="og:title" content="perhaps nothing is more responsible for the 21st c — Daniel M. Lavery @daniel_m_lavery">
+    <meta property="og:image:alt" content="perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you cannot bustle into the dining room with vol-au-vents and a panicked smile if there&#x27;s not a door swinging behind you, revealing a fire or inappropriate tryst.">
+    <meta property="og:description" content="perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you cannot bustle into the dining room with vol-au-vents and a panicked smile if there&#x27;s not a door swinging behind you, revealing a fire or inappropriate tryst.">
+    <meta property="og:image" content="/img/0443.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>perhaps nothing is more responsible for the 21st c — Daniel M. Lavery @daniel_m_lavery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0443/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0443",
+      "headline": "perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you ca",
+      "articleBody": "perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you cannot bustle into the dining room with vol-au-vents and a panicked smile if there's not a door swinging behind you, revealing a fire or inappropriate tryst.",
+      "image": "/img/0443.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel M. Lavery",
+        "alternateName": "daniel_m_lavery"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0443.webp" class="img-fluid rounded" alt="perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you cannot bustle into the dining room with vol-au-vents and a panicked smile if there&#x27;s not a door swinging behind you, revealing a fire or inappropriate tryst.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Daniel M. Lavery</span> <span class="handle-text fs-6 d-block d-md-inline">@daniel_m_lavery</span></h4>
+            <p>perhaps nothing is more responsible for the 21st century decline of the farce than the open floor plan. you cannot bustle into the dining room with vol-au-vents and a panicked smile if there&#x27;s not a door swinging behind you, revealing a fire or inappropriate tryst.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

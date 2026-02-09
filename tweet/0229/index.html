@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="the person who names a thing is often more powerful than the real discoverer
+
+
+Andrew Reed @andrew__reed
+i cal...">
+    <meta property="og:title" content="the person who names a thing is often more powerfu — roon @tszzl">
+    <meta property="og:image:alt" content="the person who names a thing is often more powerful than the real discoverer
+
+
+Andrew Reed @andrew__reed
+i call this &quot;reed&#x27;s law&quot;">
+    <meta property="og:description" content="the person who names a thing is often more powerful than the real discoverer
+
+
+Andrew Reed @andrew__reed
+i call this &quot;reed&#x27;s law&quot;">
+    <meta property="og:image" content="/img/0229.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>the person who names a thing is often more powerfu — roon @tszzl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0229/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0229",
+      "headline": "the person who names a thing is often more powerful than the real discoverer\n\n\nAndrew Reed @andrew__reed\ni cal",
+      "articleBody": "the person who names a thing is often more powerful than the real discoverer\n\n\nAndrew Reed @andrew__reed\ni call this \"reed's law\"",
+      "image": "/img/0229.webp",
+      "author": {
+        "@type": "Person",
+        "name": "roon",
+        "alternateName": "tszzl"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0229.webp" class="img-fluid rounded" alt="the person who names a thing is often more powerful than the real discoverer
+
+
+Andrew Reed @andrew__reed
+i call this &quot;reed&#x27;s law&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">roon</span> <span class="handle-text fs-6 d-block d-md-inline">@tszzl</span></h4>
+            <p>the person who names a thing is often more powerful than the real discoverer<br><br><br>Andrew Reed @andrew__reed<br>i call this &quot;reed&#x27;s law&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

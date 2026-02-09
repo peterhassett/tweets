@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="heard a guy answer the question &quot;are you a smoker or non-smoker?&quot;
+with &quot;i do a little of both&q...">
+    <meta property="og:title" content="heard a guy answer the question &quot;are you a smoker  — slick @dlicj">
+    <meta property="og:image:alt" content="heard a guy answer the question &quot;are you a smoker or non-smoker?&quot;
+with &quot;i do a little of both&quot;">
+    <meta property="og:description" content="heard a guy answer the question &quot;are you a smoker or non-smoker?&quot;
+with &quot;i do a little of both&quot;">
+    <meta property="og:image" content="/img/1452.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>heard a guy answer the question &quot;are you a smoker  — slick @dlicj</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1452/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1452",
+      "headline": "heard a guy answer the question \"are you a smoker or non-smoker?\"\nwith \"i do a little of both\"",
+      "articleBody": "heard a guy answer the question \"are you a smoker or non-smoker?\"\nwith \"i do a little of both\"",
+      "image": "/img/1452.webp",
+      "author": {
+        "@type": "Person",
+        "name": "slick",
+        "alternateName": "dlicj"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1452.webp" class="img-fluid rounded" alt="heard a guy answer the question &quot;are you a smoker or non-smoker?&quot;
+with &quot;i do a little of both&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">slick</span> <span class="handle-text fs-6 d-block d-md-inline">@dlicj</span></h4>
+            <p>heard a guy answer the question &quot;are you a smoker or non-smoker?&quot;<br>with &quot;i do a little of both&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

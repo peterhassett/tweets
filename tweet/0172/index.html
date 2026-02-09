@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="For everyone visiting their parents
+this week:
+LG tvs call it TrueMotion
+Roku/TCL calls it Action Smoothing
+Sa...">
+    <meta property="og:title" content="For everyone visiting their parents
+this week:
+LG  — lauren @NotABigJerk">
+    <meta property="og:image:alt" content="For everyone visiting their parents
+this week:
+LG tvs call it TrueMotion
+Roku/TCL calls it Action Smoothing
+Samsung calls it Auto Motion Plus
+Sony calls it MotionFlow
+Panasonic calls it Intelligent Frame Creation
+Amazon Fire TVs call it Motion
+Processing
+12/25/22">
+    <meta property="og:description" content="For everyone visiting their parents
+this week:
+LG tvs call it TrueMotion
+Roku/TCL calls it Action Smoothing
+Samsung calls it Auto Motion Plus
+Sony calls it MotionFlow
+Panasonic calls it Intelligent Frame Creation
+Amazon Fire TVs call it Motion
+Processing
+12/25/22">
+    <meta property="og:image" content="/img/0172.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>For everyone visiting their parents
+this week:
+LG  — lauren @NotABigJerk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0172/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0172",
+      "headline": "For everyone visiting their parents\nthis week:\nLG tvs call it TrueMotion\nRoku/TCL calls it Action Smoothing\nSa",
+      "articleBody": "For everyone visiting their parents\nthis week:\nLG tvs call it TrueMotion\nRoku/TCL calls it Action Smoothing\nSamsung calls it Auto Motion Plus\nSony calls it MotionFlow\nPanasonic calls it Intelligent Frame Creation\nAmazon Fire TVs call it Motion\nProcessing\n12/25/22",
+      "image": "/img/0172.webp",
+      "author": {
+        "@type": "Person",
+        "name": "lauren",
+        "alternateName": "NotABigJerk"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0172.webp" class="img-fluid rounded" alt="For everyone visiting their parents
+this week:
+LG tvs call it TrueMotion
+Roku/TCL calls it Action Smoothing
+Samsung calls it Auto Motion Plus
+Sony calls it MotionFlow
+Panasonic calls it Intelligent Frame Creation
+Amazon Fire TVs call it Motion
+Processing
+12/25/22">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">lauren</span> <span class="handle-text fs-6 d-block d-md-inline">@NotABigJerk</span></h4>
+            <p>For everyone visiting their parents<br>this week:<br>LG tvs call it TrueMotion<br>Roku/TCL calls it Action Smoothing<br>Samsung calls it Auto Motion Plus<br>Sony calls it MotionFlow<br>Panasonic calls it Intelligent Frame Creation<br>Amazon Fire TVs call it Motion<br>Processing<br>12/25/22</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

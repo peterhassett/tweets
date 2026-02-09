@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be mysterious} I don&#x27;t
+know">
+    <meta property="og:title" content="BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be m — Darth Erogenous @darth_erogenous">
+    <meta property="og:image:alt" content="BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be mysterious} I don&#x27;t
+know">
+    <meta property="og:description" content="BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be mysterious} I don&#x27;t
+know">
+    <meta property="og:image" content="/img/1127.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be m — Darth Erogenous @darth_erogenous</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1127/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1127",
+      "headline": "BEAUTIFUL WOMAN: What's your\nname?\n{trying to be mysterious} I don't\nknow",
+      "articleBody": "BEAUTIFUL WOMAN: What's your\nname?\n{trying to be mysterious} I don't\nknow",
+      "image": "/img/1127.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Darth Erogenous",
+        "alternateName": "darth_erogenous"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1127.webp" class="img-fluid rounded" alt="BEAUTIFUL WOMAN: What&#x27;s your
+name?
+{trying to be mysterious} I don&#x27;t
+know">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Darth Erogenous</span> <span class="handle-text fs-6 d-block d-md-inline">@darth_erogenous</span></h4>
+            <p>BEAUTIFUL WOMAN: What&#x27;s your<br>name?<br>{trying to be mysterious} I don&#x27;t<br>know</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

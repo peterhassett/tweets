@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Andor&#x27;s great because it&#x27;s a grounded, thoughtful drama with nuanced characters who at any given mom...">
+    <meta property="og:title" content="Andor&#x27;s great because it&#x27;s a grounded, thoughtful  — Ben Joseph @jenboseph">
+    <meta property="og:image:alt" content="Andor&#x27;s great because it&#x27;s a grounded, thoughtful drama with nuanced characters who at any given moment could meet Jar Jar Binks">
+    <meta property="og:description" content="Andor&#x27;s great because it&#x27;s a grounded, thoughtful drama with nuanced characters who at any given moment could meet Jar Jar Binks">
+    <meta property="og:image" content="/img/0579.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Andor&#x27;s great because it&#x27;s a grounded, thoughtful  — Ben Joseph @jenboseph</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0579/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0579",
+      "headline": "Andor's great because it's a grounded, thoughtful drama with nuanced characters who at any given moment could ",
+      "articleBody": "Andor's great because it's a grounded, thoughtful drama with nuanced characters who at any given moment could meet Jar Jar Binks",
+      "image": "/img/0579.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ben Joseph",
+        "alternateName": "jenboseph"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0579.webp" class="img-fluid rounded" alt="Andor&#x27;s great because it&#x27;s a grounded, thoughtful drama with nuanced characters who at any given moment could meet Jar Jar Binks">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ben Joseph</span> <span class="handle-text fs-6 d-block d-md-inline">@jenboseph</span></h4>
+            <p>Andor&#x27;s great because it&#x27;s a grounded, thoughtful drama with nuanced characters who at any given moment could meet Jar Jar Binks</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

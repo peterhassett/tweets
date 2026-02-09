@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Saw some pigeon detectives down at the lake trying to solve a murder.
+
+(Pigeons walking around behind crime sc...">
+    <meta property="og:title" content="Saw some pigeon detectives down at the lake trying — joey alison sayers @joeyalison">
+    <meta property="og:image:alt" content="Saw some pigeon detectives down at the lake trying to solve a murder.
+
+(Pigeons walking around behind crime scene tape)">
+    <meta property="og:description" content="Saw some pigeon detectives down at the lake trying to solve a murder.
+
+(Pigeons walking around behind crime scene tape)">
+    <meta property="og:image" content="/img/2059.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Saw some pigeon detectives down at the lake trying — joey alison sayers @joeyalison</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2059/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2059",
+      "headline": "Saw some pigeon detectives down at the lake trying to solve a murder.\n\n(Pigeons walking around behind crime sc",
+      "articleBody": "Saw some pigeon detectives down at the lake trying to solve a murder.\n\n(Pigeons walking around behind crime scene tape)",
+      "image": "/img/2059.webp",
+      "author": {
+        "@type": "Person",
+        "name": "joey alison sayers",
+        "alternateName": "joeyalison"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2059.webp" class="img-fluid rounded" alt="Saw some pigeon detectives down at the lake trying to solve a murder.
+
+(Pigeons walking around behind crime scene tape)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">joey alison sayers</span> <span class="handle-text fs-6 d-block d-md-inline">@joeyalison</span></h4>
+            <p>Saw some pigeon detectives down at the lake trying to solve a murder.<br><br>(Pigeons walking around behind crime scene tape)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

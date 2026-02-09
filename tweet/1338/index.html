@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello. My mom took my phone and nintendo ds so I have no choice but...">
+    <meta property="og:title" content="#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello.  — dorothy @thankunext327">
+    <meta property="og:image:alt" content="#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello. My mom took my phone and nintendo ds so I have no choice but to use my wii thank
+u all for the support and
+love. i will answer my dms and follow back when i have a stable connection to twitter.
+(bye (3
+- dorothy x
+
+
+2:40 PM 8/5/19 Wii U Image Share">
+    <meta property="og:description" content="#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello. My mom took my phone and nintendo ds so I have no choice but to use my wii thank
+u all for the support and
+love. i will answer my dms and follow back when i have a stable connection to twitter.
+(bye (3
+- dorothy x
+
+
+2:40 PM 8/5/19 Wii U Image Share">
+    <meta property="og:image" content="/img/1338.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello.  — dorothy @thankunext327</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1338/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1338",
+      "headline": "#WiiU\n\n\n(Photo of Wii U image share note)\n\nhello. My mom took my phone and nintendo ds so I have no choice but",
+      "articleBody": "#WiiU\n\n\n(Photo of Wii U image share note)\n\nhello. My mom took my phone and nintendo ds so I have no choice but to use my wii thank\nu all for the support and\nlove. i will answer my dms and follow back when i have a stable connection to twitter.\n(bye (3\n- dorothy x\n\n\n2:40 PM 8/5/19 Wii U Image Share",
+      "image": "/img/1338.webp",
+      "author": {
+        "@type": "Person",
+        "name": "dorothy",
+        "alternateName": "thankunext327"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1338.webp" class="img-fluid rounded" alt="#WiiU
+
+
+(Photo of Wii U image share note)
+
+hello. My mom took my phone and nintendo ds so I have no choice but to use my wii thank
+u all for the support and
+love. i will answer my dms and follow back when i have a stable connection to twitter.
+(bye (3
+- dorothy x
+
+
+2:40 PM 8/5/19 Wii U Image Share">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">dorothy</span> <span class="handle-text fs-6 d-block d-md-inline">@thankunext327</span></h4>
+            <p>#WiiU<br><br><br>(Photo of Wii U image share note)<br><br>hello. My mom took my phone and nintendo ds so I have no choice but to use my wii thank<br>u all for the support and<br>love. i will answer my dms and follow back when i have a stable connection to twitter.<br>(bye (3<br>- dorothy x<br><br><br>2:40 PM 8/5/19 Wii U Image Share</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

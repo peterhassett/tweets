@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;whips&quot;.
+KISSINGER: It also &quot;bops&quot...">
+    <meta property="og:title" content="NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;wh — Karan Lyons @karanlyons">
+    <meta property="og:image:alt" content="NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;whips&quot;.
+KISSINGER: It also &quot;bops&quot;, sir. NIXON: And does it flog or punch?
+KISSINGER: No.
+NIXON: So this is not
+sadomasochism.
+KISSINGER: No, sir.
+NIXON: But it is a perversion. KISSINGER: Of language, certainly.
+NIXON: Disgraceful.">
+    <meta property="og:description" content="NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;whips&quot;.
+KISSINGER: It also &quot;bops&quot;, sir. NIXON: And does it flog or punch?
+KISSINGER: No.
+NIXON: So this is not
+sadomasochism.
+KISSINGER: No, sir.
+NIXON: But it is a perversion. KISSINGER: Of language, certainly.
+NIXON: Disgraceful.">
+    <meta property="og:image" content="/img/1899.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;wh — Karan Lyons @karanlyons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1899/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1899",
+      "headline": "NIXON: And so if it is good then it\n\"slaps\" or \"whips\".\nKISSINGER: It also \"bops\", sir. NIXON: And does it flo",
+      "articleBody": "NIXON: And so if it is good then it\n\"slaps\" or \"whips\".\nKISSINGER: It also \"bops\", sir. NIXON: And does it flog or punch?\nKISSINGER: No.\nNIXON: So this is not\nsadomasochism.\nKISSINGER: No, sir.\nNIXON: But it is a perversion. KISSINGER: Of language, certainly.\nNIXON: Disgraceful.",
+      "image": "/img/1899.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Karan Lyons",
+        "alternateName": "karanlyons"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1899.webp" class="img-fluid rounded" alt="NIXON: And so if it is good then it
+&quot;slaps&quot; or &quot;whips&quot;.
+KISSINGER: It also &quot;bops&quot;, sir. NIXON: And does it flog or punch?
+KISSINGER: No.
+NIXON: So this is not
+sadomasochism.
+KISSINGER: No, sir.
+NIXON: But it is a perversion. KISSINGER: Of language, certainly.
+NIXON: Disgraceful.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Karan Lyons</span> <span class="handle-text fs-6 d-block d-md-inline">@karanlyons</span></h4>
+            <p>NIXON: And so if it is good then it<br>&quot;slaps&quot; or &quot;whips&quot;.<br>KISSINGER: It also &quot;bops&quot;, sir. NIXON: And does it flog or punch?<br>KISSINGER: No.<br>NIXON: So this is not<br>sadomasochism.<br>KISSINGER: No, sir.<br>NIXON: But it is a perversion. KISSINGER: Of language, certainly.<br>NIXON: Disgraceful.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

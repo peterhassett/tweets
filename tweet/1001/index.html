@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="*me, teaching a classroom* ok so today&#x27;s lesson is kind of loose because some of you are in a horror movi...">
+    <meta property="og:title" content="*me, teaching a classroom* ok so today&#x27;s lesson is — Karin Malady EX @SweetNAwful">
+    <meta property="og:image:alt" content="*me, teaching a classroom* ok so today&#x27;s lesson is kind of loose because some of you are in a horror movie and i need to deliver the themes to the audience. this won&#x27;t
+help you avoid death, but it will help you contextualize it">
+    <meta property="og:description" content="*me, teaching a classroom* ok so today&#x27;s lesson is kind of loose because some of you are in a horror movie and i need to deliver the themes to the audience. this won&#x27;t
+help you avoid death, but it will help you contextualize it">
+    <meta property="og:image" content="/img/1001.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>*me, teaching a classroom* ok so today&#x27;s lesson is — Karin Malady EX @SweetNAwful</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1001/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1001",
+      "headline": "*me, teaching a classroom* ok so today's lesson is kind of loose because some of you are in a horror movie and",
+      "articleBody": "*me, teaching a classroom* ok so today's lesson is kind of loose because some of you are in a horror movie and i need to deliver the themes to the audience. this won't\nhelp you avoid death, but it will help you contextualize it",
+      "image": "/img/1001.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Karin Malady EX",
+        "alternateName": "SweetNAwful"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1001.webp" class="img-fluid rounded" alt="*me, teaching a classroom* ok so today&#x27;s lesson is kind of loose because some of you are in a horror movie and i need to deliver the themes to the audience. this won&#x27;t
+help you avoid death, but it will help you contextualize it">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Karin Malady EX</span> <span class="handle-text fs-6 d-block d-md-inline">@SweetNAwful</span></h4>
+            <p>*me, teaching a classroom* ok so today&#x27;s lesson is kind of loose because some of you are in a horror movie and i need to deliver the themes to the audience. this won&#x27;t<br>help you avoid death, but it will help you contextualize it</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

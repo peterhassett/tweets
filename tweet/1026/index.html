@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profi...">
+    <meta property="og:title" content="Like a cursed amulet this website drives each pers — internethimbo @InternetHippo">
+    <meta property="og:image:alt" content="Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profile">
+    <meta property="og:description" content="Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profile">
+    <meta property="og:image" content="/img/1026.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Like a cursed amulet this website drives each pers — internethimbo @InternetHippo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1026/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1026",
+      "headline": "Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profi",
+      "articleBody": "Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profile",
+      "image": "/img/1026.webp",
+      "author": {
+        "@type": "Person",
+        "name": "internethimbo",
+        "alternateName": "InternetHippo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1026.webp" class="img-fluid rounded" alt="Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profile">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">internethimbo</span> <span class="handle-text fs-6 d-block d-md-inline">@InternetHippo</span></h4>
+            <p>Like a cursed amulet this website drives each person mad in a way unique to their specific psychological profile</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

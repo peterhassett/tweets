@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Captain: I&#x27;m really nervous about giving this speech.
+Sun, rubbing his shoulders: Don&#x27;t worry, big g...">
+    <meta property="og:title" content="Captain: I&#x27;m really nervous about giving this spee — Father Drinks McGee @drinksmcgee">
+    <meta property="og:image:alt" content="Captain: I&#x27;m really nervous about giving this speech.
+Sun, rubbing his shoulders: Don&#x27;t worry, big guy. You got this.
+
+(A photo that looks like this: sun insignia behind military captain, with yellow epaulettes that look like the sun’s fingers)">
+    <meta property="og:description" content="Captain: I&#x27;m really nervous about giving this speech.
+Sun, rubbing his shoulders: Don&#x27;t worry, big guy. You got this.
+
+(A photo that looks like this: sun insignia behind military captain, with yellow epaulettes that look like the sun’s fingers)">
+    <meta property="og:image" content="/img/1645.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Captain: I&#x27;m really nervous about giving this spee — Father Drinks McGee @drinksmcgee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1645/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1645",
+      "headline": "Captain: I'm really nervous about giving this speech.\nSun, rubbing his shoulders: Don't worry, big guy. You go",
+      "articleBody": "Captain: I'm really nervous about giving this speech.\nSun, rubbing his shoulders: Don't worry, big guy. You got this.\n\n(A photo that looks like this: sun insignia behind military captain, with yellow epaulettes that look like the sun\u2019s fingers)",
+      "image": "/img/1645.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Father Drinks McGee",
+        "alternateName": "drinksmcgee"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1645.webp" class="img-fluid rounded" alt="Captain: I&#x27;m really nervous about giving this speech.
+Sun, rubbing his shoulders: Don&#x27;t worry, big guy. You got this.
+
+(A photo that looks like this: sun insignia behind military captain, with yellow epaulettes that look like the sun’s fingers)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Father Drinks McGee</span> <span class="handle-text fs-6 d-block d-md-inline">@drinksmcgee</span></h4>
+            <p>Captain: I&#x27;m really nervous about giving this speech.<br>Sun, rubbing his shoulders: Don&#x27;t worry, big guy. You got this.<br><br>(A photo that looks like this: sun insignia behind military captain, with yellow epaulettes that look like the sun’s fingers)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I hate when someone makes an
+Instagram for their pet and then spells all the words wrong.
+Either your dog is s...">
+    <meta property="og:title" content="I hate when someone makes an
+Instagram for their p — Andrew Nadeau @TheAndrewNadeau">
+    <meta property="og:image:alt" content="I hate when someone makes an
+Instagram for their pet and then spells all the words wrong.
+Either your dog is smart enough to set up, build &amp; maintain a successful social media presence or he isn&#x27;t. If you expect me to believe a dog did all this I think he can also spell
+&quot;hungry.&quot;">
+    <meta property="og:description" content="I hate when someone makes an
+Instagram for their pet and then spells all the words wrong.
+Either your dog is smart enough to set up, build &amp; maintain a successful social media presence or he isn&#x27;t. If you expect me to believe a dog did all this I think he can also spell
+&quot;hungry.&quot;">
+    <meta property="og:image" content="/img/0139.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I hate when someone makes an
+Instagram for their p — Andrew Nadeau @TheAndrewNadeau</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0139/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0139",
+      "headline": "I hate when someone makes an\nInstagram for their pet and then spells all the words wrong.\nEither your dog is s",
+      "articleBody": "I hate when someone makes an\nInstagram for their pet and then spells all the words wrong.\nEither your dog is smart enough to set up, build & maintain a successful social media presence or he isn't. If you expect me to believe a dog did all this I think he can also spell\n\"hungry.\"",
+      "image": "/img/0139.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Andrew Nadeau",
+        "alternateName": "TheAndrewNadeau"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0139.webp" class="img-fluid rounded" alt="I hate when someone makes an
+Instagram for their pet and then spells all the words wrong.
+Either your dog is smart enough to set up, build &amp; maintain a successful social media presence or he isn&#x27;t. If you expect me to believe a dog did all this I think he can also spell
+&quot;hungry.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Andrew Nadeau</span> <span class="handle-text fs-6 d-block d-md-inline">@TheAndrewNadeau</span></h4>
+            <p>I hate when someone makes an<br>Instagram for their pet and then spells all the words wrong.<br>Either your dog is smart enough to set up, build &amp; maintain a successful social media presence or he isn&#x27;t. If you expect me to believe a dog did all this I think he can also spell<br>&quot;hungry.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

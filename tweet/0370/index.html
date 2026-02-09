@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, ...">
+    <meta property="og:title" content="In Super Mario World, Mario has a halo after a Gam — Supper Mario Broth @MarioBrothBlog">
+    <meta property="og:image:alt" content="In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, in Super Paper Mario, he goes to the Underwhere, an equivalent of Hell, after death. This implies that between 1990 and 2007, Mario has committed some unforgivable sin.
+
+(Screenshots of the same)">
+    <meta property="og:description" content="In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, in Super Paper Mario, he goes to the Underwhere, an equivalent of Hell, after death. This implies that between 1990 and 2007, Mario has committed some unforgivable sin.
+
+(Screenshots of the same)">
+    <meta property="og:image" content="/img/0370.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>In Super Mario World, Mario has a halo after a Gam — Supper Mario Broth @MarioBrothBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0370/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0370",
+      "headline": "In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, ",
+      "articleBody": "In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, in Super Paper Mario, he goes to the Underwhere, an equivalent of Hell, after death. This implies that between 1990 and 2007, Mario has committed some unforgivable sin.\n\n(Screenshots of the same)",
+      "image": "/img/0370.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Supper Mario Broth",
+        "alternateName": "MarioBrothBlog"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0370.webp" class="img-fluid rounded" alt="In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, in Super Paper Mario, he goes to the Underwhere, an equivalent of Hell, after death. This implies that between 1990 and 2007, Mario has committed some unforgivable sin.
+
+(Screenshots of the same)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Supper Mario Broth</span> <span class="handle-text fs-6 d-block d-md-inline">@MarioBrothBlog</span></h4>
+            <p>In Super Mario World, Mario has a halo after a Game Over, implying he would go to Heaven if he dies. However, in Super Paper Mario, he goes to the Underwhere, an equivalent of Hell, after death. This implies that between 1990 and 2007, Mario has committed some unforgivable sin.<br><br>(Screenshots of the same)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

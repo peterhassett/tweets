@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Just discovered this stunning short story in my drafts:
+
+&quot;I&#x27;m pregnant!&quot; shouts Jonathan Franze...">
+    <meta property="og:title" content="Just discovered this stunning short story in my dr — Patricia Lockwood @TriciaLockwood">
+    <meta property="og:image:alt" content="Just discovered this stunning short story in my drafts:
+
+&quot;I&#x27;m pregnant!&quot; shouts Jonathan Franzen&#x27;s wife. He places a finger on her lips. &quot;No, it is I who am
+pregnant,&quot; he says. &quot;Pregnant with the next great American novel.&quot; He walks into the backyard and places a single portobello mushroom upon the grill.">
+    <meta property="og:description" content="Just discovered this stunning short story in my drafts:
+
+&quot;I&#x27;m pregnant!&quot; shouts Jonathan Franzen&#x27;s wife. He places a finger on her lips. &quot;No, it is I who am
+pregnant,&quot; he says. &quot;Pregnant with the next great American novel.&quot; He walks into the backyard and places a single portobello mushroom upon the grill.">
+    <meta property="og:image" content="/img/2065.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Just discovered this stunning short story in my dr — Patricia Lockwood @TriciaLockwood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2065/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2065",
+      "headline": "Just discovered this stunning short story in my drafts:\n\n\"I'm pregnant!\" shouts Jonathan Franzen's wife. He pl",
+      "articleBody": "Just discovered this stunning short story in my drafts:\n\n\"I'm pregnant!\" shouts Jonathan Franzen's wife. He places a finger on her lips. \"No, it is I who am\npregnant,\" he says. \"Pregnant with the next great American novel.\" He walks into the backyard and places a single portobello mushroom upon the grill.",
+      "image": "/img/2065.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Patricia Lockwood",
+        "alternateName": "TriciaLockwood"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2065.webp" class="img-fluid rounded" alt="Just discovered this stunning short story in my drafts:
+
+&quot;I&#x27;m pregnant!&quot; shouts Jonathan Franzen&#x27;s wife. He places a finger on her lips. &quot;No, it is I who am
+pregnant,&quot; he says. &quot;Pregnant with the next great American novel.&quot; He walks into the backyard and places a single portobello mushroom upon the grill.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Patricia Lockwood</span> <span class="handle-text fs-6 d-block d-md-inline">@TriciaLockwood</span></h4>
+            <p>Just discovered this stunning short story in my drafts:<br><br>&quot;I&#x27;m pregnant!&quot; shouts Jonathan Franzen&#x27;s wife. He places a finger on her lips. &quot;No, it is I who am<br>pregnant,&quot; he says. &quot;Pregnant with the next great American novel.&quot; He walks into the backyard and places a single portobello mushroom upon the grill.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

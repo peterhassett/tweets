@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I watched the hunger games for the first time last night. It was good.
+
+
+micah @dontpullme⚫ 3/25/20
+you... lit...">
+    <meta property="og:title" content="I watched the hunger games for the first time last — Charli @charli_xcx">
+    <meta property="og:image:alt" content="I watched the hunger games for the first time last night. It was good.
+
+
+micah @dontpullme⚫ 3/25/20
+you... literally have a song on their soundtrack LMFAOOO
+
+
+Charli
+@charli_xcx
+Lorde sent me an email with a plot
+summary and a vibe she wanted so I just went with it">
+    <meta property="og:description" content="I watched the hunger games for the first time last night. It was good.
+
+
+micah @dontpullme⚫ 3/25/20
+you... literally have a song on their soundtrack LMFAOOO
+
+
+Charli
+@charli_xcx
+Lorde sent me an email with a plot
+summary and a vibe she wanted so I just went with it">
+    <meta property="og:image" content="/img/1783.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I watched the hunger games for the first time last — Charli @charli_xcx</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1783/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1783",
+      "headline": "I watched the hunger games for the first time last night. It was good.\n\n\nmicah @dontpullme\u26ab 3/25/20\nyou... lit",
+      "articleBody": "I watched the hunger games for the first time last night. It was good.\n\n\nmicah @dontpullme\u26ab 3/25/20\nyou... literally have a song on their soundtrack LMFAOOO\n\n\nCharli\n@charli_xcx\nLorde sent me an email with a plot\nsummary and a vibe she wanted so I just went with it",
+      "image": "/img/1783.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Charli",
+        "alternateName": "charli_xcx"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1783.webp" class="img-fluid rounded" alt="I watched the hunger games for the first time last night. It was good.
+
+
+micah @dontpullme⚫ 3/25/20
+you... literally have a song on their soundtrack LMFAOOO
+
+
+Charli
+@charli_xcx
+Lorde sent me an email with a plot
+summary and a vibe she wanted so I just went with it">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Charli</span> <span class="handle-text fs-6 d-block d-md-inline">@charli_xcx</span></h4>
+            <p>I watched the hunger games for the first time last night. It was good.<br><br><br>micah @dontpullme⚫ 3/25/20<br>you... literally have a song on their soundtrack LMFAOOO<br><br><br>Charli<br>@charli_xcx<br>Lorde sent me an email with a plot<br>summary and a vibe she wanted so I just went with it</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

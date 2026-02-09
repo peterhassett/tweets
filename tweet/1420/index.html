@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="pilot: we&#x27;ll be landing shortly
+passengers: ok
+pilot: on the moon
+passengers: what
+pilot: i went too high">
+    <meta property="og:title" content="pilot: we&#x27;ll be landing shortly
+passengers: ok
+pil — cory (harvard graduate) @coolmathgame_">
+    <meta property="og:image:alt" content="pilot: we&#x27;ll be landing shortly
+passengers: ok
+pilot: on the moon
+passengers: what
+pilot: i went too high">
+    <meta property="og:description" content="pilot: we&#x27;ll be landing shortly
+passengers: ok
+pilot: on the moon
+passengers: what
+pilot: i went too high">
+    <meta property="og:image" content="/img/1420.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>pilot: we&#x27;ll be landing shortly
+passengers: ok
+pil — cory (harvard graduate) @coolmathgame_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1420/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1420",
+      "headline": "pilot: we'll be landing shortly\npassengers: ok\npilot: on the moon\npassengers: what\npilot: i went too high",
+      "articleBody": "pilot: we'll be landing shortly\npassengers: ok\npilot: on the moon\npassengers: what\npilot: i went too high",
+      "image": "/img/1420.webp",
+      "author": {
+        "@type": "Person",
+        "name": "cory (harvard graduate)",
+        "alternateName": "coolmathgame_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1420.webp" class="img-fluid rounded" alt="pilot: we&#x27;ll be landing shortly
+passengers: ok
+pilot: on the moon
+passengers: what
+pilot: i went too high">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">cory (harvard graduate)</span> <span class="handle-text fs-6 d-block d-md-inline">@coolmathgame_</span></h4>
+            <p>pilot: we&#x27;ll be landing shortly<br>passengers: ok<br>pilot: on the moon<br>passengers: what<br>pilot: i went too high</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

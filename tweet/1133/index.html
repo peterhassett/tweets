@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Where did Scar&#x27;s accent come from.
+Did he study abroad">
+    <meta property="og:title" content="Where did Scar&#x27;s accent come from.
+Did he study ab — Amber Treadway @treadway_amber">
+    <meta property="og:image:alt" content="Where did Scar&#x27;s accent come from.
+Did he study abroad">
+    <meta property="og:description" content="Where did Scar&#x27;s accent come from.
+Did he study abroad">
+    <meta property="og:image" content="/img/1133.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Where did Scar&#x27;s accent come from.
+Did he study ab — Amber Treadway @treadway_amber</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1133/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1133",
+      "headline": "Where did Scar's accent come from.\nDid he study abroad",
+      "articleBody": "Where did Scar's accent come from.\nDid he study abroad",
+      "image": "/img/1133.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Amber Treadway",
+        "alternateName": "treadway_amber"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1133.webp" class="img-fluid rounded" alt="Where did Scar&#x27;s accent come from.
+Did he study abroad">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Amber Treadway</span> <span class="handle-text fs-6 d-block d-md-inline">@treadway_amber</span></h4>
+            <p>Where did Scar&#x27;s accent come from.<br>Did he study abroad</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

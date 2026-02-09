@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the ...">
+    <meta property="og:title" content="CHOMSKY: to look at a case like the grinch, who co — steph&amp;#39;s harvest @FKAReynolds">
+    <meta property="og:image:alt" content="CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the who-hash.. whose heart grew three sizes.. to say he doesn&#x27;t deserve to be spared-
+FOUCAULT: I&#x27;m going to stop you there. the question is not one of mercy, but of power">
+    <meta property="og:description" content="CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the who-hash.. whose heart grew three sizes.. to say he doesn&#x27;t deserve to be spared-
+FOUCAULT: I&#x27;m going to stop you there. the question is not one of mercy, but of power">
+    <meta property="og:image" content="/img/0554.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>CHOMSKY: to look at a case like the grinch, who co — steph&amp;#39;s harvest @FKAReynolds</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0554/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0554",
+      "headline": "CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the ",
+      "articleBody": "CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the who-hash.. whose heart grew three sizes.. to say he doesn't deserve to be spared-\nFOUCAULT: I'm going to stop you there. the question is not one of mercy, but of power",
+      "image": "/img/0554.webp",
+      "author": {
+        "@type": "Person",
+        "name": "steph&#39;s harvest",
+        "alternateName": "FKAReynolds"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0554.webp" class="img-fluid rounded" alt="CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the who-hash.. whose heart grew three sizes.. to say he doesn&#x27;t deserve to be spared-
+FOUCAULT: I&#x27;m going to stop you there. the question is not one of mercy, but of power">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">steph&amp;#39;s harvest</span> <span class="handle-text fs-6 d-block d-md-inline">@FKAReynolds</span></h4>
+            <p>CHOMSKY: to look at a case like the grinch, who commited.. many crimes, to be sure.. but who brought back the who-hash.. whose heart grew three sizes.. to say he doesn&#x27;t deserve to be spared-<br>FOUCAULT: I&#x27;m going to stop you there. the question is not one of mercy, but of power</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

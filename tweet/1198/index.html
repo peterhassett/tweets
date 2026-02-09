@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tat...">
+    <meta property="og:title" content="the idea of having tattoos making it harder to get — LUCYANA @LUCYANARANDALL">
+    <meta property="og:image:alt" content="the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tattoos i don&#x27;t think &quot;degenerate&quot;, i think &quot;nice, a guy who schedules lots of appointments and shows up to them on time&quot;">
+    <meta property="og:description" content="the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tattoos i don&#x27;t think &quot;degenerate&quot;, i think &quot;nice, a guy who schedules lots of appointments and shows up to them on time&quot;">
+    <meta property="og:image" content="/img/1198.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>the idea of having tattoos making it harder to get — LUCYANA @LUCYANARANDALL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1198/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1198",
+      "headline": "the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tat",
+      "articleBody": "the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tattoos i don't think \"degenerate\", i think \"nice, a guy who schedules lots of appointments and shows up to them on time\"",
+      "image": "/img/1198.webp",
+      "author": {
+        "@type": "Person",
+        "name": "LUCYANA",
+        "alternateName": "LUCYANARANDALL"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1198.webp" class="img-fluid rounded" alt="the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tattoos i don&#x27;t think &quot;degenerate&quot;, i think &quot;nice, a guy who schedules lots of appointments and shows up to them on time&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">LUCYANA</span> <span class="handle-text fs-6 d-block d-md-inline">@LUCYANARANDALL</span></h4>
+            <p>the idea of having tattoos making it harder to get a job is so bizarre bc when i see someone with a lot of tattoos i don&#x27;t think &quot;degenerate&quot;, i think &quot;nice, a guy who schedules lots of appointments and shows up to them on time&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

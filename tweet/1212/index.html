@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, &quot;This is like COMING T...">
+    <meta property="og:title" content="CLEOPATRA is on the TV at The Bar and John the Bar — Vikram Murthi @fauxbeatpoet">
+    <meta property="og:image:alt" content="CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, &quot;This is like COMING TO AMERICA meets the Prince Ali scene from ALADDIN&quot; and right then I realized that basically anyone can
+write film criticism.">
+    <meta property="og:description" content="CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, &quot;This is like COMING TO AMERICA meets the Prince Ali scene from ALADDIN&quot; and right then I realized that basically anyone can
+write film criticism.">
+    <meta property="og:image" content="/img/1212.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>CLEOPATRA is on the TV at The Bar and John the Bar — Vikram Murthi @fauxbeatpoet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1212/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1212",
+      "headline": "CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, \"This is like COMING TO AME",
+      "articleBody": "CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, \"This is like COMING TO AMERICA meets the Prince Ali scene from ALADDIN\" and right then I realized that basically anyone can\nwrite film criticism.",
+      "image": "/img/1212.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Vikram Murthi",
+        "alternateName": "fauxbeatpoet"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1212.webp" class="img-fluid rounded" alt="CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, &quot;This is like COMING TO AMERICA meets the Prince Ali scene from ALADDIN&quot; and right then I realized that basically anyone can
+write film criticism.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Vikram Murthi</span> <span class="handle-text fs-6 d-block d-md-inline">@fauxbeatpoet</span></h4>
+            <p>CLEOPATRA is on the TV at The Bar and John the Bartender looked up at it and says, &quot;This is like COMING TO AMERICA meets the Prince Ali scene from ALADDIN&quot; and right then I realized that basically anyone can<br>write film criticism.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

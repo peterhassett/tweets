@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Your parents in 1996: don’t trust anyone on the Internet
+
+Your parents in 2016: freedom Eagle dot Facebook say...">
+    <meta property="og:title" content="Your parents in 1996: don’t trust anyone on the In — Kibblesmith @">
+    <meta property="og:image:alt" content="Your parents in 1996: don’t trust anyone on the Internet
+
+Your parents in 2016: freedom Eagle dot Facebook says Hillary invented aids">
+    <meta property="og:description" content="Your parents in 1996: don’t trust anyone on the Internet
+
+Your parents in 2016: freedom Eagle dot Facebook says Hillary invented aids">
+    <meta property="og:image" content="/img/2275.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Your parents in 1996: don’t trust anyone on the In — Kibblesmith @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2275/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2275",
+      "headline": "Your parents in 1996: don\u2019t trust anyone on the Internet\n\nYour parents in 2016: freedom Eagle dot Facebook say",
+      "articleBody": "Your parents in 1996: don\u2019t trust anyone on the Internet\n\nYour parents in 2016: freedom Eagle dot Facebook says Hillary invented aids",
+      "image": "/img/2275.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Kibblesmith",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2275.webp" class="img-fluid rounded" alt="Your parents in 1996: don’t trust anyone on the Internet
+
+Your parents in 2016: freedom Eagle dot Facebook says Hillary invented aids">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Kibblesmith</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>Your parents in 1996: don’t trust anyone on the Internet<br><br>Your parents in 2016: freedom Eagle dot Facebook says Hillary invented aids</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

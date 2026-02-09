@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&quot;i will face god and walk backwards into hell&quot; is a dril quote that people keep mistaking for seriou...">
+    <meta property="og:title" content="&quot;i will face god and walk backwards into hell&quot; is  — aperol tits @mmiatime">
+    <meta property="og:image:alt" content="&quot;i will face god and walk backwards into hell&quot; is a dril quote that people keep mistaking for serious literature but &quot;that&#x27;s how it is on this bitch of an earth&quot; is a fucking beckett line that i consistently keep thinking is dril">
+    <meta property="og:description" content="&quot;i will face god and walk backwards into hell&quot; is a dril quote that people keep mistaking for serious literature but &quot;that&#x27;s how it is on this bitch of an earth&quot; is a fucking beckett line that i consistently keep thinking is dril">
+    <meta property="og:image" content="/img/0999.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>&quot;i will face god and walk backwards into hell&quot; is  — aperol tits @mmiatime</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0999/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0999",
+      "headline": "\"i will face god and walk backwards into hell\" is a dril quote that people keep mistaking for serious literatu",
+      "articleBody": "\"i will face god and walk backwards into hell\" is a dril quote that people keep mistaking for serious literature but \"that's how it is on this bitch of an earth\" is a fucking beckett line that i consistently keep thinking is dril",
+      "image": "/img/0999.webp",
+      "author": {
+        "@type": "Person",
+        "name": "aperol tits",
+        "alternateName": "mmiatime"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0999.webp" class="img-fluid rounded" alt="&quot;i will face god and walk backwards into hell&quot; is a dril quote that people keep mistaking for serious literature but &quot;that&#x27;s how it is on this bitch of an earth&quot; is a fucking beckett line that i consistently keep thinking is dril">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">aperol tits</span> <span class="handle-text fs-6 d-block d-md-inline">@mmiatime</span></h4>
+            <p>&quot;i will face god and walk backwards into hell&quot; is a dril quote that people keep mistaking for serious literature but &quot;that&#x27;s how it is on this bitch of an earth&quot; is a fucking beckett line that i consistently keep thinking is dril</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

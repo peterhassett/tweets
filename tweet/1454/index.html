@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="the only lasting 9/11 memory i have is
+when the budweiser ad with the kneeling clydesdales came on during the ...">
+    <meta property="og:title" content="the only lasting 9/11 memory i have is
+when the bu — cj (chilling) @TOS_Violator">
+    <meta property="og:image:alt" content="the only lasting 9/11 memory i have is
+when the budweiser ad with the kneeling clydesdales came on during the super bowl and i said &quot;those horses are praying to mecca&quot; and my friend&#x27;s uncle got so mad that he had to go in the backyard">
+    <meta property="og:description" content="the only lasting 9/11 memory i have is
+when the budweiser ad with the kneeling clydesdales came on during the super bowl and i said &quot;those horses are praying to mecca&quot; and my friend&#x27;s uncle got so mad that he had to go in the backyard">
+    <meta property="og:image" content="/img/1454.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>the only lasting 9/11 memory i have is
+when the bu — cj (chilling) @TOS_Violator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1454/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1454",
+      "headline": "the only lasting 9/11 memory i have is\nwhen the budweiser ad with the kneeling clydesdales came on during the ",
+      "articleBody": "the only lasting 9/11 memory i have is\nwhen the budweiser ad with the kneeling clydesdales came on during the super bowl and i said \"those horses are praying to mecca\" and my friend's uncle got so mad that he had to go in the backyard",
+      "image": "/img/1454.webp",
+      "author": {
+        "@type": "Person",
+        "name": "cj (chilling)",
+        "alternateName": "TOS_Violator"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1454.webp" class="img-fluid rounded" alt="the only lasting 9/11 memory i have is
+when the budweiser ad with the kneeling clydesdales came on during the super bowl and i said &quot;those horses are praying to mecca&quot; and my friend&#x27;s uncle got so mad that he had to go in the backyard">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">cj (chilling)</span> <span class="handle-text fs-6 d-block d-md-inline">@TOS_Violator</span></h4>
+            <p>the only lasting 9/11 memory i have is<br>when the budweiser ad with the kneeling clydesdales came on during the super bowl and i said &quot;those horses are praying to mecca&quot; and my friend&#x27;s uncle got so mad that he had to go in the backyard</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 1d Utterly moronic understates it.
+
+(Photo of maskless Covid era White House event 10/2/20)
+
+
+Alex Kotch @al...">
+    <meta property="og:title" content=". 1d Utterly moronic understates it.
+
+(Photo of ma — George Conway @gtconway3d">
+    <meta property="og:image:alt" content=". 1d Utterly moronic understates it.
+
+(Photo of maskless Covid era White House event 10/2/20)
+
+
+Alex Kotch @alexkotch
+This guy&#x27;s wife is in this photo...">
+    <meta property="og:description" content=". 1d Utterly moronic understates it.
+
+(Photo of maskless Covid era White House event 10/2/20)
+
+
+Alex Kotch @alexkotch
+This guy&#x27;s wife is in this photo...">
+    <meta property="og:image" content="/img/1673.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 1d Utterly moronic understates it.
+
+(Photo of ma — George Conway @gtconway3d</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1673/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1673",
+      "headline": ". 1d Utterly moronic understates it.\n\n(Photo of maskless Covid era White House event 10/2/20)\n\n\nAlex Kotch @al",
+      "articleBody": ". 1d Utterly moronic understates it.\n\n(Photo of maskless Covid era White House event 10/2/20)\n\n\nAlex Kotch @alexkotch\nThis guy's wife is in this photo...",
+      "image": "/img/1673.webp",
+      "author": {
+        "@type": "Person",
+        "name": "George Conway",
+        "alternateName": "gtconway3d"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1673.webp" class="img-fluid rounded" alt=". 1d Utterly moronic understates it.
+
+(Photo of maskless Covid era White House event 10/2/20)
+
+
+Alex Kotch @alexkotch
+This guy&#x27;s wife is in this photo...">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">George Conway</span> <span class="handle-text fs-6 d-block d-md-inline">@gtconway3d</span></h4>
+            <p>. 1d Utterly moronic understates it.<br><br>(Photo of maskless Covid era White House event 10/2/20)<br><br><br>Alex Kotch @alexkotch<br>This guy&#x27;s wife is in this photo...</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="looking at the data and simply
+laughing">
+    <meta property="og:title" content="looking at the data and simply
+laughing — wint @dril">
+    <meta property="og:image:alt" content="looking at the data and simply
+laughing">
+    <meta property="og:description" content="looking at the data and simply
+laughing">
+    <meta property="og:image" content="/img/1647.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>looking at the data and simply
+laughing — wint @dril</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1647/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1647",
+      "headline": "looking at the data and simply\nlaughing",
+      "articleBody": "looking at the data and simply\nlaughing",
+      "image": "/img/1647.webp",
+      "author": {
+        "@type": "Person",
+        "name": "wint",
+        "alternateName": "dril"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1647.webp" class="img-fluid rounded" alt="looking at the data and simply
+laughing">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">wint</span> <span class="handle-text fs-6 d-block d-md-inline">@dril</span></h4>
+            <p>looking at the data and simply<br>laughing</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

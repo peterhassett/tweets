@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="officials should have a second flag
+they can throw if they see something they think is neat. interesting
+block...">
+    <meta property="og:title" content="officials should have a second flag
+they can throw — Jon Bois @jon_bois">
+    <meta property="og:image:alt" content="officials should have a second flag
+they can throw if they see something they think is neat. interesting
+blocking scheme, weird rock, etc">
+    <meta property="og:description" content="officials should have a second flag
+they can throw if they see something they think is neat. interesting
+blocking scheme, weird rock, etc">
+    <meta property="og:image" content="/img/1277.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>officials should have a second flag
+they can throw — Jon Bois @jon_bois</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1277/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1277",
+      "headline": "officials should have a second flag\nthey can throw if they see something they think is neat. interesting\nblock",
+      "articleBody": "officials should have a second flag\nthey can throw if they see something they think is neat. interesting\nblocking scheme, weird rock, etc",
+      "image": "/img/1277.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jon Bois",
+        "alternateName": "jon_bois"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1277.webp" class="img-fluid rounded" alt="officials should have a second flag
+they can throw if they see something they think is neat. interesting
+blocking scheme, weird rock, etc">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jon Bois</span> <span class="handle-text fs-6 d-block d-md-inline">@jon_bois</span></h4>
+            <p>officials should have a second flag<br>they can throw if they see something they think is neat. interesting<br>blocking scheme, weird rock, etc</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

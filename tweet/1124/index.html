@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I&#x27;ve convinced myself that the city in
+Upstate Gotham is called Gonkers
+and no one can convince me
+otherw...">
+    <meta property="og:title" content="I&#x27;ve convinced myself that the city in
+Upstate Got — Gobblin&amp;#39; Mode @lfyNwadiwe">
+    <meta property="og:image:alt" content="I&#x27;ve convinced myself that the city in
+Upstate Gotham is called Gonkers
+and no one can convince me
+otherwise.">
+    <meta property="og:description" content="I&#x27;ve convinced myself that the city in
+Upstate Gotham is called Gonkers
+and no one can convince me
+otherwise.">
+    <meta property="og:image" content="/img/1124.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I&#x27;ve convinced myself that the city in
+Upstate Got — Gobblin&amp;#39; Mode @lfyNwadiwe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1124/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1124",
+      "headline": "I've convinced myself that the city in\nUpstate Gotham is called Gonkers\nand no one can convince me\notherwise.",
+      "articleBody": "I've convinced myself that the city in\nUpstate Gotham is called Gonkers\nand no one can convince me\notherwise.",
+      "image": "/img/1124.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Gobblin&#39; Mode",
+        "alternateName": "lfyNwadiwe"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1124.webp" class="img-fluid rounded" alt="I&#x27;ve convinced myself that the city in
+Upstate Gotham is called Gonkers
+and no one can convince me
+otherwise.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Gobblin&amp;#39; Mode</span> <span class="handle-text fs-6 d-block d-md-inline">@lfyNwadiwe</span></h4>
+            <p>I&#x27;ve convinced myself that the city in<br>Upstate Gotham is called Gonkers<br>and no one can convince me<br>otherwise.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

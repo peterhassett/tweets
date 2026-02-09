@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="it&#x27;s crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say &quot;it s...">
+    <meta property="og:title" content="it&#x27;s crazy that they only figured out tectonic pla — sophia @pastoralcomical">
+    <meta property="og:image:alt" content="it&#x27;s crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say &quot;it seems like
+south america and africa would fit together&quot; and his mom would go &quot;that&#x27;s cute honey would you like a cigarette&quot;">
+    <meta property="og:description" content="it&#x27;s crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say &quot;it seems like
+south america and africa would fit together&quot; and his mom would go &quot;that&#x27;s cute honey would you like a cigarette&quot;">
+    <meta property="og:image" content="/img/0953.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>it&#x27;s crazy that they only figured out tectonic pla — sophia @pastoralcomical</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0953/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0953",
+      "headline": "it's crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say \"it seems like\n",
+      "articleBody": "it's crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say \"it seems like\nsouth america and africa would fit together\" and his mom would go \"that's cute honey would you like a cigarette\"",
+      "image": "/img/0953.webp",
+      "author": {
+        "@type": "Person",
+        "name": "sophia",
+        "alternateName": "pastoralcomical"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0953.webp" class="img-fluid rounded" alt="it&#x27;s crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say &quot;it seems like
+south america and africa would fit together&quot; and his mom would go &quot;that&#x27;s cute honey would you like a cigarette&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">sophia</span> <span class="handle-text fs-6 d-block d-md-inline">@pastoralcomical</span></h4>
+            <p>it&#x27;s crazy that they only figured out tectonic plates in the 60s. a child in the 50s would say &quot;it seems like<br>south america and africa would fit together&quot; and his mom would go &quot;that&#x27;s cute honey would you like a cigarette&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

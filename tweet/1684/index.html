@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put i...">
+    <meta property="og:title" content="I never had butter as a kid. Came from a big famil — Joe Walsh @WalshFreedom">
+    <meta property="og:image:alt" content="I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put it on everything. Only she &amp; my Dad would have butter on occasion. Now I&#x27;m sitting here, wolfing down a bunch of crackers with butter. I love butter. My mom would smile.">
+    <meta property="og:description" content="I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put it on everything. Only she &amp; my Dad would have butter on occasion. Now I&#x27;m sitting here, wolfing down a bunch of crackers with butter. I love butter. My mom would smile.">
+    <meta property="og:image" content="/img/1684.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I never had butter as a kid. Came from a big famil — Joe Walsh @WalshFreedom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1684/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1684",
+      "headline": "I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put i",
+      "articleBody": "I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put it on everything. Only she & my Dad would have butter on occasion. Now I'm sitting here, wolfing down a bunch of crackers with butter. I love butter. My mom would smile.",
+      "image": "/img/1684.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Joe Walsh",
+        "alternateName": "WalshFreedom"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1684.webp" class="img-fluid rounded" alt="I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put it on everything. Only she &amp; my Dad would have butter on occasion. Now I&#x27;m sitting here, wolfing down a bunch of crackers with butter. I love butter. My mom would smile.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Joe Walsh</span> <span class="handle-text fs-6 d-block d-md-inline">@WalshFreedom</span></h4>
+            <p>I never had butter as a kid. Came from a big family, Mom only had margarine in the house for us kids. We put it on everything. Only she &amp; my Dad would have butter on occasion. Now I&#x27;m sitting here, wolfing down a bunch of crackers with butter. I love butter. My mom would smile.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

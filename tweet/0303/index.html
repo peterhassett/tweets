@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="*sisyphus on the phone with his parents* yeah i&#x27;m actually making a ton of progress with the boulder...no...">
+    <meta property="og:title" content="*sisyphus on the phone with his parents* yeah i&#x27;m  — Ben Rosen @ben_rosen">
+    <meta property="og:image:alt" content="*sisyphus on the phone with his parents* yeah i&#x27;m actually making a ton of progress with the boulder...no there&#x27;s not really like promotions...no yeah I can definitely ask">
+    <meta property="og:description" content="*sisyphus on the phone with his parents* yeah i&#x27;m actually making a ton of progress with the boulder...no there&#x27;s not really like promotions...no yeah I can definitely ask">
+    <meta property="og:image" content="/img/0303.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>*sisyphus on the phone with his parents* yeah i&#x27;m  — Ben Rosen @ben_rosen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0303/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0303",
+      "headline": "*sisyphus on the phone with his parents* yeah i'm actually making a ton of progress with the boulder...no ther",
+      "articleBody": "*sisyphus on the phone with his parents* yeah i'm actually making a ton of progress with the boulder...no there's not really like promotions...no yeah I can definitely ask",
+      "image": "/img/0303.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ben Rosen",
+        "alternateName": "ben_rosen"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0303.webp" class="img-fluid rounded" alt="*sisyphus on the phone with his parents* yeah i&#x27;m actually making a ton of progress with the boulder...no there&#x27;s not really like promotions...no yeah I can definitely ask">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ben Rosen</span> <span class="handle-text fs-6 d-block d-md-inline">@ben_rosen</span></h4>
+            <p>*sisyphus on the phone with his parents* yeah i&#x27;m actually making a ton of progress with the boulder...no there&#x27;s not really like promotions...no yeah I can definitely ask</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

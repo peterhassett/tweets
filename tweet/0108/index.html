@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Do what you love for a living, and the only &quot;work&quot; you&#x27;ll do is the endless toil required to ac...">
+    <meta property="og:title" content="Do what you love for a living, and the only &quot;work&quot; — P. Revess @MKupperman">
+    <meta property="og:image:alt" content="Do what you love for a living, and the only &quot;work&quot; you&#x27;ll do is the endless toil required to actually generate income">
+    <meta property="og:description" content="Do what you love for a living, and the only &quot;work&quot; you&#x27;ll do is the endless toil required to actually generate income">
+    <meta property="og:image" content="/img/0108.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Do what you love for a living, and the only &quot;work&quot; — P. Revess @MKupperman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0108/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0108",
+      "headline": "Do what you love for a living, and the only \"work\" you'll do is the endless toil required to actually generate",
+      "articleBody": "Do what you love for a living, and the only \"work\" you'll do is the endless toil required to actually generate income",
+      "image": "/img/0108.webp",
+      "author": {
+        "@type": "Person",
+        "name": "P. Revess",
+        "alternateName": "MKupperman"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0108.webp" class="img-fluid rounded" alt="Do what you love for a living, and the only &quot;work&quot; you&#x27;ll do is the endless toil required to actually generate income">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">P. Revess</span> <span class="handle-text fs-6 d-block d-md-inline">@MKupperman</span></h4>
+            <p>Do what you love for a living, and the only &quot;work&quot; you&#x27;ll do is the endless toil required to actually generate income</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

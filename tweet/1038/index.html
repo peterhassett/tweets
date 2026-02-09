@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[Ducktales theme]
+Vast and trunkless legs of stone
+l-n the, de-sert
+Standing out there all alone
+It&#x27;s un-...">
+    <meta property="og:title" content="[Ducktales theme]
+Vast and trunkless legs of stone — Bison &amp;#39;Guy Kelly&amp;#39; Sexhorn Twitch.tv... @Brainmage">
+    <meta property="og:image:alt" content="[Ducktales theme]
+Vast and trunkless legs of stone
+l-n the, de-sert
+Standing out there all alone
+It&#x27;s un-pleasant
+A shattered visage
+might be a mirage
+Hubris! Woo hoo!">
+    <meta property="og:description" content="[Ducktales theme]
+Vast and trunkless legs of stone
+l-n the, de-sert
+Standing out there all alone
+It&#x27;s un-pleasant
+A shattered visage
+might be a mirage
+Hubris! Woo hoo!">
+    <meta property="og:image" content="/img/1038.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[Ducktales theme]
+Vast and trunkless legs of stone — Bison &amp;#39;Guy Kelly&amp;#39; Sexhorn Twitch.tv... @Brainmage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1038/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1038",
+      "headline": "[Ducktales theme]\nVast and trunkless legs of stone\nl-n the, de-sert\nStanding out there all alone\nIt's un-pleas",
+      "articleBody": "[Ducktales theme]\nVast and trunkless legs of stone\nl-n the, de-sert\nStanding out there all alone\nIt's un-pleasant\nA shattered visage\nmight be a mirage\nHubris! Woo hoo!",
+      "image": "/img/1038.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Bison &#39;Guy Kelly&#39; Sexhorn Twitch.tv...",
+        "alternateName": "Brainmage"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1038.webp" class="img-fluid rounded" alt="[Ducktales theme]
+Vast and trunkless legs of stone
+l-n the, de-sert
+Standing out there all alone
+It&#x27;s un-pleasant
+A shattered visage
+might be a mirage
+Hubris! Woo hoo!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Bison &amp;#39;Guy Kelly&amp;#39; Sexhorn Twitch.tv...</span> <span class="handle-text fs-6 d-block d-md-inline">@Brainmage</span></h4>
+            <p>[Ducktales theme]<br>Vast and trunkless legs of stone<br>l-n the, de-sert<br>Standing out there all alone<br>It&#x27;s un-pleasant<br>A shattered visage<br>might be a mirage<br>Hubris! Woo hoo!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

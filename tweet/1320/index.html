@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap emoji) 
+porter
+
+(altered Screenshots of congressional hearing)...">
+    <meta property="og:title" content="thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap em — Ben Rosen @ben_rosen">
+    <meta property="og:image:alt" content="thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap emoji) 
+porter
+
+(altered Screenshots of congressional hearing)
+Katie Porter to person testifying before Congress: What letter is on Wario&#x27;s hat?
+Person: It&#x27;s a W.
+Katie: No, it&#x27;s technically an upside down M.
+And how do we know this?
+(pointing at waluigi)
+Waluigi.">
+    <meta property="og:description" content="thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap emoji) 
+porter
+
+(altered Screenshots of congressional hearing)
+Katie Porter to person testifying before Congress: What letter is on Wario&#x27;s hat?
+Person: It&#x27;s a W.
+Katie: No, it&#x27;s technically an upside down M.
+And how do we know this?
+(pointing at waluigi)
+Waluigi.">
+    <meta property="og:image" content="/img/1320.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap em — Ben Rosen @ben_rosen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1320/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1320",
+      "headline": "thank\n(clap emoji)\nyou\n(clap emoji)\nkatie\n(clap emoji) \nporter\n\n(altered Screenshots of congressional hearing)",
+      "articleBody": "thank\n(clap emoji)\nyou\n(clap emoji)\nkatie\n(clap emoji) \nporter\n\n(altered Screenshots of congressional hearing)\nKatie Porter to person testifying before Congress: What letter is on Wario's hat?\nPerson: It's a W.\nKatie: No, it's technically an upside down M.\nAnd how do we know this?\n(pointing at waluigi)\nWaluigi.",
+      "image": "/img/1320.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ben Rosen",
+        "alternateName": "ben_rosen"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1320.webp" class="img-fluid rounded" alt="thank
+(clap emoji)
+you
+(clap emoji)
+katie
+(clap emoji) 
+porter
+
+(altered Screenshots of congressional hearing)
+Katie Porter to person testifying before Congress: What letter is on Wario&#x27;s hat?
+Person: It&#x27;s a W.
+Katie: No, it&#x27;s technically an upside down M.
+And how do we know this?
+(pointing at waluigi)
+Waluigi.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ben Rosen</span> <span class="handle-text fs-6 d-block d-md-inline">@ben_rosen</span></h4>
+            <p>thank<br>(clap emoji)<br>you<br>(clap emoji)<br>katie<br>(clap emoji) <br>porter<br><br>(altered Screenshots of congressional hearing)<br>Katie Porter to person testifying before Congress: What letter is on Wario&#x27;s hat?<br>Person: It&#x27;s a W.<br>Katie: No, it&#x27;s technically an upside down M.<br>And how do we know this?<br>(pointing at waluigi)<br>Waluigi.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

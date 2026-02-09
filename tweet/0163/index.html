@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing &quot;HELLO BAYYYYYBAY&quot; and doing the ...">
+    <meta property="og:title" content="How long before TikTok gets Big Bopper-pilled? Zoo — lousy smarch weather @craig_rangoon">
+    <meta property="og:image:alt" content="How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing &quot;HELLO BAYYYYYBAY&quot; and doing the phone bit. Chantilly Lace becomes the song of the summer.">
+    <meta property="og:description" content="How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing &quot;HELLO BAYYYYYBAY&quot; and doing the phone bit. Chantilly Lace becomes the song of the summer.">
+    <meta property="og:image" content="/img/0163.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>How long before TikTok gets Big Bopper-pilled? Zoo — lousy smarch weather @craig_rangoon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0163/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0163",
+      "headline": "How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing \"HELLO BAYYYYYBAY\" and doing the phone bit.",
+      "articleBody": "How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing \"HELLO BAYYYYYBAY\" and doing the phone bit. Chantilly Lace becomes the song of the summer.",
+      "image": "/img/0163.webp",
+      "author": {
+        "@type": "Person",
+        "name": "lousy smarch weather",
+        "alternateName": "craig_rangoon"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0163.webp" class="img-fluid rounded" alt="How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing &quot;HELLO BAYYYYYBAY&quot; and doing the phone bit. Chantilly Lace becomes the song of the summer.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">lousy smarch weather</span> <span class="handle-text fs-6 d-block d-md-inline">@craig_rangoon</span></h4>
+            <p>How long before TikTok gets Big Bopper-pilled? Zoomers lip-syncing &quot;HELLO BAYYYYYBAY&quot; and doing the phone bit. Chantilly Lace becomes the song of the summer.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

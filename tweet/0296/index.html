@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="wish you could mark certain songs on spotify as emotional support songs. like this shouldn&#x27;t count
+toward...">
+    <meta property="og:title" content="wish you could mark certain songs on spotify as em — pascalle @pasxalle">
+    <meta property="og:image:alt" content="wish you could mark certain songs on spotify as emotional support songs. like this shouldn&#x27;t count
+towards my end of year wrapped it&#x27;s a medical song">
+    <meta property="og:description" content="wish you could mark certain songs on spotify as emotional support songs. like this shouldn&#x27;t count
+towards my end of year wrapped it&#x27;s a medical song">
+    <meta property="og:image" content="/img/0296.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>wish you could mark certain songs on spotify as em — pascalle @pasxalle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0296/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0296",
+      "headline": "wish you could mark certain songs on spotify as emotional support songs. like this shouldn't count\ntowards my ",
+      "articleBody": "wish you could mark certain songs on spotify as emotional support songs. like this shouldn't count\ntowards my end of year wrapped it's a medical song",
+      "image": "/img/0296.webp",
+      "author": {
+        "@type": "Person",
+        "name": "pascalle",
+        "alternateName": "pasxalle"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0296.webp" class="img-fluid rounded" alt="wish you could mark certain songs on spotify as emotional support songs. like this shouldn&#x27;t count
+towards my end of year wrapped it&#x27;s a medical song">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">pascalle</span> <span class="handle-text fs-6 d-block d-md-inline">@pasxalle</span></h4>
+            <p>wish you could mark certain songs on spotify as emotional support songs. like this shouldn&#x27;t count<br>towards my end of year wrapped it&#x27;s a medical song</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="If it&#x27;s a banger as you say, then why has it not blown up?! *hurls wine goblet*
+Squeaky servant: the algo...">
+    <meta property="og:title" content="If it&#x27;s a banger as you say, then why has it not b — very tall bart @TallBart">
+    <meta property="og:image:alt" content="If it&#x27;s a banger as you say, then why has it not blown up?! *hurls wine goblet*
+Squeaky servant: the algorithm, m&#x27;lord! oh how dreadful!
+Me: how about &quot;vacuuming the piss out my dick&quot; and misspell vacuum? does that work
+Squeaky servant: rejoice! oh rejoice! another banger!">
+    <meta property="og:description" content="If it&#x27;s a banger as you say, then why has it not blown up?! *hurls wine goblet*
+Squeaky servant: the algorithm, m&#x27;lord! oh how dreadful!
+Me: how about &quot;vacuuming the piss out my dick&quot; and misspell vacuum? does that work
+Squeaky servant: rejoice! oh rejoice! another banger!">
+    <meta property="og:image" content="/img/0346.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>If it&#x27;s a banger as you say, then why has it not b — very tall bart @TallBart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0346/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0346",
+      "headline": "If it's a banger as you say, then why has it not blown up?! *hurls wine goblet*\nSqueaky servant: the algorithm",
+      "articleBody": "If it's a banger as you say, then why has it not blown up?! *hurls wine goblet*\nSqueaky servant: the algorithm, m'lord! oh how dreadful!\nMe: how about \"vacuuming the piss out my dick\" and misspell vacuum? does that work\nSqueaky servant: rejoice! oh rejoice! another banger!",
+      "image": "/img/0346.webp",
+      "author": {
+        "@type": "Person",
+        "name": "very tall bart",
+        "alternateName": "TallBart"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0346.webp" class="img-fluid rounded" alt="If it&#x27;s a banger as you say, then why has it not blown up?! *hurls wine goblet*
+Squeaky servant: the algorithm, m&#x27;lord! oh how dreadful!
+Me: how about &quot;vacuuming the piss out my dick&quot; and misspell vacuum? does that work
+Squeaky servant: rejoice! oh rejoice! another banger!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">very tall bart</span> <span class="handle-text fs-6 d-block d-md-inline">@TallBart</span></h4>
+            <p>If it&#x27;s a banger as you say, then why has it not blown up?! *hurls wine goblet*<br>Squeaky servant: the algorithm, m&#x27;lord! oh how dreadful!<br>Me: how about &quot;vacuuming the piss out my dick&quot; and misspell vacuum? does that work<br>Squeaky servant: rejoice! oh rejoice! another banger!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

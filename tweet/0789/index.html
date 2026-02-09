@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A Crow on the Orient Express">
+    <meta property="og:title" content="A Crow on the Orient Express — James Hannah.
+ Depluralise a film.
+I&amp;#39;ll start.
+Jaw. @benjaminjudge">
+    <meta property="og:image:alt" content="A Crow on the Orient Express">
+    <meta property="og:description" content="A Crow on the Orient Express">
+    <meta property="og:image" content="/img/0789.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>A Crow on the Orient Express — James Hannah.
+ Depluralise a film.
+I&amp;#39;ll start.
+Jaw. @benjaminjudge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0789/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0789",
+      "headline": "A Crow on the Orient Express",
+      "articleBody": "A Crow on the Orient Express",
+      "image": "/img/0789.webp",
+      "author": {
+        "@type": "Person",
+        "name": "James Hannah.\n Depluralise a film.\nI&#39;ll start.\nJaw.",
+        "alternateName": "benjaminjudge"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0789.webp" class="img-fluid rounded" alt="A Crow on the Orient Express">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">James Hannah.
+ Depluralise a film.
+I&amp;#39;ll start.
+Jaw.</span> <span class="handle-text fs-6 d-block d-md-inline">@benjaminjudge</span></h4>
+            <p>A Crow on the Orient Express</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

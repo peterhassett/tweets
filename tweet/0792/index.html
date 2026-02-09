@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Photo of a product that says)
+
+Plant-based REFRIG...">
+    <meta property="og:title" content="*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Phot — DC Pierson @DCpierson">
+    <meta property="og:image:alt" content="*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Photo of a product that says)
+
+Plant-based REFRIGERANT
+GEL">
+    <meta property="og:description" content="*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Photo of a product that says)
+
+Plant-based REFRIGERANT
+GEL">
+    <meta property="og:image" content="/img/0792.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Phot — DC Pierson @DCpierson</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0792/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0792",
+      "headline": "*Neil Young \"Cinnamon Girl\" voice*\n\"I wanna\n\n(Photo of a product that says)\n\nPlant-based REFRIGERANT\nGEL",
+      "articleBody": "*Neil Young \"Cinnamon Girl\" voice*\n\"I wanna\n\n(Photo of a product that says)\n\nPlant-based REFRIGERANT\nGEL",
+      "image": "/img/0792.webp",
+      "author": {
+        "@type": "Person",
+        "name": "DC Pierson",
+        "alternateName": "DCpierson"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0792.webp" class="img-fluid rounded" alt="*Neil Young &quot;Cinnamon Girl&quot; voice*
+&quot;I wanna
+
+(Photo of a product that says)
+
+Plant-based REFRIGERANT
+GEL">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">DC Pierson</span> <span class="handle-text fs-6 d-block d-md-inline">@DCpierson</span></h4>
+            <p>*Neil Young &quot;Cinnamon Girl&quot; voice*<br>&quot;I wanna<br><br>(Photo of a product that says)<br><br>Plant-based REFRIGERANT<br>GEL</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

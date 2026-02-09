@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&#x27;Mickey&#x27; is a nickname, and nicknames are for friends, and
+Michael Mouse is no friend of mine.">
+    <meta property="og:title" content="&#x27;Mickey&#x27; is a nickname, and nicknames are for frie — Kevin &amp;quot;Beloved by All&amp;quot; Magnet @KevMagnet">
+    <meta property="og:image:alt" content="&#x27;Mickey&#x27; is a nickname, and nicknames are for friends, and
+Michael Mouse is no friend of mine.">
+    <meta property="og:description" content="&#x27;Mickey&#x27; is a nickname, and nicknames are for friends, and
+Michael Mouse is no friend of mine.">
+    <meta property="og:image" content="/img/0811.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>&#x27;Mickey&#x27; is a nickname, and nicknames are for frie — Kevin &amp;quot;Beloved by All&amp;quot; Magnet @KevMagnet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0811/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0811",
+      "headline": "'Mickey' is a nickname, and nicknames are for friends, and\nMichael Mouse is no friend of mine.",
+      "articleBody": "'Mickey' is a nickname, and nicknames are for friends, and\nMichael Mouse is no friend of mine.",
+      "image": "/img/0811.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Kevin &quot;Beloved by All&quot; Magnet",
+        "alternateName": "KevMagnet"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0811.webp" class="img-fluid rounded" alt="&#x27;Mickey&#x27; is a nickname, and nicknames are for friends, and
+Michael Mouse is no friend of mine.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Kevin &amp;quot;Beloved by All&amp;quot; Magnet</span> <span class="handle-text fs-6 d-block d-md-inline">@KevMagnet</span></h4>
+            <p>&#x27;Mickey&#x27; is a nickname, and nicknames are for friends, and<br>Michael Mouse is no friend of mine.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

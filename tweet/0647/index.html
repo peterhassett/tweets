@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester">
+    <meta property="og:title" content="crazy how every friend group has an esoteric oracl — Timothée Inshallahmet @heauxrgeoisie">
+    <meta property="og:image:alt" content="crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester">
+    <meta property="og:description" content="crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester">
+    <meta property="og:image" content="/img/0647.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>crazy how every friend group has an esoteric oracl — Timothée Inshallahmet @heauxrgeoisie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0647/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0647",
+      "headline": "crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester",
+      "articleBody": "crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester",
+      "image": "/img/0647.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Timoth\u00e9e Inshallahmet",
+        "alternateName": "heauxrgeoisie"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0647.webp" class="img-fluid rounded" alt="crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Timothée Inshallahmet</span> <span class="handle-text fs-6 d-block d-md-inline">@heauxrgeoisie</span></h4>
+            <p>crazy how every friend group has an esoteric oracle, a conniving eunuch, and a sad court jester</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

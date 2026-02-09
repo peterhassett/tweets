@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My parents bought an AR 15 to
+defend their rural missouri home from antifa but little do they know antifa has ...">
+    <meta property="og:title" content="My parents bought an AR 15 to
+defend their rural m — adam @childbearer">
+    <meta property="og:image:alt" content="My parents bought an AR 15 to
+defend their rural missouri home from antifa but little do they know antifa has ALREADY INVADED THEIR HOME and is in their fridge eating all their shredded mozzarella at 2 am">
+    <meta property="og:description" content="My parents bought an AR 15 to
+defend their rural missouri home from antifa but little do they know antifa has ALREADY INVADED THEIR HOME and is in their fridge eating all their shredded mozzarella at 2 am">
+    <meta property="og:image" content="/img/1792.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>My parents bought an AR 15 to
+defend their rural m — adam @childbearer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1792/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1792",
+      "headline": "My parents bought an AR 15 to\ndefend their rural missouri home from antifa but little do they know antifa has ",
+      "articleBody": "My parents bought an AR 15 to\ndefend their rural missouri home from antifa but little do they know antifa has ALREADY INVADED THEIR HOME and is in their fridge eating all their shredded mozzarella at 2 am",
+      "image": "/img/1792.webp",
+      "author": {
+        "@type": "Person",
+        "name": "adam",
+        "alternateName": "childbearer"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1792.webp" class="img-fluid rounded" alt="My parents bought an AR 15 to
+defend their rural missouri home from antifa but little do they know antifa has ALREADY INVADED THEIR HOME and is in their fridge eating all their shredded mozzarella at 2 am">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">adam</span> <span class="handle-text fs-6 d-block d-md-inline">@childbearer</span></h4>
+            <p>My parents bought an AR 15 to<br>defend their rural missouri home from antifa but little do they know antifa has ALREADY INVADED THEIR HOME and is in their fridge eating all their shredded mozzarella at 2 am</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

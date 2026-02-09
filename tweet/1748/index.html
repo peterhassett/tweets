@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="*shipwrecked diary*
+Follow
+Day 1: alone, doing well. Mentally sound. Met a crab
+Day 2: I have married the crab...">
+    <meta property="og:title" content="*shipwrecked diary*
+Follow
+Day 1: alone, doing wel — Brent @murrman5">
+    <meta property="og:image:alt" content="*shipwrecked diary*
+Follow
+Day 1: alone, doing well. Mentally sound. Met a crab
+Day 2: I have married the crab. 
+Day 3: I have eaten my wife.">
+    <meta property="og:description" content="*shipwrecked diary*
+Follow
+Day 1: alone, doing well. Mentally sound. Met a crab
+Day 2: I have married the crab. 
+Day 3: I have eaten my wife.">
+    <meta property="og:image" content="/img/1748.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>*shipwrecked diary*
+Follow
+Day 1: alone, doing wel — Brent @murrman5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1748/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1748",
+      "headline": "*shipwrecked diary*\nFollow\nDay 1: alone, doing well. Mentally sound. Met a crab\nDay 2: I have married the crab",
+      "articleBody": "*shipwrecked diary*\nFollow\nDay 1: alone, doing well. Mentally sound. Met a crab\nDay 2: I have married the crab. \nDay 3: I have eaten my wife.",
+      "image": "/img/1748.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Brent",
+        "alternateName": "murrman5"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1748.webp" class="img-fluid rounded" alt="*shipwrecked diary*
+Follow
+Day 1: alone, doing well. Mentally sound. Met a crab
+Day 2: I have married the crab. 
+Day 3: I have eaten my wife.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Brent</span> <span class="handle-text fs-6 d-block d-md-inline">@murrman5</span></h4>
+            <p>*shipwrecked diary*<br>Follow<br>Day 1: alone, doing well. Mentally sound. Met a crab<br>Day 2: I have married the crab. <br>Day 3: I have eaten my wife.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

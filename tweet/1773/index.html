@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people c...">
+    <meta property="og:title" content="One extremely unappealing trait of mine is getting — Séamas It Ever Was @shockproofbeats">
+    <meta property="og:image:alt" content="One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people called Greg, and describe it as a &quot;Greg sandwich&quot;. If you&#x27;re in the middle then it&#x27;s a YOU sandwich, on Greg bread. You idiot. You fucking moron.">
+    <meta property="og:description" content="One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people called Greg, and describe it as a &quot;Greg sandwich&quot;. If you&#x27;re in the middle then it&#x27;s a YOU sandwich, on Greg bread. You idiot. You fucking moron.">
+    <meta property="og:image" content="/img/1773.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>One extremely unappealing trait of mine is getting — Séamas It Ever Was @shockproofbeats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1773/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1773",
+      "headline": "One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people c",
+      "articleBody": "One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people called Greg, and describe it as a \"Greg sandwich\". If you're in the middle then it's a YOU sandwich, on Greg bread. You idiot. You fucking moron.",
+      "image": "/img/1773.webp",
+      "author": {
+        "@type": "Person",
+        "name": "S\u00e9amas It Ever Was",
+        "alternateName": "shockproofbeats"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1773.webp" class="img-fluid rounded" alt="One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people called Greg, and describe it as a &quot;Greg sandwich&quot;. If you&#x27;re in the middle then it&#x27;s a YOU sandwich, on Greg bread. You idiot. You fucking moron.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Séamas It Ever Was</span> <span class="handle-text fs-6 d-block d-md-inline">@shockproofbeats</span></h4>
+            <p>One extremely unappealing trait of mine is getting silently annoyed when people are between, say, two people called Greg, and describe it as a &quot;Greg sandwich&quot;. If you&#x27;re in the middle then it&#x27;s a YOU sandwich, on Greg bread. You idiot. You fucking moron.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

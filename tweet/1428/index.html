@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="(you, dumb): we should pay workers
+more
+(me, has taken econ 101): you see where this line meets that line? tha...">
+    <meta property="og:title" content="(you, dumb): we should pay workers
+more
+(me, has t — you wouldn&amp;#39;t download a Sridhar @haircut_hippie">
+    <meta property="og:image:alt" content="(you, dumb): we should pay workers
+more
+(me, has taken econ 101): you see where this line meets that line? that&#x27;s why the poor should starve">
+    <meta property="og:description" content="(you, dumb): we should pay workers
+more
+(me, has taken econ 101): you see where this line meets that line? that&#x27;s why the poor should starve">
+    <meta property="og:image" content="/img/1428.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>(you, dumb): we should pay workers
+more
+(me, has t — you wouldn&amp;#39;t download a Sridhar @haircut_hippie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1428/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1428",
+      "headline": "(you, dumb): we should pay workers\nmore\n(me, has taken econ 101): you see where this line meets that line? tha",
+      "articleBody": "(you, dumb): we should pay workers\nmore\n(me, has taken econ 101): you see where this line meets that line? that's why the poor should starve",
+      "image": "/img/1428.webp",
+      "author": {
+        "@type": "Person",
+        "name": "you wouldn&#39;t download a Sridhar",
+        "alternateName": "haircut_hippie"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1428.webp" class="img-fluid rounded" alt="(you, dumb): we should pay workers
+more
+(me, has taken econ 101): you see where this line meets that line? that&#x27;s why the poor should starve">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">you wouldn&amp;#39;t download a Sridhar</span> <span class="handle-text fs-6 d-block d-md-inline">@haircut_hippie</span></h4>
+            <p>(you, dumb): we should pay workers<br>more<br>(me, has taken econ 101): you see where this line meets that line? that&#x27;s why the poor should starve</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

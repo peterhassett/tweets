@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Football movies are a lot like
+Frankenstein movies, no one&#x27;s ever made one that&#x27;s both accurate and
+...">
+    <meta property="og:title" content="Football movies are a lot like
+Frankenstein movies — The Mike @TheMike31">
+    <meta property="og:image:alt" content="Football movies are a lot like
+Frankenstein movies, no one&#x27;s ever made one that&#x27;s both accurate and
+good">
+    <meta property="og:description" content="Football movies are a lot like
+Frankenstein movies, no one&#x27;s ever made one that&#x27;s both accurate and
+good">
+    <meta property="og:image" content="/img/1308.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Football movies are a lot like
+Frankenstein movies — The Mike @TheMike31</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1308/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1308",
+      "headline": "Football movies are a lot like\nFrankenstein movies, no one's ever made one that's both accurate and\ngood",
+      "articleBody": "Football movies are a lot like\nFrankenstein movies, no one's ever made one that's both accurate and\ngood",
+      "image": "/img/1308.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The Mike",
+        "alternateName": "TheMike31"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1308.webp" class="img-fluid rounded" alt="Football movies are a lot like
+Frankenstein movies, no one&#x27;s ever made one that&#x27;s both accurate and
+good">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The Mike</span> <span class="handle-text fs-6 d-block d-md-inline">@TheMike31</span></h4>
+            <p>Football movies are a lot like<br>Frankenstein movies, no one&#x27;s ever made one that&#x27;s both accurate and<br>good</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

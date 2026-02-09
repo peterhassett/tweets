@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here answering your
+questions about
+#WEIRDTheAlYankovicStory, ...">
+    <meta property="og:title" content="@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here a —  @TheRokuChannel">
+    <meta property="og:image:alt" content="@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here answering your
+questions about
+#WEIRDTheAlYankovicStory, the
+unexaggerated true story about the greatest musician of our time!
+Ask your questions and he&#x27;ll answer in the
+comments
+
+
+BJ @bj_carter
+How do I watch in Australia?
+
+
+
+
+Al Yankovic@alyankovic 
+Roku&#x27;s working on it. In the meantime
+there&#x27;s VPN (Very Probably No) way to
+watch it legally. I&#x27;m sure you have a TORRENT of other questions, but I have to move along, sorry.">
+    <meta property="og:description" content="@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here answering your
+questions about
+#WEIRDTheAlYankovicStory, the
+unexaggerated true story about the greatest musician of our time!
+Ask your questions and he&#x27;ll answer in the
+comments
+
+
+BJ @bj_carter
+How do I watch in Australia?
+
+
+
+
+Al Yankovic@alyankovic 
+Roku&#x27;s working on it. In the meantime
+there&#x27;s VPN (Very Probably No) way to
+watch it legally. I&#x27;m sure you have a TORRENT of other questions, but I have to move along, sorry.">
+    <meta property="og:image" content="/img/0531.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here a —  @TheRokuChannel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0531/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0531",
+      "headline": "@TheRokuChannel\nChannel Q&A: @alyankovic is here answering your\nquestions about\n#WEIRDTheAlYankovicStory, the\n",
+      "articleBody": "@TheRokuChannel\nChannel Q&A: @alyankovic is here answering your\nquestions about\n#WEIRDTheAlYankovicStory, the\nunexaggerated true story about the greatest musician of our time!\nAsk your questions and he'll answer in the\ncomments\n\n\nBJ @bj_carter\nHow do I watch in Australia?\n\n\n\n\nAl Yankovic@alyankovic \nRoku's working on it. In the meantime\nthere's VPN (Very Probably No) way to\nwatch it legally. I'm sure you have a TORRENT of other questions, but I have to move along, sorry.",
+      "image": "/img/0531.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "TheRokuChannel"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0531.webp" class="img-fluid rounded" alt="@TheRokuChannel
+Channel Q&amp;A: @alyankovic is here answering your
+questions about
+#WEIRDTheAlYankovicStory, the
+unexaggerated true story about the greatest musician of our time!
+Ask your questions and he&#x27;ll answer in the
+comments
+
+
+BJ @bj_carter
+How do I watch in Australia?
+
+
+
+
+Al Yankovic@alyankovic 
+Roku&#x27;s working on it. In the meantime
+there&#x27;s VPN (Very Probably No) way to
+watch it legally. I&#x27;m sure you have a TORRENT of other questions, but I have to move along, sorry.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@TheRokuChannel</span></h4>
+            <p>@TheRokuChannel<br>Channel Q&amp;A: @alyankovic is here answering your<br>questions about<br>#WEIRDTheAlYankovicStory, the<br>unexaggerated true story about the greatest musician of our time!<br>Ask your questions and he&#x27;ll answer in the<br>comments<br><br><br>BJ @bj_carter<br>How do I watch in Australia?<br><br><br><br><br>Al Yankovic@alyankovic <br>Roku&#x27;s working on it. In the meantime<br>there&#x27;s VPN (Very Probably No) way to<br>watch it legally. I&#x27;m sure you have a TORRENT of other questions, but I have to move along, sorry.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

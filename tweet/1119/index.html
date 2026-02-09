@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Parenthood changes you. My life
+didn&#x27;t begin until I had parents.">
+    <meta property="og:title" content="Parenthood changes you. My life
+didn&#x27;t begin until — Sridhar Ramesh @RadishHarmers">
+    <meta property="og:image:alt" content="Parenthood changes you. My life
+didn&#x27;t begin until I had parents.">
+    <meta property="og:description" content="Parenthood changes you. My life
+didn&#x27;t begin until I had parents.">
+    <meta property="og:image" content="/img/1119.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Parenthood changes you. My life
+didn&#x27;t begin until — Sridhar Ramesh @RadishHarmers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1119/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1119",
+      "headline": "Parenthood changes you. My life\ndidn't begin until I had parents.",
+      "articleBody": "Parenthood changes you. My life\ndidn't begin until I had parents.",
+      "image": "/img/1119.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Sridhar Ramesh",
+        "alternateName": "RadishHarmers"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1119.webp" class="img-fluid rounded" alt="Parenthood changes you. My life
+didn&#x27;t begin until I had parents.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Sridhar Ramesh</span> <span class="handle-text fs-6 d-block d-md-inline">@RadishHarmers</span></h4>
+            <p>Parenthood changes you. My life<br>didn&#x27;t begin until I had parents.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

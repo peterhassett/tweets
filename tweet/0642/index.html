@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[my gf actually turns into a worm]
+me: oh my god. it&#x27;s ok, i&#x27;ll still go out
+with you
+my worm gf: [s...">
+    <meta property="og:title" content="[my gf actually turns into a worm]
+me: oh my god.  — cory @coolmathgame_">
+    <meta property="og:image:alt" content="[my gf actually turns into a worm]
+me: oh my god. it&#x27;s ok, i&#x27;ll still go out
+with you
+my worm gf: [sees a cool worm wearing a leather jacket] i think we should see other people">
+    <meta property="og:description" content="[my gf actually turns into a worm]
+me: oh my god. it&#x27;s ok, i&#x27;ll still go out
+with you
+my worm gf: [sees a cool worm wearing a leather jacket] i think we should see other people">
+    <meta property="og:image" content="/img/0642.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[my gf actually turns into a worm]
+me: oh my god.  — cory @coolmathgame_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0642/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0642",
+      "headline": "[my gf actually turns into a worm]\nme: oh my god. it's ok, i'll still go out\nwith you\nmy worm gf: [sees a cool",
+      "articleBody": "[my gf actually turns into a worm]\nme: oh my god. it's ok, i'll still go out\nwith you\nmy worm gf: [sees a cool worm wearing a leather jacket] i think we should see other people",
+      "image": "/img/0642.webp",
+      "author": {
+        "@type": "Person",
+        "name": "cory",
+        "alternateName": "coolmathgame_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0642.webp" class="img-fluid rounded" alt="[my gf actually turns into a worm]
+me: oh my god. it&#x27;s ok, i&#x27;ll still go out
+with you
+my worm gf: [sees a cool worm wearing a leather jacket] i think we should see other people">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">cory</span> <span class="handle-text fs-6 d-block d-md-inline">@coolmathgame_</span></h4>
+            <p>[my gf actually turns into a worm]<br>me: oh my god. it&#x27;s ok, i&#x27;ll still go out<br>with you<br>my worm gf: [sees a cool worm wearing a leather jacket] i think we should see other people</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

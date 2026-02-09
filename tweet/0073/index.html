@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I just had an idea
+
+Cee @_ceee_
+(stick figure diagram showing a howling man in a shower with red and blue wate...">
+    <meta property="og:title" content="I just had an idea
+
+Cee @_ceee_
+(stick figure diag — Cee @_ceee_">
+    <meta property="og:image:alt" content="I just had an idea
+
+Cee @_ceee_
+(stick figure diagram showing a howling man in a shower with red and blue water coming out in discrete waves. Labels say: hot water, cold water, some type of device that rapidly oscillates hot and cold, extreme sensory hell shower)">
+    <meta property="og:description" content="I just had an idea
+
+Cee @_ceee_
+(stick figure diagram showing a howling man in a shower with red and blue water coming out in discrete waves. Labels say: hot water, cold water, some type of device that rapidly oscillates hot and cold, extreme sensory hell shower)">
+    <meta property="og:image" content="/img/0073.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I just had an idea
+
+Cee @_ceee_
+(stick figure diag — Cee @_ceee_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0073/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0073",
+      "headline": "I just had an idea\n\nCee @_ceee_\n(stick figure diagram showing a howling man in a shower with red and blue wate",
+      "articleBody": "I just had an idea\n\nCee @_ceee_\n(stick figure diagram showing a howling man in a shower with red and blue water coming out in discrete waves. Labels say: hot water, cold water, some type of device that rapidly oscillates hot and cold, extreme sensory hell shower)",
+      "image": "/img/0073.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Cee",
+        "alternateName": "_ceee_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0073.webp" class="img-fluid rounded" alt="I just had an idea
+
+Cee @_ceee_
+(stick figure diagram showing a howling man in a shower with red and blue water coming out in discrete waves. Labels say: hot water, cold water, some type of device that rapidly oscillates hot and cold, extreme sensory hell shower)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Cee</span> <span class="handle-text fs-6 d-block d-md-inline">@_ceee_</span></h4>
+            <p>I just had an idea<br><br>Cee @_ceee_<br>(stick figure diagram showing a howling man in a shower with red and blue water coming out in discrete waves. Labels say: hot water, cold water, some type of device that rapidly oscillates hot and cold, extreme sensory hell shower)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

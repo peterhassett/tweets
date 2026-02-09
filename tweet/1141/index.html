@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your chec...">
+    <meta property="og:title" content="What if the phishing link downloaded a virus, but  — EMAIL MAN!!! @HaroldLaptop">
+    <meta property="og:image:alt" content="What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your checking account? that could happen and that&#x27;s why you should open a phishing link once in a while">
+    <meta property="og:description" content="What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your checking account? that could happen and that&#x27;s why you should open a phishing link once in a while">
+    <meta property="og:image" content="/img/1141.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>What if the phishing link downloaded a virus, but  — EMAIL MAN!!! @HaroldLaptop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1141/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1141",
+      "headline": "What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your chec",
+      "articleBody": "What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your checking account? that could happen and that's why you should open a phishing link once in a while",
+      "image": "/img/1141.webp",
+      "author": {
+        "@type": "Person",
+        "name": "EMAIL MAN!!!",
+        "alternateName": "HaroldLaptop"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1141.webp" class="img-fluid rounded" alt="What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your checking account? that could happen and that&#x27;s why you should open a phishing link once in a while">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">EMAIL MAN!!!</span> <span class="handle-text fs-6 d-block d-md-inline">@HaroldLaptop</span></h4>
+            <p>What if the phishing link downloaded a virus, but it was a really good virus that gave you $10000 in your checking account? that could happen and that&#x27;s why you should open a phishing link once in a while</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

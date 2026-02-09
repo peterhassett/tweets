@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Nothing. Everything has been smooth
+sailing.
+
+
+Jesse McLaren @McJesse
+What piece of pop culture has ruined you...">
+    <meta property="og:title" content="Nothing. Everything has been smooth
+sailing.
+
+
+Jes — Hannibal Buress @hannibalburess">
+    <meta property="og:image:alt" content="Nothing. Everything has been smooth
+sailing.
+
+
+Jesse McLaren @McJesse
+What piece of pop culture has ruined your first name?">
+    <meta property="og:description" content="Nothing. Everything has been smooth
+sailing.
+
+
+Jesse McLaren @McJesse
+What piece of pop culture has ruined your first name?">
+    <meta property="og:image" content="/img/2167.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Nothing. Everything has been smooth
+sailing.
+
+
+Jes — Hannibal Buress @hannibalburess</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2167/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2167",
+      "headline": "Nothing. Everything has been smooth\nsailing.\n\n\nJesse McLaren @McJesse\nWhat piece of pop culture has ruined you",
+      "articleBody": "Nothing. Everything has been smooth\nsailing.\n\n\nJesse McLaren @McJesse\nWhat piece of pop culture has ruined your first name?",
+      "image": "/img/2167.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Hannibal Buress",
+        "alternateName": "hannibalburess"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2167.webp" class="img-fluid rounded" alt="Nothing. Everything has been smooth
+sailing.
+
+
+Jesse McLaren @McJesse
+What piece of pop culture has ruined your first name?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Hannibal Buress</span> <span class="handle-text fs-6 d-block d-md-inline">@hannibalburess</span></h4>
+            <p>Nothing. Everything has been smooth<br>sailing.<br><br><br>Jesse McLaren @McJesse<br>What piece of pop culture has ruined your first name?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

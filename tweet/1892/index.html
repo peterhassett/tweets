@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="20h
+Havelock Road in Southall - London&#x27;s &#x27;Little India&#x27; - is finally to be renamed Guru Nanak R...">
+    <meta property="og:title" content="20h
+Havelock Road in Southall - London&#x27;s &#x27;Little I — Edward Anderson @edanderson101">
+    <meta property="og:image:alt" content="20h
+Havelock Road in Southall - London&#x27;s &#x27;Little India&#x27; - is finally to be renamed Guru Nanak Road. This is a big deal. Havelock Rd was
+named after the colonial British general who fought in the Sikh wars &amp; later suppressed the 1857 Uprising. It is home to London&#x27;s largest gurudwara.
+
+
+Peter Farley @FarleyP. 15h
+What a load of nonsense. What if we went to India and started to change their street
+names?">
+    <meta property="og:description" content="20h
+Havelock Road in Southall - London&#x27;s &#x27;Little India&#x27; - is finally to be renamed Guru Nanak Road. This is a big deal. Havelock Rd was
+named after the colonial British general who fought in the Sikh wars &amp; later suppressed the 1857 Uprising. It is home to London&#x27;s largest gurudwara.
+
+
+Peter Farley @FarleyP. 15h
+What a load of nonsense. What if we went to India and started to change their street
+names?">
+    <meta property="og:image" content="/img/1892.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>20h
+Havelock Road in Southall - London&#x27;s &#x27;Little I — Edward Anderson @edanderson101</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1892/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1892",
+      "headline": "20h\nHavelock Road in Southall - London's 'Little India' - is finally to be renamed Guru Nanak Road. This is a ",
+      "articleBody": "20h\nHavelock Road in Southall - London's 'Little India' - is finally to be renamed Guru Nanak Road. This is a big deal. Havelock Rd was\nnamed after the colonial British general who fought in the Sikh wars & later suppressed the 1857 Uprising. It is home to London's largest gurudwara.\n\n\nPeter Farley @FarleyP. 15h\nWhat a load of nonsense. What if we went to India and started to change their street\nnames?",
+      "image": "/img/1892.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Edward Anderson",
+        "alternateName": "edanderson101"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1892.webp" class="img-fluid rounded" alt="20h
+Havelock Road in Southall - London&#x27;s &#x27;Little India&#x27; - is finally to be renamed Guru Nanak Road. This is a big deal. Havelock Rd was
+named after the colonial British general who fought in the Sikh wars &amp; later suppressed the 1857 Uprising. It is home to London&#x27;s largest gurudwara.
+
+
+Peter Farley @FarleyP. 15h
+What a load of nonsense. What if we went to India and started to change their street
+names?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Edward Anderson</span> <span class="handle-text fs-6 d-block d-md-inline">@edanderson101</span></h4>
+            <p>20h<br>Havelock Road in Southall - London&#x27;s &#x27;Little India&#x27; - is finally to be renamed Guru Nanak Road. This is a big deal. Havelock Rd was<br>named after the colonial British general who fought in the Sikh wars &amp; later suppressed the 1857 Uprising. It is home to London&#x27;s largest gurudwara.<br><br><br>Peter Farley @FarleyP. 15h<br>What a load of nonsense. What if we went to India and started to change their street<br>names?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

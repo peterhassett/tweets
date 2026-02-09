@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="hi, my dick is
+(what?) my dick is
+(who?) my dick is
+chicka chicka
+real tiny">
+    <meta property="og:title" content="hi, my dick is
+(what?) my dick is
+(who?) my dick i — trevb @trrvvb">
+    <meta property="og:image:alt" content="hi, my dick is
+(what?) my dick is
+(who?) my dick is
+chicka chicka
+real tiny">
+    <meta property="og:description" content="hi, my dick is
+(what?) my dick is
+(who?) my dick is
+chicka chicka
+real tiny">
+    <meta property="og:image" content="/img/1723.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>hi, my dick is
+(what?) my dick is
+(who?) my dick i — trevb @trrvvb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1723/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1723",
+      "headline": "hi, my dick is\n(what?) my dick is\n(who?) my dick is\nchicka chicka\nreal tiny",
+      "articleBody": "hi, my dick is\n(what?) my dick is\n(who?) my dick is\nchicka chicka\nreal tiny",
+      "image": "/img/1723.webp",
+      "author": {
+        "@type": "Person",
+        "name": "trevb",
+        "alternateName": "trrvvb"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1723.webp" class="img-fluid rounded" alt="hi, my dick is
+(what?) my dick is
+(who?) my dick is
+chicka chicka
+real tiny">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">trevb</span> <span class="handle-text fs-6 d-block d-md-inline">@trrvvb</span></h4>
+            <p>hi, my dick is<br>(what?) my dick is<br>(who?) my dick is<br>chicka chicka<br>real tiny</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+my culture is not your costume
+ 
+(A woman in a Dunkin’ D...">
+    <meta property="og:title" content="@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+m —  @WrittenByHanna">
+    <meta property="og:image:alt" content="@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+my culture is not your costume
+ 
+(A woman in a Dunkin’ Donuts coffee costume)">
+    <meta property="og:description" content="@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+my culture is not your costume
+ 
+(A woman in a Dunkin’ Donuts coffee costume)">
+    <meta property="og:image" content="/img/0623.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+m —  @WrittenByHanna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0623/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0623",
+      "headline": "@WrittenByHanna\nJLO's foreplay costume:\n\n@ubanks\nmy culture is not your costume\n \n(A woman in a Dunkin\u2019 Donuts",
+      "articleBody": "@WrittenByHanna\nJLO's foreplay costume:\n\n@ubanks\nmy culture is not your costume\n \n(A woman in a Dunkin\u2019 Donuts coffee costume)",
+      "image": "/img/0623.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "WrittenByHanna"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0623.webp" class="img-fluid rounded" alt="@WrittenByHanna
+JLO&#x27;s foreplay costume:
+
+@ubanks
+my culture is not your costume
+ 
+(A woman in a Dunkin’ Donuts coffee costume)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@WrittenByHanna</span></h4>
+            <p>@WrittenByHanna<br>JLO&#x27;s foreplay costume:<br><br>@ubanks<br>my culture is not your costume<br> <br>(A woman in a Dunkin’ Donuts coffee costume)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="There are tons of Sheriff&#x27;s cars but only one sheriff. How do I find Sheriff Prime and stop him from rele...">
+    <meta property="og:title" content="There are tons of Sheriff&#x27;s cars but only one sher — Dante Allegheny @woodmuffin">
+    <meta property="og:image:alt" content="There are tons of Sheriff&#x27;s cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing
+more spore cars">
+    <meta property="og:description" content="There are tons of Sheriff&#x27;s cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing
+more spore cars">
+    <meta property="og:image" content="/img/1738.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>There are tons of Sheriff&#x27;s cars but only one sher — Dante Allegheny @woodmuffin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1738/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1738",
+      "headline": "There are tons of Sheriff's cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing",
+      "articleBody": "There are tons of Sheriff's cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing\nmore spore cars",
+      "image": "/img/1738.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dante Allegheny",
+        "alternateName": "woodmuffin"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1738.webp" class="img-fluid rounded" alt="There are tons of Sheriff&#x27;s cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing
+more spore cars">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dante Allegheny</span> <span class="handle-text fs-6 d-block d-md-inline">@woodmuffin</span></h4>
+            <p>There are tons of Sheriff&#x27;s cars but only one sheriff. How do I find Sheriff Prime and stop him from releasing<br>more spore cars</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

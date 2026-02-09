@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Over Innsmouth,&quot; the narrator describes taking a...">
+    <meta property="og:title" content="MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Ove —  @">
+    <meta property="og:image:alt" content="MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Over Innsmouth,&quot; the narrator describes taking a supply of &quot;cheese crackers&quot; with him for lunch. A certain brand of cheese cracker was invented in 1921 - which means he quite probably took some Cheez-Its to Innsmouth.
+
+
+
+jack @jackalltogether. 
+clearly this is the innsmouth look
+(Photo of goldfish cracker)
+
+
+@grosspointbreak
+&quot;The Snack That Smiles Back&quot; is my
+favorite Lovecraft story">
+    <meta property="og:description" content="MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Over Innsmouth,&quot; the narrator describes taking a supply of &quot;cheese crackers&quot; with him for lunch. A certain brand of cheese cracker was invented in 1921 - which means he quite probably took some Cheez-Its to Innsmouth.
+
+
+
+jack @jackalltogether. 
+clearly this is the innsmouth look
+(Photo of goldfish cracker)
+
+
+@grosspointbreak
+&quot;The Snack That Smiles Back&quot; is my
+favorite Lovecraft story">
+    <meta property="og:image" content="/img/0444.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Ove —  @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0444/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0444",
+      "headline": "MX Daniel Shipwreck\nIn Lovecraft's \"The Shadow Over Innsmouth,\" the narrator describes taking a supply of \"che",
+      "articleBody": "MX Daniel Shipwreck\nIn Lovecraft's \"The Shadow Over Innsmouth,\" the narrator describes taking a supply of \"cheese crackers\" with him for lunch. A certain brand of cheese cracker was invented in 1921 - which means he quite probably took some Cheez-Its to Innsmouth.\n\n\n\njack @jackalltogether. \nclearly this is the innsmouth look\n(Photo of goldfish cracker)\n\n\n@grosspointbreak\n\"The Snack That Smiles Back\" is my\nfavorite Lovecraft story",
+      "image": "/img/0444.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0444.webp" class="img-fluid rounded" alt="MX Daniel Shipwreck
+In Lovecraft&#x27;s &quot;The Shadow Over Innsmouth,&quot; the narrator describes taking a supply of &quot;cheese crackers&quot; with him for lunch. A certain brand of cheese cracker was invented in 1921 - which means he quite probably took some Cheez-Its to Innsmouth.
+
+
+
+jack @jackalltogether. 
+clearly this is the innsmouth look
+(Photo of goldfish cracker)
+
+
+@grosspointbreak
+&quot;The Snack That Smiles Back&quot; is my
+favorite Lovecraft story">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>MX Daniel Shipwreck<br>In Lovecraft&#x27;s &quot;The Shadow Over Innsmouth,&quot; the narrator describes taking a supply of &quot;cheese crackers&quot; with him for lunch. A certain brand of cheese cracker was invented in 1921 - which means he quite probably took some Cheez-Its to Innsmouth.<br><br><br><br>jack @jackalltogether. <br>clearly this is the innsmouth look<br>(Photo of goldfish cracker)<br><br><br>@grosspointbreak<br>&quot;The Snack That Smiles Back&quot; is my<br>favorite Lovecraft story</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

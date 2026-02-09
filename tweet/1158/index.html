@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="belle and sebastian: oouuh the priest
+and the clown girl had sex in the
+arboretum
+me: i&#x27;m going to cry">
+    <meta property="og:title" content="belle and sebastian: oouuh the priest
+and the clow — ordering rainforest cafe on postmat... @Vimmy">
+    <meta property="og:image:alt" content="belle and sebastian: oouuh the priest
+and the clown girl had sex in the
+arboretum
+me: i&#x27;m going to cry">
+    <meta property="og:description" content="belle and sebastian: oouuh the priest
+and the clown girl had sex in the
+arboretum
+me: i&#x27;m going to cry">
+    <meta property="og:image" content="/img/1158.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>belle and sebastian: oouuh the priest
+and the clow — ordering rainforest cafe on postmat... @Vimmy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1158/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1158",
+      "headline": "belle and sebastian: oouuh the priest\nand the clown girl had sex in the\narboretum\nme: i'm going to cry",
+      "articleBody": "belle and sebastian: oouuh the priest\nand the clown girl had sex in the\narboretum\nme: i'm going to cry",
+      "image": "/img/1158.webp",
+      "author": {
+        "@type": "Person",
+        "name": "ordering rainforest cafe on postmat...",
+        "alternateName": "Vimmy"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1158.webp" class="img-fluid rounded" alt="belle and sebastian: oouuh the priest
+and the clown girl had sex in the
+arboretum
+me: i&#x27;m going to cry">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">ordering rainforest cafe on postmat...</span> <span class="handle-text fs-6 d-block d-md-inline">@Vimmy</span></h4>
+            <p>belle and sebastian: oouuh the priest<br>and the clown girl had sex in the<br>arboretum<br>me: i&#x27;m going to cry</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

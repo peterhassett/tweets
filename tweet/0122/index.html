@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="The way people say &quot;It&#x27;s just business&quot; after doing something cold &amp; heartless, I&#x27;m go...">
+    <meta property="og:title" content="The way people say &quot;It&#x27;s just business&quot; after doin — Aparna Nancherla @aparnapkin">
+    <meta property="og:image:alt" content="The way people say &quot;It&#x27;s just business&quot; after doing something cold &amp; heartless, I&#x27;m going to start saying &quot;It&#x27;s just pleasure&quot; after doing something warm &amp; kindly, then I will walk off into the horizon whistling">
+    <meta property="og:description" content="The way people say &quot;It&#x27;s just business&quot; after doing something cold &amp; heartless, I&#x27;m going to start saying &quot;It&#x27;s just pleasure&quot; after doing something warm &amp; kindly, then I will walk off into the horizon whistling">
+    <meta property="og:image" content="/img/0122.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>The way people say &quot;It&#x27;s just business&quot; after doin — Aparna Nancherla @aparnapkin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0122/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0122",
+      "headline": "The way people say \"It's just business\" after doing something cold & heartless, I'm going to start saying \"It'",
+      "articleBody": "The way people say \"It's just business\" after doing something cold & heartless, I'm going to start saying \"It's just pleasure\" after doing something warm & kindly, then I will walk off into the horizon whistling",
+      "image": "/img/0122.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Aparna Nancherla",
+        "alternateName": "aparnapkin"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0122.webp" class="img-fluid rounded" alt="The way people say &quot;It&#x27;s just business&quot; after doing something cold &amp; heartless, I&#x27;m going to start saying &quot;It&#x27;s just pleasure&quot; after doing something warm &amp; kindly, then I will walk off into the horizon whistling">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Aparna Nancherla</span> <span class="handle-text fs-6 d-block d-md-inline">@aparnapkin</span></h4>
+            <p>The way people say &quot;It&#x27;s just business&quot; after doing something cold &amp; heartless, I&#x27;m going to start saying &quot;It&#x27;s just pleasure&quot; after doing something warm &amp; kindly, then I will walk off into the horizon whistling</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

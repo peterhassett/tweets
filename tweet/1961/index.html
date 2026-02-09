@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="if you grew up as a person you have
+traits now">
+    <meta property="og:title" content="if you grew up as a person you have
+traits now — gay little fart in the wind @catranator">
+    <meta property="og:image:alt" content="if you grew up as a person you have
+traits now">
+    <meta property="og:description" content="if you grew up as a person you have
+traits now">
+    <meta property="og:image" content="/img/1961.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>if you grew up as a person you have
+traits now — gay little fart in the wind @catranator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1961/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1961",
+      "headline": "if you grew up as a person you have\ntraits now",
+      "articleBody": "if you grew up as a person you have\ntraits now",
+      "image": "/img/1961.webp",
+      "author": {
+        "@type": "Person",
+        "name": "gay little fart in the wind",
+        "alternateName": "catranator"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1961.webp" class="img-fluid rounded" alt="if you grew up as a person you have
+traits now">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">gay little fart in the wind</span> <span class="handle-text fs-6 d-block d-md-inline">@catranator</span></h4>
+            <p>if you grew up as a person you have<br>traits now</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

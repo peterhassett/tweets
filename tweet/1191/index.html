@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="One reason I still have trouble
+believing crypto currency is money is that there aren&#x27;t commercials for
+m...">
+    <meta property="og:title" content="One reason I still have trouble
+believing crypto c — Noah Garfinkel @NoahGarfinkel">
+    <meta property="og:image:alt" content="One reason I still have trouble
+believing crypto currency is money is that there aren&#x27;t commercials for
+money.
+
+2/13/22">
+    <meta property="og:description" content="One reason I still have trouble
+believing crypto currency is money is that there aren&#x27;t commercials for
+money.
+
+2/13/22">
+    <meta property="og:image" content="/img/1191.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>One reason I still have trouble
+believing crypto c — Noah Garfinkel @NoahGarfinkel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1191/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1191",
+      "headline": "One reason I still have trouble\nbelieving crypto currency is money is that there aren't commercials for\nmoney.",
+      "articleBody": "One reason I still have trouble\nbelieving crypto currency is money is that there aren't commercials for\nmoney.\n\n2/13/22",
+      "image": "/img/1191.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Noah Garfinkel",
+        "alternateName": "NoahGarfinkel"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1191.webp" class="img-fluid rounded" alt="One reason I still have trouble
+believing crypto currency is money is that there aren&#x27;t commercials for
+money.
+
+2/13/22">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Noah Garfinkel</span> <span class="handle-text fs-6 d-block d-md-inline">@NoahGarfinkel</span></h4>
+            <p>One reason I still have trouble<br>believing crypto currency is money is that there aren&#x27;t commercials for<br>money.<br><br>2/13/22</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

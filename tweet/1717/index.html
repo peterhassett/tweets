@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="expliaining to wife what the phrase &quot;pussy nexus: beyond pussy&quot; means and why it has appeared on my
+...">
+    <meta property="og:title" content="expliaining to wife what the phrase &quot;pussy nexus:  — wint @dril">
+    <meta property="og:image:alt" content="expliaining to wife what the phrase &quot;pussy nexus: beyond pussy&quot; means and why it has appeared on my
+credit card statement like 8 times">
+    <meta property="og:description" content="expliaining to wife what the phrase &quot;pussy nexus: beyond pussy&quot; means and why it has appeared on my
+credit card statement like 8 times">
+    <meta property="og:image" content="/img/1717.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>expliaining to wife what the phrase &quot;pussy nexus:  — wint @dril</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1717/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1717",
+      "headline": "expliaining to wife what the phrase \"pussy nexus: beyond pussy\" means and why it has appeared on my\ncredit car",
+      "articleBody": "expliaining to wife what the phrase \"pussy nexus: beyond pussy\" means and why it has appeared on my\ncredit card statement like 8 times",
+      "image": "/img/1717.webp",
+      "author": {
+        "@type": "Person",
+        "name": "wint",
+        "alternateName": "dril"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1717.webp" class="img-fluid rounded" alt="expliaining to wife what the phrase &quot;pussy nexus: beyond pussy&quot; means and why it has appeared on my
+credit card statement like 8 times">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">wint</span> <span class="handle-text fs-6 d-block d-md-inline">@dril</span></h4>
+            <p>expliaining to wife what the phrase &quot;pussy nexus: beyond pussy&quot; means and why it has appeared on my<br>credit card statement like 8 times</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

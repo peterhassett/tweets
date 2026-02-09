@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="did I &quot;kill a plant&quot; or did the plant not
+have what it takes to thrive in this
+fast-paced environmen...">
+    <meta property="og:title" content="did I &quot;kill a plant&quot; or did the plant not
+have wha — Sarah Lazarus @sarahclazarus">
+    <meta property="og:image:alt" content="did I &quot;kill a plant&quot; or did the plant not
+have what it takes to thrive in this
+fast-paced environment">
+    <meta property="og:description" content="did I &quot;kill a plant&quot; or did the plant not
+have what it takes to thrive in this
+fast-paced environment">
+    <meta property="og:image" content="/img/0913.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>did I &quot;kill a plant&quot; or did the plant not
+have wha — Sarah Lazarus @sarahclazarus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0913/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0913",
+      "headline": "did I \"kill a plant\" or did the plant not\nhave what it takes to thrive in this\nfast-paced environment",
+      "articleBody": "did I \"kill a plant\" or did the plant not\nhave what it takes to thrive in this\nfast-paced environment",
+      "image": "/img/0913.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah Lazarus",
+        "alternateName": "sarahclazarus"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0913.webp" class="img-fluid rounded" alt="did I &quot;kill a plant&quot; or did the plant not
+have what it takes to thrive in this
+fast-paced environment">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Sarah Lazarus</span> <span class="handle-text fs-6 d-block d-md-inline">@sarahclazarus</span></h4>
+            <p>did I &quot;kill a plant&quot; or did the plant not<br>have what it takes to thrive in this<br>fast-paced environment</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

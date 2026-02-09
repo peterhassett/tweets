@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Found a time machine in the woods but I really only use it to send 20-30 McDonald&#x27;s Apple Pies back to a ...">
+    <meta property="og:title" content="Found a time machine in the woods but I really onl — Dan Sheehan @ItsDanSheehan">
+    <meta property="og:image:alt" content="Found a time machine in the woods but I really only use it to send 20-30 McDonald&#x27;s Apple Pies back to a vacant field in pre-revolutionary Boston every day, assuming at some point it&#x27;ll show up in a book or something">
+    <meta property="og:description" content="Found a time machine in the woods but I really only use it to send 20-30 McDonald&#x27;s Apple Pies back to a vacant field in pre-revolutionary Boston every day, assuming at some point it&#x27;ll show up in a book or something">
+    <meta property="og:image" content="/img/0341.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Found a time machine in the woods but I really onl — Dan Sheehan @ItsDanSheehan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0341/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0341",
+      "headline": "Found a time machine in the woods but I really only use it to send 20-30 McDonald's Apple Pies back to a vacan",
+      "articleBody": "Found a time machine in the woods but I really only use it to send 20-30 McDonald's Apple Pies back to a vacant field in pre-revolutionary Boston every day, assuming at some point it'll show up in a book or something",
+      "image": "/img/0341.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dan Sheehan",
+        "alternateName": "ItsDanSheehan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0341.webp" class="img-fluid rounded" alt="Found a time machine in the woods but I really only use it to send 20-30 McDonald&#x27;s Apple Pies back to a vacant field in pre-revolutionary Boston every day, assuming at some point it&#x27;ll show up in a book or something">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dan Sheehan</span> <span class="handle-text fs-6 d-block d-md-inline">@ItsDanSheehan</span></h4>
+            <p>Found a time machine in the woods but I really only use it to send 20-30 McDonald&#x27;s Apple Pies back to a vacant field in pre-revolutionary Boston every day, assuming at some point it&#x27;ll show up in a book or something</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORTHLESS AND EVERYONE HATES ME.
+
+DEMONS: 
+NOOOOO!
+YOU&#x27...">
+    <meta property="og:title" content="keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORT — JIVE @JiveXXL">
+    <meta property="og:image:alt" content="keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORTHLESS AND EVERYONE HATES ME.
+
+DEMONS: 
+NOOOOO!
+YOU&#x27;RE SO TALENTED!
+AND LOVED!
+
+OP:
+PLEASE
+JUST GO 
+AWAY...">
+    <meta property="og:description" content="keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORTHLESS AND EVERYONE HATES ME.
+
+DEMONS: 
+NOOOOO!
+YOU&#x27;RE SO TALENTED!
+AND LOVED!
+
+OP:
+PLEASE
+JUST GO 
+AWAY...">
+    <meta property="og:image" content="/img/1333.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORT — JIVE @JiveXXL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1333/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1333",
+      "headline": "keep battling those demons\n\n(comic)\n\nOP: \nI'M WORTHLESS AND EVERYONE HATES ME.\n\nDEMONS: \nNOOOOO!\nYOU'RE SO TAL",
+      "articleBody": "keep battling those demons\n\n(comic)\n\nOP: \nI'M WORTHLESS AND EVERYONE HATES ME.\n\nDEMONS: \nNOOOOO!\nYOU'RE SO TALENTED!\nAND LOVED!\n\nOP:\nPLEASE\nJUST GO \nAWAY...",
+      "image": "/img/1333.webp",
+      "author": {
+        "@type": "Person",
+        "name": "JIVE",
+        "alternateName": "JiveXXL"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1333.webp" class="img-fluid rounded" alt="keep battling those demons
+
+(comic)
+
+OP: 
+I&#x27;M WORTHLESS AND EVERYONE HATES ME.
+
+DEMONS: 
+NOOOOO!
+YOU&#x27;RE SO TALENTED!
+AND LOVED!
+
+OP:
+PLEASE
+JUST GO 
+AWAY...">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">JIVE</span> <span class="handle-text fs-6 d-block d-md-inline">@JiveXXL</span></h4>
+            <p>keep battling those demons<br><br>(comic)<br><br>OP: <br>I&#x27;M WORTHLESS AND EVERYONE HATES ME.<br><br>DEMONS: <br>NOOOOO!<br>YOU&#x27;RE SO TALENTED!<br>AND LOVED!<br><br>OP:<br>PLEASE<br>JUST GO <br>AWAY...</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

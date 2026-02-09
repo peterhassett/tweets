@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting &quot;baseball ga...">
+    <meta property="og:title" content="couple weeks ago I saw a drunk guy in the crowd at — The Discourse Lover @Trillburne">
+    <meta property="og:image:alt" content="couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting &quot;baseball game!&quot; I think about him every day">
+    <meta property="og:description" content="couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting &quot;baseball game!&quot; I think about him every day">
+    <meta property="og:image" content="/img/0653.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>couple weeks ago I saw a drunk guy in the crowd at — The Discourse Lover @Trillburne</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0653/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0653",
+      "headline": "couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting \"baseball game!\" ",
+      "articleBody": "couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting \"baseball game!\" I think about him every day",
+      "image": "/img/0653.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The Discourse Lover",
+        "alternateName": "Trillburne"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0653.webp" class="img-fluid rounded" alt="couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting &quot;baseball game!&quot; I think about him every day">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The Discourse Lover</span> <span class="handle-text fs-6 d-block d-md-inline">@Trillburne</span></h4>
+            <p>couple weeks ago I saw a drunk guy in the crowd at a baseball game enthusiastically chanting &quot;baseball game!&quot; I think about him every day</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

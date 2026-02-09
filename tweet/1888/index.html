@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Willow said something about Lee Harvey Oswald&#x27;s &#x27;little cowboy hat&#x27;s and I had no idea what she...">
+    <meta property="og:title" content="Willow said something about Lee Harvey Oswald&#x27;s &#x27;l — homojave wasteland &amp;amp; @taliasturm">
+    <meta property="og:image:alt" content="Willow said something about Lee Harvey Oswald&#x27;s &#x27;little cowboy hat&#x27;s and I had no idea what she was talking about and it turns out she&#x27;d seen this picture and thought he was wearing a ridiculous little hat when he got shot
+
+(Photo where guy behind LHO is wearing a normal sized cowboy hat but it looks like LHO is wearing it and it is tiny)">
+    <meta property="og:description" content="Willow said something about Lee Harvey Oswald&#x27;s &#x27;little cowboy hat&#x27;s and I had no idea what she was talking about and it turns out she&#x27;d seen this picture and thought he was wearing a ridiculous little hat when he got shot
+
+(Photo where guy behind LHO is wearing a normal sized cowboy hat but it looks like LHO is wearing it and it is tiny)">
+    <meta property="og:image" content="/img/1888.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Willow said something about Lee Harvey Oswald&#x27;s &#x27;l — homojave wasteland &amp;amp; @taliasturm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1888/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1888",
+      "headline": "Willow said something about Lee Harvey Oswald's 'little cowboy hat's and I had no idea what she was talking ab",
+      "articleBody": "Willow said something about Lee Harvey Oswald's 'little cowboy hat's and I had no idea what she was talking about and it turns out she'd seen this picture and thought he was wearing a ridiculous little hat when he got shot\n\n(Photo where guy behind LHO is wearing a normal sized cowboy hat but it looks like LHO is wearing it and it is tiny)",
+      "image": "/img/1888.webp",
+      "author": {
+        "@type": "Person",
+        "name": "homojave wasteland &amp;",
+        "alternateName": "taliasturm"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1888.webp" class="img-fluid rounded" alt="Willow said something about Lee Harvey Oswald&#x27;s &#x27;little cowboy hat&#x27;s and I had no idea what she was talking about and it turns out she&#x27;d seen this picture and thought he was wearing a ridiculous little hat when he got shot
+
+(Photo where guy behind LHO is wearing a normal sized cowboy hat but it looks like LHO is wearing it and it is tiny)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">homojave wasteland &amp;amp;</span> <span class="handle-text fs-6 d-block d-md-inline">@taliasturm</span></h4>
+            <p>Willow said something about Lee Harvey Oswald&#x27;s &#x27;little cowboy hat&#x27;s and I had no idea what she was talking about and it turns out she&#x27;d seen this picture and thought he was wearing a ridiculous little hat when he got shot<br><br>(Photo where guy behind LHO is wearing a normal sized cowboy hat but it looks like LHO is wearing it and it is tiny)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

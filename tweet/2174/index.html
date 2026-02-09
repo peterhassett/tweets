@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Jar Jar Binks appears on
+screen">
+    <meta property="og:title" content="&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Ja — rob delaney @robdelaney">
+    <meta property="og:image:alt" content="&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Jar Jar Binks appears on
+screen">
+    <meta property="og:description" content="&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Jar Jar Binks appears on
+screen">
+    <meta property="og:image" content="/img/2174.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Ja — rob delaney @robdelaney</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2174/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2174",
+      "headline": "\"Ha ha ha! Terrific!\" - Mitt Romney,\nevery time Jar Jar Binks appears on\nscreen",
+      "articleBody": "\"Ha ha ha! Terrific!\" - Mitt Romney,\nevery time Jar Jar Binks appears on\nscreen",
+      "image": "/img/2174.webp",
+      "author": {
+        "@type": "Person",
+        "name": "rob delaney",
+        "alternateName": "robdelaney"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2174.webp" class="img-fluid rounded" alt="&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,
+every time Jar Jar Binks appears on
+screen">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">rob delaney</span> <span class="handle-text fs-6 d-block d-md-inline">@robdelaney</span></h4>
+            <p>&quot;Ha ha ha! Terrific!&quot; - Mitt Romney,<br>every time Jar Jar Binks appears on<br>screen</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

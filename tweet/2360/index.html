@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="P.F. Chang’s waiter: [recites specials]
+
+Stephen A. Smith: (acts surprised) to me, that’s preposterous. Crab R...">
+    <meta property="og:title" content="P.F. Chang’s waiter: [recites specials]
+
+Stephen A — DavidJRoth @">
+    <meta property="og:image:alt" content="P.F. Chang’s waiter: [recites specials]
+
+Stephen A. Smith: (acts surprised) to me, that’s preposterous. Crab Rangoon, things of that nature">
+    <meta property="og:description" content="P.F. Chang’s waiter: [recites specials]
+
+Stephen A. Smith: (acts surprised) to me, that’s preposterous. Crab Rangoon, things of that nature">
+    <meta property="og:image" content="/img/2360.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>P.F. Chang’s waiter: [recites specials]
+
+Stephen A — DavidJRoth @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2360/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2360",
+      "headline": "P.F. Chang\u2019s waiter: [recites specials]\n\nStephen A. Smith: (acts surprised) to me, that\u2019s preposterous. Crab R",
+      "articleBody": "P.F. Chang\u2019s waiter: [recites specials]\n\nStephen A. Smith: (acts surprised) to me, that\u2019s preposterous. Crab Rangoon, things of that nature",
+      "image": "/img/2360.webp",
+      "author": {
+        "@type": "Person",
+        "name": "DavidJRoth",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2360.webp" class="img-fluid rounded" alt="P.F. Chang’s waiter: [recites specials]
+
+Stephen A. Smith: (acts surprised) to me, that’s preposterous. Crab Rangoon, things of that nature">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">DavidJRoth</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>P.F. Chang’s waiter: [recites specials]<br><br>Stephen A. Smith: (acts surprised) to me, that’s preposterous. Crab Rangoon, things of that nature</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="boomers will let a guy named Gordon Sumner be called Sting but wont respect someone&#x27;s pronouns">
+    <meta property="og:title" content="boomers will let a guy named Gordon Sumner be call — Cullen Crawford @HelloCullen">
+    <meta property="og:image:alt" content="boomers will let a guy named Gordon Sumner be called Sting but wont respect someone&#x27;s pronouns">
+    <meta property="og:description" content="boomers will let a guy named Gordon Sumner be called Sting but wont respect someone&#x27;s pronouns">
+    <meta property="og:image" content="/img/0273.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>boomers will let a guy named Gordon Sumner be call — Cullen Crawford @HelloCullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0273/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0273",
+      "headline": "boomers will let a guy named Gordon Sumner be called Sting but wont respect someone's pronouns",
+      "articleBody": "boomers will let a guy named Gordon Sumner be called Sting but wont respect someone's pronouns",
+      "image": "/img/0273.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Cullen Crawford",
+        "alternateName": "HelloCullen"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0273.webp" class="img-fluid rounded" alt="boomers will let a guy named Gordon Sumner be called Sting but wont respect someone&#x27;s pronouns">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Cullen Crawford</span> <span class="handle-text fs-6 d-block d-md-inline">@HelloCullen</span></h4>
+            <p>boomers will let a guy named Gordon Sumner be called Sting but wont respect someone&#x27;s pronouns</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

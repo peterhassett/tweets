@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="*sitting in middle seat on airplane*
+Person in window seat: excuse me can you help me
+Me: uh sure are you ok?
+...">
+    <meta property="og:title" content="*sitting in middle seat on airplane*
+Person in win — Josh Trebach, MD @jtrebach">
+    <meta property="og:image:alt" content="*sitting in middle seat on airplane*
+Person in window seat: excuse me can you help me
+Me: uh sure are you ok?
+Person: I am playing wordle. And I am stuck. And I NEED to beat my inlaws
+Me: *takes off headphones* we will defeat your inlaws together">
+    <meta property="og:description" content="*sitting in middle seat on airplane*
+Person in window seat: excuse me can you help me
+Me: uh sure are you ok?
+Person: I am playing wordle. And I am stuck. And I NEED to beat my inlaws
+Me: *takes off headphones* we will defeat your inlaws together">
+    <meta property="og:image" content="/img/0262.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>*sitting in middle seat on airplane*
+Person in win — Josh Trebach, MD @jtrebach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0262/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0262",
+      "headline": "*sitting in middle seat on airplane*\nPerson in window seat: excuse me can you help me\nMe: uh sure are you ok?\n",
+      "articleBody": "*sitting in middle seat on airplane*\nPerson in window seat: excuse me can you help me\nMe: uh sure are you ok?\nPerson: I am playing wordle. And I am stuck. And I NEED to beat my inlaws\nMe: *takes off headphones* we will defeat your inlaws together",
+      "image": "/img/0262.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Josh Trebach, MD",
+        "alternateName": "jtrebach"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0262.webp" class="img-fluid rounded" alt="*sitting in middle seat on airplane*
+Person in window seat: excuse me can you help me
+Me: uh sure are you ok?
+Person: I am playing wordle. And I am stuck. And I NEED to beat my inlaws
+Me: *takes off headphones* we will defeat your inlaws together">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Josh Trebach, MD</span> <span class="handle-text fs-6 d-block d-md-inline">@jtrebach</span></h4>
+            <p>*sitting in middle seat on airplane*<br>Person in window seat: excuse me can you help me<br>Me: uh sure are you ok?<br>Person: I am playing wordle. And I am stuck. And I NEED to beat my inlaws<br>Me: *takes off headphones* we will defeat your inlaws together</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

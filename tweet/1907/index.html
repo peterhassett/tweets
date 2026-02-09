@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose experience of covid was worse than flu
+
+Michael Rosen @...">
+    <meta property="og:title" content="... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose  — Spencer Morgan @spencer">
+    <meta property="og:image:alt" content="... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose experience of covid was worse than flu
+
+Michael Rosen @MichaelRo.... 11/2/20 My oxygen saturation level was 58. If my wife hadn&#x27;t taken me to A and E I would have died within hours. I had blood clots in my lungs and bleeds or clots in my brain. Lost sight in eye, hearing in ear, feeling in toes. Flu?
+
+Spencer Morgan @spencer... . 11/2/20 
+I haven&#x27;t met you
+
+Michael Rosen @MichaelRo.... 11/2/20
+Yes - I was due some good luck at some point this year.">
+    <meta property="og:description" content="... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose experience of covid was worse than flu
+
+Michael Rosen @MichaelRo.... 11/2/20 My oxygen saturation level was 58. If my wife hadn&#x27;t taken me to A and E I would have died within hours. I had blood clots in my lungs and bleeds or clots in my brain. Lost sight in eye, hearing in ear, feeling in toes. Flu?
+
+Spencer Morgan @spencer... . 11/2/20 
+I haven&#x27;t met you
+
+Michael Rosen @MichaelRo.... 11/2/20
+Yes - I was due some good luck at some point this year.">
+    <meta property="og:image" content="/img/1907.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose  — Spencer Morgan @spencer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1907/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1907",
+      "headline": "... 11/1/20 Wonder if I'll ever meet anyone whose experience of covid was worse than flu\n\nMichael Rosen @Micha",
+      "articleBody": "... 11/1/20 Wonder if I'll ever meet anyone whose experience of covid was worse than flu\n\nMichael Rosen @MichaelRo.... 11/2/20 My oxygen saturation level was 58. If my wife hadn't taken me to A and E I would have died within hours. I had blood clots in my lungs and bleeds or clots in my brain. Lost sight in eye, hearing in ear, feeling in toes. Flu?\n\nSpencer Morgan @spencer... . 11/2/20 \nI haven't met you\n\nMichael Rosen @MichaelRo.... 11/2/20\nYes - I was due some good luck at some point this year.",
+      "image": "/img/1907.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Spencer Morgan",
+        "alternateName": "spencer"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1907.webp" class="img-fluid rounded" alt="... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose experience of covid was worse than flu
+
+Michael Rosen @MichaelRo.... 11/2/20 My oxygen saturation level was 58. If my wife hadn&#x27;t taken me to A and E I would have died within hours. I had blood clots in my lungs and bleeds or clots in my brain. Lost sight in eye, hearing in ear, feeling in toes. Flu?
+
+Spencer Morgan @spencer... . 11/2/20 
+I haven&#x27;t met you
+
+Michael Rosen @MichaelRo.... 11/2/20
+Yes - I was due some good luck at some point this year.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Spencer Morgan</span> <span class="handle-text fs-6 d-block d-md-inline">@spencer</span></h4>
+            <p>... 11/1/20 Wonder if I&#x27;ll ever meet anyone whose experience of covid was worse than flu<br><br>Michael Rosen @MichaelRo.... 11/2/20 My oxygen saturation level was 58. If my wife hadn&#x27;t taken me to A and E I would have died within hours. I had blood clots in my lungs and bleeds or clots in my brain. Lost sight in eye, hearing in ear, feeling in toes. Flu?<br><br>Spencer Morgan @spencer... . 11/2/20 <br>I haven&#x27;t met you<br><br>Michael Rosen @MichaelRo.... 11/2/20<br>Yes - I was due some good luck at some point this year.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

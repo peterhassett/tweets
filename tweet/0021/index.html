@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.
+BOURDAIN...">
+    <meta property="og:title" content="BOURDAIN: Alright so tell me what this is. CITIZEN — Brooks Otterlake @i_zzzzzz">
+    <meta property="og:image:alt" content="BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.
+BOURDAIN: Okay, so-- wait, what are you doing?
+CITIZEN: I am adding a small scoop of ice
+cream.
+BOURDAIN: [chuckling skeptically] All right. All right. Fuck it. Let&#x27;s do this.">
+    <meta property="og:description" content="BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.
+BOURDAIN: Okay, so-- wait, what are you doing?
+CITIZEN: I am adding a small scoop of ice
+cream.
+BOURDAIN: [chuckling skeptically] All right. All right. Fuck it. Let&#x27;s do this.">
+    <meta property="og:image" content="/img/0021.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>BOURDAIN: Alright so tell me what this is. CITIZEN — Brooks Otterlake @i_zzzzzz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0021/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0021",
+      "headline": "BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.\nBOURDAIN",
+      "articleBody": "BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.\nBOURDAIN: Okay, so-- wait, what are you doing?\nCITIZEN: I am adding a small scoop of ice\ncream.\nBOURDAIN: [chuckling skeptically] All right. All right. Fuck it. Let's do this.",
+      "image": "/img/0021.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Brooks Otterlake",
+        "alternateName": "i_zzzzzz"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0021.webp" class="img-fluid rounded" alt="BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.
+BOURDAIN: Okay, so-- wait, what are you doing?
+CITIZEN: I am adding a small scoop of ice
+cream.
+BOURDAIN: [chuckling skeptically] All right. All right. Fuck it. Let&#x27;s do this.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Brooks Otterlake</span> <span class="handle-text fs-6 d-block d-md-inline">@i_zzzzzz</span></h4>
+            <p>BOURDAIN: Alright so tell me what this is. CITIZEN: This is apple pie. It is a classic American food.<br>BOURDAIN: Okay, so-- wait, what are you doing?<br>CITIZEN: I am adding a small scoop of ice<br>cream.<br>BOURDAIN: [chuckling skeptically] All right. All right. Fuck it. Let&#x27;s do this.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

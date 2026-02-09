@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="my neighbor and I have entered into yet another classic yard sign feud
+
+(Photo: sign 1)
+
+LOOK TWICE-SAVE A LIF...">
+    <meta property="og:title" content="my neighbor and I have entered into yet another cl — america&amp;#39;s lounge singer @KrangTNelson">
+    <meta property="og:image:alt" content="my neighbor and I have entered into yet another classic yard sign feud
+
+(Photo: sign 1)
+
+LOOK TWICE-SAVE A LIFE MOTORCYCLES ARE EVERYWHERE
+
+(Photo: sign 2)
+
+THERES NO SUCH THING AS MOTORCYCLES
+THEY DONT EXIST!!
+YOU CAN JUST MERGE WITHOUT LOOKING">
+    <meta property="og:description" content="my neighbor and I have entered into yet another classic yard sign feud
+
+(Photo: sign 1)
+
+LOOK TWICE-SAVE A LIFE MOTORCYCLES ARE EVERYWHERE
+
+(Photo: sign 2)
+
+THERES NO SUCH THING AS MOTORCYCLES
+THEY DONT EXIST!!
+YOU CAN JUST MERGE WITHOUT LOOKING">
+    <meta property="og:image" content="/img/1591.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>my neighbor and I have entered into yet another cl — america&amp;#39;s lounge singer @KrangTNelson</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1591/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1591",
+      "headline": "my neighbor and I have entered into yet another classic yard sign feud\n\n(Photo: sign 1)\n\nLOOK TWICE-SAVE A LIF",
+      "articleBody": "my neighbor and I have entered into yet another classic yard sign feud\n\n(Photo: sign 1)\n\nLOOK TWICE-SAVE A LIFE MOTORCYCLES ARE EVERYWHERE\n\n(Photo: sign 2)\n\nTHERES NO SUCH THING AS MOTORCYCLES\nTHEY DONT EXIST!!\nYOU CAN JUST MERGE WITHOUT LOOKING",
+      "image": "/img/1591.webp",
+      "author": {
+        "@type": "Person",
+        "name": "america&#39;s lounge singer",
+        "alternateName": "KrangTNelson"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1591.webp" class="img-fluid rounded" alt="my neighbor and I have entered into yet another classic yard sign feud
+
+(Photo: sign 1)
+
+LOOK TWICE-SAVE A LIFE MOTORCYCLES ARE EVERYWHERE
+
+(Photo: sign 2)
+
+THERES NO SUCH THING AS MOTORCYCLES
+THEY DONT EXIST!!
+YOU CAN JUST MERGE WITHOUT LOOKING">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">america&amp;#39;s lounge singer</span> <span class="handle-text fs-6 d-block d-md-inline">@KrangTNelson</span></h4>
+            <p>my neighbor and I have entered into yet another classic yard sign feud<br><br>(Photo: sign 1)<br><br>LOOK TWICE-SAVE A LIFE MOTORCYCLES ARE EVERYWHERE<br><br>(Photo: sign 2)<br><br>THERES NO SUCH THING AS MOTORCYCLES<br>THEY DONT EXIST!!<br>YOU CAN JUST MERGE WITHOUT LOOKING</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

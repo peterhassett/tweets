@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="11:15AM: hey man look out. the tickle monster is on the loose
+2:24PM: did you seriously report me to HR about ...">
+    <meta property="og:title" content="11:15AM: hey man look out. the tickle monster is o — Patrick Doran @lunch_enjoyer">
+    <meta property="og:image:alt" content="11:15AM: hey man look out. the tickle monster is on the loose
+2:24PM: did you seriously report me to HR about the tickle monster?
+2:36PM: I was just joking about the tickle monster being on the loose.
+3:33AM: The Tickle Monster Is Standing Outside Your House">
+    <meta property="og:description" content="11:15AM: hey man look out. the tickle monster is on the loose
+2:24PM: did you seriously report me to HR about the tickle monster?
+2:36PM: I was just joking about the tickle monster being on the loose.
+3:33AM: The Tickle Monster Is Standing Outside Your House">
+    <meta property="og:image" content="/img/0902.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>11:15AM: hey man look out. the tickle monster is o — Patrick Doran @lunch_enjoyer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0902/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0902",
+      "headline": "11:15AM: hey man look out. the tickle monster is on the loose\n2:24PM: did you seriously report me to HR about ",
+      "articleBody": "11:15AM: hey man look out. the tickle monster is on the loose\n2:24PM: did you seriously report me to HR about the tickle monster?\n2:36PM: I was just joking about the tickle monster being on the loose.\n3:33AM: The Tickle Monster Is Standing Outside Your House",
+      "image": "/img/0902.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Patrick Doran",
+        "alternateName": "lunch_enjoyer"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0902.webp" class="img-fluid rounded" alt="11:15AM: hey man look out. the tickle monster is on the loose
+2:24PM: did you seriously report me to HR about the tickle monster?
+2:36PM: I was just joking about the tickle monster being on the loose.
+3:33AM: The Tickle Monster Is Standing Outside Your House">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Patrick Doran</span> <span class="handle-text fs-6 d-block d-md-inline">@lunch_enjoyer</span></h4>
+            <p>11:15AM: hey man look out. the tickle monster is on the loose<br>2:24PM: did you seriously report me to HR about the tickle monster?<br>2:36PM: I was just joking about the tickle monster being on the loose.<br>3:33AM: The Tickle Monster Is Standing Outside Your House</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

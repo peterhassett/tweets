@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars...">
+    <meta property="og:title" content="imagine being the CEO of spirit halloween. you onl — nate of the living dead @MNateShyamalan">
+    <meta property="og:image:alt" content="imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars. your only job is sell skeleton. life is good.
+and then some fucker from HOME DEPOT says &quot;let&#x27;s make one taller than god.&quot;">
+    <meta property="og:description" content="imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars. your only job is sell skeleton. life is good.
+and then some fucker from HOME DEPOT says &quot;let&#x27;s make one taller than god.&quot;">
+    <meta property="og:image" content="/img/0695.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>imagine being the CEO of spirit halloween. you onl — nate of the living dead @MNateShyamalan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0695/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0695",
+      "headline": "imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars",
+      "articleBody": "imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars. your only job is sell skeleton. life is good.\nand then some fucker from HOME DEPOT says \"let's make one taller than god.\"",
+      "image": "/img/0695.webp",
+      "author": {
+        "@type": "Person",
+        "name": "nate of the living dead",
+        "alternateName": "MNateShyamalan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0695.webp" class="img-fluid rounded" alt="imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars. your only job is sell skeleton. life is good.
+and then some fucker from HOME DEPOT says &quot;let&#x27;s make one taller than god.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">nate of the living dead</span> <span class="handle-text fs-6 d-block d-md-inline">@MNateShyamalan</span></h4>
+            <p>imagine being the CEO of spirit halloween. you only work a single month a year and you make 10 billion dollars. your only job is sell skeleton. life is good.<br>and then some fucker from HOME DEPOT says &quot;let&#x27;s make one taller than god.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

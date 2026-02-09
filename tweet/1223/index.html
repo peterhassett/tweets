@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he ...">
+    <meta property="og:title" content="getting kicked out of a jerry seinfeld live stand- — pregabalin fan account @SAMOYEDWAVE">
+    <meta property="og:image:alt" content="getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he tells a joke">
+    <meta property="og:description" content="getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he tells a joke">
+    <meta property="og:image" content="/img/1223.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>getting kicked out of a jerry seinfeld live stand- — pregabalin fan account @SAMOYEDWAVE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1223/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1223",
+      "headline": "getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he ",
+      "articleBody": "getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he tells a joke",
+      "image": "/img/1223.webp",
+      "author": {
+        "@type": "Person",
+        "name": "pregabalin fan account",
+        "alternateName": "SAMOYEDWAVE"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1223.webp" class="img-fluid rounded" alt="getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he tells a joke">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">pregabalin fan account</span> <span class="handle-text fs-6 d-block d-md-inline">@SAMOYEDWAVE</span></h4>
+            <p>getting kicked out of a jerry seinfeld live stand-up special for laughing like an anime villain every time he tells a joke</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

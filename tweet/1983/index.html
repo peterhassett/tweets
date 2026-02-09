@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Why must a movie be &quot;good&quot;? Is it not enough to sit somewhere dark and see a beautiful face, huge?">
+    <meta property="og:title" content="Why must a movie be &quot;good&quot;? Is it not enough to si — Mike Ginn @shutupmikeginn">
+    <meta property="og:image:alt" content="Why must a movie be &quot;good&quot;? Is it not enough to sit somewhere dark and see a beautiful face, huge?">
+    <meta property="og:description" content="Why must a movie be &quot;good&quot;? Is it not enough to sit somewhere dark and see a beautiful face, huge?">
+    <meta property="og:image" content="/img/1983.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Why must a movie be &quot;good&quot;? Is it not enough to si — Mike Ginn @shutupmikeginn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1983/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1983",
+      "headline": "Why must a movie be \"good\"? Is it not enough to sit somewhere dark and see a beautiful face, huge?",
+      "articleBody": "Why must a movie be \"good\"? Is it not enough to sit somewhere dark and see a beautiful face, huge?",
+      "image": "/img/1983.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Mike Ginn",
+        "alternateName": "shutupmikeginn"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1983.webp" class="img-fluid rounded" alt="Why must a movie be &quot;good&quot;? Is it not enough to sit somewhere dark and see a beautiful face, huge?">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Mike Ginn</span> <span class="handle-text fs-6 d-block d-md-inline">@shutupmikeginn</span></h4>
+            <p>Why must a movie be &quot;good&quot;? Is it not enough to sit somewhere dark and see a beautiful face, huge?</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

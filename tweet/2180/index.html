@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="most cutting thing you can say is &quot;who&#x27;s this clown?&quot; because it
+implies they&#x27;re a) a clow...">
+    <meta property="og:title" content="most cutting thing you can say is &quot;who&#x27;s this clow — Cohen is a ghost @skullmandible">
+    <meta property="og:image:alt" content="most cutting thing you can say is &quot;who&#x27;s this clown?&quot; because it
+implies they&#x27;re a) a clown &amp; b) not even one of the better-known clowns">
+    <meta property="og:description" content="most cutting thing you can say is &quot;who&#x27;s this clown?&quot; because it
+implies they&#x27;re a) a clown &amp; b) not even one of the better-known clowns">
+    <meta property="og:image" content="/img/2180.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>most cutting thing you can say is &quot;who&#x27;s this clow — Cohen is a ghost @skullmandible</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2180/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2180",
+      "headline": "most cutting thing you can say is \"who's this clown?\" because it\nimplies they're a) a clown & b) not even one ",
+      "articleBody": "most cutting thing you can say is \"who's this clown?\" because it\nimplies they're a) a clown & b) not even one of the better-known clowns",
+      "image": "/img/2180.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Cohen is a ghost",
+        "alternateName": "skullmandible"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2180.webp" class="img-fluid rounded" alt="most cutting thing you can say is &quot;who&#x27;s this clown?&quot; because it
+implies they&#x27;re a) a clown &amp; b) not even one of the better-known clowns">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Cohen is a ghost</span> <span class="handle-text fs-6 d-block d-md-inline">@skullmandible</span></h4>
+            <p>most cutting thing you can say is &quot;who&#x27;s this clown?&quot; because it<br>implies they&#x27;re a) a clown &amp; b) not even one of the better-known clowns</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

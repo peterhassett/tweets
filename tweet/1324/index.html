@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Nov 11
+first time completing a puzzle this shit is easy
+
+(Photo of a completely incorrect solve of a puzzle us...">
+    <meta property="og:title" content="Nov 11
+first time completing a puzzle this shit is — spencer @Sssnakeepit">
+    <meta property="og:image:alt" content="Nov 11
+first time completing a puzzle this shit is easy
+
+(Photo of a completely incorrect solve of a puzzle using brown shapes mushed into the vague shape of a horse and green shapes mushed into the vague shape of grass)
+
+Alistair Croll @acroll
+This is the best metaphor for
+machine learning I have ever seen.">
+    <meta property="og:description" content="Nov 11
+first time completing a puzzle this shit is easy
+
+(Photo of a completely incorrect solve of a puzzle using brown shapes mushed into the vague shape of a horse and green shapes mushed into the vague shape of grass)
+
+Alistair Croll @acroll
+This is the best metaphor for
+machine learning I have ever seen.">
+    <meta property="og:image" content="/img/1324.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Nov 11
+first time completing a puzzle this shit is — spencer @Sssnakeepit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1324/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1324",
+      "headline": "Nov 11\nfirst time completing a puzzle this shit is easy\n\n(Photo of a completely incorrect solve of a puzzle us",
+      "articleBody": "Nov 11\nfirst time completing a puzzle this shit is easy\n\n(Photo of a completely incorrect solve of a puzzle using brown shapes mushed into the vague shape of a horse and green shapes mushed into the vague shape of grass)\n\nAlistair Croll @acroll\nThis is the best metaphor for\nmachine learning I have ever seen.",
+      "image": "/img/1324.webp",
+      "author": {
+        "@type": "Person",
+        "name": "spencer",
+        "alternateName": "Sssnakeepit"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1324.webp" class="img-fluid rounded" alt="Nov 11
+first time completing a puzzle this shit is easy
+
+(Photo of a completely incorrect solve of a puzzle using brown shapes mushed into the vague shape of a horse and green shapes mushed into the vague shape of grass)
+
+Alistair Croll @acroll
+This is the best metaphor for
+machine learning I have ever seen.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">spencer</span> <span class="handle-text fs-6 d-block d-md-inline">@Sssnakeepit</span></h4>
+            <p>Nov 11<br>first time completing a puzzle this shit is easy<br><br>(Photo of a completely incorrect solve of a puzzle using brown shapes mushed into the vague shape of a horse and green shapes mushed into the vague shape of grass)<br><br>Alistair Croll @acroll<br>This is the best metaphor for<br>machine learning I have ever seen.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

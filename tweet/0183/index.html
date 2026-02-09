@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It&#x27;s ...">
+    <meta property="og:title" content="To Catch 22, one must think like a 22. But to know — Steven @sjksalisbury.bsky.social">
+    <meta property="og:image:alt" content="To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It&#x27;s your classic something situation.">
+    <meta property="og:description" content="To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It&#x27;s your classic something situation.">
+    <meta property="og:image" content="/img/0183.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>To Catch 22, one must think like a 22. But to know — Steven @sjksalisbury.bsky.social</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0183/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0183",
+      "headline": "To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It's your ",
+      "articleBody": "To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It's your classic something situation.",
+      "image": "/img/0183.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Steven",
+        "alternateName": "sjksalisbury.bsky.social"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0183.webp" class="img-fluid rounded" alt="To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It&#x27;s your classic something situation.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Steven</span> <span class="handle-text fs-6 d-block d-md-inline">@sjksalisbury.bsky.social</span></h4>
+            <p>To Catch 22, one must think like a 22. But to know how to think like a 22, one must first Catch 22. It&#x27;s your classic something situation.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

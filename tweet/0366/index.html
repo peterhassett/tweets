@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="We went from &quot;golden age of
+prestige tv&quot; to &quot;please stream my show the first weekend or I might...">
+    <meta property="og:title" content="We went from &quot;golden age of
+prestige tv&quot; to &quot;pleas — Gabriel Diani (he/him) @GabeDiani">
+    <meta property="og:image:alt" content="We went from &quot;golden age of
+prestige tv&quot; to &quot;please stream my show the first weekend or I might not get a season 2&quot; to &quot;every season of this television show has been wiped from existence for all eternity for tax purposes.&quot;">
+    <meta property="og:description" content="We went from &quot;golden age of
+prestige tv&quot; to &quot;please stream my show the first weekend or I might not get a season 2&quot; to &quot;every season of this television show has been wiped from existence for all eternity for tax purposes.&quot;">
+    <meta property="og:image" content="/img/0366.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>We went from &quot;golden age of
+prestige tv&quot; to &quot;pleas — Gabriel Diani (he/him) @GabeDiani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0366/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0366",
+      "headline": "We went from \"golden age of\nprestige tv\" to \"please stream my show the first weekend or I might not get a seas",
+      "articleBody": "We went from \"golden age of\nprestige tv\" to \"please stream my show the first weekend or I might not get a season 2\" to \"every season of this television show has been wiped from existence for all eternity for tax purposes.\"",
+      "image": "/img/0366.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Diani (he/him)",
+        "alternateName": "GabeDiani"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0366.webp" class="img-fluid rounded" alt="We went from &quot;golden age of
+prestige tv&quot; to &quot;please stream my show the first weekend or I might not get a season 2&quot; to &quot;every season of this television show has been wiped from existence for all eternity for tax purposes.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Gabriel Diani (he/him)</span> <span class="handle-text fs-6 d-block d-md-inline">@GabeDiani</span></h4>
+            <p>We went from &quot;golden age of<br>prestige tv&quot; to &quot;please stream my show the first weekend or I might not get a season 2&quot; to &quot;every season of this television show has been wiped from existence for all eternity for tax purposes.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="no matter how hard i try, nothing will be able to top this
+none of us can compete. it&#x27;s the
+perfect revie...">
+    <meta property="og:title" content="no matter how hard i try, nothing will be able to  — mister movies from the mister movi... @mistermoviespod">
+    <meta property="og:image:alt" content="no matter how hard i try, nothing will be able to top this
+none of us can compete. it&#x27;s the
+perfect review
+
+(Screenshot of letterboxd review)
+
+Closer Look Media
+Joker 2019
+Watched Apr 28, 2020
+This happened to my buddy Eric">
+    <meta property="og:description" content="no matter how hard i try, nothing will be able to top this
+none of us can compete. it&#x27;s the
+perfect review
+
+(Screenshot of letterboxd review)
+
+Closer Look Media
+Joker 2019
+Watched Apr 28, 2020
+This happened to my buddy Eric">
+    <meta property="og:image" content="/img/1487.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>no matter how hard i try, nothing will be able to  — mister movies from the mister movi... @mistermoviespod</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1487/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1487",
+      "headline": "no matter how hard i try, nothing will be able to top this\nnone of us can compete. it's the\nperfect review\n\n(S",
+      "articleBody": "no matter how hard i try, nothing will be able to top this\nnone of us can compete. it's the\nperfect review\n\n(Screenshot of letterboxd review)\n\nCloser Look Media\nJoker 2019\nWatched Apr 28, 2020\nThis happened to my buddy Eric",
+      "image": "/img/1487.webp",
+      "author": {
+        "@type": "Person",
+        "name": "mister movies from the mister movi...",
+        "alternateName": "mistermoviespod"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1487.webp" class="img-fluid rounded" alt="no matter how hard i try, nothing will be able to top this
+none of us can compete. it&#x27;s the
+perfect review
+
+(Screenshot of letterboxd review)
+
+Closer Look Media
+Joker 2019
+Watched Apr 28, 2020
+This happened to my buddy Eric">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">mister movies from the mister movi...</span> <span class="handle-text fs-6 d-block d-md-inline">@mistermoviespod</span></h4>
+            <p>no matter how hard i try, nothing will be able to top this<br>none of us can compete. it&#x27;s the<br>perfect review<br><br>(Screenshot of letterboxd review)<br><br>Closer Look Media<br>Joker 2019<br>Watched Apr 28, 2020<br>This happened to my buddy Eric</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

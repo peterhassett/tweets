@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="To my wife: twitter isn&#x27;t damaging my brain
+To myself: I could tweet &quot;take me to chonch&quot;">
+    <meta property="og:title" content="To my wife: twitter isn&#x27;t damaging my brain
+To mys — bitten! in the gecs pit @AynRandy">
+    <meta property="og:image:alt" content="To my wife: twitter isn&#x27;t damaging my brain
+To myself: I could tweet &quot;take me to chonch&quot;">
+    <meta property="og:description" content="To my wife: twitter isn&#x27;t damaging my brain
+To myself: I could tweet &quot;take me to chonch&quot;">
+    <meta property="og:image" content="/img/0131.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>To my wife: twitter isn&#x27;t damaging my brain
+To mys — bitten! in the gecs pit @AynRandy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0131/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0131",
+      "headline": "To my wife: twitter isn't damaging my brain\nTo myself: I could tweet \"take me to chonch\"",
+      "articleBody": "To my wife: twitter isn't damaging my brain\nTo myself: I could tweet \"take me to chonch\"",
+      "image": "/img/0131.webp",
+      "author": {
+        "@type": "Person",
+        "name": "bitten! in the gecs pit",
+        "alternateName": "AynRandy"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0131.webp" class="img-fluid rounded" alt="To my wife: twitter isn&#x27;t damaging my brain
+To myself: I could tweet &quot;take me to chonch&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">bitten! in the gecs pit</span> <span class="handle-text fs-6 d-block d-md-inline">@AynRandy</span></h4>
+            <p>To my wife: twitter isn&#x27;t damaging my brain<br>To myself: I could tweet &quot;take me to chonch&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

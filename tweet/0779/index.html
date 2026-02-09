@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@GrahamB47
+what&#x27;s up with the flat-earthers. did they
+go away? haven&#x27;t heard much from them
+lately.
+...">
+    <meta property="og:title" content="@GrahamB47
+what&#x27;s up with the flat-earthers. did t —  @GrahamB47">
+    <meta property="og:image:alt" content="@GrahamB47
+what&#x27;s up with the flat-earthers. did they
+go away? haven&#x27;t heard much from them
+lately.
+
+
+@garfpooop
+They fell off">
+    <meta property="og:description" content="@GrahamB47
+what&#x27;s up with the flat-earthers. did they
+go away? haven&#x27;t heard much from them
+lately.
+
+
+@garfpooop
+They fell off">
+    <meta property="og:image" content="/img/0779.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@GrahamB47
+what&#x27;s up with the flat-earthers. did t —  @GrahamB47</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0779/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0779",
+      "headline": "@GrahamB47\nwhat's up with the flat-earthers. did they\ngo away? haven't heard much from them\nlately.\n\n\n@garfpoo",
+      "articleBody": "@GrahamB47\nwhat's up with the flat-earthers. did they\ngo away? haven't heard much from them\nlately.\n\n\n@garfpooop\nThey fell off",
+      "image": "/img/0779.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "GrahamB47"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0779.webp" class="img-fluid rounded" alt="@GrahamB47
+what&#x27;s up with the flat-earthers. did they
+go away? haven&#x27;t heard much from them
+lately.
+
+
+@garfpooop
+They fell off">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@GrahamB47</span></h4>
+            <p>@GrahamB47<br>what&#x27;s up with the flat-earthers. did they<br>go away? haven&#x27;t heard much from them<br>lately.<br><br><br>@garfpooop<br>They fell off</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I just accidentally, prematurely sent a work email to a supplier. It was supposed to say &quot;I am afraid tha...">
+    <meta property="og:title" content="I just accidentally, prematurely sent a work email — Granite Fear-sneachda @GraniteDhuine">
+    <meta property="og:image:alt" content="I just accidentally, prematurely sent a work email to a supplier. It was supposed to say &quot;I am afraid that we will have to reschedule our meeting&quot;
+I hit send when all it said was:
+&quot;Hi Dave,
+I am afraid&quot;">
+    <meta property="og:description" content="I just accidentally, prematurely sent a work email to a supplier. It was supposed to say &quot;I am afraid that we will have to reschedule our meeting&quot;
+I hit send when all it said was:
+&quot;Hi Dave,
+I am afraid&quot;">
+    <meta property="og:image" content="/img/1245.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I just accidentally, prematurely sent a work email — Granite Fear-sneachda @GraniteDhuine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1245/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1245",
+      "headline": "I just accidentally, prematurely sent a work email to a supplier. It was supposed to say \"I am afraid that we ",
+      "articleBody": "I just accidentally, prematurely sent a work email to a supplier. It was supposed to say \"I am afraid that we will have to reschedule our meeting\"\nI hit send when all it said was:\n\"Hi Dave,\nI am afraid\"",
+      "image": "/img/1245.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Granite Fear-sneachda",
+        "alternateName": "GraniteDhuine"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1245.webp" class="img-fluid rounded" alt="I just accidentally, prematurely sent a work email to a supplier. It was supposed to say &quot;I am afraid that we will have to reschedule our meeting&quot;
+I hit send when all it said was:
+&quot;Hi Dave,
+I am afraid&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Granite Fear-sneachda</span> <span class="handle-text fs-6 d-block d-md-inline">@GraniteDhuine</span></h4>
+            <p>I just accidentally, prematurely sent a work email to a supplier. It was supposed to say &quot;I am afraid that we will have to reschedule our meeting&quot;<br>I hit send when all it said was:<br>&quot;Hi Dave,<br>I am afraid&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="what if spiders laughed like seth rogen when u found them">
+    <meta property="og:title" content="what if spiders laughed like seth rogen when u fou — one of ur hoes @miliondollameat">
+    <meta property="og:image:alt" content="what if spiders laughed like seth rogen when u found them">
+    <meta property="og:description" content="what if spiders laughed like seth rogen when u found them">
+    <meta property="og:image" content="/img/0637.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>what if spiders laughed like seth rogen when u fou — one of ur hoes @miliondollameat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0637/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0637",
+      "headline": "what if spiders laughed like seth rogen when u found them",
+      "articleBody": "what if spiders laughed like seth rogen when u found them",
+      "image": "/img/0637.webp",
+      "author": {
+        "@type": "Person",
+        "name": "one of ur hoes",
+        "alternateName": "miliondollameat"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0637.webp" class="img-fluid rounded" alt="what if spiders laughed like seth rogen when u found them">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">one of ur hoes</span> <span class="handle-text fs-6 d-block d-md-inline">@miliondollameat</span></h4>
+            <p>what if spiders laughed like seth rogen when u found them</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

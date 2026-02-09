@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Sucks when you try to be world- weary and post &quot;Next year will be bad!&quot; and some guy one ups you by ...">
+    <meta property="og:title" content="Sucks when you try to be world- weary and post &quot;Ne — Ded Moroz @InternetHippo">
+    <meta property="og:image:alt" content="Sucks when you try to be world- weary and post &quot;Next year will be bad!&quot; and some guy one ups you by saying &quot;This naive fool thinks there will be a next year.&quot; You thought you were taking gold in the gloom olympics but got clowned at the finish line">
+    <meta property="og:description" content="Sucks when you try to be world- weary and post &quot;Next year will be bad!&quot; and some guy one ups you by saying &quot;This naive fool thinks there will be a next year.&quot; You thought you were taking gold in the gloom olympics but got clowned at the finish line">
+    <meta property="og:image" content="/img/0069.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Sucks when you try to be world- weary and post &quot;Ne — Ded Moroz @InternetHippo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0069/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0069",
+      "headline": "Sucks when you try to be world- weary and post \"Next year will be bad!\" and some guy one ups you by saying \"Th",
+      "articleBody": "Sucks when you try to be world- weary and post \"Next year will be bad!\" and some guy one ups you by saying \"This naive fool thinks there will be a next year.\" You thought you were taking gold in the gloom olympics but got clowned at the finish line",
+      "image": "/img/0069.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ded Moroz",
+        "alternateName": "InternetHippo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0069.webp" class="img-fluid rounded" alt="Sucks when you try to be world- weary and post &quot;Next year will be bad!&quot; and some guy one ups you by saying &quot;This naive fool thinks there will be a next year.&quot; You thought you were taking gold in the gloom olympics but got clowned at the finish line">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ded Moroz</span> <span class="handle-text fs-6 d-block d-md-inline">@InternetHippo</span></h4>
+            <p>Sucks when you try to be world- weary and post &quot;Next year will be bad!&quot; and some guy one ups you by saying &quot;This naive fool thinks there will be a next year.&quot; You thought you were taking gold in the gloom olympics but got clowned at the finish line</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

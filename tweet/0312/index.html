@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Is it just me or do all horses look like they&#x27;d talk like Jimmy Stewart">
+    <meta property="og:title" content="Is it just me or do all horses look like they&#x27;d ta — Hoagie @hoa9ie">
+    <meta property="og:image:alt" content="Is it just me or do all horses look like they&#x27;d talk like Jimmy Stewart">
+    <meta property="og:description" content="Is it just me or do all horses look like they&#x27;d talk like Jimmy Stewart">
+    <meta property="og:image" content="/img/0312.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Is it just me or do all horses look like they&#x27;d ta — Hoagie @hoa9ie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0312/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0312",
+      "headline": "Is it just me or do all horses look like they'd talk like Jimmy Stewart",
+      "articleBody": "Is it just me or do all horses look like they'd talk like Jimmy Stewart",
+      "image": "/img/0312.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Hoagie",
+        "alternateName": "hoa9ie"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0312.webp" class="img-fluid rounded" alt="Is it just me or do all horses look like they&#x27;d talk like Jimmy Stewart">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Hoagie</span> <span class="handle-text fs-6 d-block d-md-inline">@hoa9ie</span></h4>
+            <p>Is it just me or do all horses look like they&#x27;d talk like Jimmy Stewart</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

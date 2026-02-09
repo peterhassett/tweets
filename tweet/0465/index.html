@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="hey man, i just wanted to let you know that we&#x27;ve been making fun of your tweets in the gc for the last c...">
+    <meta property="og:title" content="hey man, i just wanted to let you know that we&#x27;ve  — tyler, newsman @Film_Butt">
+    <meta property="og:image:alt" content="hey man, i just wanted to let you know that we&#x27;ve been making fun of your tweets in the gc for the last couple months. actually, the gc is named after an inside joke about how much we hate you. im so sorry that you found out like this">
+    <meta property="og:description" content="hey man, i just wanted to let you know that we&#x27;ve been making fun of your tweets in the gc for the last couple months. actually, the gc is named after an inside joke about how much we hate you. im so sorry that you found out like this">
+    <meta property="og:image" content="/img/0465.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>hey man, i just wanted to let you know that we&#x27;ve  — tyler, newsman @Film_Butt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0465/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0465",
+      "headline": "hey man, i just wanted to let you know that we've been making fun of your tweets in the gc for the last couple",
+      "articleBody": "hey man, i just wanted to let you know that we've been making fun of your tweets in the gc for the last couple months. actually, the gc is named after an inside joke about how much we hate you. im so sorry that you found out like this",
+      "image": "/img/0465.webp",
+      "author": {
+        "@type": "Person",
+        "name": "tyler, newsman",
+        "alternateName": "Film_Butt"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0465.webp" class="img-fluid rounded" alt="hey man, i just wanted to let you know that we&#x27;ve been making fun of your tweets in the gc for the last couple months. actually, the gc is named after an inside joke about how much we hate you. im so sorry that you found out like this">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">tyler, newsman</span> <span class="handle-text fs-6 d-block d-md-inline">@Film_Butt</span></h4>
+            <p>hey man, i just wanted to let you know that we&#x27;ve been making fun of your tweets in the gc for the last couple months. actually, the gc is named after an inside joke about how much we hate you. im so sorry that you found out like this</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

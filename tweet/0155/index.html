@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll go first
+
+(Screenshot of email thread)
+
+Do you...">
+    <meta property="og:title" content="what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll g — The author, Séam... @shockproofbeats">
+    <meta property="og:image:alt" content="what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll go first
+
+(Screenshot of email thread)
+
+Do you think that horses used in films know that they are in a film?
+Séamas O&#x27;Reilly
+
+
+Herzog Werner
+to me▾
+Dear Seamas O&#x27;Reilly,
+my answer to your question is: no.
+Best,
+Werner Herzog">
+    <meta property="og:description" content="what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll go first
+
+(Screenshot of email thread)
+
+Do you think that horses used in films know that they are in a film?
+Séamas O&#x27;Reilly
+
+
+Herzog Werner
+to me▾
+Dear Seamas O&#x27;Reilly,
+my answer to your question is: no.
+Best,
+Werner Herzog">
+    <meta property="og:image" content="/img/0155.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll g — The author, Séam... @shockproofbeats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0155/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0155",
+      "headline": "what's the best email you've ever received? i'll go first\n\n(Screenshot of email thread)\n\nDo you think that hor",
+      "articleBody": "what's the best email you've ever received? i'll go first\n\n(Screenshot of email thread)\n\nDo you think that horses used in films know that they are in a film?\nS\u00e9amas O'Reilly\n\n\nHerzog Werner\nto me\u25be\nDear Seamas O'Reilly,\nmy answer to your question is: no.\nBest,\nWerner Herzog",
+      "image": "/img/0155.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The author, S\u00e9am...",
+        "alternateName": "shockproofbeats"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0155.webp" class="img-fluid rounded" alt="what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll go first
+
+(Screenshot of email thread)
+
+Do you think that horses used in films know that they are in a film?
+Séamas O&#x27;Reilly
+
+
+Herzog Werner
+to me▾
+Dear Seamas O&#x27;Reilly,
+my answer to your question is: no.
+Best,
+Werner Herzog">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The author, Séam...</span> <span class="handle-text fs-6 d-block d-md-inline">@shockproofbeats</span></h4>
+            <p>what&#x27;s the best email you&#x27;ve ever received? i&#x27;ll go first<br><br>(Screenshot of email thread)<br><br>Do you think that horses used in films know that they are in a film?<br>Séamas O&#x27;Reilly<br><br><br>Herzog Werner<br>to me▾<br>Dear Seamas O&#x27;Reilly,<br>my answer to your question is: no.<br>Best,<br>Werner Herzog</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

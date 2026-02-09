@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="hey it&#x27;s Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer ...">
+    <meta property="og:title" content="hey it&#x27;s Miles. apparently i never got logged out  — MEL MEL Magazine @WeAreMel">
+    <meta property="og:image:alt" content="hey it&#x27;s Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on their balls?
+11/11/22">
+    <meta property="og:description" content="hey it&#x27;s Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on their balls?
+11/11/22">
+    <meta property="og:image" content="/img/0497.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>hey it&#x27;s Miles. apparently i never got logged out  — MEL MEL Magazine @WeAreMel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0497/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0497",
+      "headline": "hey it's Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on th",
+      "articleBody": "hey it's Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on their balls?\n11/11/22",
+      "image": "/img/0497.webp",
+      "author": {
+        "@type": "Person",
+        "name": "MEL MEL Magazine",
+        "alternateName": "WeAreMel"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0497.webp" class="img-fluid rounded" alt="hey it&#x27;s Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on their balls?
+11/11/22">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">MEL MEL Magazine</span> <span class="handle-text fs-6 d-block d-md-inline">@WeAreMel</span></h4>
+            <p>hey it&#x27;s Miles. apparently i never got logged out of this account. so, who else likes using a hair dryer on their balls?<br>11/11/22</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

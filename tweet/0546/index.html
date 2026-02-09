@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start crying like alittle bitch. This Twitter has m...">
+    <meta property="og:title" content="I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start  — Hulk Hogan @HulkHogan">
+    <meta property="og:image:alt" content="I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start crying like alittle bitch. This Twitter has me hooked
+8/24/10. Echofon">
+    <meta property="og:description" content="I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start crying like alittle bitch. This Twitter has me hooked
+8/24/10. Echofon">
+    <meta property="og:image" content="/img/0546.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start  — Hulk Hogan @HulkHogan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0546/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0546",
+      "headline": "I'm so tired if I don't go to bed I'm\ngonna start crying like alittle bitch. This Twitter has me hooked\n8/24/1",
+      "articleBody": "I'm so tired if I don't go to bed I'm\ngonna start crying like alittle bitch. This Twitter has me hooked\n8/24/10. Echofon",
+      "image": "/img/0546.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Hulk Hogan",
+        "alternateName": "HulkHogan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0546.webp" class="img-fluid rounded" alt="I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m
+gonna start crying like alittle bitch. This Twitter has me hooked
+8/24/10. Echofon">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Hulk Hogan</span> <span class="handle-text fs-6 d-block d-md-inline">@HulkHogan</span></h4>
+            <p>I&#x27;m so tired if I don&#x27;t go to bed I&#x27;m<br>gonna start crying like alittle bitch. This Twitter has me hooked<br>8/24/10. Echofon</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="babylon bee headline: &#x27;the lord of the
+rings just announced their newest character... a gay guy!&#x27;
+gu...">
+    <meta property="og:title" content="babylon bee headline: &#x27;the lord of the
+rings just  — nick ciarelli @nickciarelli">
+    <meta property="og:image:alt" content="babylon bee headline: &#x27;the lord of the
+rings just announced their newest character... a gay guy!&#x27;
+guy who&#x27;s profile picture is his golden retriever that died after he
+gave it tylenol: &#x27;funny thing is, this will probably happen&#x27;">
+    <meta property="og:description" content="babylon bee headline: &#x27;the lord of the
+rings just announced their newest character... a gay guy!&#x27;
+guy who&#x27;s profile picture is his golden retriever that died after he
+gave it tylenol: &#x27;funny thing is, this will probably happen&#x27;">
+    <meta property="og:image" content="/img/1895.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>babylon bee headline: &#x27;the lord of the
+rings just  — nick ciarelli @nickciarelli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1895/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1895",
+      "headline": "babylon bee headline: 'the lord of the\nrings just announced their newest character... a gay guy!'\nguy who's pr",
+      "articleBody": "babylon bee headline: 'the lord of the\nrings just announced their newest character... a gay guy!'\nguy who's profile picture is his golden retriever that died after he\ngave it tylenol: 'funny thing is, this will probably happen'",
+      "image": "/img/1895.webp",
+      "author": {
+        "@type": "Person",
+        "name": "nick ciarelli",
+        "alternateName": "nickciarelli"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1895.webp" class="img-fluid rounded" alt="babylon bee headline: &#x27;the lord of the
+rings just announced their newest character... a gay guy!&#x27;
+guy who&#x27;s profile picture is his golden retriever that died after he
+gave it tylenol: &#x27;funny thing is, this will probably happen&#x27;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">nick ciarelli</span> <span class="handle-text fs-6 d-block d-md-inline">@nickciarelli</span></h4>
+            <p>babylon bee headline: &#x27;the lord of the<br>rings just announced their newest character... a gay guy!&#x27;<br>guy who&#x27;s profile picture is his golden retriever that died after he<br>gave it tylenol: &#x27;funny thing is, this will probably happen&#x27;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

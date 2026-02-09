@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and
+miscellaneous.
+S...">
+    <meta property="og:title" content="FOUNDER OF HOGWARTS: okay, so we all know there ar — Carl Kinsella @TVsCarlKinsella">
+    <meta property="og:image:alt" content="FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and
+miscellaneous.
+SCHOOL BOARD: yes, continue.">
+    <meta property="og:description" content="FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and
+miscellaneous.
+SCHOOL BOARD: yes, continue.">
+    <meta property="og:image" content="/img/1142.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>FOUNDER OF HOGWARTS: okay, so we all know there ar — Carl Kinsella @TVsCarlKinsella</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1142/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1142",
+      "headline": "FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and\nmiscellaneous.\nS",
+      "articleBody": "FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and\nmiscellaneous.\nSCHOOL BOARD: yes, continue.",
+      "image": "/img/1142.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Carl Kinsella",
+        "alternateName": "TVsCarlKinsella"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1142.webp" class="img-fluid rounded" alt="FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and
+miscellaneous.
+SCHOOL BOARD: yes, continue.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Carl Kinsella</span> <span class="handle-text fs-6 d-block d-md-inline">@TVsCarlKinsella</span></h4>
+            <p>FOUNDER OF HOGWARTS: okay, so we all know there are four types of kid. brave, smart, evil and<br>miscellaneous.<br>SCHOOL BOARD: yes, continue.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

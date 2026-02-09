@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bu...">
+    <meta property="og:title" content="(picture of George W. Bush holding a baby dressed  — Bakoon @">
+    <meta property="og:image:alt" content="(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bush. You fucker. How many babies are still up there">
+    <meta property="og:description" content="(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bush. You fucker. How many babies are still up there">
+    <meta property="og:image" content="/img/2342.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>(picture of George W. Bush holding a baby dressed  — Bakoon @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2342/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2342",
+      "headline": "(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bu",
+      "articleBody": "(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bush. You fucker. How many babies are still up there",
+      "image": "/img/2342.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Bakoon",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2342.webp" class="img-fluid rounded" alt="(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bush. You fucker. How many babies are still up there">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Bakoon</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>(picture of George W. Bush holding a baby dressed like an astronaut) how many babies did you send to space, bush. You fucker. How many babies are still up there</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

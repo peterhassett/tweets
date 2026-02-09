@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Following
+Just once I want to see &quot;Soooo many animals harmed in the making of this movie. Like, SO many. ...">
+    <meta property="og:title" content="Following
+Just once I want to see &quot;Soooo many anim — shelby fero @shelbyfero">
+    <meta property="og:image:alt" content="Following
+Just once I want to see &quot;Soooo many animals harmed in the making of this movie. Like, SO many. An insane amount. Too many, probably.&quot;">
+    <meta property="og:description" content="Following
+Just once I want to see &quot;Soooo many animals harmed in the making of this movie. Like, SO many. An insane amount. Too many, probably.&quot;">
+    <meta property="og:image" content="/img/0089.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Following
+Just once I want to see &quot;Soooo many anim — shelby fero @shelbyfero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0089/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0089",
+      "headline": "Following\nJust once I want to see \"Soooo many animals harmed in the making of this movie. Like, SO many. An in",
+      "articleBody": "Following\nJust once I want to see \"Soooo many animals harmed in the making of this movie. Like, SO many. An insane amount. Too many, probably.\"",
+      "image": "/img/0089.webp",
+      "author": {
+        "@type": "Person",
+        "name": "shelby fero",
+        "alternateName": "shelbyfero"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0089.webp" class="img-fluid rounded" alt="Following
+Just once I want to see &quot;Soooo many animals harmed in the making of this movie. Like, SO many. An insane amount. Too many, probably.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">shelby fero</span> <span class="handle-text fs-6 d-block d-md-inline">@shelbyfero</span></h4>
+            <p>Following<br>Just once I want to see &quot;Soooo many animals harmed in the making of this movie. Like, SO many. An insane amount. Too many, probably.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

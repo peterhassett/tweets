@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="dreamed I went to see a movie
+based on the Iliad and when the ocean appeared in the first shot, the audience w...">
+    <meta property="og:title" content="dreamed I went to see a movie
+based on the Iliad a — Jared Pechacek @vandroidhelsing">
+    <meta property="og:image:alt" content="dreamed I went to see a movie
+based on the Iliad and when the ocean appeared in the first shot, the audience went absolutely wild shouting THE WINE DARK SEA! THE WINE DARK SEA!">
+    <meta property="og:description" content="dreamed I went to see a movie
+based on the Iliad and when the ocean appeared in the first shot, the audience went absolutely wild shouting THE WINE DARK SEA! THE WINE DARK SEA!">
+    <meta property="og:image" content="/img/0224.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>dreamed I went to see a movie
+based on the Iliad a — Jared Pechacek @vandroidhelsing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0224/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0224",
+      "headline": "dreamed I went to see a movie\nbased on the Iliad and when the ocean appeared in the first shot, the audience w",
+      "articleBody": "dreamed I went to see a movie\nbased on the Iliad and when the ocean appeared in the first shot, the audience went absolutely wild shouting THE WINE DARK SEA! THE WINE DARK SEA!",
+      "image": "/img/0224.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jared Pechacek",
+        "alternateName": "vandroidhelsing"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0224.webp" class="img-fluid rounded" alt="dreamed I went to see a movie
+based on the Iliad and when the ocean appeared in the first shot, the audience went absolutely wild shouting THE WINE DARK SEA! THE WINE DARK SEA!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jared Pechacek</span> <span class="handle-text fs-6 d-block d-md-inline">@vandroidhelsing</span></h4>
+            <p>dreamed I went to see a movie<br>based on the Iliad and when the ocean appeared in the first shot, the audience went absolutely wild shouting THE WINE DARK SEA! THE WINE DARK SEA!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

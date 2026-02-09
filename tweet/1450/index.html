@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". Sep 11 Has anyone done a cartoon yet where it&#x27;s vaccine 9/11 and the planes are syringes and the towers...">
+    <meta property="og:title" content=". Sep 11 Has anyone done a cartoon yet where it&#x27;s  — taking a nice walk @InternetHippo">
+    <meta property="og:image:alt" content=". Sep 11 Has anyone done a cartoon yet where it&#x27;s vaccine 9/11 and the planes are syringes and the towers are arms
+10:00 AM Sep 11, 2021
+
+‎بلداجي Justin Boldaji
+@justinboldaji
+
+(Crying emoji, heart emoji)
+
+(A drawing by Justin of syringe planes hitting a WTC with arms for towers. In the bottom right, a tombstone that says “here lies liberty”)">
+    <meta property="og:description" content=". Sep 11 Has anyone done a cartoon yet where it&#x27;s vaccine 9/11 and the planes are syringes and the towers are arms
+10:00 AM Sep 11, 2021
+
+‎بلداجي Justin Boldaji
+@justinboldaji
+
+(Crying emoji, heart emoji)
+
+(A drawing by Justin of syringe planes hitting a WTC with arms for towers. In the bottom right, a tombstone that says “here lies liberty”)">
+    <meta property="og:image" content="/img/1450.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. Sep 11 Has anyone done a cartoon yet where it&#x27;s  — taking a nice walk @InternetHippo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1450/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1450",
+      "headline": ". Sep 11 Has anyone done a cartoon yet where it's vaccine 9/11 and the planes are syringes and the towers are ",
+      "articleBody": ". Sep 11 Has anyone done a cartoon yet where it's vaccine 9/11 and the planes are syringes and the towers are arms\n10:00 AM Sep 11, 2021\n\n\u200e\u0628\u0644\u062f\u0627\u062c\u064a Justin Boldaji\n@justinboldaji\n\n(Crying emoji, heart emoji)\n\n(A drawing by Justin of syringe planes hitting a WTC with arms for towers. In the bottom right, a tombstone that says \u201chere lies liberty\u201d)",
+      "image": "/img/1450.webp",
+      "author": {
+        "@type": "Person",
+        "name": "taking a nice walk",
+        "alternateName": "InternetHippo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1450.webp" class="img-fluid rounded" alt=". Sep 11 Has anyone done a cartoon yet where it&#x27;s vaccine 9/11 and the planes are syringes and the towers are arms
+10:00 AM Sep 11, 2021
+
+‎بلداجي Justin Boldaji
+@justinboldaji
+
+(Crying emoji, heart emoji)
+
+(A drawing by Justin of syringe planes hitting a WTC with arms for towers. In the bottom right, a tombstone that says “here lies liberty”)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">taking a nice walk</span> <span class="handle-text fs-6 d-block d-md-inline">@InternetHippo</span></h4>
+            <p>. Sep 11 Has anyone done a cartoon yet where it&#x27;s vaccine 9/11 and the planes are syringes and the towers are arms<br>10:00 AM Sep 11, 2021<br><br>‎بلداجي Justin Boldaji<br>@justinboldaji<br><br>(Crying emoji, heart emoji)<br><br>(A drawing by Justin of syringe planes hitting a WTC with arms for towers. In the bottom right, a tombstone that says “here lies liberty”)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

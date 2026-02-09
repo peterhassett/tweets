@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Comics 3h
+Archie Please stop writing &quot;Archie is a simp&quot; in
+the comments of our YouTube videos.
+You w...">
+    <meta property="og:title" content="Comics 3h
+Archie Please stop writing &quot;Archie is a  — Archie Comics @Archie">
+    <meta property="og:image:alt" content="Comics 3h
+Archie Please stop writing &quot;Archie is a simp&quot; in
+the comments of our YouTube videos.
+You will receive a permanent ban from our channel. Thank you.
+
+
+Keith Campbell @keithrcampbell. 3h This you?
+
+(Archie comic) 
+
+Archie: I&#x27;M A WEAKLING. A COWARD A SPINELESS
+SIMP!
+
+
+Archie Comics @Archie Comics. 3h
+delete this">
+    <meta property="og:description" content="Comics 3h
+Archie Please stop writing &quot;Archie is a simp&quot; in
+the comments of our YouTube videos.
+You will receive a permanent ban from our channel. Thank you.
+
+
+Keith Campbell @keithrcampbell. 3h This you?
+
+(Archie comic) 
+
+Archie: I&#x27;M A WEAKLING. A COWARD A SPINELESS
+SIMP!
+
+
+Archie Comics @Archie Comics. 3h
+delete this">
+    <meta property="og:image" content="/img/2015.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Comics 3h
+Archie Please stop writing &quot;Archie is a  — Archie Comics @Archie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2015/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2015",
+      "headline": "Comics 3h\nArchie Please stop writing \"Archie is a simp\" in\nthe comments of our YouTube videos.\nYou will receiv",
+      "articleBody": "Comics 3h\nArchie Please stop writing \"Archie is a simp\" in\nthe comments of our YouTube videos.\nYou will receive a permanent ban from our channel. Thank you.\n\n\nKeith Campbell @keithrcampbell. 3h This you?\n\n(Archie comic) \n\nArchie: I'M A WEAKLING. A COWARD A SPINELESS\nSIMP!\n\n\nArchie Comics @Archie Comics. 3h\ndelete this",
+      "image": "/img/2015.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Archie Comics",
+        "alternateName": "Archie"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2015.webp" class="img-fluid rounded" alt="Comics 3h
+Archie Please stop writing &quot;Archie is a simp&quot; in
+the comments of our YouTube videos.
+You will receive a permanent ban from our channel. Thank you.
+
+
+Keith Campbell @keithrcampbell. 3h This you?
+
+(Archie comic) 
+
+Archie: I&#x27;M A WEAKLING. A COWARD A SPINELESS
+SIMP!
+
+
+Archie Comics @Archie Comics. 3h
+delete this">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Archie Comics</span> <span class="handle-text fs-6 d-block d-md-inline">@Archie</span></h4>
+            <p>Comics 3h<br>Archie Please stop writing &quot;Archie is a simp&quot; in<br>the comments of our YouTube videos.<br>You will receive a permanent ban from our channel. Thank you.<br><br><br>Keith Campbell @keithrcampbell. 3h This you?<br><br>(Archie comic) <br><br>Archie: I&#x27;M A WEAKLING. A COWARD A SPINELESS<br>SIMP!<br><br><br>Archie Comics @Archie Comics. 3h<br>delete this</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

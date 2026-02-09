@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="(training someone at work)
+Me: you gotta clock out here when you&#x27;re done Guy: uh huh
+Me: (pointing to a r...">
+    <meta property="og:title" content="(training someone at work)
+Me: you gotta clock out — Tito Worldwide @TitoMahalo">
+    <meta property="og:image:alt" content="(training someone at work)
+Me: you gotta clock out here when you&#x27;re done Guy: uh huh
+Me: (pointing to a red barrel) don&#x27;t shoot those they&#x27;re explosive. they&#x27;re all over the place for some reason">
+    <meta property="og:description" content="(training someone at work)
+Me: you gotta clock out here when you&#x27;re done Guy: uh huh
+Me: (pointing to a red barrel) don&#x27;t shoot those they&#x27;re explosive. they&#x27;re all over the place for some reason">
+    <meta property="og:image" content="/img/0379.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>(training someone at work)
+Me: you gotta clock out — Tito Worldwide @TitoMahalo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0379/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0379",
+      "headline": "(training someone at work)\nMe: you gotta clock out here when you're done Guy: uh huh\nMe: (pointing to a red ba",
+      "articleBody": "(training someone at work)\nMe: you gotta clock out here when you're done Guy: uh huh\nMe: (pointing to a red barrel) don't shoot those they're explosive. they're all over the place for some reason",
+      "image": "/img/0379.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Tito Worldwide",
+        "alternateName": "TitoMahalo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0379.webp" class="img-fluid rounded" alt="(training someone at work)
+Me: you gotta clock out here when you&#x27;re done Guy: uh huh
+Me: (pointing to a red barrel) don&#x27;t shoot those they&#x27;re explosive. they&#x27;re all over the place for some reason">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Tito Worldwide</span> <span class="handle-text fs-6 d-block d-md-inline">@TitoMahalo</span></h4>
+            <p>(training someone at work)<br>Me: you gotta clock out here when you&#x27;re done Guy: uh huh<br>Me: (pointing to a red barrel) don&#x27;t shoot those they&#x27;re explosive. they&#x27;re all over the place for some reason</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

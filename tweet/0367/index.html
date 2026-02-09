@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Steve Balls, American A24 director: I&#x27;m really influenced by international cinema. My favourite film is t...">
+    <meta property="og:title" content="Steve Balls, American A24 director: I&#x27;m really inf — J.R. @CorgiHell">
+    <meta property="og:image:alt" content="Steve Balls, American A24 director: I&#x27;m really influenced by international cinema. My favourite film is the lost &quot;Portrait d&#x27;un clown triste en temps de guerre&quot;
+Palme D&#x27;Or winning French director Jacques LePerve, smoking racist cigarette: Ah... j&#x27;aime le film &quot;Hubie Halloween&quot;">
+    <meta property="og:description" content="Steve Balls, American A24 director: I&#x27;m really influenced by international cinema. My favourite film is the lost &quot;Portrait d&#x27;un clown triste en temps de guerre&quot;
+Palme D&#x27;Or winning French director Jacques LePerve, smoking racist cigarette: Ah... j&#x27;aime le film &quot;Hubie Halloween&quot;">
+    <meta property="og:image" content="/img/0367.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Steve Balls, American A24 director: I&#x27;m really inf — J.R. @CorgiHell</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0367/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0367",
+      "headline": "Steve Balls, American A24 director: I'm really influenced by international cinema. My favourite film is the lo",
+      "articleBody": "Steve Balls, American A24 director: I'm really influenced by international cinema. My favourite film is the lost \"Portrait d'un clown triste en temps de guerre\"\nPalme D'Or winning French director Jacques LePerve, smoking racist cigarette: Ah... j'aime le film \"Hubie Halloween\"",
+      "image": "/img/0367.webp",
+      "author": {
+        "@type": "Person",
+        "name": "J.R.",
+        "alternateName": "CorgiHell"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0367.webp" class="img-fluid rounded" alt="Steve Balls, American A24 director: I&#x27;m really influenced by international cinema. My favourite film is the lost &quot;Portrait d&#x27;un clown triste en temps de guerre&quot;
+Palme D&#x27;Or winning French director Jacques LePerve, smoking racist cigarette: Ah... j&#x27;aime le film &quot;Hubie Halloween&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">J.R.</span> <span class="handle-text fs-6 d-block d-md-inline">@CorgiHell</span></h4>
+            <p>Steve Balls, American A24 director: I&#x27;m really influenced by international cinema. My favourite film is the lost &quot;Portrait d&#x27;un clown triste en temps de guerre&quot;<br>Palme D&#x27;Or winning French director Jacques LePerve, smoking racist cigarette: Ah... j&#x27;aime le film &quot;Hubie Halloween&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

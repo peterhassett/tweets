@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I tip 50% on terrible service because I think it&#x27;s cool to hate your job and
+suck at it.">
+    <meta property="og:title" content="I tip 50% on terrible service because I think it&#x27;s — marla cruz @prolepeach">
+    <meta property="og:image:alt" content="I tip 50% on terrible service because I think it&#x27;s cool to hate your job and
+suck at it.">
+    <meta property="og:description" content="I tip 50% on terrible service because I think it&#x27;s cool to hate your job and
+suck at it.">
+    <meta property="og:image" content="/img/0926.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I tip 50% on terrible service because I think it&#x27;s — marla cruz @prolepeach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0926/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0926",
+      "headline": "I tip 50% on terrible service because I think it's cool to hate your job and\nsuck at it.",
+      "articleBody": "I tip 50% on terrible service because I think it's cool to hate your job and\nsuck at it.",
+      "image": "/img/0926.webp",
+      "author": {
+        "@type": "Person",
+        "name": "marla cruz",
+        "alternateName": "prolepeach"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0926.webp" class="img-fluid rounded" alt="I tip 50% on terrible service because I think it&#x27;s cool to hate your job and
+suck at it.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">marla cruz</span> <span class="handle-text fs-6 d-block d-md-inline">@prolepeach</span></h4>
+            <p>I tip 50% on terrible service because I think it&#x27;s cool to hate your job and<br>suck at it.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="sometimes I think I could never write a movie and then I remember that one of the guys in Predator’s whole thi...">
+    <meta property="og:title" content="sometimes I think I could never write a movie and  — Chasemit @">
+    <meta property="og:image:alt" content="sometimes I think I could never write a movie and then I remember that one of the guys in Predator’s whole thing is that he’s always shaving">
+    <meta property="og:description" content="sometimes I think I could never write a movie and then I remember that one of the guys in Predator’s whole thing is that he’s always shaving">
+    <meta property="og:image" content="/img/2307.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>sometimes I think I could never write a movie and  — Chasemit @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2307/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2307",
+      "headline": "sometimes I think I could never write a movie and then I remember that one of the guys in Predator\u2019s whole thi",
+      "articleBody": "sometimes I think I could never write a movie and then I remember that one of the guys in Predator\u2019s whole thing is that he\u2019s always shaving",
+      "image": "/img/2307.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Chasemit",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2307.webp" class="img-fluid rounded" alt="sometimes I think I could never write a movie and then I remember that one of the guys in Predator’s whole thing is that he’s always shaving">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Chasemit</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>sometimes I think I could never write a movie and then I remember that one of the guys in Predator’s whole thing is that he’s always shaving</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

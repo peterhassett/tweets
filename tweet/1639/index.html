@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Shout out to the top 5 fives in the
+world, gimme, high, Nine to, Slaughterhouse and Mambo
+number.">
+    <meta property="og:title" content="Shout out to the top 5 fives in the
+world, gimme,  — George Wallace @MrGeorgeWallace">
+    <meta property="og:image:alt" content="Shout out to the top 5 fives in the
+world, gimme, high, Nine to, Slaughterhouse and Mambo
+number.">
+    <meta property="og:description" content="Shout out to the top 5 fives in the
+world, gimme, high, Nine to, Slaughterhouse and Mambo
+number.">
+    <meta property="og:image" content="/img/1639.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Shout out to the top 5 fives in the
+world, gimme,  — George Wallace @MrGeorgeWallace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1639/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1639",
+      "headline": "Shout out to the top 5 fives in the\nworld, gimme, high, Nine to, Slaughterhouse and Mambo\nnumber.",
+      "articleBody": "Shout out to the top 5 fives in the\nworld, gimme, high, Nine to, Slaughterhouse and Mambo\nnumber.",
+      "image": "/img/1639.webp",
+      "author": {
+        "@type": "Person",
+        "name": "George Wallace",
+        "alternateName": "MrGeorgeWallace"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1639.webp" class="img-fluid rounded" alt="Shout out to the top 5 fives in the
+world, gimme, high, Nine to, Slaughterhouse and Mambo
+number.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">George Wallace</span> <span class="handle-text fs-6 d-block d-md-inline">@MrGeorgeWallace</span></h4>
+            <p>Shout out to the top 5 fives in the<br>world, gimme, high, Nine to, Slaughterhouse and Mambo<br>number.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

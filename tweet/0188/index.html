@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="i can&#x27;t wait to take my kid to a baseball game &quot;daddy what&#x27;s going on&quot; shut the fuck up im...">
+    <meta property="og:title" content="i can&#x27;t wait to take my kid to a baseball game &quot;da — andy @andymoney69">
+    <meta property="og:image:alt" content="i can&#x27;t wait to take my kid to a baseball game &quot;daddy what&#x27;s going on&quot; shut the fuck up im calculating win probability jesus christ">
+    <meta property="og:description" content="i can&#x27;t wait to take my kid to a baseball game &quot;daddy what&#x27;s going on&quot; shut the fuck up im calculating win probability jesus christ">
+    <meta property="og:image" content="/img/0188.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>i can&#x27;t wait to take my kid to a baseball game &quot;da — andy @andymoney69</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0188/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0188",
+      "headline": "i can't wait to take my kid to a baseball game \"daddy what's going on\" shut the fuck up im calculating win pro",
+      "articleBody": "i can't wait to take my kid to a baseball game \"daddy what's going on\" shut the fuck up im calculating win probability jesus christ",
+      "image": "/img/0188.webp",
+      "author": {
+        "@type": "Person",
+        "name": "andy",
+        "alternateName": "andymoney69"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0188.webp" class="img-fluid rounded" alt="i can&#x27;t wait to take my kid to a baseball game &quot;daddy what&#x27;s going on&quot; shut the fuck up im calculating win probability jesus christ">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">andy</span> <span class="handle-text fs-6 d-block d-md-inline">@andymoney69</span></h4>
+            <p>i can&#x27;t wait to take my kid to a baseball game &quot;daddy what&#x27;s going on&quot; shut the fuck up im calculating win probability jesus christ</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

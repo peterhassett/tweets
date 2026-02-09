@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I’m fingering your wife’s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls m...">
+    <meta property="og:title" content="I’m fingering your wife’s pussy you idiot. She lov — Bakoon @">
+    <meta property="og:image:alt" content="I’m fingering your wife’s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls me dad
+
+(Picture of smiling Nixon with caption “president Nixon talks to the astronauts on the moon”)">
+    <meta property="og:description" content="I’m fingering your wife’s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls me dad
+
+(Picture of smiling Nixon with caption “president Nixon talks to the astronauts on the moon”)">
+    <meta property="og:image" content="/img/2291.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I’m fingering your wife’s pussy you idiot. She lov — Bakoon @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2291/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2291",
+      "headline": "I\u2019m fingering your wife\u2019s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls m",
+      "articleBody": "I\u2019m fingering your wife\u2019s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls me dad\n\n(Picture of smiling Nixon with caption \u201cpresident Nixon talks to the astronauts on the moon\u201d)",
+      "image": "/img/2291.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Bakoon",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2291.webp" class="img-fluid rounded" alt="I’m fingering your wife’s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls me dad
+
+(Picture of smiling Nixon with caption “president Nixon talks to the astronauts on the moon”)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Bakoon</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>I’m fingering your wife’s pussy you idiot. She loves it, says not to come back from the Moon. Your son calls me dad<br><br>(Picture of smiling Nixon with caption “president Nixon talks to the astronauts on the moon”)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

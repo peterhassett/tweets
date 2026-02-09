@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="i just found out croque monsieur just means &quot;mister crunchy.&quot; i don&#x27;t know what i thought it me...">
+    <meta property="og:title" content="i just found out croque monsieur just means &quot;miste — molly conger @socialistdogmom">
+    <meta property="og:image:alt" content="i just found out croque monsieur just means &quot;mister crunchy.&quot; i don&#x27;t know what i thought it meant but french people ordering a mr crunchy is just too fucking funny to me.">
+    <meta property="og:description" content="i just found out croque monsieur just means &quot;mister crunchy.&quot; i don&#x27;t know what i thought it meant but french people ordering a mr crunchy is just too fucking funny to me.">
+    <meta property="og:image" content="/img/1144.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>i just found out croque monsieur just means &quot;miste — molly conger @socialistdogmom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1144/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1144",
+      "headline": "i just found out croque monsieur just means \"mister crunchy.\" i don't know what i thought it meant but french ",
+      "articleBody": "i just found out croque monsieur just means \"mister crunchy.\" i don't know what i thought it meant but french people ordering a mr crunchy is just too fucking funny to me.",
+      "image": "/img/1144.webp",
+      "author": {
+        "@type": "Person",
+        "name": "molly conger",
+        "alternateName": "socialistdogmom"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1144.webp" class="img-fluid rounded" alt="i just found out croque monsieur just means &quot;mister crunchy.&quot; i don&#x27;t know what i thought it meant but french people ordering a mr crunchy is just too fucking funny to me.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">molly conger</span> <span class="handle-text fs-6 d-block d-md-inline">@socialistdogmom</span></h4>
+            <p>i just found out croque monsieur just means &quot;mister crunchy.&quot; i don&#x27;t know what i thought it meant but french people ordering a mr crunchy is just too fucking funny to me.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

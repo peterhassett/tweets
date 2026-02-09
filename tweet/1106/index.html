@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Horror is when there&#x27;s a big spider.
+Gothic horror is when it emerges
+from a teacup">
+    <meta property="og:title" content="Horror is when there&#x27;s a big spider.
+Gothic horror — literary agent needing jerk @rajandelman">
+    <meta property="og:image:alt" content="Horror is when there&#x27;s a big spider.
+Gothic horror is when it emerges
+from a teacup">
+    <meta property="og:description" content="Horror is when there&#x27;s a big spider.
+Gothic horror is when it emerges
+from a teacup">
+    <meta property="og:image" content="/img/1106.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Horror is when there&#x27;s a big spider.
+Gothic horror — literary agent needing jerk @rajandelman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1106/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1106",
+      "headline": "Horror is when there's a big spider.\nGothic horror is when it emerges\nfrom a teacup",
+      "articleBody": "Horror is when there's a big spider.\nGothic horror is when it emerges\nfrom a teacup",
+      "image": "/img/1106.webp",
+      "author": {
+        "@type": "Person",
+        "name": "literary agent needing jerk",
+        "alternateName": "rajandelman"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1106.webp" class="img-fluid rounded" alt="Horror is when there&#x27;s a big spider.
+Gothic horror is when it emerges
+from a teacup">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">literary agent needing jerk</span> <span class="handle-text fs-6 d-block d-md-inline">@rajandelman</span></h4>
+            <p>Horror is when there&#x27;s a big spider.<br>Gothic horror is when it emerges<br>from a teacup</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

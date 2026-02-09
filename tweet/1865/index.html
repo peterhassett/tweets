@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpic...">
+    <meta property="og:title" content="Large boulder the size of a small boulder is compl — San Miguel Sheriff @Sherif....1/27/20">
+    <meta property="og:image:alt" content="Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpick Rd. Please use caution and watch for
+emergency vehicles in the area.
+
+
+(Photo of a large boulder the size of a small boulder)">
+    <meta property="og:description" content="Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpick Rd. Please use caution and watch for
+emergency vehicles in the area.
+
+
+(Photo of a large boulder the size of a small boulder)">
+    <meta property="og:image" content="/img/1865.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Large boulder the size of a small boulder is compl — San Miguel Sheriff @Sherif....1/27/20</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1865/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1865",
+      "headline": "Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpic",
+      "articleBody": "Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpick Rd. Please use caution and watch for\nemergency vehicles in the area.\n\n\n(Photo of a large boulder the size of a small boulder)",
+      "image": "/img/1865.webp",
+      "author": {
+        "@type": "Person",
+        "name": "San Miguel Sheriff",
+        "alternateName": "Sherif....1/27/20"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1865.webp" class="img-fluid rounded" alt="Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpick Rd. Please use caution and watch for
+emergency vehicles in the area.
+
+
+(Photo of a large boulder the size of a small boulder)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">San Miguel Sheriff</span> <span class="handle-text fs-6 d-block d-md-inline">@Sherif....1/27/20</span></h4>
+            <p>Large boulder the size of a small boulder is completely blocking east-bound lane Highway 145 mm78 at Silverpick Rd. Please use caution and watch for<br>emergency vehicles in the area.<br><br><br>(Photo of a large boulder the size of a small boulder)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

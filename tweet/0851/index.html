@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="if the hardcore bands guitarist looks
+like this you are about to die in that pit
+
+(Photo of Tobey Maguire as P...">
+    <meta property="og:title" content="if the hardcore bands guitarist looks
+like this yo — Homie @Proud_Shooter">
+    <meta property="og:image:alt" content="if the hardcore bands guitarist looks
+like this you are about to die in that pit
+
+(Photo of Tobey Maguire as Peter Parker)">
+    <meta property="og:description" content="if the hardcore bands guitarist looks
+like this you are about to die in that pit
+
+(Photo of Tobey Maguire as Peter Parker)">
+    <meta property="og:image" content="/img/0851.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>if the hardcore bands guitarist looks
+like this yo — Homie @Proud_Shooter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0851/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0851",
+      "headline": "if the hardcore bands guitarist looks\nlike this you are about to die in that pit\n\n(Photo of Tobey Maguire as P",
+      "articleBody": "if the hardcore bands guitarist looks\nlike this you are about to die in that pit\n\n(Photo of Tobey Maguire as Peter Parker)",
+      "image": "/img/0851.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Homie",
+        "alternateName": "Proud_Shooter"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0851.webp" class="img-fluid rounded" alt="if the hardcore bands guitarist looks
+like this you are about to die in that pit
+
+(Photo of Tobey Maguire as Peter Parker)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Homie</span> <span class="handle-text fs-6 d-block d-md-inline">@Proud_Shooter</span></h4>
+            <p>if the hardcore bands guitarist looks<br>like this you are about to die in that pit<br><br>(Photo of Tobey Maguire as Peter Parker)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

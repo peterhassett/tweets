@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I showed dad my BE GAY DO CRIME shirt and he didn&#x27;t get it and so I explained it to him and he still didn...">
+    <meta property="og:title" content="I showed dad my BE GAY DO CRIME shirt and he didn&#x27; — Ryan North @ryanqnorth">
+    <meta property="og:image:alt" content="I showed dad my BE GAY DO CRIME shirt and he didn&#x27;t get it and so I explained it to him and he still didn&#x27;t get it and I said the equivalent would be him wearing a BE STRAIGHT OBEY THE COPS shirt and now he wants one that says that">
+    <meta property="og:description" content="I showed dad my BE GAY DO CRIME shirt and he didn&#x27;t get it and so I explained it to him and he still didn&#x27;t get it and I said the equivalent would be him wearing a BE STRAIGHT OBEY THE COPS shirt and now he wants one that says that">
+    <meta property="og:image" content="/img/1541.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I showed dad my BE GAY DO CRIME shirt and he didn&#x27; — Ryan North @ryanqnorth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1541/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1541",
+      "headline": "I showed dad my BE GAY DO CRIME shirt and he didn't get it and so I explained it to him and he still didn't ge",
+      "articleBody": "I showed dad my BE GAY DO CRIME shirt and he didn't get it and so I explained it to him and he still didn't get it and I said the equivalent would be him wearing a BE STRAIGHT OBEY THE COPS shirt and now he wants one that says that",
+      "image": "/img/1541.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ryan North",
+        "alternateName": "ryanqnorth"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1541.webp" class="img-fluid rounded" alt="I showed dad my BE GAY DO CRIME shirt and he didn&#x27;t get it and so I explained it to him and he still didn&#x27;t get it and I said the equivalent would be him wearing a BE STRAIGHT OBEY THE COPS shirt and now he wants one that says that">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ryan North</span> <span class="handle-text fs-6 d-block d-md-inline">@ryanqnorth</span></h4>
+            <p>I showed dad my BE GAY DO CRIME shirt and he didn&#x27;t get it and so I explained it to him and he still didn&#x27;t get it and I said the equivalent would be him wearing a BE STRAIGHT OBEY THE COPS shirt and now he wants one that says that</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

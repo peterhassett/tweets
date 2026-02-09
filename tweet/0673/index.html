@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@maggotmagick
+Psycho 1960
+- Stinky UGLY black and white
+. Directed by some boring ass fat British dude
+- Antho...">
+    <meta property="og:title" content="@maggotmagick
+Psycho 1960
+- Stinky UGLY black and  —  @maggotmagick">
+    <meta property="og:image:alt" content="@maggotmagick
+Psycho 1960
+- Stinky UGLY black and white
+. Directed by some boring ass fat British dude
+- Anthony Perkins? WHO?
+Psycho 1998
+- BEAUTIFUL COLOR PHOTOGRAPHY
+- Directed by a GAY AMERICAN
+- Vince Vaughn!">
+    <meta property="og:description" content="@maggotmagick
+Psycho 1960
+- Stinky UGLY black and white
+. Directed by some boring ass fat British dude
+- Anthony Perkins? WHO?
+Psycho 1998
+- BEAUTIFUL COLOR PHOTOGRAPHY
+- Directed by a GAY AMERICAN
+- Vince Vaughn!">
+    <meta property="og:image" content="/img/0673.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@maggotmagick
+Psycho 1960
+- Stinky UGLY black and  —  @maggotmagick</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0673/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0673",
+      "headline": "@maggotmagick\nPsycho 1960\n- Stinky UGLY black and white\n. Directed by some boring ass fat British dude\n- Antho",
+      "articleBody": "@maggotmagick\nPsycho 1960\n- Stinky UGLY black and white\n. Directed by some boring ass fat British dude\n- Anthony Perkins? WHO?\nPsycho 1998\n- BEAUTIFUL COLOR PHOTOGRAPHY\n- Directed by a GAY AMERICAN\n- Vince Vaughn!",
+      "image": "/img/0673.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "maggotmagick"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0673.webp" class="img-fluid rounded" alt="@maggotmagick
+Psycho 1960
+- Stinky UGLY black and white
+. Directed by some boring ass fat British dude
+- Anthony Perkins? WHO?
+Psycho 1998
+- BEAUTIFUL COLOR PHOTOGRAPHY
+- Directed by a GAY AMERICAN
+- Vince Vaughn!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@maggotmagick</span></h4>
+            <p>@maggotmagick<br>Psycho 1960<br>- Stinky UGLY black and white<br>. Directed by some boring ass fat British dude<br>- Anthony Perkins? WHO?<br>Psycho 1998<br>- BEAUTIFUL COLOR PHOTOGRAPHY<br>- Directed by a GAY AMERICAN<br>- Vince Vaughn!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="me: any historical figure?
+wizard: that&#x27;s right
+[later at dinner]
+Beethoven: you seem disappointed me: *h...">
+    <meta property="og:title" content="me: any historical figure?
+wizard: that&#x27;s right
+[l — dan mentos @DanMentos">
+    <meta property="og:image:alt" content="me: any historical figure?
+wizard: that&#x27;s right
+[later at dinner]
+Beethoven: you seem disappointed me: *hiding dog treats* it&#x27;s fine">
+    <meta property="og:description" content="me: any historical figure?
+wizard: that&#x27;s right
+[later at dinner]
+Beethoven: you seem disappointed me: *hiding dog treats* it&#x27;s fine">
+    <meta property="og:image" content="/img/2092.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>me: any historical figure?
+wizard: that&#x27;s right
+[l — dan mentos @DanMentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2092/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2092",
+      "headline": "me: any historical figure?\nwizard: that's right\n[later at dinner]\nBeethoven: you seem disappointed me: *hiding",
+      "articleBody": "me: any historical figure?\nwizard: that's right\n[later at dinner]\nBeethoven: you seem disappointed me: *hiding dog treats* it's fine",
+      "image": "/img/2092.webp",
+      "author": {
+        "@type": "Person",
+        "name": "dan mentos",
+        "alternateName": "DanMentos"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2092.webp" class="img-fluid rounded" alt="me: any historical figure?
+wizard: that&#x27;s right
+[later at dinner]
+Beethoven: you seem disappointed me: *hiding dog treats* it&#x27;s fine">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">dan mentos</span> <span class="handle-text fs-6 d-block d-md-inline">@DanMentos</span></h4>
+            <p>me: any historical figure?<br>wizard: that&#x27;s right<br>[later at dinner]<br>Beethoven: you seem disappointed me: *hiding dog treats* it&#x27;s fine</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

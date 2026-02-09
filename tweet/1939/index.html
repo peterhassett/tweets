@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="If you want to know what it&#x27;s like to be in your 30s, I just ordered an orange soda with my lunch and sai...">
+    <meta property="og:title" content="If you want to know what it&#x27;s like to be in your 3 — SovCit, Esq. @CORPORATE_NAME">
+    <meta property="og:image:alt" content="If you want to know what it&#x27;s like to be in your 30s, I just ordered an orange soda with my lunch and said &quot;that&#x27;ll be a nice
+little treat&quot; out loud.">
+    <meta property="og:description" content="If you want to know what it&#x27;s like to be in your 30s, I just ordered an orange soda with my lunch and said &quot;that&#x27;ll be a nice
+little treat&quot; out loud.">
+    <meta property="og:image" content="/img/1939.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>If you want to know what it&#x27;s like to be in your 3 — SovCit, Esq. @CORPORATE_NAME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1939/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1939",
+      "headline": "If you want to know what it's like to be in your 30s, I just ordered an orange soda with my lunch and said \"th",
+      "articleBody": "If you want to know what it's like to be in your 30s, I just ordered an orange soda with my lunch and said \"that'll be a nice\nlittle treat\" out loud.",
+      "image": "/img/1939.webp",
+      "author": {
+        "@type": "Person",
+        "name": "SovCit, Esq.",
+        "alternateName": "CORPORATE_NAME"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1939.webp" class="img-fluid rounded" alt="If you want to know what it&#x27;s like to be in your 30s, I just ordered an orange soda with my lunch and said &quot;that&#x27;ll be a nice
+little treat&quot; out loud.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">SovCit, Esq.</span> <span class="handle-text fs-6 d-block d-md-inline">@CORPORATE_NAME</span></h4>
+            <p>If you want to know what it&#x27;s like to be in your 30s, I just ordered an orange soda with my lunch and said &quot;that&#x27;ll be a nice<br>little treat&quot; out loud.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

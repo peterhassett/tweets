@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, that&#x27;s just my
+dog wearing glasses.&quo...">
+    <meta property="og:title" content="LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, — Matt Oswalt ✔ @MattOswaltVA">
+    <meta property="og:image:alt" content="LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, that&#x27;s just my
+dog wearing glasses.&quot;">
+    <meta property="og:description" content="LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, that&#x27;s just my
+dog wearing glasses.&quot;">
+    <meta property="og:image" content="/img/1696.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, — Matt Oswalt ✔ @MattOswaltVA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1696/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1696",
+      "headline": "LOIS LANE: \"Awww, you got a cat!\"\nCLARK KENT: \"No, that's just my\ndog wearing glasses.\"",
+      "articleBody": "LOIS LANE: \"Awww, you got a cat!\"\nCLARK KENT: \"No, that's just my\ndog wearing glasses.\"",
+      "image": "/img/1696.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Matt Oswalt \u2714",
+        "alternateName": "MattOswaltVA"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1696.webp" class="img-fluid rounded" alt="LOIS LANE: &quot;Awww, you got a cat!&quot;
+CLARK KENT: &quot;No, that&#x27;s just my
+dog wearing glasses.&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Matt Oswalt ✔</span> <span class="handle-text fs-6 d-block d-md-inline">@MattOswaltVA</span></h4>
+            <p>LOIS LANE: &quot;Awww, you got a cat!&quot;<br>CLARK KENT: &quot;No, that&#x27;s just my<br>dog wearing glasses.&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

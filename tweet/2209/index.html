@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="MIKE D: microphone fiend and my rhymes is
+EVERY BEASTIE BOY: raw
+MIKE D: spent the day in paris like
+frances
+E...">
+    <meta property="og:title" content="MIKE D: microphone fiend and my rhymes is
+EVERY BE — Andrew Durso @andrew_durso">
+    <meta property="og:image:alt" content="MIKE D: microphone fiend and my rhymes is
+EVERY BEASTIE BOY: raw
+MIKE D: spent the day in paris like
+frances
+EVERY BEASTIE BOY: ha
+ADROCK: ladybird jumpin out the side of the
+EVERY BEASTIE BOY: car
+ADROCK: i love baumbach and gerwig
+and np
+EVERY BEASTIE BOY: r">
+    <meta property="og:description" content="MIKE D: microphone fiend and my rhymes is
+EVERY BEASTIE BOY: raw
+MIKE D: spent the day in paris like
+frances
+EVERY BEASTIE BOY: ha
+ADROCK: ladybird jumpin out the side of the
+EVERY BEASTIE BOY: car
+ADROCK: i love baumbach and gerwig
+and np
+EVERY BEASTIE BOY: r">
+    <meta property="og:image" content="/img/2209.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>MIKE D: microphone fiend and my rhymes is
+EVERY BE — Andrew Durso @andrew_durso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2209/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2209",
+      "headline": "MIKE D: microphone fiend and my rhymes is\nEVERY BEASTIE BOY: raw\nMIKE D: spent the day in paris like\nfrances\nE",
+      "articleBody": "MIKE D: microphone fiend and my rhymes is\nEVERY BEASTIE BOY: raw\nMIKE D: spent the day in paris like\nfrances\nEVERY BEASTIE BOY: ha\nADROCK: ladybird jumpin out the side of the\nEVERY BEASTIE BOY: car\nADROCK: i love baumbach and gerwig\nand np\nEVERY BEASTIE BOY: r",
+      "image": "/img/2209.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Andrew Durso",
+        "alternateName": "andrew_durso"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2209.webp" class="img-fluid rounded" alt="MIKE D: microphone fiend and my rhymes is
+EVERY BEASTIE BOY: raw
+MIKE D: spent the day in paris like
+frances
+EVERY BEASTIE BOY: ha
+ADROCK: ladybird jumpin out the side of the
+EVERY BEASTIE BOY: car
+ADROCK: i love baumbach and gerwig
+and np
+EVERY BEASTIE BOY: r">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Andrew Durso</span> <span class="handle-text fs-6 d-block d-md-inline">@andrew_durso</span></h4>
+            <p>MIKE D: microphone fiend and my rhymes is<br>EVERY BEASTIE BOY: raw<br>MIKE D: spent the day in paris like<br>frances<br>EVERY BEASTIE BOY: ha<br>ADROCK: ladybird jumpin out the side of the<br>EVERY BEASTIE BOY: car<br>ADROCK: i love baumbach and gerwig<br>and np<br>EVERY BEASTIE BOY: r</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

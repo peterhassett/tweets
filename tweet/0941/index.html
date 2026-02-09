@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="me, every night: it&#x27;s ok, I&#x27;ll get up early and do that work in the
+morning
+me, every morning: I don...">
+    <meta property="og:title" content="me, every night: it&#x27;s ok, I&#x27;ll get up early and do — maura quint @behindyourback">
+    <meta property="og:image:alt" content="me, every night: it&#x27;s ok, I&#x27;ll get up early and do that work in the
+morning
+me, every morning: I don&#x27;t know who
+that bitch last night was but her
+being a liar is not my fucking
+problem">
+    <meta property="og:description" content="me, every night: it&#x27;s ok, I&#x27;ll get up early and do that work in the
+morning
+me, every morning: I don&#x27;t know who
+that bitch last night was but her
+being a liar is not my fucking
+problem">
+    <meta property="og:image" content="/img/0941.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>me, every night: it&#x27;s ok, I&#x27;ll get up early and do — maura quint @behindyourback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0941/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0941",
+      "headline": "me, every night: it's ok, I'll get up early and do that work in the\nmorning\nme, every morning: I don't know wh",
+      "articleBody": "me, every night: it's ok, I'll get up early and do that work in the\nmorning\nme, every morning: I don't know who\nthat bitch last night was but her\nbeing a liar is not my fucking\nproblem",
+      "image": "/img/0941.webp",
+      "author": {
+        "@type": "Person",
+        "name": "maura quint",
+        "alternateName": "behindyourback"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0941.webp" class="img-fluid rounded" alt="me, every night: it&#x27;s ok, I&#x27;ll get up early and do that work in the
+morning
+me, every morning: I don&#x27;t know who
+that bitch last night was but her
+being a liar is not my fucking
+problem">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">maura quint</span> <span class="handle-text fs-6 d-block d-md-inline">@behindyourback</span></h4>
+            <p>me, every night: it&#x27;s ok, I&#x27;ll get up early and do that work in the<br>morning<br>me, every morning: I don&#x27;t know who<br>that bitch last night was but her<br>being a liar is not my fucking<br>problem</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

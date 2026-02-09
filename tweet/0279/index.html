@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War...">
+    <meta property="og:title" content="Popular music used to teach people important facts — matt christman @cushbomb">
+    <meta property="og:image:alt" content="Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War One aerial combat. Now it&#x27;s just about bottle service at the club. I
+blame The Beatles.">
+    <meta property="og:description" content="Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War One aerial combat. Now it&#x27;s just about bottle service at the club. I
+blame The Beatles.">
+    <meta property="og:image" content="/img/0279.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Popular music used to teach people important facts — matt christman @cushbomb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0279/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0279",
+      "headline": "Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War",
+      "articleBody": "Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War One aerial combat. Now it's just about bottle service at the club. I\nblame The Beatles.",
+      "image": "/img/0279.webp",
+      "author": {
+        "@type": "Person",
+        "name": "matt christman",
+        "alternateName": "cushbomb"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0279.webp" class="img-fluid rounded" alt="Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War One aerial combat. Now it&#x27;s just about bottle service at the club. I
+blame The Beatles.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">matt christman</span> <span class="handle-text fs-6 d-block d-md-inline">@cushbomb</span></h4>
+            <p>Popular music used to teach people important facts about subjects like the Battle of New Orleans and World War One aerial combat. Now it&#x27;s just about bottle service at the club. I<br>blame The Beatles.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

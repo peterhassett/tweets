@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I once heard Ska described as &quot;what plays in a 13-year-old kid&#x27;s head when he gets extra mozzarella ...">
+    <meta property="og:title" content="I once heard Ska described as &quot;what plays in a 13- — F, Marry, Abraham @NeverOnBrand">
+    <meta property="og:image:alt" content="I once heard Ska described as &quot;what plays in a 13-year-old kid&#x27;s head when he gets extra mozzarella sticks&quot; and nothing in this world is more accurate.">
+    <meta property="og:description" content="I once heard Ska described as &quot;what plays in a 13-year-old kid&#x27;s head when he gets extra mozzarella sticks&quot; and nothing in this world is more accurate.">
+    <meta property="og:image" content="/img/2076.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I once heard Ska described as &quot;what plays in a 13- — F, Marry, Abraham @NeverOnBrand</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2076/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2076",
+      "headline": "I once heard Ska described as \"what plays in a 13-year-old kid's head when he gets extra mozzarella sticks\" an",
+      "articleBody": "I once heard Ska described as \"what plays in a 13-year-old kid's head when he gets extra mozzarella sticks\" and nothing in this world is more accurate.",
+      "image": "/img/2076.webp",
+      "author": {
+        "@type": "Person",
+        "name": "F, Marry, Abraham",
+        "alternateName": "NeverOnBrand"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2076.webp" class="img-fluid rounded" alt="I once heard Ska described as &quot;what plays in a 13-year-old kid&#x27;s head when he gets extra mozzarella sticks&quot; and nothing in this world is more accurate.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">F, Marry, Abraham</span> <span class="handle-text fs-6 d-block d-md-inline">@NeverOnBrand</span></h4>
+            <p>I once heard Ska described as &quot;what plays in a 13-year-old kid&#x27;s head when he gets extra mozzarella sticks&quot; and nothing in this world is more accurate.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

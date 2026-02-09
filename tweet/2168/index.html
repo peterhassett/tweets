@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="because of your stupid face
+
+(photo of guy with stupid face posing smugly next to newspaper opinion headline r...">
+    <meta property="og:title" content="because of your stupid face
+
+(photo of guy with st — Luke Kennard @LukeKennard">
+    <meta property="og:image:alt" content="because of your stupid face
+
+(photo of guy with stupid face posing smugly next to newspaper opinion headline reading: 
+“Never mind student debt,
+why won&#x27;t Corbyn pay
+off my mortgage?”)">
+    <meta property="og:description" content="because of your stupid face
+
+(photo of guy with stupid face posing smugly next to newspaper opinion headline reading: 
+“Never mind student debt,
+why won&#x27;t Corbyn pay
+off my mortgage?”)">
+    <meta property="og:image" content="/img/2168.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>because of your stupid face
+
+(photo of guy with st — Luke Kennard @LukeKennard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2168/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2168",
+      "headline": "because of your stupid face\n\n(photo of guy with stupid face posing smugly next to newspaper opinion headline r",
+      "articleBody": "because of your stupid face\n\n(photo of guy with stupid face posing smugly next to newspaper opinion headline reading: \n\u201cNever mind student debt,\nwhy won't Corbyn pay\noff my mortgage?\u201d)",
+      "image": "/img/2168.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Luke Kennard",
+        "alternateName": "LukeKennard"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2168.webp" class="img-fluid rounded" alt="because of your stupid face
+
+(photo of guy with stupid face posing smugly next to newspaper opinion headline reading: 
+“Never mind student debt,
+why won&#x27;t Corbyn pay
+off my mortgage?”)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Luke Kennard</span> <span class="handle-text fs-6 d-block d-md-inline">@LukeKennard</span></h4>
+            <p>because of your stupid face<br><br>(photo of guy with stupid face posing smugly next to newspaper opinion headline reading: <br>“Never mind student debt,<br>why won&#x27;t Corbyn pay<br>off my mortgage?”)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

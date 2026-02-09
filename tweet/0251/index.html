@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Adam had a rib removed so someone else
+could suck his dick">
+    <meta property="og:title" content="Adam had a rib removed so someone else
+could suck  — Sen. Lemon Gogurt ugarles.bsky.soc... @Ugarles">
+    <meta property="og:image:alt" content="Adam had a rib removed so someone else
+could suck his dick">
+    <meta property="og:description" content="Adam had a rib removed so someone else
+could suck his dick">
+    <meta property="og:image" content="/img/0251.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Adam had a rib removed so someone else
+could suck  — Sen. Lemon Gogurt ugarles.bsky.soc... @Ugarles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0251/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0251",
+      "headline": "Adam had a rib removed so someone else\ncould suck his dick",
+      "articleBody": "Adam had a rib removed so someone else\ncould suck his dick",
+      "image": "/img/0251.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Sen. Lemon Gogurt ugarles.bsky.soc...",
+        "alternateName": "Ugarles"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0251.webp" class="img-fluid rounded" alt="Adam had a rib removed so someone else
+could suck his dick">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Sen. Lemon Gogurt ugarles.bsky.soc...</span> <span class="handle-text fs-6 d-block d-md-inline">@Ugarles</span></h4>
+            <p>Adam had a rib removed so someone else<br>could suck his dick</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

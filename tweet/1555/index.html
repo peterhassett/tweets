@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE WIND IS
+KILLING ME AHHHH
+[me, in the eye of the hurricane]:...">
+    <meta property="og:title" content="[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE — my life is a living hell. every minute i... ✓ @on_da_spectrum">
+    <meta property="og:image:alt" content="[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE WIND IS
+KILLING ME AHHHH
+[me, in the eye of the hurricane]: honestly, I do not know what I was freaking out about earlier. this is fine.
+[me, in the hurricane again]: AHHHH AHHHH FUCK, AHHHHH THE WIND IS KILLING ME AHHHH">
+    <meta property="og:description" content="[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE WIND IS
+KILLING ME AHHHH
+[me, in the eye of the hurricane]: honestly, I do not know what I was freaking out about earlier. this is fine.
+[me, in the hurricane again]: AHHHH AHHHH FUCK, AHHHHH THE WIND IS KILLING ME AHHHH">
+    <meta property="og:image" content="/img/1555.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE — my life is a living hell. every minute i... ✓ @on_da_spectrum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1555/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1555",
+      "headline": "[me, in a hurricane]: AHHHH AHHHH\nFUCK, AHHHHH THE WIND IS\nKILLING ME AHHHH\n[me, in the eye of the hurricane]:",
+      "articleBody": "[me, in a hurricane]: AHHHH AHHHH\nFUCK, AHHHHH THE WIND IS\nKILLING ME AHHHH\n[me, in the eye of the hurricane]: honestly, I do not know what I was freaking out about earlier. this is fine.\n[me, in the hurricane again]: AHHHH AHHHH FUCK, AHHHHH THE WIND IS KILLING ME AHHHH",
+      "image": "/img/1555.webp",
+      "author": {
+        "@type": "Person",
+        "name": "my life is a living hell. every minute i... \u2713",
+        "alternateName": "on_da_spectrum"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1555.webp" class="img-fluid rounded" alt="[me, in a hurricane]: AHHHH AHHHH
+FUCK, AHHHHH THE WIND IS
+KILLING ME AHHHH
+[me, in the eye of the hurricane]: honestly, I do not know what I was freaking out about earlier. this is fine.
+[me, in the hurricane again]: AHHHH AHHHH FUCK, AHHHHH THE WIND IS KILLING ME AHHHH">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">my life is a living hell. every minute i... ✓</span> <span class="handle-text fs-6 d-block d-md-inline">@on_da_spectrum</span></h4>
+            <p>[me, in a hurricane]: AHHHH AHHHH<br>FUCK, AHHHHH THE WIND IS<br>KILLING ME AHHHH<br>[me, in the eye of the hurricane]: honestly, I do not know what I was freaking out about earlier. this is fine.<br>[me, in the hurricane again]: AHHHH AHHHH FUCK, AHHHHH THE WIND IS KILLING ME AHHHH</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

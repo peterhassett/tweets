@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="What&#x27;s your favourite Steven Spielberg movie and why?
+
+Ben Dreyfuss @bendreyfuss. Sep 16, 2017
+&quot;Jaws...">
+    <meta property="og:title" content="What&#x27;s your favourite Steven Spielberg movie and w — Little White Lies @LWLies">
+    <meta property="og:image:alt" content="What&#x27;s your favourite Steven Spielberg movie and why?
+
+Ben Dreyfuss @bendreyfuss. Sep 16, 2017
+&quot;Jaws&quot; because I didn&#x27;t get a scholarship to college and my dad had to pay for
+it.
+
+
+
+Richard Dreyfuss
+@RichardDreyfuss.
+I used the Poseidon money for your college.
+
+
+Ben Dreyfuss
+@bendreyfuss Sep 16, 2017
+That wasn&#x27;t college. That was rehab.
+
+
+Richard Dreyfuss @Richard Dreyfuss.
+I get them confused because neither took.">
+    <meta property="og:description" content="What&#x27;s your favourite Steven Spielberg movie and why?
+
+Ben Dreyfuss @bendreyfuss. Sep 16, 2017
+&quot;Jaws&quot; because I didn&#x27;t get a scholarship to college and my dad had to pay for
+it.
+
+
+
+Richard Dreyfuss
+@RichardDreyfuss.
+I used the Poseidon money for your college.
+
+
+Ben Dreyfuss
+@bendreyfuss Sep 16, 2017
+That wasn&#x27;t college. That was rehab.
+
+
+Richard Dreyfuss @Richard Dreyfuss.
+I get them confused because neither took.">
+    <meta property="og:image" content="/img/1572.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>What&#x27;s your favourite Steven Spielberg movie and w — Little White Lies @LWLies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1572/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1572",
+      "headline": "What's your favourite Steven Spielberg movie and why?\n\nBen Dreyfuss @bendreyfuss. Sep 16, 2017\n\"Jaws\" because ",
+      "articleBody": "What's your favourite Steven Spielberg movie and why?\n\nBen Dreyfuss @bendreyfuss. Sep 16, 2017\n\"Jaws\" because I didn't get a scholarship to college and my dad had to pay for\nit.\n\n\n\nRichard Dreyfuss\n@RichardDreyfuss.\nI used the Poseidon money for your college.\n\n\nBen Dreyfuss\n@bendreyfuss Sep 16, 2017\nThat wasn't college. That was rehab.\n\n\nRichard Dreyfuss @Richard Dreyfuss.\nI get them confused because neither took.",
+      "image": "/img/1572.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Little White Lies",
+        "alternateName": "LWLies"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1572.webp" class="img-fluid rounded" alt="What&#x27;s your favourite Steven Spielberg movie and why?
+
+Ben Dreyfuss @bendreyfuss. Sep 16, 2017
+&quot;Jaws&quot; because I didn&#x27;t get a scholarship to college and my dad had to pay for
+it.
+
+
+
+Richard Dreyfuss
+@RichardDreyfuss.
+I used the Poseidon money for your college.
+
+
+Ben Dreyfuss
+@bendreyfuss Sep 16, 2017
+That wasn&#x27;t college. That was rehab.
+
+
+Richard Dreyfuss @Richard Dreyfuss.
+I get them confused because neither took.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Little White Lies</span> <span class="handle-text fs-6 d-block d-md-inline">@LWLies</span></h4>
+            <p>What&#x27;s your favourite Steven Spielberg movie and why?<br><br>Ben Dreyfuss @bendreyfuss. Sep 16, 2017<br>&quot;Jaws&quot; because I didn&#x27;t get a scholarship to college and my dad had to pay for<br>it.<br><br><br><br>Richard Dreyfuss<br>@RichardDreyfuss.<br>I used the Poseidon money for your college.<br><br><br>Ben Dreyfuss<br>@bendreyfuss Sep 16, 2017<br>That wasn&#x27;t college. That was rehab.<br><br><br>Richard Dreyfuss @Richard Dreyfuss.<br>I get them confused because neither took.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I made queso
+
+(a truly terrifying dark brown encrusted burned pot of queso)">
+    <meta property="og:title" content="I made queso
+
+(a truly terrifying dark brown encru — Dana Perino @DanaPerino">
+    <meta property="og:image:alt" content="I made queso
+
+(a truly terrifying dark brown encrusted burned pot of queso)">
+    <meta property="og:description" content="I made queso
+
+(a truly terrifying dark brown encrusted burned pot of queso)">
+    <meta property="og:image" content="/img/2165.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I made queso
+
+(a truly terrifying dark brown encru — Dana Perino @DanaPerino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2165/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2165",
+      "headline": "I made queso\n\n(a truly terrifying dark brown encrusted burned pot of queso)",
+      "articleBody": "I made queso\n\n(a truly terrifying dark brown encrusted burned pot of queso)",
+      "image": "/img/2165.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Dana Perino",
+        "alternateName": "DanaPerino"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2165.webp" class="img-fluid rounded" alt="I made queso
+
+(a truly terrifying dark brown encrusted burned pot of queso)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Dana Perino</span> <span class="handle-text fs-6 d-block d-md-inline">@DanaPerino</span></h4>
+            <p>I made queso<br><br>(a truly terrifying dark brown encrusted burned pot of queso)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

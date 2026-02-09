@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@postcyborg
+Film Twitter will be like &quot;just finished my rewatch of the Ernest Goes To Mars and it&#x27;s ...">
+    <meta property="og:title" content="@postcyborg
+Film Twitter will be like &quot;just finish —  @postcyborg">
+    <meta property="og:image:alt" content="@postcyborg
+Film Twitter will be like &quot;just finished my rewatch of the Ernest Goes To Mars and it&#x27;s shocking how simple attention to blocking of actors effortlessly increases the level of craft compared to today...&quot; and they&#x27;re right">
+    <meta property="og:description" content="@postcyborg
+Film Twitter will be like &quot;just finished my rewatch of the Ernest Goes To Mars and it&#x27;s shocking how simple attention to blocking of actors effortlessly increases the level of craft compared to today...&quot; and they&#x27;re right">
+    <meta property="og:image" content="/img/0838.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@postcyborg
+Film Twitter will be like &quot;just finish —  @postcyborg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0838/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0838",
+      "headline": "@postcyborg\nFilm Twitter will be like \"just finished my rewatch of the Ernest Goes To Mars and it's shocking h",
+      "articleBody": "@postcyborg\nFilm Twitter will be like \"just finished my rewatch of the Ernest Goes To Mars and it's shocking how simple attention to blocking of actors effortlessly increases the level of craft compared to today...\" and they're right",
+      "image": "/img/0838.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "postcyborg"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0838.webp" class="img-fluid rounded" alt="@postcyborg
+Film Twitter will be like &quot;just finished my rewatch of the Ernest Goes To Mars and it&#x27;s shocking how simple attention to blocking of actors effortlessly increases the level of craft compared to today...&quot; and they&#x27;re right">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@postcyborg</span></h4>
+            <p>@postcyborg<br>Film Twitter will be like &quot;just finished my rewatch of the Ernest Goes To Mars and it&#x27;s shocking how simple attention to blocking of actors effortlessly increases the level of craft compared to today...&quot; and they&#x27;re right</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

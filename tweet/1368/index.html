@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="back in the day if u did a tv show called surf dracula you&#x27;d see that fool surfing every week in new adve...">
+    <meta property="og:title" content="back in the day if u did a tv show called surf dra — D
+CFUTURE @topherflorence">
+    <meta property="og:image:alt" content="back in the day if u did a tv show called surf dracula you&#x27;d see that fool surfing every week in new adventures but in the streaming era the entire 1st season gotta be a long ass flashback to how he got the surfboard until you finally get to see him surf for 5 min in the finale">
+    <meta property="og:description" content="back in the day if u did a tv show called surf dracula you&#x27;d see that fool surfing every week in new adventures but in the streaming era the entire 1st season gotta be a long ass flashback to how he got the surfboard until you finally get to see him surf for 5 min in the finale">
+    <meta property="og:image" content="/img/1368.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>back in the day if u did a tv show called surf dra — D
+CFUTURE @topherflorence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1368/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1368",
+      "headline": "back in the day if u did a tv show called surf dracula you'd see that fool surfing every week in new adventure",
+      "articleBody": "back in the day if u did a tv show called surf dracula you'd see that fool surfing every week in new adventures but in the streaming era the entire 1st season gotta be a long ass flashback to how he got the surfboard until you finally get to see him surf for 5 min in the finale",
+      "image": "/img/1368.webp",
+      "author": {
+        "@type": "Person",
+        "name": "D\nCFUTURE",
+        "alternateName": "topherflorence"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1368.webp" class="img-fluid rounded" alt="back in the day if u did a tv show called surf dracula you&#x27;d see that fool surfing every week in new adventures but in the streaming era the entire 1st season gotta be a long ass flashback to how he got the surfboard until you finally get to see him surf for 5 min in the finale">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">D
+CFUTURE</span> <span class="handle-text fs-6 d-block d-md-inline">@topherflorence</span></h4>
+            <p>back in the day if u did a tv show called surf dracula you&#x27;d see that fool surfing every week in new adventures but in the streaming era the entire 1st season gotta be a long ass flashback to how he got the surfboard until you finally get to see him surf for 5 min in the finale</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

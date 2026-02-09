@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I k...">
+    <meta property="og:title" content="Every woman I know is a beautiful, under-appreciat — Gabriella Paiella @GMPaiella">
+    <meta property="og:image:alt" content="Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I know is an Italian-American bakery owner with a wooden hand and anger issues">
+    <meta property="og:description" content="Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I know is an Italian-American bakery owner with a wooden hand and anger issues">
+    <meta property="og:image" content="/img/1965.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Every woman I know is a beautiful, under-appreciat — Gabriella Paiella @GMPaiella</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1965/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1965",
+      "headline": "Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I k",
+      "articleBody": "Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I know is an Italian-American bakery owner with a wooden hand and anger issues",
+      "image": "/img/1965.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Gabriella Paiella",
+        "alternateName": "GMPaiella"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1965.webp" class="img-fluid rounded" alt="Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I know is an Italian-American bakery owner with a wooden hand and anger issues">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Gabriella Paiella</span> <span class="handle-text fs-6 d-block d-md-inline">@GMPaiella</span></h4>
+            <p>Every woman I know is a beautiful, under-appreciated bookkeeper with a gorgeous mane of hair and every man I know is an Italian-American bakery owner with a wooden hand and anger issues</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

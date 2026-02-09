@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 
+48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments
+BEASTIE BOYS SONG COM...">
+    <meta property="og:title" content=". 
+48 YEAR OLD DAD: The rowing team used to go wil — gale na @poisonjr">
+    <meta property="og:image:alt" content=". 
+48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments
+BEASTIE BOYS SONG COMING THROUGH THE LAND ROVER SPEAKERS:
+
+
+(Screenshot of twitter convo between maximumgraves and dunstonchexin)
+
+max graves @maximumgraves.9h
+they put me in the smallener. they made me small
+
+
+
+FunstonChecksin @dunstonchexin. 
+You went to the beach that makes you small?
+
+
+max graves
+@maximumgraves
+yeah now im 1ft tall">
+    <meta property="og:description" content=". 
+48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments
+BEASTIE BOYS SONG COMING THROUGH THE LAND ROVER SPEAKERS:
+
+
+(Screenshot of twitter convo between maximumgraves and dunstonchexin)
+
+max graves @maximumgraves.9h
+they put me in the smallener. they made me small
+
+
+
+FunstonChecksin @dunstonchexin. 
+You went to the beach that makes you small?
+
+
+max graves
+@maximumgraves
+yeah now im 1ft tall">
+    <meta property="og:image" content="/img/0232.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 
+48 YEAR OLD DAD: The rowing team used to go wil — gale na @poisonjr</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0232/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0232",
+      "headline": ". \n48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments\nBEASTIE BOYS SONG COM",
+      "articleBody": ". \n48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments\nBEASTIE BOYS SONG COMING THROUGH THE LAND ROVER SPEAKERS:\n\n\n(Screenshot of twitter convo between maximumgraves and dunstonchexin)\n\nmax graves @maximumgraves.9h\nthey put me in the smallener. they made me small\n\n\n\nFunstonChecksin @dunstonchexin. \nYou went to the beach that makes you small?\n\n\nmax graves\n@maximumgraves\nyeah now im 1ft tall",
+      "image": "/img/0232.webp",
+      "author": {
+        "@type": "Person",
+        "name": "gale na",
+        "alternateName": "poisonjr"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0232.webp" class="img-fluid rounded" alt=". 
+48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments
+BEASTIE BOYS SONG COMING THROUGH THE LAND ROVER SPEAKERS:
+
+
+(Screenshot of twitter convo between maximumgraves and dunstonchexin)
+
+max graves @maximumgraves.9h
+they put me in the smallener. they made me small
+
+
+
+FunstonChecksin @dunstonchexin. 
+You went to the beach that makes you small?
+
+
+max graves
+@maximumgraves
+yeah now im 1ft tall">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">gale na</span> <span class="handle-text fs-6 d-block d-md-inline">@poisonjr</span></h4>
+            <p>. <br>48 YEAR OLD DAD: The rowing team used to go wild to this track before our tournaments<br>BEASTIE BOYS SONG COMING THROUGH THE LAND ROVER SPEAKERS:<br><br><br>(Screenshot of twitter convo between maximumgraves and dunstonchexin)<br><br>max graves @maximumgraves.9h<br>they put me in the smallener. they made me small<br><br><br><br>FunstonChecksin @dunstonchexin. <br>You went to the beach that makes you small?<br><br><br>max graves<br>@maximumgraves<br>yeah now im 1ft tall</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

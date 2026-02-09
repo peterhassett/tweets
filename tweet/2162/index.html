@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="user named &quot; beavis_sinatra &quot; has been terrorizing me since 2004, by sending me pictures of cups tha...">
+    <meta property="og:title" content="user named &quot; beavis_sinatra &quot; has been terrorizing — wint @dril">
+    <meta property="og:image:alt" content="user named &quot; beavis_sinatra &quot; has been terrorizing me since 2004, by sending me pictures of cups that are too close to the edge of the table">
+    <meta property="og:description" content="user named &quot; beavis_sinatra &quot; has been terrorizing me since 2004, by sending me pictures of cups that are too close to the edge of the table">
+    <meta property="og:image" content="/img/2162.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>user named &quot; beavis_sinatra &quot; has been terrorizing — wint @dril</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2162/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2162",
+      "headline": "user named \" beavis_sinatra \" has been terrorizing me since 2004, by sending me pictures of cups that are too ",
+      "articleBody": "user named \" beavis_sinatra \" has been terrorizing me since 2004, by sending me pictures of cups that are too close to the edge of the table",
+      "image": "/img/2162.webp",
+      "author": {
+        "@type": "Person",
+        "name": "wint",
+        "alternateName": "dril"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2162.webp" class="img-fluid rounded" alt="user named &quot; beavis_sinatra &quot; has been terrorizing me since 2004, by sending me pictures of cups that are too close to the edge of the table">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">wint</span> <span class="handle-text fs-6 d-block d-md-inline">@dril</span></h4>
+            <p>user named &quot; beavis_sinatra &quot; has been terrorizing me since 2004, by sending me pictures of cups that are too close to the edge of the table</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

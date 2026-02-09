@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.
+
+Tim ...">
+    <meta property="og:title" content="As a scholar of Herman Melville I strongly believe — Nate Wolff @proffwolff">
+    <meta property="og:image:alt" content="As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.
+
+Tim Walz @Tim_Walz 22h
+For the past few years I&#x27;ve not seen a turkey while hunting. Today they mock me.
+
+(Photo of a yard full of turkeys)
+
+9:32 AM Aug 3, 2024.">
+    <meta property="og:description" content="As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.
+
+Tim Walz @Tim_Walz 22h
+For the past few years I&#x27;ve not seen a turkey while hunting. Today they mock me.
+
+(Photo of a yard full of turkeys)
+
+9:32 AM Aug 3, 2024.">
+    <meta property="og:image" content="/img/0178.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>As a scholar of Herman Melville I strongly believe — Nate Wolff @proffwolff</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0178/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0178",
+      "headline": "As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.\n\nTim ",
+      "articleBody": "As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.\n\nTim Walz @Tim_Walz 22h\nFor the past few years I've not seen a turkey while hunting. Today they mock me.\n\n(Photo of a yard full of turkeys)\n\n9:32 AM Aug 3, 2024.",
+      "image": "/img/0178.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Nate Wolff",
+        "alternateName": "proffwolff"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0178.webp" class="img-fluid rounded" alt="As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.
+
+Tim Walz @Tim_Walz 22h
+For the past few years I&#x27;ve not seen a turkey while hunting. Today they mock me.
+
+(Photo of a yard full of turkeys)
+
+9:32 AM Aug 3, 2024.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Nate Wolff</span> <span class="handle-text fs-6 d-block d-md-inline">@proffwolff</span></h4>
+            <p>As a scholar of Herman Melville I strongly believe our next VP should be someone with an animal nemesis.<br><br>Tim Walz @Tim_Walz 22h<br>For the past few years I&#x27;ve not seen a turkey while hunting. Today they mock me.<br><br>(Photo of a yard full of turkeys)<br><br>9:32 AM Aug 3, 2024.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

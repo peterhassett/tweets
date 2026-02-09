@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Here are all the kinds of documentaries:
+• Animal friends
+• Some weirdos made some money and then lost some of...">
+    <meta property="og:title" content="Here are all the kinds of documentaries:
+• Animal  — Daniel Kibblesmith @kibblesmith">
+    <meta property="og:image:alt" content="Here are all the kinds of documentaries:
+• Animal friends
+• Some weirdos made some money and then lost some of the money
+• I did a murder, yes me, the person talking
+• Famous person is old now
+• Here&#x27;s a cult
+• Learning about my family will fuck you up for life">
+    <meta property="og:description" content="Here are all the kinds of documentaries:
+• Animal friends
+• Some weirdos made some money and then lost some of the money
+• I did a murder, yes me, the person talking
+• Famous person is old now
+• Here&#x27;s a cult
+• Learning about my family will fuck you up for life">
+    <meta property="og:image" content="/img/0099.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Here are all the kinds of documentaries:
+• Animal  — Daniel Kibblesmith @kibblesmith</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0099/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0099",
+      "headline": "Here are all the kinds of documentaries:\n\u2022 Animal friends\n\u2022 Some weirdos made some money and then lost some of",
+      "articleBody": "Here are all the kinds of documentaries:\n\u2022 Animal friends\n\u2022 Some weirdos made some money and then lost some of the money\n\u2022 I did a murder, yes me, the person talking\n\u2022 Famous person is old now\n\u2022 Here's a cult\n\u2022 Learning about my family will fuck you up for life",
+      "image": "/img/0099.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Kibblesmith",
+        "alternateName": "kibblesmith"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0099.webp" class="img-fluid rounded" alt="Here are all the kinds of documentaries:
+• Animal friends
+• Some weirdos made some money and then lost some of the money
+• I did a murder, yes me, the person talking
+• Famous person is old now
+• Here&#x27;s a cult
+• Learning about my family will fuck you up for life">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Daniel Kibblesmith</span> <span class="handle-text fs-6 d-block d-md-inline">@kibblesmith</span></h4>
+            <p>Here are all the kinds of documentaries:<br>• Animal friends<br>• Some weirdos made some money and then lost some of the money<br>• I did a murder, yes me, the person talking<br>• Famous person is old now<br>• Here&#x27;s a cult<br>• Learning about my family will fuck you up for life</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="when I was like 12 I went to the California science center which had a “drunk driving simulator” educational a...">
+    <meta property="og:title" content="when I was like 12 I went to the California scienc — Turing_police @">
+    <meta property="og:image:alt" content="when I was like 12 I went to the California science center which had a “drunk driving simulator” educational arcade type game and if you were too good at it the game would automatically crash the car after a while so you didn’t undermine their message">
+    <meta property="og:description" content="when I was like 12 I went to the California science center which had a “drunk driving simulator” educational arcade type game and if you were too good at it the game would automatically crash the car after a while so you didn’t undermine their message">
+    <meta property="og:image" content="/img/2268.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>when I was like 12 I went to the California scienc — Turing_police @</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2268/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2268",
+      "headline": "when I was like 12 I went to the California science center which had a \u201cdrunk driving simulator\u201d educational a",
+      "articleBody": "when I was like 12 I went to the California science center which had a \u201cdrunk driving simulator\u201d educational arcade type game and if you were too good at it the game would automatically crash the car after a while so you didn\u2019t undermine their message",
+      "image": "/img/2268.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Turing_police",
+        "alternateName": ""
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2268.webp" class="img-fluid rounded" alt="when I was like 12 I went to the California science center which had a “drunk driving simulator” educational arcade type game and if you were too good at it the game would automatically crash the car after a while so you didn’t undermine their message">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Turing_police</span> <span class="handle-text fs-6 d-block d-md-inline">@</span></h4>
+            <p>when I was like 12 I went to the California science center which had a “drunk driving simulator” educational arcade type game and if you were too good at it the game would automatically crash the car after a while so you didn’t undermine their message</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="[every assassin&#x27;s creed game]
+NPC: hello it is i, your best friend wolfgang amadeus mozart! i made you th...">
+    <meta property="og:title" content="[every assassin&#x27;s creed game]
+NPC: hello it is i,  — soul nate @MNateShyamalan">
+    <meta property="og:image:alt" content="[every assassin&#x27;s creed game]
+NPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this crossbow">
+    <meta property="og:description" content="[every assassin&#x27;s creed game]
+NPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this crossbow">
+    <meta property="og:image" content="/img/0134.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>[every assassin&#x27;s creed game]
+NPC: hello it is i,  — soul nate @MNateShyamalan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0134/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0134",
+      "headline": "[every assassin's creed game]\nNPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this cr",
+      "articleBody": "[every assassin's creed game]\nNPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this crossbow",
+      "image": "/img/0134.webp",
+      "author": {
+        "@type": "Person",
+        "name": "soul nate",
+        "alternateName": "MNateShyamalan"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0134.webp" class="img-fluid rounded" alt="[every assassin&#x27;s creed game]
+NPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this crossbow">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">soul nate</span> <span class="handle-text fs-6 d-block d-md-inline">@MNateShyamalan</span></h4>
+            <p>[every assassin&#x27;s creed game]<br>NPC: hello it is i, your best friend wolfgang amadeus mozart! i made you this crossbow</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

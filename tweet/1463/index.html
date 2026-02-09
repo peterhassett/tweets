@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I got my vaccine. Against my absolute morality. I couldn&#x27;t afford to lose my job. Pray for me and my fami...">
+    <meta property="og:title" content="I got my vaccine. Against my absolute morality. I  — Satoshi Smith @me_think_free">
+    <meta property="og:image:alt" content="I got my vaccine. Against my absolute morality. I couldn&#x27;t afford to lose my job. Pray for me and my family. This was very hard. This was degrading to the core. An absolute abomination of my freedom of which I will never forget.
+
+
+Satoshi Smith
+@me_think_free
+We&#x27;re fine. Not as bad as I thought it was
+going to be.">
+    <meta property="og:description" content="I got my vaccine. Against my absolute morality. I couldn&#x27;t afford to lose my job. Pray for me and my family. This was very hard. This was degrading to the core. An absolute abomination of my freedom of which I will never forget.
+
+
+Satoshi Smith
+@me_think_free
+We&#x27;re fine. Not as bad as I thought it was
+going to be.">
+    <meta property="og:image" content="/img/1463.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I got my vaccine. Against my absolute morality. I  — Satoshi Smith @me_think_free</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1463/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1463",
+      "headline": "I got my vaccine. Against my absolute morality. I couldn't afford to lose my job. Pray for me and my family. T",
+      "articleBody": "I got my vaccine. Against my absolute morality. I couldn't afford to lose my job. Pray for me and my family. This was very hard. This was degrading to the core. An absolute abomination of my freedom of which I will never forget.\n\n\nSatoshi Smith\n@me_think_free\nWe're fine. Not as bad as I thought it was\ngoing to be.",
+      "image": "/img/1463.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Satoshi Smith",
+        "alternateName": "me_think_free"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1463.webp" class="img-fluid rounded" alt="I got my vaccine. Against my absolute morality. I couldn&#x27;t afford to lose my job. Pray for me and my family. This was very hard. This was degrading to the core. An absolute abomination of my freedom of which I will never forget.
+
+
+Satoshi Smith
+@me_think_free
+We&#x27;re fine. Not as bad as I thought it was
+going to be.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Satoshi Smith</span> <span class="handle-text fs-6 d-block d-md-inline">@me_think_free</span></h4>
+            <p>I got my vaccine. Against my absolute morality. I couldn&#x27;t afford to lose my job. Pray for me and my family. This was very hard. This was degrading to the core. An absolute abomination of my freedom of which I will never forget.<br><br><br>Satoshi Smith<br>@me_think_free<br>We&#x27;re fine. Not as bad as I thought it was<br>going to be.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

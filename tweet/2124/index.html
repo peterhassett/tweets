@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="These two books contain the sum total of all human knowledge
+
+WHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL
+
+...">
+    <meta property="og:title" content="These two books contain the sum total of all human — James Kirkpatrick @James_Kpatrick">
+    <meta property="og:image:alt" content="These two books contain the sum total of all human knowledge
+
+WHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL
+
+
+WHAT THEY DON&#x27;T TEACH YOU AT HARVARD BUSINESS SCHOOL">
+    <meta property="og:description" content="These two books contain the sum total of all human knowledge
+
+WHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL
+
+
+WHAT THEY DON&#x27;T TEACH YOU AT HARVARD BUSINESS SCHOOL">
+    <meta property="og:image" content="/img/2124.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>These two books contain the sum total of all human — James Kirkpatrick @James_Kpatrick</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2124/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2124",
+      "headline": "These two books contain the sum total of all human knowledge\n\nWHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL\n\n",
+      "articleBody": "These two books contain the sum total of all human knowledge\n\nWHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL\n\n\nWHAT THEY DON'T TEACH YOU AT HARVARD BUSINESS SCHOOL",
+      "image": "/img/2124.webp",
+      "author": {
+        "@type": "Person",
+        "name": "James Kirkpatrick",
+        "alternateName": "James_Kpatrick"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2124.webp" class="img-fluid rounded" alt="These two books contain the sum total of all human knowledge
+
+WHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL
+
+
+WHAT THEY DON&#x27;T TEACH YOU AT HARVARD BUSINESS SCHOOL">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">James Kirkpatrick</span> <span class="handle-text fs-6 d-block d-md-inline">@James_Kpatrick</span></h4>
+            <p>These two books contain the sum total of all human knowledge<br><br>WHAT THEY TEACH YOU AT HARVARD BUSINESS SCHOOL<br><br><br>WHAT THEY DON&#x27;T TEACH YOU AT HARVARD BUSINESS SCHOOL</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s parent&#x27;s house. I sat down way too early then she
+t...">
+    <meta property="og:title" content="...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s p — Brooks Wheelan @broo">
+    <meta property="og:image:alt" content="...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s parent&#x27;s house. I sat down way too early then she
+took this photo to make fun of me.
+
+(a photo of him looking embarrassed and bored)">
+    <meta property="og:description" content="...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s parent&#x27;s house. I sat down way too early then she
+took this photo to make fun of me.
+
+(a photo of him looking embarrassed and bored)">
+    <meta property="og:image" content="/img/1302.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s p — Brooks Wheelan @broo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1302/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1302",
+      "headline": "...\nNov 24\nFirst Thanksgiving at my girlfriend's parent's house. I sat down way too early then she\ntook this p",
+      "articleBody": "...\nNov 24\nFirst Thanksgiving at my girlfriend's parent's house. I sat down way too early then she\ntook this photo to make fun of me.\n\n(a photo of him looking embarrassed and bored)",
+      "image": "/img/1302.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Brooks Wheelan",
+        "alternateName": "broo"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1302.webp" class="img-fluid rounded" alt="...
+Nov 24
+First Thanksgiving at my girlfriend&#x27;s parent&#x27;s house. I sat down way too early then she
+took this photo to make fun of me.
+
+(a photo of him looking embarrassed and bored)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Brooks Wheelan</span> <span class="handle-text fs-6 d-block d-md-inline">@broo</span></h4>
+            <p>...<br>Nov 24<br>First Thanksgiving at my girlfriend&#x27;s parent&#x27;s house. I sat down way too early then she<br>took this photo to make fun of me.<br><br>(a photo of him looking embarrassed and bored)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

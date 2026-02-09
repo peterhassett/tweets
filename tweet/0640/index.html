@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird...">
+    <meta property="og:title" content="My favorite kind of star wars guy is a freaky litt — Gorey Bonesly Killustration @CoreyBrickley">
+    <meta property="og:image:alt" content="My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird little laugh in one shot">
+    <meta property="og:description" content="My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird little laugh in one shot">
+    <meta property="og:image" content="/img/0640.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>My favorite kind of star wars guy is a freaky litt — Gorey Bonesly Killustration @CoreyBrickley</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0640/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0640",
+      "headline": "My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird",
+      "articleBody": "My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird little laugh in one shot",
+      "image": "/img/0640.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Gorey Bonesly Killustration",
+        "alternateName": "CoreyBrickley"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0640.webp" class="img-fluid rounded" alt="My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird little laugh in one shot">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Gorey Bonesly Killustration</span> <span class="handle-text fs-6 d-block d-md-inline">@CoreyBrickley</span></h4>
+            <p>My favorite kind of star wars guy is a freaky little puppet constructed for the sole purpose of giving a weird little laugh in one shot</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

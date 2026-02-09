@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="... 4/10/19 Eartha Kitt slapped the f%#! outta me!
+She thought I was sleeping with her boyfriend.. which I was...">
+    <meta property="og:title" content="... 4/10/19 Eartha Kitt slapped the f%#! outta me! — Jackée Harry @JackeeH">
+    <meta property="og:image:alt" content="... 4/10/19 Eartha Kitt slapped the f%#! outta me!
+She thought I was sleeping with her boyfriend.. which I was, but I didn&#x27;t know he was taken.
+
+
+michael segalov
+@Mi.... 4/7/19
+what&#x27;s the most surreal encounter you&#x27;ve had with someone famous? been thinking about this all day... mine was looking up while riding a bucking bronco in Liverpool last ye... Show this thread">
+    <meta property="og:description" content="... 4/10/19 Eartha Kitt slapped the f%#! outta me!
+She thought I was sleeping with her boyfriend.. which I was, but I didn&#x27;t know he was taken.
+
+
+michael segalov
+@Mi.... 4/7/19
+what&#x27;s the most surreal encounter you&#x27;ve had with someone famous? been thinking about this all day... mine was looking up while riding a bucking bronco in Liverpool last ye... Show this thread">
+    <meta property="og:image" content="/img/1789.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>... 4/10/19 Eartha Kitt slapped the f%#! outta me! — Jackée Harry @JackeeH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1789/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1789",
+      "headline": "... 4/10/19 Eartha Kitt slapped the f%#! outta me!\nShe thought I was sleeping with her boyfriend.. which I was",
+      "articleBody": "... 4/10/19 Eartha Kitt slapped the f%#! outta me!\nShe thought I was sleeping with her boyfriend.. which I was, but I didn't know he was taken.\n\n\nmichael segalov\n@Mi.... 4/7/19\nwhat's the most surreal encounter you've had with someone famous? been thinking about this all day... mine was looking up while riding a bucking bronco in Liverpool last ye... Show this thread",
+      "image": "/img/1789.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jack\u00e9e Harry",
+        "alternateName": "JackeeH"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1789.webp" class="img-fluid rounded" alt="... 4/10/19 Eartha Kitt slapped the f%#! outta me!
+She thought I was sleeping with her boyfriend.. which I was, but I didn&#x27;t know he was taken.
+
+
+michael segalov
+@Mi.... 4/7/19
+what&#x27;s the most surreal encounter you&#x27;ve had with someone famous? been thinking about this all day... mine was looking up while riding a bucking bronco in Liverpool last ye... Show this thread">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jackée Harry</span> <span class="handle-text fs-6 d-block d-md-inline">@JackeeH</span></h4>
+            <p>... 4/10/19 Eartha Kitt slapped the f%#! outta me!<br>She thought I was sleeping with her boyfriend.. which I was, but I didn&#x27;t know he was taken.<br><br><br>michael segalov<br>@Mi.... 4/7/19<br>what&#x27;s the most surreal encounter you&#x27;ve had with someone famous? been thinking about this all day... mine was looking up while riding a bucking bronco in Liverpool last ye... Show this thread</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

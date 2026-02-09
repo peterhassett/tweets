@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="(hanging out with twitter person irl)
+- do you follow grungle?
+- hmmm.... sounds familiar but i&#x27;m
+not sur...">
+    <meta property="og:title" content="(hanging out with twitter person irl)
+- do you fol — dylan @spiritnght2">
+    <meta property="og:image:alt" content="(hanging out with twitter person irl)
+- do you follow grungle?
+- hmmm.... sounds familiar but i&#x27;m
+not sure
+- his display name is &quot;ass haver&quot; 
+- oh yeah.... he&#x27;s really nice">
+    <meta property="og:description" content="(hanging out with twitter person irl)
+- do you follow grungle?
+- hmmm.... sounds familiar but i&#x27;m
+not sure
+- his display name is &quot;ass haver&quot; 
+- oh yeah.... he&#x27;s really nice">
+    <meta property="og:image" content="/img/1615.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>(hanging out with twitter person irl)
+- do you fol — dylan @spiritnght2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1615/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1615",
+      "headline": "(hanging out with twitter person irl)\n- do you follow grungle?\n- hmmm.... sounds familiar but i'm\nnot sure\n- h",
+      "articleBody": "(hanging out with twitter person irl)\n- do you follow grungle?\n- hmmm.... sounds familiar but i'm\nnot sure\n- his display name is \"ass haver\" \n- oh yeah.... he's really nice",
+      "image": "/img/1615.webp",
+      "author": {
+        "@type": "Person",
+        "name": "dylan",
+        "alternateName": "spiritnght2"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1615.webp" class="img-fluid rounded" alt="(hanging out with twitter person irl)
+- do you follow grungle?
+- hmmm.... sounds familiar but i&#x27;m
+not sure
+- his display name is &quot;ass haver&quot; 
+- oh yeah.... he&#x27;s really nice">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">dylan</span> <span class="handle-text fs-6 d-block d-md-inline">@spiritnght2</span></h4>
+            <p>(hanging out with twitter person irl)<br>- do you follow grungle?<br>- hmmm.... sounds familiar but i&#x27;m<br>not sure<br>- his display name is &quot;ass haver&quot; <br>- oh yeah.... he&#x27;s really nice</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

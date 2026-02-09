@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following y...">
+    <meta property="og:title" content="In 1965, President Lyndon B. Johnson signed a meas — The Post-Star @poststar">
+    <meta property="og:image:alt" content="In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following year, and more events that happened on this day in history
+
+Elise Stefanik @EliseStefanik
+Today&#x27;s Anniversary of Medicare &amp; Medicaid reminds us to reflect on the critical role these programs have played to protect the healthcare of millions of families. To safeguard our future, we must reject Socialist healthcare
+schemes.">
+    <meta property="og:description" content="In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following year, and more events that happened on this day in history
+
+Elise Stefanik @EliseStefanik
+Today&#x27;s Anniversary of Medicare &amp; Medicaid reminds us to reflect on the critical role these programs have played to protect the healthcare of millions of families. To safeguard our future, we must reject Socialist healthcare
+schemes.">
+    <meta property="og:image" content="/img/1424.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>In 1965, President Lyndon B. Johnson signed a meas — The Post-Star @poststar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1424/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1424",
+      "headline": "In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following y",
+      "articleBody": "In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following year, and more events that happened on this day in history\n\nElise Stefanik @EliseStefanik\nToday's Anniversary of Medicare & Medicaid reminds us to reflect on the critical role these programs have played to protect the healthcare of millions of families. To safeguard our future, we must reject Socialist healthcare\nschemes.",
+      "image": "/img/1424.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The Post-Star",
+        "alternateName": "poststar"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1424.webp" class="img-fluid rounded" alt="In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following year, and more events that happened on this day in history
+
+Elise Stefanik @EliseStefanik
+Today&#x27;s Anniversary of Medicare &amp; Medicaid reminds us to reflect on the critical role these programs have played to protect the healthcare of millions of families. To safeguard our future, we must reject Socialist healthcare
+schemes.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The Post-Star</span> <span class="handle-text fs-6 d-block d-md-inline">@poststar</span></h4>
+            <p>In 1965, President Lyndon B. Johnson signed a measure creating Medicare, which began operating the following year, and more events that happened on this day in history<br><br>Elise Stefanik @EliseStefanik<br>Today&#x27;s Anniversary of Medicare &amp; Medicaid reminds us to reflect on the critical role these programs have played to protect the healthcare of millions of families. To safeguard our future, we must reject Socialist healthcare<br>schemes.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

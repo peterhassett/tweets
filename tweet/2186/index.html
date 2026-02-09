@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="q*bert&#x27;s hell is naturalistic. it could just be a large pyrite deposit. pac-man&#x27;s
+hell has an archit...">
+    <meta property="og:title" content="q*bert&#x27;s hell is naturalistic. it could just be a  — Ryan 9 @earthdistance">
+    <meta property="og:image:alt" content="q*bert&#x27;s hell is naturalistic. it could just be a large pyrite deposit. pac-man&#x27;s
+hell has an architect and that&#x27;s the real horror">
+    <meta property="og:description" content="q*bert&#x27;s hell is naturalistic. it could just be a large pyrite deposit. pac-man&#x27;s
+hell has an architect and that&#x27;s the real horror">
+    <meta property="og:image" content="/img/2186.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>q*bert&#x27;s hell is naturalistic. it could just be a  — Ryan 9 @earthdistance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2186/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2186",
+      "headline": "q*bert's hell is naturalistic. it could just be a large pyrite deposit. pac-man's\nhell has an architect and th",
+      "articleBody": "q*bert's hell is naturalistic. it could just be a large pyrite deposit. pac-man's\nhell has an architect and that's the real horror",
+      "image": "/img/2186.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Ryan 9",
+        "alternateName": "earthdistance"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2186.webp" class="img-fluid rounded" alt="q*bert&#x27;s hell is naturalistic. it could just be a large pyrite deposit. pac-man&#x27;s
+hell has an architect and that&#x27;s the real horror">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Ryan 9</span> <span class="handle-text fs-6 d-block d-md-inline">@earthdistance</span></h4>
+            <p>q*bert&#x27;s hell is naturalistic. it could just be a large pyrite deposit. pac-man&#x27;s<br>hell has an architect and that&#x27;s the real horror</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

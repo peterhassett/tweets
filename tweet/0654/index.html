@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died
+of tubercu...">
+    <meta property="og:title" content="guest rapper on gorillaz song: i been in ends sinc — Big Bitch For All Weather @fixyourheartsor">
+    <meta property="og:image:alt" content="guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died
+of tuberculosis i&#x27;m slipping into psychosis
+Damon Albarn on the chorus: ooooooh flimsy steve, where did you go, what have you seen">
+    <meta property="og:description" content="guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died
+of tuberculosis i&#x27;m slipping into psychosis
+Damon Albarn on the chorus: ooooooh flimsy steve, where did you go, what have you seen">
+    <meta property="og:image" content="/img/0654.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>guest rapper on gorillaz song: i been in ends sinc — Big Bitch For All Weather @fixyourheartsor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0654/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0654",
+      "headline": "guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died\nof tubercu",
+      "articleBody": "guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died\nof tuberculosis i'm slipping into psychosis\nDamon Albarn on the chorus: ooooooh flimsy steve, where did you go, what have you seen",
+      "image": "/img/0654.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Big Bitch For All Weather",
+        "alternateName": "fixyourheartsor"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0654.webp" class="img-fluid rounded" alt="guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died
+of tuberculosis i&#x27;m slipping into psychosis
+Damon Albarn on the chorus: ooooooh flimsy steve, where did you go, what have you seen">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Big Bitch For All Weather</span> <span class="handle-text fs-6 d-block d-md-inline">@fixyourheartsor</span></h4>
+            <p>guest rapper on gorillaz song: i been in ends since ten kicking product round the bend, my mum died<br>of tuberculosis i&#x27;m slipping into psychosis<br>Damon Albarn on the chorus: ooooooh flimsy steve, where did you go, what have you seen</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

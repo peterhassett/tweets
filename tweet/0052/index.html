@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Stan Lee: &quot;So this guy has the powers of a spider. But we need a villain. What&#x27;s the natural enemy o...">
+    <meta property="og:title" content="Stan Lee: &quot;So this guy has the powers of a spider. — Argon Dreamcast Evangelion @synthandlasers">
+    <meta property="og:image:alt" content="Stan Lee: &quot;So this guy has the powers of a spider. But we need a villain. What&#x27;s the natural enemy of a spider?&quot;
+Jack Kirby: *claws his way out from under a three-hundred pound pile of cocaine&quot; &quot;Goblins&quot;">
+    <meta property="og:description" content="Stan Lee: &quot;So this guy has the powers of a spider. But we need a villain. What&#x27;s the natural enemy of a spider?&quot;
+Jack Kirby: *claws his way out from under a three-hundred pound pile of cocaine&quot; &quot;Goblins&quot;">
+    <meta property="og:image" content="/img/0052.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Stan Lee: &quot;So this guy has the powers of a spider. — Argon Dreamcast Evangelion @synthandlasers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0052/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0052",
+      "headline": "Stan Lee: \"So this guy has the powers of a spider. But we need a villain. What's the natural enemy of a spider",
+      "articleBody": "Stan Lee: \"So this guy has the powers of a spider. But we need a villain. What's the natural enemy of a spider?\"\nJack Kirby: *claws his way out from under a three-hundred pound pile of cocaine\" \"Goblins\"",
+      "image": "/img/0052.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Argon Dreamcast Evangelion",
+        "alternateName": "synthandlasers"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0052.webp" class="img-fluid rounded" alt="Stan Lee: &quot;So this guy has the powers of a spider. But we need a villain. What&#x27;s the natural enemy of a spider?&quot;
+Jack Kirby: *claws his way out from under a three-hundred pound pile of cocaine&quot; &quot;Goblins&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Argon Dreamcast Evangelion</span> <span class="handle-text fs-6 d-block d-md-inline">@synthandlasers</span></h4>
+            <p>Stan Lee: &quot;So this guy has the powers of a spider. But we need a villain. What&#x27;s the natural enemy of a spider?&quot;<br>Jack Kirby: *claws his way out from under a three-hundred pound pile of cocaine&quot; &quot;Goblins&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

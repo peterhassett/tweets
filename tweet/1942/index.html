@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="oh god oh fuck
+
+(Screen cap or lock screen notifications)
+
+DUOLINGO
+08:11
+Looks like you forgot your Spanish l...">
+    <meta property="og:title" content="oh god oh fuck
+
+(Screen cap or lock screen notific — John @monadoboii">
+    <meta property="og:image:alt" content="oh god oh fuck
+
+(Screen cap or lock screen notifications)
+
+DUOLINGO
+08:11
+Looks like you forgot your Spanish lessons again. You know what happens now!
+
+ADT
+Intruder Alert (Back Door). Proceed with caution.">
+    <meta property="og:description" content="oh god oh fuck
+
+(Screen cap or lock screen notifications)
+
+DUOLINGO
+08:11
+Looks like you forgot your Spanish lessons again. You know what happens now!
+
+ADT
+Intruder Alert (Back Door). Proceed with caution.">
+    <meta property="og:image" content="/img/1942.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>oh god oh fuck
+
+(Screen cap or lock screen notific — John @monadoboii</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1942/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1942",
+      "headline": "oh god oh fuck\n\n(Screen cap or lock screen notifications)\n\nDUOLINGO\n08:11\nLooks like you forgot your Spanish l",
+      "articleBody": "oh god oh fuck\n\n(Screen cap or lock screen notifications)\n\nDUOLINGO\n08:11\nLooks like you forgot your Spanish lessons again. You know what happens now!\n\nADT\nIntruder Alert (Back Door). Proceed with caution.",
+      "image": "/img/1942.webp",
+      "author": {
+        "@type": "Person",
+        "name": "John",
+        "alternateName": "monadoboii"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1942.webp" class="img-fluid rounded" alt="oh god oh fuck
+
+(Screen cap or lock screen notifications)
+
+DUOLINGO
+08:11
+Looks like you forgot your Spanish lessons again. You know what happens now!
+
+ADT
+Intruder Alert (Back Door). Proceed with caution.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">John</span> <span class="handle-text fs-6 d-block d-md-inline">@monadoboii</span></h4>
+            <p>oh god oh fuck<br><br>(Screen cap or lock screen notifications)<br><br>DUOLINGO<br>08:11<br>Looks like you forgot your Spanish lessons again. You know what happens now!<br><br>ADT<br>Intruder Alert (Back Door). Proceed with caution.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

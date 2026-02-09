@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Me: what do you mean I can&#x27;t pay with this
+Cashier: Your dollar, sir. It&#x27;s torn
+asunder
+Me: it&#x27;...">
+    <meta property="og:title" content="Me: what do you mean I can&#x27;t pay with this
+Cashier — Daggerlad @Daggerlad2">
+    <meta property="og:image:alt" content="Me: what do you mean I can&#x27;t pay with this
+Cashier: Your dollar, sir. It&#x27;s torn
+asunder
+Me: it&#x27;s just a little rip!
+Manager: What seems to be the issue?
+Cashier: His dollar has been irrevocably riven
+Me: it&#x27;s a minor tear!
+Manager: *inspecting dollar* It is
+cloven in twain">
+    <meta property="og:description" content="Me: what do you mean I can&#x27;t pay with this
+Cashier: Your dollar, sir. It&#x27;s torn
+asunder
+Me: it&#x27;s just a little rip!
+Manager: What seems to be the issue?
+Cashier: His dollar has been irrevocably riven
+Me: it&#x27;s a minor tear!
+Manager: *inspecting dollar* It is
+cloven in twain">
+    <meta property="og:image" content="/img/0540.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Me: what do you mean I can&#x27;t pay with this
+Cashier — Daggerlad @Daggerlad2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0540/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0540",
+      "headline": "Me: what do you mean I can't pay with this\nCashier: Your dollar, sir. It's torn\nasunder\nMe: it's just a little",
+      "articleBody": "Me: what do you mean I can't pay with this\nCashier: Your dollar, sir. It's torn\nasunder\nMe: it's just a little rip!\nManager: What seems to be the issue?\nCashier: His dollar has been irrevocably riven\nMe: it's a minor tear!\nManager: *inspecting dollar* It is\ncloven in twain",
+      "image": "/img/0540.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Daggerlad",
+        "alternateName": "Daggerlad2"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0540.webp" class="img-fluid rounded" alt="Me: what do you mean I can&#x27;t pay with this
+Cashier: Your dollar, sir. It&#x27;s torn
+asunder
+Me: it&#x27;s just a little rip!
+Manager: What seems to be the issue?
+Cashier: His dollar has been irrevocably riven
+Me: it&#x27;s a minor tear!
+Manager: *inspecting dollar* It is
+cloven in twain">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Daggerlad</span> <span class="handle-text fs-6 d-block d-md-inline">@Daggerlad2</span></h4>
+            <p>Me: what do you mean I can&#x27;t pay with this<br>Cashier: Your dollar, sir. It&#x27;s torn<br>asunder<br>Me: it&#x27;s just a little rip!<br>Manager: What seems to be the issue?<br>Cashier: His dollar has been irrevocably riven<br>Me: it&#x27;s a minor tear!<br>Manager: *inspecting dollar* It is<br>cloven in twain</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

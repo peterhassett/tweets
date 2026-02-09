@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content=". 4h
+What&#x27;s one of your weirdest literary encounters?
+Mine? Once, Joyce Carol Oates accidentally slammed ...">
+    <meta property="og:title" content=". 4h
+What&#x27;s one of your weirdest literary encounte — Emilia Phillips (she/they) @emdashphillips">
+    <meta property="og:image:alt" content=". 4h
+What&#x27;s one of your weirdest literary encounters?
+Mine? Once, Joyce Carol Oates accidentally slammed a bathroom door into me.
+
+Joyce Carol Oates @JoyceCarolOates
+that was no accident.">
+    <meta property="og:description" content=". 4h
+What&#x27;s one of your weirdest literary encounters?
+Mine? Once, Joyce Carol Oates accidentally slammed a bathroom door into me.
+
+Joyce Carol Oates @JoyceCarolOates
+that was no accident.">
+    <meta property="og:image" content="/img/1609.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>. 4h
+What&#x27;s one of your weirdest literary encounte — Emilia Phillips (she/they) @emdashphillips</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1609/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1609",
+      "headline": ". 4h\nWhat's one of your weirdest literary encounters?\nMine? Once, Joyce Carol Oates accidentally slammed a bat",
+      "articleBody": ". 4h\nWhat's one of your weirdest literary encounters?\nMine? Once, Joyce Carol Oates accidentally slammed a bathroom door into me.\n\nJoyce Carol Oates @JoyceCarolOates\nthat was no accident.",
+      "image": "/img/1609.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Emilia Phillips (she/they)",
+        "alternateName": "emdashphillips"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1609.webp" class="img-fluid rounded" alt=". 4h
+What&#x27;s one of your weirdest literary encounters?
+Mine? Once, Joyce Carol Oates accidentally slammed a bathroom door into me.
+
+Joyce Carol Oates @JoyceCarolOates
+that was no accident.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Emilia Phillips (she/they)</span> <span class="handle-text fs-6 d-block d-md-inline">@emdashphillips</span></h4>
+            <p>. 4h<br>What&#x27;s one of your weirdest literary encounters?<br>Mine? Once, Joyce Carol Oates accidentally slammed a bathroom door into me.<br><br>Joyce Carol Oates @JoyceCarolOates<br>that was no accident.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

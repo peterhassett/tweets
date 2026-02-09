@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Shout out to moms one of the
+hardest jobs in the world right after
+being a dad">
+    <meta property="og:title" content="Shout out to moms one of the
+hardest jobs in the w — Will Sennett @Senn_Spud">
+    <meta property="og:image:alt" content="Shout out to moms one of the
+hardest jobs in the world right after
+being a dad">
+    <meta property="og:description" content="Shout out to moms one of the
+hardest jobs in the world right after
+being a dad">
+    <meta property="og:image" content="/img/0994.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Shout out to moms one of the
+hardest jobs in the w — Will Sennett @Senn_Spud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0994/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0994",
+      "headline": "Shout out to moms one of the\nhardest jobs in the world right after\nbeing a dad",
+      "articleBody": "Shout out to moms one of the\nhardest jobs in the world right after\nbeing a dad",
+      "image": "/img/0994.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Will Sennett",
+        "alternateName": "Senn_Spud"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0994.webp" class="img-fluid rounded" alt="Shout out to moms one of the
+hardest jobs in the world right after
+being a dad">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Will Sennett</span> <span class="handle-text fs-6 d-block d-md-inline">@Senn_Spud</span></h4>
+            <p>Shout out to moms one of the<br>hardest jobs in the world right after<br>being a dad</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Elephant
+I am going to have SEX tonight!
+
+
+RicksCEO.eth @RicksCEO. 
+Alone or with somebody?
+
+
+Bonnie! @Bonnie ...">
+    <meta property="og:title" content="Elephant
+I am going to have SEX tonight!
+
+
+RicksCE — Bonnie! @Bonnie">
+    <meta property="og:image:alt" content="Elephant
+I am going to have SEX tonight!
+
+
+RicksCEO.eth @RicksCEO. 
+Alone or with somebody?
+
+
+Bonnie! @Bonnie Elephant 
+I dont accept criticism or roasts from people who invest in CRYPTOCURRENCY!">
+    <meta property="og:description" content="Elephant
+I am going to have SEX tonight!
+
+
+RicksCEO.eth @RicksCEO. 
+Alone or with somebody?
+
+
+Bonnie! @Bonnie Elephant 
+I dont accept criticism or roasts from people who invest in CRYPTOCURRENCY!">
+    <meta property="og:image" content="/img/0112.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Elephant
+I am going to have SEX tonight!
+
+
+RicksCE — Bonnie! @Bonnie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0112/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0112",
+      "headline": "Elephant\nI am going to have SEX tonight!\n\n\nRicksCEO.eth @RicksCEO. \nAlone or with somebody?\n\n\nBonnie! @Bonnie ",
+      "articleBody": "Elephant\nI am going to have SEX tonight!\n\n\nRicksCEO.eth @RicksCEO. \nAlone or with somebody?\n\n\nBonnie! @Bonnie Elephant \nI dont accept criticism or roasts from people who invest in CRYPTOCURRENCY!",
+      "image": "/img/0112.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Bonnie!",
+        "alternateName": "Bonnie"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0112.webp" class="img-fluid rounded" alt="Elephant
+I am going to have SEX tonight!
+
+
+RicksCEO.eth @RicksCEO. 
+Alone or with somebody?
+
+
+Bonnie! @Bonnie Elephant 
+I dont accept criticism or roasts from people who invest in CRYPTOCURRENCY!">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Bonnie!</span> <span class="handle-text fs-6 d-block d-md-inline">@Bonnie</span></h4>
+            <p>Elephant<br>I am going to have SEX tonight!<br><br><br>RicksCEO.eth @RicksCEO. <br>Alone or with somebody?<br><br><br>Bonnie! @Bonnie Elephant <br>I dont accept criticism or roasts from people who invest in CRYPTOCURRENCY!</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

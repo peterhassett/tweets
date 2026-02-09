@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="If you can hear your manager walking towards you, giving you enough time to make it look like you&#x27;re bein...">
+    <meta property="og:title" content="If you can hear your manager walking towards you,  — Kyle @KylePlantEmoji">
+    <meta property="og:image:alt" content="If you can hear your manager walking towards you, giving you enough time to make it look like you&#x27;re being productive, then in a way, you&#x27;ve effectively memorized a boss&#x27;s attack telegraph to successfully avoid taking damage">
+    <meta property="og:description" content="If you can hear your manager walking towards you, giving you enough time to make it look like you&#x27;re being productive, then in a way, you&#x27;ve effectively memorized a boss&#x27;s attack telegraph to successfully avoid taking damage">
+    <meta property="og:image" content="/img/0660.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>If you can hear your manager walking towards you,  — Kyle @KylePlantEmoji</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0660/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0660",
+      "headline": "If you can hear your manager walking towards you, giving you enough time to make it look like you're being pro",
+      "articleBody": "If you can hear your manager walking towards you, giving you enough time to make it look like you're being productive, then in a way, you've effectively memorized a boss's attack telegraph to successfully avoid taking damage",
+      "image": "/img/0660.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Kyle",
+        "alternateName": "KylePlantEmoji"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0660.webp" class="img-fluid rounded" alt="If you can hear your manager walking towards you, giving you enough time to make it look like you&#x27;re being productive, then in a way, you&#x27;ve effectively memorized a boss&#x27;s attack telegraph to successfully avoid taking damage">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Kyle</span> <span class="handle-text fs-6 d-block d-md-inline">@KylePlantEmoji</span></h4>
+            <p>If you can hear your manager walking towards you, giving you enough time to make it look like you&#x27;re being productive, then in a way, you&#x27;ve effectively memorized a boss&#x27;s attack telegraph to successfully avoid taking damage</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&quot;politically homeless&quot; is such a cool euphemism for &quot;I haven&#x27;t come to terms with the fact...">
+    <meta property="og:title" content="&quot;politically homeless&quot; is such a cool euphemism fo — Jane @JaneOst_">
+    <meta property="og:image:alt" content="&quot;politically homeless&quot; is such a cool euphemism for &quot;I haven&#x27;t come to terms with the fact that I&#x27;m just a
+conservative&quot;">
+    <meta property="og:description" content="&quot;politically homeless&quot; is such a cool euphemism for &quot;I haven&#x27;t come to terms with the fact that I&#x27;m just a
+conservative&quot;">
+    <meta property="og:image" content="/img/0795.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>&quot;politically homeless&quot; is such a cool euphemism fo — Jane @JaneOst_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0795/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0795",
+      "headline": "\"politically homeless\" is such a cool euphemism for \"I haven't come to terms with the fact that I'm just a\ncon",
+      "articleBody": "\"politically homeless\" is such a cool euphemism for \"I haven't come to terms with the fact that I'm just a\nconservative\"",
+      "image": "/img/0795.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Jane",
+        "alternateName": "JaneOst_"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0795.webp" class="img-fluid rounded" alt="&quot;politically homeless&quot; is such a cool euphemism for &quot;I haven&#x27;t come to terms with the fact that I&#x27;m just a
+conservative&quot;">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Jane</span> <span class="handle-text fs-6 d-block d-md-inline">@JaneOst_</span></h4>
+            <p>&quot;politically homeless&quot; is such a cool euphemism for &quot;I haven&#x27;t come to terms with the fact that I&#x27;m just a<br>conservative&quot;</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

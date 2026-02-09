@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="doctor: I&#x27;ve written you a prescription here. Follow that and let&#x27;s check in next week. It should he...">
+    <meta property="og:title" content="doctor: I&#x27;ve written you a prescription here. Foll — warrior cop @wyatt_privilege">
+    <meta property="og:image:alt" content="doctor: I&#x27;ve written you a prescription here. Follow that and let&#x27;s check in next week. It should help with your
+symptoms but if it doesn&#x27;t we&#x27;ll know
+more.
+chiropractor sprinting to double kick you in the neck: say goodbye to IBS">
+    <meta property="og:description" content="doctor: I&#x27;ve written you a prescription here. Follow that and let&#x27;s check in next week. It should help with your
+symptoms but if it doesn&#x27;t we&#x27;ll know
+more.
+chiropractor sprinting to double kick you in the neck: say goodbye to IBS">
+    <meta property="og:image" content="/img/1969.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>doctor: I&#x27;ve written you a prescription here. Foll — warrior cop @wyatt_privilege</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1969/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1969",
+      "headline": "doctor: I've written you a prescription here. Follow that and let's check in next week. It should help with yo",
+      "articleBody": "doctor: I've written you a prescription here. Follow that and let's check in next week. It should help with your\nsymptoms but if it doesn't we'll know\nmore.\nchiropractor sprinting to double kick you in the neck: say goodbye to IBS",
+      "image": "/img/1969.webp",
+      "author": {
+        "@type": "Person",
+        "name": "warrior cop",
+        "alternateName": "wyatt_privilege"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1969.webp" class="img-fluid rounded" alt="doctor: I&#x27;ve written you a prescription here. Follow that and let&#x27;s check in next week. It should help with your
+symptoms but if it doesn&#x27;t we&#x27;ll know
+more.
+chiropractor sprinting to double kick you in the neck: say goodbye to IBS">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">warrior cop</span> <span class="handle-text fs-6 d-block d-md-inline">@wyatt_privilege</span></h4>
+            <p>doctor: I&#x27;ve written you a prescription here. Follow that and let&#x27;s check in next week. It should help with your<br>symptoms but if it doesn&#x27;t we&#x27;ll know<br>more.<br>chiropractor sprinting to double kick you in the neck: say goodbye to IBS</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

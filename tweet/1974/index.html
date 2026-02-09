@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I got demons. Who doesn&#x27;t. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thin...">
+    <meta property="og:title" content="I got demons. Who doesn&#x27;t. Ghosts, frattering abou — President Joe Biden (So-Called) @biden4pres">
+    <meta property="og:image:alt" content="I got demons. Who doesn&#x27;t. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fight a minotaur. Beast of a man">
+    <meta property="og:description" content="I got demons. Who doesn&#x27;t. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fight a minotaur. Beast of a man">
+    <meta property="og:image" content="/img/1974.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>I got demons. Who doesn&#x27;t. Ghosts, frattering abou — President Joe Biden (So-Called) @biden4pres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1974/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1974",
+      "headline": "I got demons. Who doesn't. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fi",
+      "articleBody": "I got demons. Who doesn't. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fight a minotaur. Beast of a man",
+      "image": "/img/1974.webp",
+      "author": {
+        "@type": "Person",
+        "name": "President Joe Biden (So-Called)",
+        "alternateName": "biden4pres"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1974.webp" class="img-fluid rounded" alt="I got demons. Who doesn&#x27;t. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fight a minotaur. Beast of a man">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">President Joe Biden (So-Called)</span> <span class="handle-text fs-6 d-block d-md-inline">@biden4pres</span></h4>
+            <p>I got demons. Who doesn&#x27;t. Ghosts, frattering about. Sometimes I get teleported to a maze, hell of a thing. Fight a minotaur. Beast of a man</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

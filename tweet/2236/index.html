@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@bobby:
+(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a won...">
+    <meta property="og:title" content="@bobby:
+(MAN EMOJI) guys, i need to get something  — @bobby @bobby">
+    <meta property="og:image:alt" content="@bobby:
+(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a wonan with my truck. not a day goes by that i don&#x27;t think
+about her. i&#x27;ll never forgive myself.
+(SECOND MAN EMOJI) wonan
+(THIRD MAN EMOJI) did this mf just say wonan
+steve changed the group name
+to wonan">
+    <meta property="og:description" content="@bobby:
+(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a wonan with my truck. not a day goes by that i don&#x27;t think
+about her. i&#x27;ll never forgive myself.
+(SECOND MAN EMOJI) wonan
+(THIRD MAN EMOJI) did this mf just say wonan
+steve changed the group name
+to wonan">
+    <meta property="og:image" content="/img/2236.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@bobby:
+(MAN EMOJI) guys, i need to get something  — @bobby @bobby</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/2236/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "2236",
+      "headline": "@bobby:\n(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a won",
+      "articleBody": "@bobby:\n(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a wonan with my truck. not a day goes by that i don't think\nabout her. i'll never forgive myself.\n(SECOND MAN EMOJI) wonan\n(THIRD MAN EMOJI) did this mf just say wonan\nsteve changed the group name\nto wonan",
+      "image": "/img/2236.webp",
+      "author": {
+        "@type": "Person",
+        "name": "@bobby",
+        "alternateName": "bobby"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/2236.webp" class="img-fluid rounded" alt="@bobby:
+(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a wonan with my truck. not a day goes by that i don&#x27;t think
+about her. i&#x27;ll never forgive myself.
+(SECOND MAN EMOJI) wonan
+(THIRD MAN EMOJI) did this mf just say wonan
+steve changed the group name
+to wonan">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">@bobby</span> <span class="handle-text fs-6 d-block d-md-inline">@bobby</span></h4>
+            <p>@bobby:<br>(MAN EMOJI) guys, i need to get something off my chest. in 2004 i was driving drunk and ran over a wonan with my truck. not a day goes by that i don&#x27;t think<br>about her. i&#x27;ll never forgive myself.<br>(SECOND MAN EMOJI) wonan<br>(THIRD MAN EMOJI) did this mf just say wonan<br>steve changed the group name<br>to wonan</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

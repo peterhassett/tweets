@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not respons...">
+    <meta property="og:title" content="Over a year ago, I threatened you out of anger ove — gav @GavBurl">
+    <meta property="og:image:alt" content="Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not responsible for.
+Today, I&#x27;ve returned to make things right. To end the cycle of violence. It&#x27;s what Steve would have wanted. I&#x27;m sorry and I love you Water Pancake.
+
+(Screen cap of tweet with guy clutching fist at stingray that says:
+About to touch a sting ray...I should punch it though just to let it know Steve Irwin still got shooters out here.
+
+Screen cap of same guy petting stingray">
+    <meta property="og:description" content="Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not responsible for.
+Today, I&#x27;ve returned to make things right. To end the cycle of violence. It&#x27;s what Steve would have wanted. I&#x27;m sorry and I love you Water Pancake.
+
+(Screen cap of tweet with guy clutching fist at stingray that says:
+About to touch a sting ray...I should punch it though just to let it know Steve Irwin still got shooters out here.
+
+Screen cap of same guy petting stingray">
+    <meta property="og:image" content="/img/1642.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Over a year ago, I threatened you out of anger ove — gav @GavBurl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1642/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1642",
+      "headline": "Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not respons",
+      "articleBody": "Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not responsible for.\nToday, I've returned to make things right. To end the cycle of violence. It's what Steve would have wanted. I'm sorry and I love you Water Pancake.\n\n(Screen cap of tweet with guy clutching fist at stingray that says:\nAbout to touch a sting ray...I should punch it though just to let it know Steve Irwin still got shooters out here.\n\nScreen cap of same guy petting stingray",
+      "image": "/img/1642.webp",
+      "author": {
+        "@type": "Person",
+        "name": "gav",
+        "alternateName": "GavBurl"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1642.webp" class="img-fluid rounded" alt="Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not responsible for.
+Today, I&#x27;ve returned to make things right. To end the cycle of violence. It&#x27;s what Steve would have wanted. I&#x27;m sorry and I love you Water Pancake.
+
+(Screen cap of tweet with guy clutching fist at stingray that says:
+About to touch a sting ray...I should punch it though just to let it know Steve Irwin still got shooters out here.
+
+Screen cap of same guy petting stingray">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">gav</span> <span class="handle-text fs-6 d-block d-md-inline">@GavBurl</span></h4>
+            <p>Over a year ago, I threatened you out of anger over the death of a lost one. A death that you were not responsible for.<br>Today, I&#x27;ve returned to make things right. To end the cycle of violence. It&#x27;s what Steve would have wanted. I&#x27;m sorry and I love you Water Pancake.<br><br>(Screen cap of tweet with guy clutching fist at stingray that says:<br>About to touch a sting ray...I should punch it though just to let it know Steve Irwin still got shooters out here.<br><br>Screen cap of same guy petting stingray</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

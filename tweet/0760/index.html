@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on
+them for the r...">
+    <meta property="og:title" content="Fran Lebowitz is the ultimate baby boomer: she wro — Julia Claire @ohJuliatweets">
+    <meta property="og:image:alt" content="Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on
+them for the rest of her life to a level of financial security most of us only dream of without ever doing anything else, and still somehow spends 100% of her time complaining">
+    <meta property="og:description" content="Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on
+them for the rest of her life to a level of financial security most of us only dream of without ever doing anything else, and still somehow spends 100% of her time complaining">
+    <meta property="og:image" content="/img/0760.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Fran Lebowitz is the ultimate baby boomer: she wro — Julia Claire @ohJuliatweets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0760/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0760",
+      "headline": "Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on\nthem for the r",
+      "articleBody": "Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on\nthem for the rest of her life to a level of financial security most of us only dream of without ever doing anything else, and still somehow spends 100% of her time complaining",
+      "image": "/img/0760.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Julia Claire",
+        "alternateName": "ohJuliatweets"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0760.webp" class="img-fluid rounded" alt="Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on
+them for the rest of her life to a level of financial security most of us only dream of without ever doing anything else, and still somehow spends 100% of her time complaining">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Julia Claire</span> <span class="handle-text fs-6 d-block d-md-inline">@ohJuliatweets</span></h4>
+            <p>Fran Lebowitz is the ultimate baby boomer: she wrote exactly two books 40 years ago, coasted on<br>them for the rest of her life to a level of financial security most of us only dream of without ever doing anything else, and still somehow spends 100% of her time complaining</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

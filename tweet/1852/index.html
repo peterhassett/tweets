@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+your ass, they say i&#x27;ll see you on the
+
+(photo o...">
+    <meta property="og:title" content="@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+you —  @reniadeb">
+    <meta property="og:image:alt" content="@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+your ass, they say i&#x27;ll see you on the
+
+(photo of a sign)
+
+Public Footpath
+to Butt Lane">
+    <meta property="og:description" content="@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+your ass, they say i&#x27;ll see you on the
+
+(photo of a sign)
+
+Public Footpath
+to Butt Lane">
+    <meta property="og:image" content="/img/1852.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+you —  @reniadeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1852/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1852",
+      "headline": "@reniadeb\nin england, they don't say i'll kick\nyour ass, they say i'll see you on the\n\n(photo of a sign)\n\nPubl",
+      "articleBody": "@reniadeb\nin england, they don't say i'll kick\nyour ass, they say i'll see you on the\n\n(photo of a sign)\n\nPublic Footpath\nto Butt Lane",
+      "image": "/img/1852.webp",
+      "author": {
+        "@type": "Person",
+        "name": "",
+        "alternateName": "reniadeb"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1852.webp" class="img-fluid rounded" alt="@reniadeb
+in england, they don&#x27;t say i&#x27;ll kick
+your ass, they say i&#x27;ll see you on the
+
+(photo of a sign)
+
+Public Footpath
+to Butt Lane">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text"></span> <span class="handle-text fs-6 d-block d-md-inline">@reniadeb</span></h4>
+            <p>@reniadeb<br>in england, they don&#x27;t say i&#x27;ll kick<br>your ass, they say i&#x27;ll see you on the<br><br>(photo of a sign)<br><br>Public Footpath<br>to Butt Lane</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

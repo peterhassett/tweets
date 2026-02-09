@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="girl what kind of interview is this
+
+(Very erotic still from Interview with the Vampire)">
+    <meta property="og:title" content="girl what kind of interview is this
+
+(Very erotic  — jjk O is the female gaze @angelsofcolour">
+    <meta property="og:image:alt" content="girl what kind of interview is this
+
+(Very erotic still from Interview with the Vampire)">
+    <meta property="og:description" content="girl what kind of interview is this
+
+(Very erotic still from Interview with the Vampire)">
+    <meta property="og:image" content="/img/1075.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>girl what kind of interview is this
+
+(Very erotic  — jjk O is the female gaze @angelsofcolour</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1075/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1075",
+      "headline": "girl what kind of interview is this\n\n(Very erotic still from Interview with the Vampire)",
+      "articleBody": "girl what kind of interview is this\n\n(Very erotic still from Interview with the Vampire)",
+      "image": "/img/1075.webp",
+      "author": {
+        "@type": "Person",
+        "name": "jjk O is the female gaze",
+        "alternateName": "angelsofcolour"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1075.webp" class="img-fluid rounded" alt="girl what kind of interview is this
+
+(Very erotic still from Interview with the Vampire)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">jjk O is the female gaze</span> <span class="handle-text fs-6 d-block d-md-inline">@angelsofcolour</span></h4>
+            <p>girl what kind of interview is this<br><br>(Very erotic still from Interview with the Vampire)</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="DJ Khaled says he doesn&#x27;t perform oral sex, but expects it from his wife because he&#x27;s the king: &quo...">
+    <meta property="og:title" content="DJ Khaled says he doesn&#x27;t perform oral sex, but ex — The Root @TheRoot">
+    <meta property="og:image:alt" content="DJ Khaled says he doesn&#x27;t perform oral sex, but expects it from his wife because he&#x27;s the king: &quot;Different rules for men&quot; trib.al/ZAzoTgh
+
+Smash Mouth @smashmouth
+A King who doesn&#x27;t is no King at all.">
+    <meta property="og:description" content="DJ Khaled says he doesn&#x27;t perform oral sex, but expects it from his wife because he&#x27;s the king: &quot;Different rules for men&quot; trib.al/ZAzoTgh
+
+Smash Mouth @smashmouth
+A King who doesn&#x27;t is no King at all.">
+    <meta property="og:image" content="/img/1681.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>DJ Khaled says he doesn&#x27;t perform oral sex, but ex — The Root @TheRoot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1681/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1681",
+      "headline": "DJ Khaled says he doesn't perform oral sex, but expects it from his wife because he's the king: \"Different rul",
+      "articleBody": "DJ Khaled says he doesn't perform oral sex, but expects it from his wife because he's the king: \"Different rules for men\" trib.al/ZAzoTgh\n\nSmash Mouth @smashmouth\nA King who doesn't is no King at all.",
+      "image": "/img/1681.webp",
+      "author": {
+        "@type": "Person",
+        "name": "The Root",
+        "alternateName": "TheRoot"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1681.webp" class="img-fluid rounded" alt="DJ Khaled says he doesn&#x27;t perform oral sex, but expects it from his wife because he&#x27;s the king: &quot;Different rules for men&quot; trib.al/ZAzoTgh
+
+Smash Mouth @smashmouth
+A King who doesn&#x27;t is no King at all.">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">The Root</span> <span class="handle-text fs-6 d-block d-md-inline">@TheRoot</span></h4>
+            <p>DJ Khaled says he doesn&#x27;t perform oral sex, but expects it from his wife because he&#x27;s the king: &quot;Different rules for men&quot; trib.al/ZAzoTgh<br><br>Smash Mouth @smashmouth<br>A King who doesn&#x27;t is no King at all.</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the
+Midwest had a cul...">
+    <meta property="og:title" content="The South had a culture of grotesque cruelty but t — Rachel Shukert @RachelShukert">
+    <meta property="og:image:alt" content="The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the
+Midwest had a culture of basic decency combined with total insistence on social conformity and now the two bad parts have come together to form the horror we have
+now
+6/20/22">
+    <meta property="og:description" content="The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the
+Midwest had a culture of basic decency combined with total insistence on social conformity and now the two bad parts have come together to form the horror we have
+now
+6/20/22">
+    <meta property="og:image" content="/img/0056.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>The South had a culture of grotesque cruelty but t — Rachel Shukert @RachelShukert</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0056/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0056",
+      "headline": "The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the\nMidwest had a cul",
+      "articleBody": "The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the\nMidwest had a culture of basic decency combined with total insistence on social conformity and now the two bad parts have come together to form the horror we have\nnow\n6/20/22",
+      "image": "/img/0056.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Rachel Shukert",
+        "alternateName": "RachelShukert"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0056.webp" class="img-fluid rounded" alt="The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the
+Midwest had a culture of basic decency combined with total insistence on social conformity and now the two bad parts have come together to form the horror we have
+now
+6/20/22">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Rachel Shukert</span> <span class="handle-text fs-6 d-block d-md-inline">@RachelShukert</span></h4>
+            <p>The South had a culture of grotesque cruelty but tolerance for personal eccentricity and the<br>Midwest had a culture of basic decency combined with total insistence on social conformity and now the two bad parts have come together to form the horror we have<br>now<br>6/20/22</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

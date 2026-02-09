@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was d...">
+    <meta property="og:title" content="Never brought a pencil to school ever. scrounged f — donald boat @laserboat999">
+    <meta property="og:image:alt" content="Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was done with this behavior. refused me pencil on test day. went to the bathroom, sad. I was to fail. Found a grimy HB#2 under a bush. I think nature spirit Pan left it for me">
+    <meta property="og:description" content="Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was done with this behavior. refused me pencil on test day. went to the bathroom, sad. I was to fail. Found a grimy HB#2 under a bush. I think nature spirit Pan left it for me">
+    <meta property="og:image" content="/img/0535.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Never brought a pencil to school ever. scrounged f — donald boat @laserboat999</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/0535/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "0535",
+      "headline": "Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was d",
+      "articleBody": "Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was done with this behavior. refused me pencil on test day. went to the bathroom, sad. I was to fail. Found a grimy HB#2 under a bush. I think nature spirit Pan left it for me",
+      "image": "/img/0535.webp",
+      "author": {
+        "@type": "Person",
+        "name": "donald boat",
+        "alternateName": "laserboat999"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/0535.webp" class="img-fluid rounded" alt="Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was done with this behavior. refused me pencil on test day. went to the bathroom, sad. I was to fail. Found a grimy HB#2 under a bush. I think nature spirit Pan left it for me">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">donald boat</span> <span class="handle-text fs-6 d-block d-md-inline">@laserboat999</span></h4>
+            <p>Never brought a pencil to school ever. scrounged for one every single day. hunter gatherer shit. teacher was done with this behavior. refused me pencil on test day. went to the bathroom, sad. I was to fail. Found a grimy HB#2 under a bush. I think nature spirit Pan left it for me</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

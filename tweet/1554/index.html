@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve coming to your fishing village looking for the aqua gu...">
+    <meta property="og:title" content="Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve comi — Good Take Jake @FORM_DESTROYER">
+    <meta property="og:image:alt" content="Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve coming to your fishing village looking for the aqua guy who lives here, because I&#x27;m building an alliance. If you see that guy in an alliance with Batman a week from now, though, that&#x27;s different. Batman is also building an alliance">
+    <meta property="og:description" content="Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve coming to your fishing village looking for the aqua guy who lives here, because I&#x27;m building an alliance. If you see that guy in an alliance with Batman a week from now, though, that&#x27;s different. Batman is also building an alliance">
+    <meta property="og:image" content="/img/1554.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="google" content="notranslate">
+    <title>Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve comi — Good Take Jake @FORM_DESTROYER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tweet",
+          "item": "/tweet/1554/"
+        }
+      ]
+    },
+    {
+      "@type": "SocialMediaPosting",
+      "identifier": "1554",
+      "headline": "Hi, I'm billionaire playboy Bruce Wayne. I've coming to your fishing village looking for the aqua guy who live",
+      "articleBody": "Hi, I'm billionaire playboy Bruce Wayne. I've coming to your fishing village looking for the aqua guy who lives here, because I'm building an alliance. If you see that guy in an alliance with Batman a week from now, though, that's different. Batman is also building an alliance",
+      "image": "/img/1554.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Good Take Jake",
+        "alternateName": "FORM_DESTROYER"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <main class="container py-3" role="main">
+      <div id="tweet-container">
+        <div class="row tweet-row">
+          <div class="col-12 col-md-6 img-col">
+            <img src="/img/1554.webp" class="img-fluid rounded" alt="Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve coming to your fishing village looking for the aqua guy who lives here, because I&#x27;m building an alliance. If you see that guy in an alliance with Batman a week from now, though, that&#x27;s different. Batman is also building an alliance">
+          </div>
+          <div class="col-12 col-md-6">
+            <h4><span class="name-text">Good Take Jake</span> <span class="handle-text fs-6 d-block d-md-inline">@FORM_DESTROYER</span></h4>
+            <p>Hi, I&#x27;m billionaire playboy Bruce Wayne. I&#x27;ve coming to your fishing village looking for the aqua guy who lives here, because I&#x27;m building an alliance. If you see that guy in an alliance with Batman a week from now, though, that&#x27;s different. Batman is also building an alliance</p>
+            <a href="/" onclick="if(history.length > 1){ event.preventDefault(); history.back(); }" class="btn btn-sm btn-link">Back</a>
+            <button id="random-btn" class="btn btn-sm btn-outline-secondary ms-2">Random</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      fetch('/data.min.json').then(r => r.json()).then(data => {
+        document.getElementById('random-btn').addEventListener('click', () => {
+          let idx = Math.floor(Math.random() * data.length);
+          window.location.href = `/tweet/${data[idx].id}/`;
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>
